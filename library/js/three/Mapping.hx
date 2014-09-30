@@ -1,3 +1,4 @@
 package js.three;
 
-interface Mapping {}
+interface Mapping
+{}

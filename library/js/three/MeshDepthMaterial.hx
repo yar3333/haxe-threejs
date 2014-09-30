@@ -1,8 +1,9 @@
 package js.three;
 
 @:native("THREE.MeshDepthMaterial")
-extern class MeshDepthMaterial extends Material {
-    public var wireframe : Bool; // false
-    public var wireframeLinewidth : Float; // 1
-    public function new(?parameters:Dynamic) : Void;
+extern class MeshDepthMaterial extends Material
+{
+	var wireframe : Bool; // false
+	var wireframeLinewidth : Float; // 1
+	function new(?parameters:Dynamic) : Void;
 }

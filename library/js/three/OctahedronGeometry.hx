@@ -1,6 +1,7 @@
 package js.three;
 
 @:native("THREE.OctahedronGeometry")
-extern class OctahedronGeometry extends PolyhedronGeometry {
-    public function new(radius:Float, ?detail:Int) : Void;
+extern class OctahedronGeometry extends PolyhedronGeometry
+{
+	function new(radius:Float, ?detail:Int) : Void;
 }

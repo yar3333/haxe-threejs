@@ -1,20 +1,21 @@
 package js.three;
 
 typedef RayIntersect = {
-    var distance : Float;
-    var point : Vector3;
-    var face : Face;
-    var object : Object3D;
+	var distance : Float;
+	var point : Vector3;
+	var face : Face;
+	var object : Object3D;
 };
 
 @:native("THREE.Raycaster")
-extern class Raycaster {
-    public var ray : Ray;
-    public var near : Float;
-    public var far : Float;
-    public var precision : Float; // 0.0001
-    public function new(origin:Vector3, direction:Vector3, ?near:Float, ?far:Float) : Void;
-    public function set(origin:Vector3, direction:Vector3) : Void;
-    public function intersectObject(object:Object3D, ?recursive:Bool=false) : Array<RayIntersect>;
-    public function intersectObjects(objects:Array<Object3D>, ?recursive:Bool=false) : Array<RayIntersect>;
+extern class Raycaster
+{
+	var ray : Ray;
+	var near : Float;
+	var far : Float;
+	var precision : Float; // 0.0001
+	function new(origin:Vector3, direction:Vector3, ?near:Float, ?far:Float) : Void;
+	function set(origin:Vector3, direction:Vector3) : Void;
+	function intersectObject(object:Object3D, recursive=false) : Array<RayIntersect>;
+	function intersectObjects(objects:Array<Object3D>, recursive=false) : Array<RayIntersect>;
 }

@@ -1,15 +1,16 @@
 package js.three;
 
 @:native("THREE.Clock")
-extern class Clock {
-    public var autoStart : Bool;
-    public var startTime : Float;
-    public var oldTime : Float;
-    public var elapsedTime : Float;
-    public var running : Bool;
-    public function new(autoStart:Bool=true) : Void;
-    public function start() : Void;
-    public function stop() : Void;
-    public function getElapsedTime() : Float;
-    public function getDelta() : Float;
+extern class Clock
+{
+	var autoStart : Bool;
+	var startTime : Float;
+	var oldTime : Float;
+	var elapsedTime : Float;
+	var running : Bool;
+	function new(autoStart=true) : Void;
+	function start() : Void;
+	function stop() : Void;
+	function getElapsedTime() : Float;
+	function getDelta() : Float;
 }

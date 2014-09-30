@@ -1,40 +1,41 @@
 package js.three;
 
 @:native("THREE.Geometry")
-extern class Geometry {
-    public var id : Int;
-    public var name : String;
-    public var vertices : Array<Vertex>;
-    public var colors : Array<Color>;
-    public var materials : Array<Material>;
-    public var faces : Array<Face>;
-    public var faceUvs : Array<Array<UV>>;
-    public var faceVertexUvs : Array<Array<UV>>;
-    public var morphTargets : Array<{name:String, vertices:Array<Vertex>}>;
-    public var morphColors : Array<Color>;
-    public var skinWeights : Array<Vector4>;
-    public var skinIndices : Array<Vector4>;
-    public var boundingBox : Box3;
-    public var boundingSphere : { radius:Float };
-    public var hasTangents : Bool; // false
-    // public var dynamic : Bool; // true  this.verticesNeedUpdate = false;
-    public var elementsNeedUpdate : Bool; // false
-    public var uvsNeedUpdate : Bool; // false
-    public var normalsNeedUpdate : Bool; // false
-    public var tangentsNeedUpdate : Bool; // false
-    public var colorsNeedUpdate : Bool; // false
-    public var lineDistancesNeedUpdate : Bool; // false
-    public function new() : Void;
-    public function applyMatrix(matrix:Matrix4) : Void;
-    public function computeCentroids() : Void;
-    public function computeFaceNormals() : Void;
-    public function computeVertexNormals() : Void;
-    public function computeMorphNormals() : Void;
-    public function computeTangents() : Void;
-    public function computeLineDistance() : Void;
-    public function computeBoundingBox() : Void;
-    public function computeBoundingSphere() : Void;
-    public function mergeVertices() : Void;
-    public function clone() : Geometry;
-    public function dispose() : Void;
+extern class Geometry
+{
+	var id : Int;
+	var name : String;
+	var vertices : Array<Vertex>;
+	var colors : Array<Color>;
+	var materials : Array<Material>;
+	var faces : Array<Face>;
+	var faceUvs : Array<Array<UV>>;
+	var faceVertexUvs : Array<Array<UV>>;
+	var morphTargets : Array<{ name:String, vertices:Array<Vertex>}>;
+	var morphColors : Array<Color>;
+	var skinWeights : Array<Vector4>;
+	var skinIndices : Array<Vector4>;
+	var boundingBox : Box3;
+	var boundingSphere : { radius:Float };
+	var hasTangents : Bool; // false
+	// var dynamic : Bool; // true  this.verticesNeedUpdate = false;
+	var elementsNeedUpdate : Bool; // false
+	var uvsNeedUpdate : Bool; // false
+	var normalsNeedUpdate : Bool; // false
+	var tangentsNeedUpdate : Bool; // false
+	var colorsNeedUpdate : Bool; // false
+	var lineDistancesNeedUpdate : Bool; // false
+	function new() : Void;
+	function applyMatrix(matrix:Matrix4) : Void;
+	function computeCentroids() : Void;
+	function computeFaceNormals() : Void;
+	function computeVertexNormals() : Void;
+	function computeMorphNormals() : Void;
+	function computeTangents() : Void;
+	function computeLineDistance() : Void;
+	function computeBoundingBox() : Void;
+	function computeBoundingSphere() : Void;
+	function mergeVertices() : Void;
+	function clone() : Geometry;
+	function dispose() : Void;
 }
