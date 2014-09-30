@@ -1,0 +1,4 @@
+ID = \b[_a-zA-Z][_a-zA-Z0-9]*\b
+
+/^/package js.three;\n\n/
+/(extern\s+(?:class|interface|enum)\s+)(ID)/@:native("THREE.$2")\n$1$2
