@@ -7,7 +7,7 @@ library/js: raw
 	mv library/js/threejs library/js/three
 
 raw: native
-	haxelib run refactor convert --exclude-string-literals native *.ts raw /[.]ts$/.hx/ ts_to_haxe.rules
+	haxelib run refactor convert --exclude-string-literals native *.ts raw \\[.]ts$$\\.hx\\ ts_to_haxe.rules
 	haxelib run refactor convert --exclude-string-literals --exclude-comments raw *.hx raw /// beauty_haxe.rules
 
 native:
