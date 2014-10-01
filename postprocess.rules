@@ -1,4 +1,74 @@
 ID = \b[_a-zA-Z][_a-zA-Z0-9]*\b
+TYPE = (?:(?:ID|\{[^}]*\})(?:\[\])*\s*)
+TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
+
+
+/////////////////////////////////
+// fix overloads
+//    1                2         3                           4                     5            6
+/\n([ \t]*)function\s+(ID)\s*\((.*?)\n\s*function\s+\2\s*\(([^)]*)\)\s*[:]\s*(TYPE_COMPLEX)\s*;(.*)$/\n$1@:overload(function($4):$5{})\n$1function $2($3$6/sr
+
+
+/////////////////////////////////
+// package & native
 
 /^/package js.three;\n\n/
 /(extern\s+(?:class|interface|enum)\s+)(ID)/@:native("THREE.$2")\n$1$2
+
+
+/////////////////////////////////
+// vars
+
+/((?:\b)hex\s*:\s*)Float\b/$1Int/
+/((?:\b)color\s*:\s*)Float\b/$1Int/
+/((?:\b)index\s*:\s*)Float\b/$1Int/
+/((?:\b)interpoltionType\s*:\s*)Float\b/$1Int/
+/((?:\b)id\s*:\s*)Float\b/$1Int/
+/((?:\b)vertices\s*:\s*)Float\b/$1Int/
+/((?:\b)faces\s*:\s*)Float\b/$1Int/
+/((?:\b)segments\s*:\s*)Float\b/$1Int/
+/((?:\b)format\s*:\s*)Float\b/$1Int/
+/((?:\b)type\s*:\s*)Float\b/$1Int/
+/((?:\b)wrapS\s*:\s*)Float\b/$1Int/
+/((?:\b)wrapT\s*:\s*)Float\b/$1Int/
+/((?:\b)magFilter\s*:\s*)Float\b/$1Int/
+/((?:\b)minFilter\s*:\s*)Float\b/$1Int/
+/((?:\b)anisotropy\s*:\s*)Float\b/$1Int/
+/((?:\b)divisions\s*:\s*)Float\b/$1Int/
+/((?:\b)count\s*:\s*)Float\b/$1Int/
+/((?:\b)vi1\s*:\s*)Float\b/$1Int/
+/((?:\b)vi2\s*:\s*)Float\b/$1Int/
+/((?:\b)n\s*:\s*)Float\b/$1Int/
+/((?:\b)loaded\s*:\s*)Float\b/$1Int/
+/((?:\b)total\s*:\s*)Float\b/$1Int/
+/((?:\b)curveSegments\s*:\s*)Float\b/$1Int/
+/(Count\s*:\s*)Float\b/$1Int/
+/(Index\s*:\s*)Float\b/$1Int/
+/(Type\s*:\s*)Float\b/$1Int/
+
+///(class\s+CanvasRenderer.+\bvar\s+width\s*:\s*Float)/$1Int/
+///(class\s+AreaLight.+\bvar\s+height\s*:\s*Float)/$1Int/
+
+
+/////////////////////////////////
+// arrays
+
+/(Width\s*:\s*)Array<Float>\b/$1Array<Int>/
+/(Height\s*:\s*)Array<Float>\b/$1Array<Int>/
+/(Indices\s*:\s*)Array<Float>\b/$1Array<Int>/
+
+
+/////////////////////////////////
+// functions return values
+
+/(function\s+getMaxAnisotropy\(\)\s*:\s*)Float\b/$1Int/
+/(function\s+getHex\(\)\s*:\s*)Float\b/$1Int/
+
+
+/////////////////////////////////
+// functions agrs
+
+/((?:function\s+getNextKeyWith\([^)]*\b)h:\s*)Float/$1Int/
+/((?:function\s+getNextKeyWith\([^)]*\b)key:\s*)Float/$1Int/
+/((?:function\s+getPrevKeyWith\([^)]*\b)h:\s*)Float/$1Int/
+/((?:function\s+getPrevKeyWith\([^)]*\b)key:\s*)Float/$1Int/
