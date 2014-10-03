@@ -5,6 +5,8 @@ library/js: raw
 	haxelib run refactor reindent library/js *.hx 4 4 4 4 -4
 	haxelib run refactor convert library/js *.hx library/js /// postprocess.rules
 	mv library/js/threejs library/js/three
+	haxelib run refactor -v override library
+	cp -r manual/* library
 
 raw: native
 	haxelib run refactor convert --exclude-string-literals native *.ts raw \\[.]ts$$\\.hx\\ ts_to_haxe.rules
@@ -22,3 +24,9 @@ native:
 clean:
 	rm -rf raw
 	rm -rf native
+	
+rebuild: prepare-rebuild library
+	
+prepare-rebuild:
+	rm -rf raw
+	rm -rf library/js

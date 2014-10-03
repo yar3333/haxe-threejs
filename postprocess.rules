@@ -12,7 +12,7 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /////////////////////////////////
 // package & native
 
-/^/package js.three;\n\n/
+/^/package js.three;\n\nimport js.html.*;\n\n
 /(extern\s+(?:class|interface|enum)\s+)(ID)/@:native("THREE.$2")\n$1$2
 
 
@@ -72,3 +72,21 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /((?:function\s+getNextKeyWith\([^)]*\b)key:\s*)Float/$1Int/
 /((?:function\s+getPrevKeyWith\([^)]*\b)h:\s*)Float/$1Int/
 /((?:function\s+getPrevKeyWith\([^)]*\b)key:\s*)Float/$1Int/
+
+
+/////////////////////////////////
+// special fixes
+
+/static function slerp\(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float\) : Quaternion;/static inline function slerp_(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float) : Quaternion return untyped js.three.Quaternion.slerp(qa, qb, qm, t);/
+/var dynamic : Bool;/inline function dynamicGet() : Bool return untyped this["dynamic"];/
+
+~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceTo(v:Vector) : Float;\n}~s
+~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceToSquared(v:Vector) : Float;\n}~s
+
+/\binterface( JSonLoaderResultGeometry\b)/class$1/
+
+
+/////////////////////////////////
+// "[name:String] : T" => "implements Dynamic<T>"
+//             1              2                                             3
+/((?:interface|class)\s+ID)(\s*\{\s*)\[name\s*:\s*(?:String|Int)\]\s*:\s*(TYPE)\s*;\s*/$1 implements Dynamic<$3>$2/s
