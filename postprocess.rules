@@ -27,6 +27,10 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /((?:\b)vertices\s*:\s*)Float\b/$1Int/
 /((?:\b)faces\s*:\s*)Float\b/$1Int/
 /((?:\b)segments\s*:\s*)Float\b/$1Int/
+/((?:\b)curveSegments\s*:\s*)Float\b/$1Int/
+/((?:\b)radialSegments\s*:\s*)Float\b/$1Int/
+/((?:\b)heightSegments\s*:\s*)Float\b/$1Int/
+/((?:\b)radiusSegments\s*:\s*)Float\b/$1Int/
 /((?:\b)format\s*:\s*)Float\b/$1Int/
 /((?:\b)type\s*:\s*)Float\b/$1Int/
 /((?:\b)wrapS\s*:\s*)Float\b/$1Int/
@@ -41,21 +45,42 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /((?:\b)n\s*:\s*)Float\b/$1Int/
 /((?:\b)loaded\s*:\s*)Float\b/$1Int/
 /((?:\b)total\s*:\s*)Float\b/$1Int/
-/((?:\b)curveSegments\s*:\s*)Float\b/$1Int/
 /(Count\s*:\s*)Float\b/$1Int/
 /(Index\s*:\s*)Float\b/$1Int/
 /(Type\s*:\s*)Float\b/$1Int/
+/(Hex\s*:\s*)Float\b/$1Int/
 
-///(class\s+CanvasRenderer.+\bvar\s+width\s*:\s*Float)/$1Int/
-///(class\s+AreaLight.+\bvar\s+height\s*:\s*Float)/$1Int/
+///(class\s+AreaLight\b.+\bvar\s+height\s*:\s*Float)/$1Int/
+/(class\s+CanvasRenderer\b.+\b)function setSize\(width:Float, height:Float, \?updateStyle:Bool\) : Void;/$1function setSize(width:Int, height:Int, ?updateStyle:Bool)/
+/(class CompressedTexture\b.+\bfunction new\([^)]+\bwidth: )Float/$1Int/s
+/(class CompressedTexture\b.+\bfunction new\([^)]+\bheight: )Float/$1Int/s
+/(class DataTexture\b.+\bfunction new\([^)]+\bwidth: )Float/$1Int/s
+/(class DataTexture.+\bfunction new\([^)]+\bheight: )Float/$1Int/s
+/(class Face3\b.+\ba\s*[:]\s*)Float/$1Int/sr
+/(class Face3\b.+\bb\s*[:]\s*)Float/$1Int/sr
+/(class Face3\b.+\bc\s*[:]\s*)Float/$1Int/sr
+/(class Face3\b.+\bd\s*[:]\s*)Float/$1Int/sr
+/(class GridHelper\b.+\bsize\s*[:]\s*)Float/$1Int/sr
+/(class GridHelper\b.+\bstep\s*[:]\s*)Float/$1Int/sr
+/(class GridHelper\b.+\bcolorCenterLine\s*[:]\s*)Float/$1Int/sr
+/(class GridHelper\b.+\bcolorGrid\s*[:]\s*)Float/$1Int/sr
+/(class OctahedronGeometry\b.+\bdetail\s*[:]\s*)Float/$1Int/sr
+/(class ParametricGeometry\b.+\bslices\s*[:]\s*)Float/$1Int/sr
+/(class ParametricGeometry\b.+\bstacks\s*[:]\s*)Float/$1Int/sr
+/(class DirectionalLight\b.+\bshadowMapWidth\s*[:]\s*)Float/$1Int/sr
+/(class DirectionalLight\b.+\bshadowMapHeight\s*[:]\s*)Float/$1Int/sr
+/(class BufferGeometry\b.+\bstart\s*[:]\s*)Float/$1Int/sr
+/(class IcosahedronGeometry\b.+\bdetail\s*[:]\s*)Float/$1Int/sr
 
 
 /////////////////////////////////
 // arrays
 
-/(Width\s*:\s*)Array<Float>\b/$1Array<Int>/
-/(Height\s*:\s*)Array<Float>\b/$1Array<Int>/
-/(Indices\s*:\s*)Array<Float>\b/$1Array<Int>/
+/(Width\s*:\s*)Array<Float>/$1Array<Int>/
+/(Height\s*:\s*)Array<Float>/$1Array<Int>/
+/(Indices\s*:\s*)Array<Float>/$1Array<Int>/
+/(shadowCascadeWidth\s*:\s*)Array<Float>/$1Array<Int>/
+/(shadowCascadeHeight\s*:\s*)Array<Float>/$1Array<Int>/
 
 
 /////////////////////////////////
@@ -64,7 +89,6 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /(function\s+getMaxAnisotropy\(\)\s*:\s*)Float\b/$1Int/
 /(function\s+getHex\(\)\s*:\s*)Float\b/$1Int/
 
-
 /////////////////////////////////
 // functions agrs
 
@@ -72,6 +96,12 @@ TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 /((?:function\s+getNextKeyWith\([^)]*\b)key:\s*)Float/$1Int/
 /((?:function\s+getPrevKeyWith\([^)]*\b)h:\s*)Float/$1Int/
 /((?:function\s+getPrevKeyWith\([^)]*\b)key:\s*)Float/$1Int/
+/((?:function\s+createAnimation\([^)]*\b)start:\s*)Float/$1Int/
+/((?:function\s+createAnimation\([^)]*\b)end:\s*)Float/$1Int/
+/((?:function\s+setFrameRange\([^)]*\b)start:\s*)Float/$1Int/
+/((?:function\s+setFrameRange\([^)]*\b)end:\s*)Float/$1Int/
+/((?:function\s+setAnimationLabel\([^)]*\b)start:\s*)Float/$1Int/
+/((?:function\s+setAnimationLabel\([^)]*\b)end:\s*)Float/$1Int/
 
 
 /////////////////////////////////

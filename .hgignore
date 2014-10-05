@@ -1,5 +1,11 @@
 syntax: glob
 library/library.zip
-bin
 test/test.n
 library/examples.zip
+original
+documentator/obj
+native
+*.pdb
+*.suo
+syntax: regexp
+^bin
