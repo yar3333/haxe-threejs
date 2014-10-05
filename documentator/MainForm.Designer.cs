@@ -28,29 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.label1 = new System.Windows.Forms.Label();
-			this.oldHaxeFileSelector = new System.Windows.Forms.ComboBox();
-			this.oldHaxeFileText = new System.Windows.Forms.RichTextBox();
-			this.newHaxeFileText = new System.Windows.Forms.RichTextBox();
-			this.newHaxeFileSelector = new System.Windows.Forms.ComboBox();
-			this.label2 = new System.Windows.Forms.Label();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.splitContainer3 = new System.Windows.Forms.SplitContainer();
 			this.label3 = new System.Windows.Forms.Label();
 			this.typeScriptText = new System.Windows.Forms.RichTextBox();
 			this.typeScriptSelector = new System.Windows.Forms.ComboBox();
-			this.splitContainer4 = new System.Windows.Forms.SplitContainer();
 			this.label4 = new System.Windows.Forms.Label();
 			this.javaScriptFileText = new System.Windows.Forms.RichTextBox();
 			this.javaScriptFileSelector = new System.Windows.Forms.ComboBox();
-			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			this.label5 = new System.Windows.Forms.Label();
 			this.docFileText = new System.Windows.Forms.RichTextBox();
 			this.docFileSelector = new System.Windows.Forms.ComboBox();
+			this.docFileHtml = new System.Windows.Forms.WebBrowser();
 			this.next = new System.Windows.Forms.Button();
 			this.prev = new System.Windows.Forms.Button();
-			this.docFileHtml = new System.Windows.Forms.WebBrowser();
+			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -59,91 +51,11 @@
 			this.splitContainer2.Panel1.SuspendLayout();
 			this.splitContainer2.Panel2.SuspendLayout();
 			this.splitContainer2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-			this.splitContainer3.Panel1.SuspendLayout();
-			this.splitContainer3.Panel2.SuspendLayout();
-			this.splitContainer3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-			this.splitContainer4.Panel1.SuspendLayout();
-			this.splitContainer4.Panel2.SuspendLayout();
-			this.splitContainer4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
 			this.splitContainer5.Panel1.SuspendLayout();
 			this.splitContainer5.Panel2.SuspendLayout();
 			this.splitContainer5.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(3, 3);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(65, 13);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Old haxe file";
-			// 
-			// oldHaxeFileSelector
-			// 
-			this.oldHaxeFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.oldHaxeFileSelector.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-			this.oldHaxeFileSelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-			this.oldHaxeFileSelector.FormattingEnabled = true;
-			this.oldHaxeFileSelector.Location = new System.Drawing.Point(6, 19);
-			this.oldHaxeFileSelector.Name = "oldHaxeFileSelector";
-			this.oldHaxeFileSelector.Size = new System.Drawing.Size(216, 21);
-			this.oldHaxeFileSelector.TabIndex = 3;
-			this.oldHaxeFileSelector.SelectedIndexChanged += new System.EventHandler(this.oldHaxeFileSelector_SelectedIndexChanged);
-			// 
-			// oldHaxeFileText
-			// 
-			this.oldHaxeFileText.AcceptsTab = true;
-			this.oldHaxeFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.oldHaxeFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.oldHaxeFileText.Location = new System.Drawing.Point(6, 46);
-			this.oldHaxeFileText.Name = "oldHaxeFileText";
-			this.oldHaxeFileText.ReadOnly = true;
-			this.oldHaxeFileText.Size = new System.Drawing.Size(216, 503);
-			this.oldHaxeFileText.TabIndex = 4;
-			this.oldHaxeFileText.Text = "";
-			this.oldHaxeFileText.WordWrap = false;
-			// 
-			// newHaxeFileText
-			// 
-			this.newHaxeFileText.AcceptsTab = true;
-			this.newHaxeFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.newHaxeFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.newHaxeFileText.Location = new System.Drawing.Point(3, 46);
-			this.newHaxeFileText.Name = "newHaxeFileText";
-			this.newHaxeFileText.ReadOnly = true;
-			this.newHaxeFileText.Size = new System.Drawing.Size(215, 503);
-			this.newHaxeFileText.TabIndex = 7;
-			this.newHaxeFileText.Text = "";
-			this.newHaxeFileText.WordWrap = false;
-			// 
-			// newHaxeFileSelector
-			// 
-			this.newHaxeFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.newHaxeFileSelector.FormattingEnabled = true;
-			this.newHaxeFileSelector.Location = new System.Drawing.Point(6, 19);
-			this.newHaxeFileSelector.Name = "newHaxeFileSelector";
-			this.newHaxeFileSelector.Size = new System.Drawing.Size(212, 21);
-			this.newHaxeFileSelector.TabIndex = 6;
-			this.newHaxeFileSelector.SelectedIndexChanged += new System.EventHandler(this.newHaxeFileSelector_SelectedIndexChanged);
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 3);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(71, 13);
-			this.label2.TabIndex = 5;
-			this.label2.Text = "New haxe file";
 			// 
 			// splitContainer1
 			// 
@@ -155,15 +67,15 @@
 			// 
 			// splitContainer1.Panel1
 			// 
-			this.splitContainer1.Panel1.Controls.Add(this.label1);
-			this.splitContainer1.Panel1.Controls.Add(this.oldHaxeFileSelector);
-			this.splitContainer1.Panel1.Controls.Add(this.oldHaxeFileText);
+			this.splitContainer1.Panel1.Controls.Add(this.typeScriptText);
+			this.splitContainer1.Panel1.Controls.Add(this.label3);
+			this.splitContainer1.Panel1.Controls.Add(this.typeScriptSelector);
 			// 
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
 			this.splitContainer1.Size = new System.Drawing.Size(1197, 552);
-			this.splitContainer1.SplitterDistance = 225;
+			this.splitContainer1.SplitterDistance = 309;
 			this.splitContainer1.TabIndex = 8;
 			// 
 			// splitContainer2
@@ -174,35 +86,16 @@
 			// 
 			// splitContainer2.Panel1
 			// 
-			this.splitContainer2.Panel1.Controls.Add(this.label2);
-			this.splitContainer2.Panel1.Controls.Add(this.newHaxeFileText);
-			this.splitContainer2.Panel1.Controls.Add(this.newHaxeFileSelector);
+			this.splitContainer2.Panel1.Controls.Add(this.javaScriptFileText);
+			this.splitContainer2.Panel1.Controls.Add(this.label4);
+			this.splitContainer2.Panel1.Controls.Add(this.javaScriptFileSelector);
 			// 
 			// splitContainer2.Panel2
 			// 
-			this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-			this.splitContainer2.Size = new System.Drawing.Size(968, 552);
-			this.splitContainer2.SplitterDistance = 221;
+			this.splitContainer2.Panel2.Controls.Add(this.splitContainer5);
+			this.splitContainer2.Size = new System.Drawing.Size(884, 552);
+			this.splitContainer2.SplitterDistance = 316;
 			this.splitContainer2.TabIndex = 0;
-			// 
-			// splitContainer3
-			// 
-			this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer3.Name = "splitContainer3";
-			// 
-			// splitContainer3.Panel1
-			// 
-			this.splitContainer3.Panel1.Controls.Add(this.label3);
-			this.splitContainer3.Panel1.Controls.Add(this.typeScriptText);
-			this.splitContainer3.Panel1.Controls.Add(this.typeScriptSelector);
-			// 
-			// splitContainer3.Panel2
-			// 
-			this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-			this.splitContainer3.Size = new System.Drawing.Size(743, 552);
-			this.splitContainer3.SplitterDistance = 239;
-			this.splitContainer3.TabIndex = 0;
 			// 
 			// label3
 			// 
@@ -222,7 +115,7 @@
 			this.typeScriptText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.typeScriptText.Location = new System.Drawing.Point(3, 46);
 			this.typeScriptText.Name = "typeScriptText";
-			this.typeScriptText.Size = new System.Drawing.Size(233, 503);
+			this.typeScriptText.Size = new System.Drawing.Size(303, 503);
 			this.typeScriptText.TabIndex = 11;
 			this.typeScriptText.Text = "";
 			this.typeScriptText.WordWrap = false;
@@ -233,30 +126,11 @@
 			this.typeScriptSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.typeScriptSelector.FormattingEnabled = true;
-			this.typeScriptSelector.Location = new System.Drawing.Point(6, 19);
+			this.typeScriptSelector.Location = new System.Drawing.Point(3, 19);
 			this.typeScriptSelector.Name = "typeScriptSelector";
-			this.typeScriptSelector.Size = new System.Drawing.Size(230, 21);
+			this.typeScriptSelector.Size = new System.Drawing.Size(303, 21);
 			this.typeScriptSelector.TabIndex = 10;
 			this.typeScriptSelector.SelectedIndexChanged += new System.EventHandler(this.typeScriptSelector_SelectedIndexChanged);
-			// 
-			// splitContainer4
-			// 
-			this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer4.Name = "splitContainer4";
-			// 
-			// splitContainer4.Panel1
-			// 
-			this.splitContainer4.Panel1.Controls.Add(this.label4);
-			this.splitContainer4.Panel1.Controls.Add(this.javaScriptFileText);
-			this.splitContainer4.Panel1.Controls.Add(this.javaScriptFileSelector);
-			// 
-			// splitContainer4.Panel2
-			// 
-			this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
-			this.splitContainer4.Size = new System.Drawing.Size(500, 552);
-			this.splitContainer4.SplitterDistance = 257;
-			this.splitContainer4.TabIndex = 0;
 			// 
 			// label4
 			// 
@@ -274,10 +148,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.javaScriptFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.javaScriptFileText.Location = new System.Drawing.Point(3, 46);
+			this.javaScriptFileText.Location = new System.Drawing.Point(-1, 46);
 			this.javaScriptFileText.Name = "javaScriptFileText";
 			this.javaScriptFileText.ReadOnly = true;
-			this.javaScriptFileText.Size = new System.Drawing.Size(251, 503);
+			this.javaScriptFileText.Size = new System.Drawing.Size(314, 503);
 			this.javaScriptFileText.TabIndex = 11;
 			this.javaScriptFileText.Text = "";
 			this.javaScriptFileText.WordWrap = false;
@@ -287,31 +161,11 @@
 			this.javaScriptFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.javaScriptFileSelector.FormattingEnabled = true;
-			this.javaScriptFileSelector.Location = new System.Drawing.Point(6, 19);
+			this.javaScriptFileSelector.Location = new System.Drawing.Point(3, 19);
 			this.javaScriptFileSelector.Name = "javaScriptFileSelector";
-			this.javaScriptFileSelector.Size = new System.Drawing.Size(248, 21);
+			this.javaScriptFileSelector.Size = new System.Drawing.Size(310, 21);
 			this.javaScriptFileSelector.TabIndex = 10;
 			this.javaScriptFileSelector.SelectedIndexChanged += new System.EventHandler(this.javaScriptFileSelector_SelectedIndexChanged);
-			// 
-			// splitContainer5
-			// 
-			this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer5.Name = "splitContainer5";
-			this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
-			// 
-			// splitContainer5.Panel1
-			// 
-			this.splitContainer5.Panel1.Controls.Add(this.label5);
-			this.splitContainer5.Panel1.Controls.Add(this.docFileText);
-			this.splitContainer5.Panel1.Controls.Add(this.docFileSelector);
-			// 
-			// splitContainer5.Panel2
-			// 
-			this.splitContainer5.Panel2.Controls.Add(this.docFileHtml);
-			this.splitContainer5.Size = new System.Drawing.Size(239, 552);
-			this.splitContainer5.SplitterDistance = 265;
-			this.splitContainer5.TabIndex = 0;
 			// 
 			// label5
 			// 
@@ -329,9 +183,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.docFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.docFileText.Location = new System.Drawing.Point(6, 46);
+			this.docFileText.Location = new System.Drawing.Point(3, 46);
 			this.docFileText.Name = "docFileText";
-			this.docFileText.Size = new System.Drawing.Size(230, 216);
+			this.docFileText.Size = new System.Drawing.Size(279, 503);
 			this.docFileText.TabIndex = 14;
 			this.docFileText.Text = "";
 			this.docFileText.WordWrap = false;
@@ -342,15 +196,32 @@
 			this.docFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.docFileSelector.FormattingEnabled = true;
-			this.docFileSelector.Location = new System.Drawing.Point(6, 19);
+			this.docFileSelector.Location = new System.Drawing.Point(3, 19);
 			this.docFileSelector.Name = "docFileSelector";
-			this.docFileSelector.Size = new System.Drawing.Size(230, 21);
+			this.docFileSelector.Size = new System.Drawing.Size(279, 21);
 			this.docFileSelector.TabIndex = 13;
 			this.docFileSelector.SelectedIndexChanged += new System.EventHandler(this.docFileSelector_SelectedIndexChanged);
 			// 
+			// docFileHtml
+			// 
+			this.docFileHtml.AllowNavigation = false;
+			this.docFileHtml.AllowWebBrowserDrop = false;
+			this.docFileHtml.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.docFileHtml.IsWebBrowserContextMenuEnabled = false;
+			this.docFileHtml.Location = new System.Drawing.Point(6, 3);
+			this.docFileHtml.MinimumSize = new System.Drawing.Size(20, 20);
+			this.docFileHtml.Name = "docFileHtml";
+			this.docFileHtml.ScriptErrorsSuppressed = true;
+			this.docFileHtml.ScrollBarsEnabled = false;
+			this.docFileHtml.Size = new System.Drawing.Size(266, 546);
+			this.docFileHtml.TabIndex = 0;
+			// 
 			// next
 			// 
-			this.next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.next.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.next.Location = new System.Drawing.Point(632, 574);
 			this.next.Name = "next";
 			this.next.Size = new System.Drawing.Size(577, 23);
@@ -370,21 +241,24 @@
 			this.prev.UseVisualStyleBackColor = true;
 			this.prev.Click += new System.EventHandler(this.prev_Click);
 			// 
-			// docFileHtml
+			// splitContainer5
 			// 
-			this.docFileHtml.AllowNavigation = false;
-			this.docFileHtml.AllowWebBrowserDrop = false;
-			this.docFileHtml.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.docFileHtml.IsWebBrowserContextMenuEnabled = false;
-			this.docFileHtml.Location = new System.Drawing.Point(6, 3);
-			this.docFileHtml.MinimumSize = new System.Drawing.Size(20, 20);
-			this.docFileHtml.Name = "docFileHtml";
-			this.docFileHtml.ScriptErrorsSuppressed = true;
-			this.docFileHtml.ScrollBarsEnabled = false;
-			this.docFileHtml.Size = new System.Drawing.Size(230, 277);
-			this.docFileHtml.TabIndex = 0;
+			this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer5.Name = "splitContainer5";
+			// 
+			// splitContainer5.Panel1
+			// 
+			this.splitContainer5.Panel1.Controls.Add(this.label5);
+			this.splitContainer5.Panel1.Controls.Add(this.docFileText);
+			this.splitContainer5.Panel1.Controls.Add(this.docFileSelector);
+			// 
+			// splitContainer5.Panel2
+			// 
+			this.splitContainer5.Panel2.Controls.Add(this.docFileHtml);
+			this.splitContainer5.Size = new System.Drawing.Size(564, 552);
+			this.splitContainer5.SplitterDistance = 285;
+			this.splitContainer5.TabIndex = 1;
 			// 
 			// MainForm
 			// 
@@ -407,16 +281,6 @@
 			this.splitContainer2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
-			this.splitContainer3.Panel1.ResumeLayout(false);
-			this.splitContainer3.Panel1.PerformLayout();
-			this.splitContainer3.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-			this.splitContainer3.ResumeLayout(false);
-			this.splitContainer4.Panel1.ResumeLayout(false);
-			this.splitContainer4.Panel1.PerformLayout();
-			this.splitContainer4.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-			this.splitContainer4.ResumeLayout(false);
 			this.splitContainer5.Panel1.ResumeLayout(false);
 			this.splitContainer5.Panel1.PerformLayout();
 			this.splitContainer5.Panel2.ResumeLayout(false);
@@ -428,19 +292,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox oldHaxeFileSelector;
-        private System.Windows.Forms.RichTextBox oldHaxeFileText;
-        private System.Windows.Forms.RichTextBox newHaxeFileText;
-        private System.Windows.Forms.ComboBox newHaxeFileSelector;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.SplitContainer splitContainer3;
+		private System.Windows.Forms.SplitContainer splitContainer1;
+		private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox typeScriptText;
-        private System.Windows.Forms.ComboBox typeScriptSelector;
-        private System.Windows.Forms.SplitContainer splitContainer4;
+		private System.Windows.Forms.ComboBox typeScriptSelector;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox javaScriptFileText;
         private System.Windows.Forms.ComboBox javaScriptFileSelector;
@@ -449,8 +305,8 @@
 		private System.Windows.Forms.ComboBox docFileSelector;
 		private System.Windows.Forms.Button next;
 		private System.Windows.Forms.Button prev;
-		private System.Windows.Forms.SplitContainer splitContainer5;
 		private System.Windows.Forms.WebBrowser docFileHtml;
+		private System.Windows.Forms.SplitContainer splitContainer5;
     }
 }
 

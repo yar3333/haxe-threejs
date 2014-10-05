@@ -10,8 +10,6 @@ namespace ThreejsDocumentator
 {
     public partial class MainForm : Form
     {
-		string oldHaxeDir     = @"..\..\..\manual-old\js\three";
-		string newHaxeDir     = @"..\..\..\library\js\three";
 		string typeScriptFile = @"..\..\..\native\threejs\three.d.ts";
 		string javaScriptDir  = @"..\..\..\original\src";
 		string docDir         = @"..\..\..\original\docs";
@@ -23,23 +21,9 @@ namespace ThreejsDocumentator
 
         void MainForm_Load(object sender, EventArgs e)
         {
-			oldHaxeDir = Path.GetFullPath(oldHaxeDir);
-			newHaxeDir = Path.GetFullPath(newHaxeDir);
 			typeScriptFile = Path.GetFullPath(typeScriptFile);
 			javaScriptDir = Path.GetFullPath(javaScriptDir);
 			docDir = Path.GetFullPath(docDir);
-
-            oldHaxeFileSelector.Items.Add(new Item(""));
-            foreach (var file in Directory.GetFiles(oldHaxeDir, "*.hx"))
-            {
-                oldHaxeFileSelector.Items.Add(new Item((file)));
-            }
-
-            newHaxeFileSelector.Items.Add(new Item(""));
-            foreach (var file in Directory.GetFiles(newHaxeDir, "*.hx"))
-            {
-                newHaxeFileSelector.Items.Add(new Item(file));
-            }
 
             typeScriptText.Text = File.ReadAllText(typeScriptFile);
             var reTsItems = new Regex(@"(?:class|interface|enum)\s+([a-z_][a-z0-9_]*)", RegexOptions.IgnoreCase);
@@ -73,15 +57,11 @@ namespace ThreejsDocumentator
 
         void switchTo(string s)
         {
-			switchComplex(s, oldHaxeFileSelector, oldHaxeFileText);
-			switchComplex(s, newHaxeFileSelector, newHaxeFileText);
 			switchComplex(s, javaScriptFileSelector, javaScriptFileText);
 			switchComplex(s, docFileSelector, docFileText);
 			
-            highlightString(oldHaxeFileText, "Int");
-
 			selectByText(s, typeScriptSelector);
-			var reTsItem = new Regex(@"(?:class|interface|enum)\s+" + s, RegexOptions.None);
+			var reTsItem = new Regex(@"(?:class|interface|enum)\s+" + s + "\\b", RegexOptions.None);
 			var m = reTsItem.Match(typeScriptText.Text);
 			if (m.Success)
 			{
@@ -92,7 +72,6 @@ namespace ThreejsDocumentator
 			if (s != "")
 			{
 				docFileHtml.Show();
-				//var uri = "http://threejs/" + ((Item)docFileSelector.SelectedItem).path.Substring(docDir.Length + 1).Replace("\\", "/");
 				var uri = ((Item)docFileSelector.SelectedItem).path;
 				Debug.WriteLine("uri = " + uri);
 				docFileHtml.Url = new Uri(uri);
@@ -164,27 +143,14 @@ namespace ThreejsDocumentator
 
 		void fixTabs()
 		{
-            var charWidth = TextRenderer.MeasureText(" ", oldHaxeFileText.Font).Width / 2;
+            var charWidth = TextRenderer.MeasureText(" ", typeScriptText.Font).Width / 2;
             var tabs = new List<int>();
             for (var i = 1; i <= 10; i++) tabs.Add(i * charWidth * 4);
 			
-			oldHaxeFileText.SelectionTabs = tabs.ToArray();
-			newHaxeFileText.SelectionTabs = tabs.ToArray();
 			typeScriptText.SelectionTabs = tabs.ToArray();
 			javaScriptFileText.SelectionTabs = tabs.ToArray();
 			docFileText.SelectionTabs = tabs.ToArray();
 		}
-
-
-        void oldHaxeFileSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-			switchTo(oldHaxeFileSelector.SelectedItem.ToString());
-        }
-
-        private void newHaxeFileSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-			switchTo((string)newHaxeFileSelector.SelectedItem.ToString());
-        }
 
         private void typeScriptSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -214,8 +180,6 @@ namespace ThreejsDocumentator
 		private void prev_Click(object sender, EventArgs e)
 		{
 			var values = new List<String>();
-			if (oldHaxeFileSelector.SelectedIndex		> 0) values.Add(oldHaxeFileSelector.Items[oldHaxeFileSelector.SelectedIndex - 1].ToString());
-			if (newHaxeFileSelector.SelectedIndex		> 0) values.Add(newHaxeFileSelector.Items[newHaxeFileSelector.SelectedIndex - 1].ToString());
 			if (typeScriptSelector.SelectedIndex		> 0) values.Add(typeScriptSelector.Items[typeScriptSelector.SelectedIndex - 1].ToString());
 			if (javaScriptFileSelector.SelectedIndex	> 0) values.Add(javaScriptFileSelector.Items[javaScriptFileSelector.SelectedIndex - 1].ToString());
 			if (docFileSelector.SelectedIndex			> 0) values.Add(docFileSelector.Items[docFileSelector.SelectedIndex - 1].ToString());
@@ -226,8 +190,6 @@ namespace ThreejsDocumentator
 		private void next_Click(object sender, EventArgs e)
 		{
 			var values = new List<String>();
-			if (oldHaxeFileSelector.SelectedIndex		< oldHaxeFileSelector.Items.Count-1)		values.Add(oldHaxeFileSelector.Items[oldHaxeFileSelector.SelectedIndex + 1].ToString());
-			if (newHaxeFileSelector.SelectedIndex		< newHaxeFileSelector.Items.Count - 1)		values.Add(newHaxeFileSelector.Items[newHaxeFileSelector.SelectedIndex + 1].ToString());
 			if (typeScriptSelector.SelectedIndex		< typeScriptSelector.Items.Count - 1)		values.Add(typeScriptSelector.Items[typeScriptSelector.SelectedIndex + 1].ToString());
 			if (javaScriptFileSelector.SelectedIndex	< javaScriptFileSelector.Items.Count - 1)	values.Add(javaScriptFileSelector.Items[javaScriptFileSelector.SelectedIndex + 1].ToString());
 			if (docFileSelector.SelectedIndex			< docFileSelector.Items.Count - 1)			values.Add(docFileSelector.Items[docFileSelector.SelectedIndex + 1].ToString());
