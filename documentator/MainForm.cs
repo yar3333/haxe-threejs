@@ -10,11 +10,11 @@ namespace ThreejsDocumentator
 {
     public partial class MainForm : Form
     {
-        string oldHaxeDir     = @"d:\MyProg\_haxelibs\threejs\manual-old\js\three";
-        string newHaxeDir     = @"d:\MyProg\_haxelibs\threejs\library\js\three";
-        string typeScriptFile = @"d:\MyProg\_haxelibs\threejs\native\threejs\three.d.ts";
-		string javaScriptDir  = @"d:\MyProg\_haxelibs\threejs\original\src";
-		string docDir         = @"d:\MyProg\_haxelibs\threejs\original\docs";
+		string oldHaxeDir     = @"..\..\..\manual-old\js\three";
+		string newHaxeDir     = @"..\..\..\library\js\three";
+		string typeScriptFile = @"..\..\..\native\threejs\three.d.ts";
+		string javaScriptDir  = @"..\..\..\original\src";
+		string docDir         = @"..\..\..\original\docs";
         
         public MainForm()
         {
@@ -23,6 +23,12 @@ namespace ThreejsDocumentator
 
         void MainForm_Load(object sender, EventArgs e)
         {
+			oldHaxeDir = Path.GetFullPath(oldHaxeDir);
+			newHaxeDir = Path.GetFullPath(newHaxeDir);
+			typeScriptFile = Path.GetFullPath(typeScriptFile);
+			javaScriptDir = Path.GetFullPath(javaScriptDir);
+			docDir = Path.GetFullPath(docDir);
+
             oldHaxeFileSelector.Items.Add(new Item(""));
             foreach (var file in Directory.GetFiles(oldHaxeDir, "*.hx"))
             {
