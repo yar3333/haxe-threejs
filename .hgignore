@@ -7,5 +7,6 @@ library/examples.zip
 library/library.zip
 *.pdb
 *.suo
+raw
 syntax: regexp
 ^bin
