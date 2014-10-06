@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.label3 = new System.Windows.Forms.Label();
 			this.typeScriptText = new System.Windows.Forms.RichTextBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.typeScriptSelector = new System.Windows.Forms.ComboBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this.javaScriptFileText = new System.Windows.Forms.RichTextBox();
+			this.label4 = new System.Windows.Forms.Label();
 			this.javaScriptFileSelector = new System.Windows.Forms.ComboBox();
+			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			this.label5 = new System.Windows.Forms.Label();
 			this.docFileText = new System.Windows.Forms.RichTextBox();
 			this.docFileSelector = new System.Windows.Forms.ComboBox();
 			this.docFileHtml = new System.Windows.Forms.WebBrowser();
 			this.next = new System.Windows.Forms.Button();
 			this.prev = new System.Windows.Forms.Button();
-			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -67,9 +67,9 @@
 			// 
 			// splitContainer1.Panel1
 			// 
-			this.splitContainer1.Panel1.Controls.Add(this.typeScriptText);
-			this.splitContainer1.Panel1.Controls.Add(this.label3);
-			this.splitContainer1.Panel1.Controls.Add(this.typeScriptSelector);
+			this.splitContainer1.Panel1.Controls.Add(this.label4);
+			this.splitContainer1.Panel1.Controls.Add(this.javaScriptFileText);
+			this.splitContainer1.Panel1.Controls.Add(this.javaScriptFileSelector);
 			// 
 			// splitContainer1.Panel2
 			// 
@@ -77,34 +77,6 @@
 			this.splitContainer1.Size = new System.Drawing.Size(1197, 552);
 			this.splitContainer1.SplitterDistance = 309;
 			this.splitContainer1.TabIndex = 8;
-			// 
-			// splitContainer2
-			// 
-			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer2.Name = "splitContainer2";
-			// 
-			// splitContainer2.Panel1
-			// 
-			this.splitContainer2.Panel1.Controls.Add(this.javaScriptFileText);
-			this.splitContainer2.Panel1.Controls.Add(this.label4);
-			this.splitContainer2.Panel1.Controls.Add(this.javaScriptFileSelector);
-			// 
-			// splitContainer2.Panel2
-			// 
-			this.splitContainer2.Panel2.Controls.Add(this.splitContainer5);
-			this.splitContainer2.Size = new System.Drawing.Size(884, 552);
-			this.splitContainer2.SplitterDistance = 316;
-			this.splitContainer2.TabIndex = 0;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 3);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 13);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "TypeScript";
 			// 
 			// typeScriptText
 			// 
@@ -115,11 +87,20 @@
 			this.typeScriptText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.typeScriptText.Location = new System.Drawing.Point(3, 46);
 			this.typeScriptText.Name = "typeScriptText";
-			this.typeScriptText.Size = new System.Drawing.Size(303, 503);
+			this.typeScriptText.Size = new System.Drawing.Size(310, 503);
 			this.typeScriptText.TabIndex = 11;
 			this.typeScriptText.Text = "";
 			this.typeScriptText.WordWrap = false;
 			this.typeScriptText.Leave += new System.EventHandler(this.typeScriptText_Leave);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(3, 3);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 13);
+			this.label3.TabIndex = 9;
+			this.label3.Text = "TypeScript";
 			// 
 			// typeScriptSelector
 			// 
@@ -128,9 +109,43 @@
 			this.typeScriptSelector.FormattingEnabled = true;
 			this.typeScriptSelector.Location = new System.Drawing.Point(3, 19);
 			this.typeScriptSelector.Name = "typeScriptSelector";
-			this.typeScriptSelector.Size = new System.Drawing.Size(303, 21);
+			this.typeScriptSelector.Size = new System.Drawing.Size(310, 21);
 			this.typeScriptSelector.TabIndex = 10;
 			this.typeScriptSelector.SelectedIndexChanged += new System.EventHandler(this.typeScriptSelector_SelectedIndexChanged);
+			// 
+			// splitContainer2
+			// 
+			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer2.Name = "splitContainer2";
+			// 
+			// splitContainer2.Panel1
+			// 
+			this.splitContainer2.Panel1.Controls.Add(this.label3);
+			this.splitContainer2.Panel1.Controls.Add(this.typeScriptText);
+			this.splitContainer2.Panel1.Controls.Add(this.typeScriptSelector);
+			// 
+			// splitContainer2.Panel2
+			// 
+			this.splitContainer2.Panel2.Controls.Add(this.splitContainer5);
+			this.splitContainer2.Size = new System.Drawing.Size(884, 552);
+			this.splitContainer2.SplitterDistance = 316;
+			this.splitContainer2.TabIndex = 0;
+			// 
+			// javaScriptFileText
+			// 
+			this.javaScriptFileText.AcceptsTab = true;
+			this.javaScriptFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.javaScriptFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.javaScriptFileText.Location = new System.Drawing.Point(0, 46);
+			this.javaScriptFileText.Name = "javaScriptFileText";
+			this.javaScriptFileText.ReadOnly = true;
+			this.javaScriptFileText.Size = new System.Drawing.Size(306, 503);
+			this.javaScriptFileText.TabIndex = 11;
+			this.javaScriptFileText.Text = "";
+			this.javaScriptFileText.WordWrap = false;
 			// 
 			// label4
 			// 
@@ -141,31 +156,35 @@
 			this.label4.TabIndex = 9;
 			this.label4.Text = "JavaScript file";
 			// 
-			// javaScriptFileText
-			// 
-			this.javaScriptFileText.AcceptsTab = true;
-			this.javaScriptFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.javaScriptFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.javaScriptFileText.Location = new System.Drawing.Point(-1, 46);
-			this.javaScriptFileText.Name = "javaScriptFileText";
-			this.javaScriptFileText.ReadOnly = true;
-			this.javaScriptFileText.Size = new System.Drawing.Size(314, 503);
-			this.javaScriptFileText.TabIndex = 11;
-			this.javaScriptFileText.Text = "";
-			this.javaScriptFileText.WordWrap = false;
-			// 
 			// javaScriptFileSelector
 			// 
 			this.javaScriptFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.javaScriptFileSelector.FormattingEnabled = true;
-			this.javaScriptFileSelector.Location = new System.Drawing.Point(3, 19);
+			this.javaScriptFileSelector.Location = new System.Drawing.Point(0, 19);
 			this.javaScriptFileSelector.Name = "javaScriptFileSelector";
-			this.javaScriptFileSelector.Size = new System.Drawing.Size(310, 21);
+			this.javaScriptFileSelector.Size = new System.Drawing.Size(306, 21);
 			this.javaScriptFileSelector.TabIndex = 10;
 			this.javaScriptFileSelector.SelectedIndexChanged += new System.EventHandler(this.javaScriptFileSelector_SelectedIndexChanged);
+			// 
+			// splitContainer5
+			// 
+			this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+			this.splitContainer5.Name = "splitContainer5";
+			// 
+			// splitContainer5.Panel1
+			// 
+			this.splitContainer5.Panel1.Controls.Add(this.label5);
+			this.splitContainer5.Panel1.Controls.Add(this.docFileText);
+			this.splitContainer5.Panel1.Controls.Add(this.docFileSelector);
+			// 
+			// splitContainer5.Panel2
+			// 
+			this.splitContainer5.Panel2.Controls.Add(this.docFileHtml);
+			this.splitContainer5.Size = new System.Drawing.Size(564, 552);
+			this.splitContainer5.SplitterDistance = 285;
+			this.splitContainer5.TabIndex = 1;
 			// 
 			// label5
 			// 
@@ -204,7 +223,6 @@
 			// 
 			// docFileHtml
 			// 
-			this.docFileHtml.AllowNavigation = false;
 			this.docFileHtml.AllowWebBrowserDrop = false;
 			this.docFileHtml.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -240,25 +258,6 @@
 			this.prev.Text = "<-----";
 			this.prev.UseVisualStyleBackColor = true;
 			this.prev.Click += new System.EventHandler(this.prev_Click);
-			// 
-			// splitContainer5
-			// 
-			this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer5.Name = "splitContainer5";
-			// 
-			// splitContainer5.Panel1
-			// 
-			this.splitContainer5.Panel1.Controls.Add(this.label5);
-			this.splitContainer5.Panel1.Controls.Add(this.docFileText);
-			this.splitContainer5.Panel1.Controls.Add(this.docFileSelector);
-			// 
-			// splitContainer5.Panel2
-			// 
-			this.splitContainer5.Panel2.Controls.Add(this.docFileHtml);
-			this.splitContainer5.Size = new System.Drawing.Size(564, 552);
-			this.splitContainer5.SplitterDistance = 285;
-			this.splitContainer5.TabIndex = 1;
 			// 
 			// MainForm
 			// 

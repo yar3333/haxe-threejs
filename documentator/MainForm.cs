@@ -71,10 +71,16 @@ namespace ThreejsDocumentator
 
 			if (s != "")
 			{
-				docFileHtml.Show();
 				var uri = ((Item)docFileSelector.SelectedItem).path;
-				Debug.WriteLine("uri = " + uri);
-				docFileHtml.Url = new Uri(uri);
+				if (uri != "")
+				{
+					docFileHtml.Url = new Uri(uri);
+					docFileHtml.Show();
+				}
+				else
+				{
+					docFileHtml.Hide();
+				}
 			}
 			else
 			{
