@@ -10,9 +10,9 @@ namespace ThreejsDocumentator
 {
     public partial class MainForm : Form
     {
-		string typeScriptFile = @"..\..\..\native\threejs\three.d.ts";
-		string javaScriptDir  = @"..\..\..\original\src";
-		string docDir         = @"..\..\..\original\docs";
+		string typeScriptFile = @"..\..\..\native-ts\threejs\three.d.ts";
+		string javaScriptDir  = @"..\..\..\native-js\src";
+		string docDir         = @"..\..\..\native-js\docs";
         
         public MainForm()
         {

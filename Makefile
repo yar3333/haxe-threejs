@@ -8,21 +8,21 @@ library/js: raw
 	haxelib run refactor override library
 	cp -r manual/* library
 
-raw: native
-	haxelib run refactor convert --exclude-string-literals native *.ts raw \\[.]ts$$\\.hx\\ ts_to_haxe.rules
+raw: native-ts
+	haxelib run refactor convert --exclude-string-literals native-ts *.ts raw \\[.]ts$$\\.hx\\ ts_to_haxe.rules
 	haxelib run refactor convert --exclude-string-literals --exclude-comments raw *.hx raw /// beauty_haxe.rules
 
-native:
-	git init native
-	cd native && \
-	git remote add origin https://github.com/borisyankov/DefinitelyTyped.git && \
+native-ts:
+	git init native-ts
+	cd native-ts && \
+	git remote add origin https://github.com/yar3333/DefinitelyTyped.git && \
 	git config core.sparsecheckout true && \
 	echo threejs/three.d.ts>> .git/info/sparse-checkout && \
 	git pull origin master
 
 clean:
 	rm -rf raw
-	rm -rf native
+	rm -rf native-ts
 	
 rebuild: prepare-rebuild library
 	

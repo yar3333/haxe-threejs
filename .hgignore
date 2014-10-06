@@ -1,10 +1,10 @@
 syntax: glob
-library/library.zip
+documentator/obj
+native-js
+native-ts
 test/test.n
 library/examples.zip
-original
-documentator/obj
-native
+library/library.zip
 *.pdb
 *.suo
 syntax: regexp
