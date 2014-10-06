@@ -72,6 +72,10 @@ FUNC_PREFIX	setAnimationLabel	FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
 // special fixes
 
 /static function slerp\(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float\) : Quaternion;/static inline function slerp_(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float) : Quaternion return untyped js.three.Quaternion.slerp(qa, qb, qm, t);/
+/static function normal\(a:Vector3, b:Vector3, c:Vector3, \?optionalTarget:Vector3\) : Vector3;/static inline function normal_(a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3 return untyped js.three.Triangle.normal(a, b, c, optionalTarget);/
+/static function barycoordFromPoint\(point:Vector3, a:Vector3, b:Vector3, c:Vector3, optionalTarget:Vector3\) : Vector3;/static inline function barycoordFromPoint_(point:Vector3, a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3 return untyped js.three.Triangle.barycoordFromPoint(a, b, c, optionalTarget);/
+/static function containsPoint\(point:Vector3, a:Vector3, b:Vector3, c:Vector3\) : Bool;/static inline function containsPoint_(point:Vector3, a:Vector3, b:Vector3, c:Vector3) : Bool return untyped js.three.Triangle.containsPoint(a, b, c);/
+
 /var dynamic : Bool;/inline function dynamicGet() : Bool return untyped this["dynamic"];/
 ~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceTo(v:Vector) : Float;\n}~s
 ~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceToSquared(v:Vector) : Float;\n}~s
@@ -85,3 +89,5 @@ FUNC_PREFIX	setAnimationLabel	FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
 
 /@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s+extends\s+(ID)\s*\{/typedef $1 =\n{\n\t>$2,\n/s
 /@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s*\{/typedef $1 =\n{/s
+
+

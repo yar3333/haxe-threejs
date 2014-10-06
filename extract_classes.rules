@@ -3,4 +3,4 @@ MLCOMMENT = \/\*(?:[^*]|(?:\*+(?:[^*\/])))*\*+\/
 SLCOMMENT = \/\/[^\n]*
 COMMENTS = [ \t]*(?:MLCOMMENT|SLCOMMENT)(?:[ \t]*\n[ \t]*(?:MLCOMMENT|SLCOMMENT))*
 
-/(?:COMMENTS\n)?[ \t]*(?:extern\s*)(?:class|interface|enum)[ \t]*(ID)[ \t\n]*[^{]*{/$1.hx/s
+/(?:COMMENTS\n)?^[ \t]*(?:extern\s+)?(?:class|interface|enum)\b[ \t]*(ID)[ \t\n]*[^{]*{/$1.hx/m
