@@ -1,0 +1,8 @@
+ID = [_a-zA-Z][_a-zA-Z0-9]*
+MLCOMMENT = \/\*(?:[^*]|(?:\*+(?:[^*\/])))*\*+\/
+SLCOMMENT = \/\/[^\n]*
+COMMENTS = [ \t]*(?:MLCOMMENT|SLCOMMENT)(?:[ \t]*\n[ \t]*(?:MLCOMMENT|SLCOMMENT))*
+
+/\bexport\s+(?:var\s+)?(ID)\s*:\s*\{/@:native("THREE.$1")\nclass $1\n{/
+/(\n[ \t]*)(ID)\s*:\s*(ID),[ \t]*/$1static var $2 : $3;/
+/(\n[ \t]*)function\b/$1static function/

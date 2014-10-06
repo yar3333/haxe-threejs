@@ -1,7 +1,8 @@
 library: library/js
 
 library/js: raw
-	haxelib run refactor extract raw *.hx library/js split_haxe.rules
+	haxelib run refactor extract raw *.hx library/js extract_classes.rules
+	haxelib run refactor extract raw *.hx library/js extract_vars.rules postprocess_vars.rules
 	haxelib run refactor reindent library/js *.hx 4 4 4 4 -4
 	haxelib run refactor convert library/js *.hx library/js /// postprocess.rules
 	mv library/js/threejs library/js/three
@@ -23,9 +24,9 @@ native-ts:
 clean:
 	rm -rf raw
 	rm -rf native-ts
-	
+
 rebuild: prepare-rebuild library
-	
+
 prepare-rebuild:
 	rm -rf raw
 	rm -rf library/js

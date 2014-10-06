@@ -1,122 +1,87 @@
+/////////////////////////////////// YOU CAN EDIT THIS ///////////////////////////////////
+
+VARS_INT = hex|color|index|interpoltionType|id|vertices|faces
+VARS_INT = VARS_INT|segments|curveSegments|radialSegments|heightSegments|radiusSegments
+VARS_INT = VARS_INT|format|type|wrapS|wrapT|magFilter|minFilter|anisotropy
+VARS_INT = VARS_INT|divisions|count|vi1|vi2|n|loaded|total
+VARS_INT = VARS_INT|shadowCascadeWidth|shadowCascadeHeight
+
+VARS_INT_ENDS = Count|Index|Type|Hex|Indices
+
+METHODS_RETURN_INT = getMaxAnisotropy|getHex
+
+THREE_ENUMS = CullFace|FrontFaceDirection|ShadowMapType|Side|Shading|Colors|LineType
+THREE_ENUMS = THREE_ENUMS|Blending|BlendingEquation|BlendingDstFactor|BlendingSrcFactor
+THREE_ENUMS = THREE_ENUMS|Combine|Wrapping|TextureFilter|TextureDataType
+THREE_ENUMS = THREE_ENUMS|PixelType|PixelFormat|CompressedPixelFormat
+
+TYPEDEFS = [_a-zA-Z][_a-zA-Z0-9]*Parameters
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 ID = \b[_a-zA-Z][_a-zA-Z0-9]*\b
 TYPE = (?:(?:ID|\{[^}]*\})(?:\[\])*\s*)
 TYPE_COMPLEX = (?:TYPE|\(ID\s[:]\s*TYPE(?:,\s*ID\s[:]\s*TYPE)\)\s*=>\s*TYPE)
 
+CLASS_PREFIX = /(\bclass\s+
+CLASS_TO_VAR = .+\b
+VAR_TO_FLOAT = \s*[:]\s*)Float/$1Int/sr
 
-/////////////////////////////////
+FUNC_PREFIX = /((?:function\s+
+FUNC_TO_VAR = \s*\([^)]*\b)
+FUNC_VAR_TO_FLOAT = \s*:\s*)Float/$1Int/
+
 // fix overloads
 //    1                2         3                           4                     5            6
 /\n([ \t]*)function\s+(ID)\s*\((.*?)\n\s*function\s+\2\s*\(([^)]*)\)\s*[:]\s*(TYPE_COMPLEX)\s*;(.*)$/\n$1@:overload(function($4):$5{})\n$1function $2($3$6/sr
 
-
-/////////////////////////////////
 // package & native
-
 /^/package js.three;\n\nimport js.html.*;\n\n
 /(extern\s+(?:class|interface|enum)\s+)(ID)/@:native("THREE.$2")\n$1$2
 
-
-/////////////////////////////////
-// vars
-
-/((?:\b)hex\s*:\s*)Float\b/$1Int/
-/((?:\b)color\s*:\s*)Float\b/$1Int/
-/((?:\b)index\s*:\s*)Float\b/$1Int/
-/((?:\b)interpoltionType\s*:\s*)Float\b/$1Int/
-/((?:\b)id\s*:\s*)Float\b/$1Int/
-/((?:\b)vertices\s*:\s*)Float\b/$1Int/
-/((?:\b)faces\s*:\s*)Float\b/$1Int/
-/((?:\b)segments\s*:\s*)Float\b/$1Int/
-/((?:\b)curveSegments\s*:\s*)Float\b/$1Int/
-/((?:\b)radialSegments\s*:\s*)Float\b/$1Int/
-/((?:\b)heightSegments\s*:\s*)Float\b/$1Int/
-/((?:\b)radiusSegments\s*:\s*)Float\b/$1Int/
-/((?:\b)format\s*:\s*)Float\b/$1Int/
-/((?:\b)type\s*:\s*)Float\b/$1Int/
-/((?:\b)wrapS\s*:\s*)Float\b/$1Int/
-/((?:\b)wrapT\s*:\s*)Float\b/$1Int/
-/((?:\b)magFilter\s*:\s*)Float\b/$1Int/
-/((?:\b)minFilter\s*:\s*)Float\b/$1Int/
-/((?:\b)anisotropy\s*:\s*)Float\b/$1Int/
-/((?:\b)divisions\s*:\s*)Float\b/$1Int/
-/((?:\b)count\s*:\s*)Float\b/$1Int/
-/((?:\b)vi1\s*:\s*)Float\b/$1Int/
-/((?:\b)vi2\s*:\s*)Float\b/$1Int/
-/((?:\b)n\s*:\s*)Float\b/$1Int/
-/((?:\b)loaded\s*:\s*)Float\b/$1Int/
-/((?:\b)total\s*:\s*)Float\b/$1Int/
-/(Count\s*:\s*)Float\b/$1Int/
-/(Index\s*:\s*)Float\b/$1Int/
-/(Type\s*:\s*)Float\b/$1Int/
-/(Hex\s*:\s*)Float\b/$1Int/
-
-///(class\s+AreaLight\b.+\bvar\s+height\s*:\s*Float)/$1Int/
-/(class\s+CanvasRenderer\b.+\b)function setSize\(width:Float, height:Float, \?updateStyle:Bool\) : Void;/$1function setSize(width:Int, height:Int, ?updateStyle:Bool)/
-/(class CompressedTexture\b.+\bfunction new\([^)]+\bwidth: )Float/$1Int/s
-/(class CompressedTexture\b.+\bfunction new\([^)]+\bheight: )Float/$1Int/s
-/(class DataTexture\b.+\bfunction new\([^)]+\bwidth: )Float/$1Int/s
-/(class DataTexture.+\bfunction new\([^)]+\bheight: )Float/$1Int/s
-/(class Face3\b.+\ba\s*[:]\s*)Float/$1Int/sr
-/(class Face3\b.+\bb\s*[:]\s*)Float/$1Int/sr
-/(class Face3\b.+\bc\s*[:]\s*)Float/$1Int/sr
-/(class Face3\b.+\bd\s*[:]\s*)Float/$1Int/sr
-/(class GridHelper\b.+\bsize\s*[:]\s*)Float/$1Int/sr
-/(class GridHelper\b.+\bstep\s*[:]\s*)Float/$1Int/sr
-/(class GridHelper\b.+\bcolorCenterLine\s*[:]\s*)Float/$1Int/sr
-/(class GridHelper\b.+\bcolorGrid\s*[:]\s*)Float/$1Int/sr
-/(class OctahedronGeometry\b.+\bdetail\s*[:]\s*)Float/$1Int/sr
-/(class ParametricGeometry\b.+\bslices\s*[:]\s*)Float/$1Int/sr
-/(class ParametricGeometry\b.+\bstacks\s*[:]\s*)Float/$1Int/sr
-/(class DirectionalLight\b.+\bshadowMapWidth\s*[:]\s*)Float/$1Int/sr
-/(class DirectionalLight\b.+\bshadowMapHeight\s*[:]\s*)Float/$1Int/sr
-/(class BufferGeometry\b.+\bstart\s*[:]\s*)Float/$1Int/sr
-/(class IcosahedronGeometry\b.+\bdetail\s*[:]\s*)Float/$1Int/sr
+// Float => Int
+/(\b(?:VARS_INT)\s*:\s*)Float\b/$1Int/
+/(\b(?:VARS_INT)\s*:\s*)Array<Float>/$1Array<Int>/
+/((?:VARS_INT_ENDS)\s*:\s*)Float\b/$1Int/
+/((?:VARS_INT_ENDS)\s*:\s*)Array<Float>/$1Array<Int>/
+/(function\s+(?:METHODS_RETURN_INT)\s*\(\)\s*:\s*)Float\b/$1Int/
 
 
-/////////////////////////////////
-// arrays
+/////////////////////////////////// YOU CAN EDIT THIS ///////////////////////////////////
 
-/(Width\s*:\s*)Array<Float>/$1Array<Int>/
-/(Height\s*:\s*)Array<Float>/$1Array<Int>/
-/(Indices\s*:\s*)Array<Float>/$1Array<Int>/
-/(shadowCascadeWidth\s*:\s*)Array<Float>/$1Array<Int>/
-/(shadowCascadeHeight\s*:\s*)Array<Float>/$1Array<Int>/
+// specified classes vars Float => Int
+CLASS_PREFIX	CanvasRenderer		CLASS_TO_VAR(?:width|height)VAR_TO_FLOAT
+CLASS_PREFIX	CompressedTexture	CLASS_TO_VAR(?:width|height)VAR_TO_FLOAT
+CLASS_PREFIX	DataTexture			CLASS_TO_VAR(?:width|height)VAR_TO_FLOAT
+CLASS_PREFIX	Face3				CLASS_TO_VAR(?:a|b|c|d)VAR_TO_FLOAT
+CLASS_PREFIX	GridHelper			CLASS_TO_VAR(?:size|step|colorCenterLine|colorGrid)VAR_TO_FLOAT
+CLASS_PREFIX	OctahedronGeometry	CLASS_TO_VAR(?:detail)VAR_TO_FLOAT
+CLASS_PREFIX	ParametricGeometry	CLASS_TO_VAR(?:slices|stacks)VAR_TO_FLOAT
+CLASS_PREFIX	DirectionalLight	CLASS_TO_VAR(?:shadowMapWidth|shadowMapHeight)VAR_TO_FLOAT
+CLASS_PREFIX	BufferGeometry		CLASS_TO_VAR(?:start)VAR_TO_FLOAT
+CLASS_PREFIX	IcosahedronGeometry	CLASS_TO_VAR(?:detail)VAR_TO_FLOAT
 
+// specified methods vars Float => Int
+FUNC_PREFIX	getNextKeyWith		FUNC_TO_VAR	(?:h|key)FUNC_VAR_TO_FLOAT
+FUNC_PREFIX	getPrevKeyWith		FUNC_TO_VAR	(?:h|key)FUNC_VAR_TO_FLOAT
+FUNC_PREFIX	createAnimation		FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
+FUNC_PREFIX	setFrameRange		FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
+FUNC_PREFIX	setAnimationLabel	FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
 
-/////////////////////////////////
-// functions return values
-
-/(function\s+getMaxAnisotropy\(\)\s*:\s*)Float\b/$1Int/
-/(function\s+getHex\(\)\s*:\s*)Float\b/$1Int/
-
-/////////////////////////////////
-// functions agrs
-
-/((?:function\s+getNextKeyWith\([^)]*\b)h:\s*)Float/$1Int/
-/((?:function\s+getNextKeyWith\([^)]*\b)key:\s*)Float/$1Int/
-/((?:function\s+getPrevKeyWith\([^)]*\b)h:\s*)Float/$1Int/
-/((?:function\s+getPrevKeyWith\([^)]*\b)key:\s*)Float/$1Int/
-/((?:function\s+createAnimation\([^)]*\b)start:\s*)Float/$1Int/
-/((?:function\s+createAnimation\([^)]*\b)end:\s*)Float/$1Int/
-/((?:function\s+setFrameRange\([^)]*\b)start:\s*)Float/$1Int/
-/((?:function\s+setFrameRange\([^)]*\b)end:\s*)Float/$1Int/
-/((?:function\s+setAnimationLabel\([^)]*\b)start:\s*)Float/$1Int/
-/((?:function\s+setAnimationLabel\([^)]*\b)end:\s*)Float/$1Int/
-
-
-/////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 // special fixes
 
 /static function slerp\(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float\) : Quaternion;/static inline function slerp_(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float) : Quaternion return untyped js.three.Quaternion.slerp(qa, qb, qm, t);/
 /var dynamic : Bool;/inline function dynamicGet() : Bool return untyped this["dynamic"];/
-
 ~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceTo(v:Vector) : Float;\n}~s
 ~(class Vector4\s+.*)\}\s*$~$1\n\t/**\n\t * Unsupported.\n\t */\n\tfunction distanceToSquared(v:Vector) : Float;\n}~s
-
 /\binterface( JSonLoaderResultGeometry\b)/class$1/
 
-
-/////////////////////////////////
 // "[name:String] : T" => "implements Dynamic<T>"
 //             1              2                                             3
 /((?:interface|class)\s+ID)(\s*\{\s*)\[name\s*:\s*(?:String|Int)\]\s*:\s*(TYPE)\s*;\s*/$1 implements Dynamic<$3>$2/s
+
+/@[:]native\("THREE[.](?:THREE_ENUMS)"\)/@:native("THREE")
+
+/@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s+extends\s+(ID)\s*\{/typedef $1 =\n{\n\t>$2,\n/s
+/@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s*\{/typedef $1 =\n{/s
