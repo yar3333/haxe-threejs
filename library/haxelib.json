@@ -1,10 +1,10 @@
 {
     "name":"threejs",
-    "url":"https://github.com/labe-me/haxe-three.js",
+    "url":"https://bitbucket.org/yar3333/haxe-threejs",
     "license":"BSD",
-    "description":"Externs for three.js",
-    "version":"0.4.57",
-    "releasenote":"Updated to three.js r57 and haxe 3",
+    "description":"Externs for three.js. Automated conversion from typescript (https://github.com/borisyankov/DefinitelyTyped/blob/master/threejs/three.d.ts).",
+    "version":"68.0.0",
+    "releasenote":"Init. ",
     "tags":["js", "three","threejs"],
-    "contributors":[]
+    "contributors":["yar3333"]
 }
