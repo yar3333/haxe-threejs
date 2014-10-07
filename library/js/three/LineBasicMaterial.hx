@@ -1,13 +1,19 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.LineBasicMaterial")
 extern class LineBasicMaterial extends Material
 {
-	var color : Color; // new Color(0xffffff)
-	var linewidth : Float; // 1
-	var linecap : String; // 'round'
-	var linejoin : String; // 'round'
-	var vertexColors : Bool; // false
-	var fog : Bool; // true
-	function new(?parameters:Dynamic) : Void;
+	function new(?parameters:LineBasicMaterialParameters) : Void;
+
+	var color : Color;
+	var linewidth : Float;
+	var linecap : String;
+	var linejoin : String;
+	var vertexColors : Colors;
+	var fog : Bool;
+
+	@:overload(function():LineBasicMaterial{})
+	override function clone(?material:Material) : Material;
 }

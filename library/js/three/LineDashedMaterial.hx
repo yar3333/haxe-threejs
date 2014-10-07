@@ -1,14 +1,20 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.LineDashedMaterial")
 extern class LineDashedMaterial extends Material
 {
-	var color : Color; // new Color(0xffffff)
-	var linewidth : Float; // 1
-	var scale : Float; // 1
-	var dashSize : Float; // 3
-	var gapSize : Float; // 1
-	var vertexColors : Bool; // false
-	var fog : Bool; // true
-	function new(?parameters:Dynamic) : Void;
+	function new(?parameters:LineDashedMaterialParameters) : Void;
+
+	var color : Color;
+	var linewidth : Float;
+	var scale : Float;
+	var dashSize : Float;
+	var gapSize : Float;
+	var vertexColors : Colors;
+	var fog : Bool;
+
+	@:overload(function():LineDashedMaterial{})
+	override function clone(?material:Material) : Material;
 }

@@ -1,4 +1,8 @@
 package js.three;
 
-interface Mapping
-{}
+import js.html.*;
+
+// Mapping modes
+@:native("THREE.Mapping")
+extern enum Mapping
+{ }

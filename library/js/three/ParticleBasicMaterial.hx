@@ -1,13 +1,11 @@
 package js.three;
 
+import js.html.*;
+
+/**
+ * @deprecated
+ */
 @:native("THREE.ParticleBasicMaterial")
-extern class ParticleBasicMaterial extends Material
+extern class ParticleBasicMaterial extends PointCloudMaterial
 {
-	var color : Color; // new Color(0xffffff)
-	var map : Texture;
-	var size : Float; // 1
-	var sizeAttenuation : Bool; // true
-	var vertexColors : Bool; // NoColors
-	var fog : Bool; // true
-	function new(?parameters:Dynamic) : Void;
 }

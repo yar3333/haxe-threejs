@@ -1,30 +1,17 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.SpriteMaterial")
 extern class SpriteMaterial extends Material
 {
-	var color : Color; // new Color(0xffffff)
-	var map : Texture;
-	var useScreenCoordinates : Bool; // true
-	// var depthTest : Bool; // false
-	var sizeAttenuation : Bool; // false
-	var scaleByViewport : Bool; // false
-	var alignment : Vector2; // SpriteAlignment.center.clone()
-	var fog : Bool; // true
-	var uvOffset : Vector2; // (0,0)
-	var uvScale : Vector2; // (1,1)
-	function new(?parameters:Dynamic) : Void;
-}
+	function new(?parameters:SpriteMaterialParameters) : Void;
 
-class SpriteAlign
-{
-	static var topLeft = new Vector2(1, -1);
-	static var topCenter = new Vector2(0, -1);
-	static var topRight = new Vector2(-1, -1);
-	static var centerLeft = new Vector2(1, 0);
-	static var center = new Vector2(0, 0);
-	static var centerRight = new Vector2(-1, 0);
-	static var bottomLeft = new Vector2(1, 1);
-	static var bottomCenter = new Vector2(0, 1);
-	static var bottomRight = new Vector2(-1, 1);
+	var color : Color;
+	var map : Texture;
+	var rotation : Float;
+	var fog : Bool;
+
+	@:overload(function():SpriteMaterial{})
+	override function clone(?material:Material) : Material;
 }

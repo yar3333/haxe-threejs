@@ -1,7 +1,9 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.TetrahedronGeometry")
 extern class TetrahedronGeometry extends PolyhedronGeometry
 {
-	function new(radius:Float, ?detail:Int) : Void;
+	function new(?radius:Float, ?detail:Float) : Void;
 }

@@ -1,21 +1,28 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material
 {
-	var fragmentShader : String;
-	var vertexShader : String;
-	var uniforms : Dynamic;
+	function new(?parameters:ShaderMaterialParameters) : Void;
+
 	var defines : Dynamic;
+	var uniforms : Dynamic;
 	var attributes : Dynamic;
-	var shading : Int; // SmoothShading
-	var wireframe : Bool; // false
-	var wireframeLinewidth : Float; // 1
-	var fog : Bool; // false
-	var lights : Bool; // false
-	var vertexColors : Bool; // NoColors
-	var skinning : Bool; // false
-	var morphTargets : Bool; // false
-	var morphNormals : Bool; // false
-	function new(?parameters:Dynamic) : Void;
+	var vertexShader : String;
+	var fragmentShader : String;
+	var shading : Shading;
+	var linewidth : Float;
+	var wireframe : Bool;
+	var wireframeLinewidth : Float;
+	var fog : Bool;
+	var lights : Bool;
+	var vertexColors : Colors;
+	var skinning : Bool;
+	var morphTargets : Bool;
+	var morphNormals : Bool;
+
+	@:overload(function():ShaderMaterial{})
+	override function clone(?material:Material) : Material;
 }

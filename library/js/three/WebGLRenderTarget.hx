@@ -1,24 +1,35 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.WebGLRenderTarget")
-extern class WebGLRenderTarget extends EventDispatcher
+extern class WebGLRenderTarget implements RenderTarget
 {
-	var width : Int;
-	var height : Int;
-	var wrapS : Int; // ClampToEdgeWrapping
-	var wrapT : Int; // ClampToEdgeWrapping
-	var magFilter : Int; // LinearFilter
-	var minFilter : Int; // LinearMipMapLinearFilter
-	var anisotropy : Int; // 1
-	var offset : Vector2; // (0,0)
-	var repeat : Vector2; // (1,1)
-	var format : Int; // RGBAFormat
-	var type : Int; // UnsignedByteType
-	var depthBuffer : Bool; // true
-	var stencilBuffer : Bool; // true
-	var generateMipmaps : Bool; // true
-	var shareDepthFrom : Dynamic; // TODO: what is this?
-	function new(width:Float, height:Float, ?options:Dynamic) : Void;
+	function new(width:Float, height:Float, ?options:WebGLRenderTargetOptions) : Void;
+
+	var width : Float;
+	var height : Float;
+	var wrapS : Wrapping;
+	var wrapT : Wrapping;
+	var magFilter : TextureFilter;
+	var minFilter : TextureFilter;
+	var anisotropy : Float;
+	var offset : Vector2;
+	var repeat : Vector2;
+	var format : Float;
+	var type : Float;
+	var depthBuffer : Bool;
+	var stencilBuffer : Bool;
+	var generateMipmaps : Bool;
+	var shareDepthFrom : Dynamic;
+
 	function clone() : WebGLRenderTarget;
 	function dispose() : Void;
+
+
+	// EventDispatcher mixins
+	function addEventListener(type:String, listener:Dynamic->Void) : Void;
+	function hasEventListener(type:String, listener:Dynamic->Void) : Void;
+	function removeEventListener(type:String, listener:Dynamic->Void) : Void;
+	function dispatchEvent(event: { type: String, target:Dynamic }) : Void;
 }

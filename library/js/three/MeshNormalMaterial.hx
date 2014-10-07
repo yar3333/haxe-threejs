@@ -1,10 +1,17 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.MeshNormalMaterial")
 extern class MeshNormalMaterial extends Material
 {
-	var shading : Int; // FlatShading
-	var wireframe : Bool; // false
-	var wireframeLinewidth : Float; // 1
-	function new(?parameters:Dynamic) : Void;
+	function new(?parameters:MeshNormalMaterialParameters) : Void;
+
+	var shading : Shading;
+	var wireframe : Bool;
+	var wireframeLinewidth : Float;
+	var morphTargets : Bool;
+
+	@:overload(function():MeshNormalMaterial{})
+	override function clone(?material:Material) : Material;
 }

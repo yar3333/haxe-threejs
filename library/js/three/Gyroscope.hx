@@ -1,16 +1,19 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.Gyroscope")
 extern class Gyroscope extends Object3D
 {
 	function new() : Void;
-	// overrides function updateMatrixWorld(force:Bool) : Void;
 
-	//TODO: not sure if I need to represent these here
-	// THREE.Gyroscope.prototype.translationWorld = new THREE.Vector3();
-	// THREE.Gyroscope.prototype.translationObject = new THREE.Vector3();
-	// THREE.Gyroscope.prototype.rotationWorld = new THREE.Quaternion();
-	// THREE.Gyroscope.prototype.rotationObject = new THREE.Quaternion();
-	// THREE.Gyroscope.prototype.scaleWorld = new THREE.Vector3();
-	// THREE.Gyroscope.prototype.scaleObject = new THREE.Vector3();
+	var translationWorld : Vector3;
+	var translationObject : Vector3;
+	var quaternionWorld : Quaternion;
+	var quaternionObject : Quaternion;
+	var scaleWorld : Vector3;
+	var scaleObject : Vector3;
+
+	@:overload(function(?force:Bool):Void{})
+	override function updateMatrixWorld(force:Bool) : Void;
 }

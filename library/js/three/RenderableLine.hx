@@ -1,9 +1,16 @@
 package js.three;
 
-@:native("THREE.RenderableLine") extern class RenderableLine {
-	var z : Float;
+import js.html.*;
+
+@:native("THREE.RenderableLine")
+extern class RenderableLine
+{
+	function new() : Void;
+
+	var id : Int;
 	var v1 : RenderableVertex;
 	var v2 : RenderableVertex;
+	var vertexColors : Array<Color>;
 	var material : Material;
-	function new() : Void;
+	var z : Float;
 }

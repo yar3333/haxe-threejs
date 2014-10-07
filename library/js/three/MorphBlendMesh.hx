@@ -1,10 +1,16 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.MorphBlendMesh")
 extern class MorphBlendMesh extends Mesh
 {
 	function new(geometry:Geometry, material:Material) : Void;
-	function createAnimation(name:String, start:Int, end:Int, fps:Float) : Void;
+
+	var animationsMap : Dynamic<MorphBlendMeshAnimation>;
+	var animationsList : Array<MorphBlendMeshAnimation>;
+
+	function createAnimation(name:String, start:Float, end:Int, fps:Float) : Void;
 	function autoCreateAnimations(fps:Float) : Void;
 	function setAnimationDirectionForward(name:String) : Void;
 	function setAnimationDirectionBackward(name:String) : Void;

@@ -1,20 +1,24 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.KeyFrameAnimation")
 extern class KeyFrameAnimation
 {
-	var root : Dynamic; // TODO (Mesh?)
-	var data : Dynamic; // AnimationHandler.get(data)
-	var hierarchy : Array<Dynamic>; // AnimationHandler.parse(root)
-	var currentTime : Float; // 0
-	var timeScale : Float; // 0.001
-	var isPlaying : Bool; // false
+	function new(data:Dynamic) : Void;
+
+	var root : Mesh;
+	var data : Dynamic;
+	var hierarchy : Array<KeyFrames>;
+	var currentTime : Float;
+	var timeScale : Float;
+	var isPlaying : Bool;
 	var isPaused : Bool;
-	var loop : Bool; // true
-	var JITCompile : Bool; // true
-	function new(root:Dynamic, data:Dynamic, ?jitCompile:Bool) : Void;
-	function play(?loop:Bool, ?startTimeMS:Float) : Void;
-	function pause() : Void;
+	var loop : Bool;
+
+	function play(?startTime:Float) : Void;
 	function stop() : Void;
-	function update(deltaTimeMS:Float) : Void;
+	function update(delta:Float) : Void;
+	function getNextKeyWith(type:String, h:Float, key:Int) : KeyFrame;
+	function getPrevKeyWith(type:String, h:Float, key:Int) : KeyFrame;
 }

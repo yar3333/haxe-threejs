@@ -1,7 +1,9 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.RingGeometry")
-extern class RingGeometry
+extern class RingGeometry extends Geometry
 {
-	function new(?innerRadius:Float, ?outerRadius:Float, ?thetaSegments:Int, ?phiSegments:Int, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	function new(?innerRadius:Float, ?outerRadius:Float, ?thetaSegments:Float, ?phiSegments:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
 }

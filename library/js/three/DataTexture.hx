@@ -1,8 +1,26 @@
 package js.three;
 
-// TODO: Find a type for image data :)
-@:native("THREE.DataTexture") extern class DataTexture extends Texture {
-	// var image : { data:Dynamic, width:Int, height:Int };
-	function new(data:Dynamic, width:Int, height:Int, ?format:Int, ?type:Int, ?mapping:Mapping, ?wrapS:Int, ?wrapT:Int, ?magFilter:Int, ?minFilter:Int, ?anisotropy:Int) : Void;
-	// override function clone() : DataTexture;
+import js.html.*;
+
+@:native("THREE.DataTexture")
+extern class DataTexture extends Texture
+{
+	function new(
+		data: ImageData,
+		width: Int,
+		height: Int,
+		format: PixelFormat,
+		type: TextureDataType,
+		mapping: Mapping,
+		wrapS: Wrapping,
+		wrapT: Wrapping,
+		magFilter: TextureFilter,
+		minFilter: TextureFilter,
+		?anisotropy:Float
+	) : Void;
+
+	//var image : { data: ImageData, width:Int, height:Int };
+
+	@:overload(function():DataTexture{})
+	override function clone() : Texture;
 }

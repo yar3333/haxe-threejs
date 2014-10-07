@@ -1,7 +1,11 @@
 package js.three;
 
+import js.html.*;
+
+/**
+ * @deprecated
+ */
 @:native("THREE.CubeGeometry")
-extern class CubeGeometry extends Geometry
+extern class CubeGeometry extends BoxGeometry
 {
-	function new(width:Float, height:Float, depth:Float, ?widthSegments:Float, ?heightSegments:Float, ?depthSegments:Float) : Void;
 }

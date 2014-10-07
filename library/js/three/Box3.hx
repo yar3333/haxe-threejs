@@ -1,21 +1,26 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.Box3")
 extern class Box3
 {
-	var min : Vector3; // (Infinity, Infinity, Infinity)
-	var max : Vector3; // (-Infinity, -Infinity, -Infinity)
 	function new(?min:Vector3, ?max:Vector3) : Void;
+
+	var max : Vector3;
+	var min : Vector3;
+
 	function set(min:Vector3, max:Vector3) : Box3;
 	function setFromPoints(points:Array<Vector3>) : Box3;
 	function setFromCenterAndSize(center:Vector3, size:Vector3) : Box3;
+	function setFromObject(object:Object3D) : Box3;
 	function copy(box:Box3) : Box3;
 	function makeEmpty() : Box3;
 	function empty() : Bool;
 	function center(?optionalTarget:Vector3) : Vector3;
 	function size(?optionalTarget:Vector3) : Vector3;
 	function expandByPoint(point:Vector3) : Box3;
-	function expandByVector(point:Vector3) : Box3;
+	function expandByVector(vector:Vector3) : Box3;
 	function expandByScalar(scalar:Float) : Box3;
 	function containsPoint(point:Vector3) : Bool;
 	function containsBox(box:Box3) : Bool;

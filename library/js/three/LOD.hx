@@ -1,10 +1,18 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.LOD")
 extern class LOD extends Object3D
 {
-	var LODs : Array<{ visibleAtDistance:Float, object3D:Object3D }>;
-	function addLevel(o:Object3D, ?visibleAtDistance:Float=0.0) : Void;
+	function new() : Void;
+
+	var objects : Array<Dynamic>;
+
+	function addLevel(object:Object3D, ?distance:Float) : Void;
+	function getObjectForDistance(distance:Float) : Object3D;
+	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 	function update(camera:Camera) : Void;
-	// function clone() : LOD;
+	@:overload(function(?object:LOD):LOD{})
+	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
 }

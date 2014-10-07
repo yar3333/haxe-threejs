@@ -1,25 +1,31 @@
 package js.three;
 
+import js.html.*;
+
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material
 {
-	var color : Color; // new Color(0xffffff)
+	function new(?parameters:MeshBasicMaterialParameters) : Void;
+
+	var color : Color;
 	var map : Texture;
 	var lightMap : Texture;
 	var specularMap : Texture;
-	var envMap : Texture; // TextureCube?
-	var combine : Int; // MultiplyOperation
-	var reflectivity : Float; // 1
-	var refractionRatio : Float; // 0.98
-	var fog : Bool; // true
-	var shading : Int; // SmoothShading
-	var wireframe : Bool; // false
-	var wireframeLinewidth : Float; // 1
-	var wireframeLinecap : String; // 'round'
-	var wireframeLinejoin : String; // 'round'
-	var vertexColors : Int; // NoColors
-	var skinning : Bool; // false
-	var morphTargets : Bool; // false
+	var alphaMap : Texture;
+	var envMap : Texture;
+	var combine : Combine;
+	var reflectivity : Float;
+	var refractionRatio : Float;
+	var fog : Bool;
+	var shading : Shading;
+	var wireframe : Bool;
+	var wireframeLinewidth : Float;
+	var wireframeLinecap : String;
+	var wireframeLinejoin : String;
+	var vertexColors : Colors;
+	var skinning : Bool;
+	var morphTargets : Bool;
 
-	function new(?parameters:Dynamic) : Void;
+	@:overload(function():MeshBasicMaterial{})
+	override function clone(?material:Material) : Material;
 }
