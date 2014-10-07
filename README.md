@@ -19,6 +19,8 @@ Project folders:
  * native-js - original three.js files (may not exists - clone manually if you want - used by documentator only - not need if you wand just update);
  * native-ts - original typescript files (to create you may run "make native-ts");
  * raw - one big haxe file - result of the typescript conversion ("make raw");
+ * manual - manually created files (copied to library as final step);
+ * unused - files from [labe-me](https://github.com/labe-me/haxe-three.js) which not exists in current externs (need to check them in future);
  * documentator - C# application to help writing documentation and fix typescript.
 
 Key project files:
