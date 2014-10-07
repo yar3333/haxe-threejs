@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.typeScriptText = new System.Windows.Forms.RichTextBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.typeScriptSelector = new System.Windows.Forms.ComboBox();
-			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-			this.javaScriptFileText = new System.Windows.Forms.RichTextBox();
 			this.label4 = new System.Windows.Forms.Label();
+			this.javaScriptFileText = new System.Windows.Forms.RichTextBox();
 			this.javaScriptFileSelector = new System.Windows.Forms.ComboBox();
+			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+			this.label3 = new System.Windows.Forms.Label();
+			this.typeScriptText = new System.Windows.Forms.RichTextBox();
+			this.typeScriptSelector = new System.Windows.Forms.ComboBox();
 			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			this.label5 = new System.Windows.Forms.Label();
 			this.docFileText = new System.Windows.Forms.RichTextBox();
@@ -78,40 +78,42 @@
 			this.splitContainer1.SplitterDistance = 309;
 			this.splitContainer1.TabIndex = 8;
 			// 
-			// typeScriptText
+			// label4
 			// 
-			this.typeScriptText.AcceptsTab = true;
-			this.typeScriptText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(3, 3);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(73, 13);
+			this.label4.TabIndex = 9;
+			this.label4.Text = "JavaScript file";
+			// 
+			// javaScriptFileText
+			// 
+			this.javaScriptFileText.AcceptsTab = true;
+			this.javaScriptFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.typeScriptText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.typeScriptText.Location = new System.Drawing.Point(3, 46);
-			this.typeScriptText.Name = "typeScriptText";
-			this.typeScriptText.Size = new System.Drawing.Size(310, 503);
-			this.typeScriptText.TabIndex = 11;
-			this.typeScriptText.Text = "";
-			this.typeScriptText.WordWrap = false;
-			this.typeScriptText.Leave += new System.EventHandler(this.typeScriptText_Leave);
+			this.javaScriptFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.javaScriptFileText.Location = new System.Drawing.Point(0, 46);
+			this.javaScriptFileText.Name = "javaScriptFileText";
+			this.javaScriptFileText.ReadOnly = true;
+			this.javaScriptFileText.Size = new System.Drawing.Size(306, 503);
+			this.javaScriptFileText.TabIndex = 11;
+			this.javaScriptFileText.Text = "";
+			this.javaScriptFileText.WordWrap = false;
 			// 
-			// label3
+			// javaScriptFileSelector
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 3);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 13);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "TypeScript";
-			// 
-			// typeScriptSelector
-			// 
-			this.typeScriptSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.javaScriptFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.typeScriptSelector.FormattingEnabled = true;
-			this.typeScriptSelector.Location = new System.Drawing.Point(3, 19);
-			this.typeScriptSelector.Name = "typeScriptSelector";
-			this.typeScriptSelector.Size = new System.Drawing.Size(310, 21);
-			this.typeScriptSelector.TabIndex = 10;
-			this.typeScriptSelector.SelectedIndexChanged += new System.EventHandler(this.typeScriptSelector_SelectedIndexChanged);
+			this.javaScriptFileSelector.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+			this.javaScriptFileSelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.javaScriptFileSelector.FormattingEnabled = true;
+			this.javaScriptFileSelector.Location = new System.Drawing.Point(0, 19);
+			this.javaScriptFileSelector.Name = "javaScriptFileSelector";
+			this.javaScriptFileSelector.Size = new System.Drawing.Size(306, 21);
+			this.javaScriptFileSelector.TabIndex = 10;
+			this.javaScriptFileSelector.SelectedIndexChanged += new System.EventHandler(this.javaScriptFileSelector_SelectedIndexChanged);
 			// 
 			// splitContainer2
 			// 
@@ -132,40 +134,42 @@
 			this.splitContainer2.SplitterDistance = 316;
 			this.splitContainer2.TabIndex = 0;
 			// 
-			// javaScriptFileText
+			// label3
 			// 
-			this.javaScriptFileText.AcceptsTab = true;
-			this.javaScriptFileText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(3, 3);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 13);
+			this.label3.TabIndex = 9;
+			this.label3.Text = "TypeScript";
+			// 
+			// typeScriptText
+			// 
+			this.typeScriptText.AcceptsTab = true;
+			this.typeScriptText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.javaScriptFileText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.javaScriptFileText.Location = new System.Drawing.Point(0, 46);
-			this.javaScriptFileText.Name = "javaScriptFileText";
-			this.javaScriptFileText.ReadOnly = true;
-			this.javaScriptFileText.Size = new System.Drawing.Size(306, 503);
-			this.javaScriptFileText.TabIndex = 11;
-			this.javaScriptFileText.Text = "";
-			this.javaScriptFileText.WordWrap = false;
+			this.typeScriptText.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.typeScriptText.Location = new System.Drawing.Point(3, 46);
+			this.typeScriptText.Name = "typeScriptText";
+			this.typeScriptText.Size = new System.Drawing.Size(310, 503);
+			this.typeScriptText.TabIndex = 11;
+			this.typeScriptText.Text = "";
+			this.typeScriptText.WordWrap = false;
+			this.typeScriptText.Leave += new System.EventHandler(this.typeScriptText_Leave);
 			// 
-			// label4
+			// typeScriptSelector
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(3, 3);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(73, 13);
-			this.label4.TabIndex = 9;
-			this.label4.Text = "JavaScript file";
-			// 
-			// javaScriptFileSelector
-			// 
-			this.javaScriptFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.typeScriptSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.javaScriptFileSelector.FormattingEnabled = true;
-			this.javaScriptFileSelector.Location = new System.Drawing.Point(0, 19);
-			this.javaScriptFileSelector.Name = "javaScriptFileSelector";
-			this.javaScriptFileSelector.Size = new System.Drawing.Size(306, 21);
-			this.javaScriptFileSelector.TabIndex = 10;
-			this.javaScriptFileSelector.SelectedIndexChanged += new System.EventHandler(this.javaScriptFileSelector_SelectedIndexChanged);
+			this.typeScriptSelector.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+			this.typeScriptSelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.typeScriptSelector.FormattingEnabled = true;
+			this.typeScriptSelector.Location = new System.Drawing.Point(3, 19);
+			this.typeScriptSelector.Name = "typeScriptSelector";
+			this.typeScriptSelector.Size = new System.Drawing.Size(310, 21);
+			this.typeScriptSelector.TabIndex = 10;
+			this.typeScriptSelector.SelectedIndexChanged += new System.EventHandler(this.typeScriptSelector_SelectedIndexChanged);
 			// 
 			// splitContainer5
 			// 
@@ -214,6 +218,8 @@
 			// 
 			this.docFileSelector.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.docFileSelector.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+			this.docFileSelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.docFileSelector.FormattingEnabled = true;
 			this.docFileSelector.Location = new System.Drawing.Point(3, 19);
 			this.docFileSelector.Name = "docFileSelector";
