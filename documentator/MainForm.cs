@@ -34,22 +34,25 @@ namespace ThreejsDocumentator
             }
             tsItems.Sort();
             typeScriptSelector.Items.Add(new Item(""));
-			foreach (var tsItem in tsItems)
-			{
-				typeScriptSelector.Items.Add(new Item(tsItem));
-			}
+			foreach (var item in tsItems) typeScriptSelector.Items.Add(new Item(item));
 
-			javaScriptFileSelector.Items.Add(new Item(""));
+			var jsItems = new List<Item>();
 			foreach (var file in Directory.GetFiles(javaScriptDir, "*.js", SearchOption.AllDirectories))
 			{
-				javaScriptFileSelector.Items.Add(new Item(file));
+				jsItems.Add(new Item(file));
 			}
-			
-			docFileSelector.Items.Add(new Item(""));
+			jsItems.Sort();
+			javaScriptFileSelector.Items.Add(new Item(""));
+			foreach (var item in jsItems) javaScriptFileSelector.Items.Add(item);
+
+			var docItems = new List<Item>();
 			foreach (var file in Directory.GetFiles(docDir + "\\api", "*.html", SearchOption.AllDirectories))
 			{
-				docFileSelector.Items.Add(new Item(file));
+				docItems.Add(new Item(file));
 			}
+			docItems.Sort();
+			docFileSelector.Items.Add(new Item(""));
+			foreach (var item in docItems) docFileSelector.Items.Add(item);
 
 			fixTabs();
 		    switchTo("");
