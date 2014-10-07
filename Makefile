@@ -17,7 +17,7 @@ raw: native-ts
 native-ts:
 	git init native-ts
 	cd native-ts && \
-	git remote add origin https://github.com/yar3333/DefinitelyTyped.git && \
+	git remote add origin https://github.com/borisyankov/DefinitelyTyped.git && \
 	git config core.sparsecheckout true && \
 	echo threejs/three.d.ts>> .git/info/sparse-checkout && \
 	git pull origin master
