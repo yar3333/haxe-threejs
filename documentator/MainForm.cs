@@ -115,15 +115,19 @@ namespace ThreejsDocumentator
 
         void highlightString(RichTextBox textBox, string s)
         {
-            int textEnd = textBox.TextLength;
+			textBox.SelectAll();
+			textBox.SelectionBackColor = textBox.BackColor;
+			textBox.Select(0, 0);
+		   
+		    int textEnd = textBox.TextLength;
             Font fnt = new Font(textBox.Font, FontStyle.Bold);
             int index = 0;
-            int lastIndex = textBox.Text.LastIndexOf(s);
-            while (index < lastIndex)
+			while (index < textBox.Text.Length)
             {
-				textBox.Find(s, index, textEnd, RichTextBoxFinds.MatchCase | RichTextBoxFinds.WholeWord);
-                textBox.SelectionBackColor = Color.Yellow;
-                index = textBox.Text.IndexOf(s, index) + 1;
+				index = textBox.Find(s, index, textEnd, RichTextBoxFinds.MatchCase | RichTextBoxFinds.WholeWord);
+				textBox.SelectionBackColor = Color.Yellow;
+				if (index < 0) break;
+				index += s.Length;
             }
         }
 
@@ -221,6 +225,13 @@ namespace ThreejsDocumentator
 					docFileHtml.Refresh();
 				}
 			}
+		}
+
+		private void searchString_TextUpdate(object sender, EventArgs e)
+		{
+			highlightString(javaScriptFileText, searchString.Text);
+			highlightString(typeScriptText, searchString.Text);
+			highlightString(docFileText, searchString.Text);
 		}
     }
 }

@@ -43,6 +43,8 @@
 			this.docFileHtml = new System.Windows.Forms.WebBrowser();
 			this.next = new System.Windows.Forms.Button();
 			this.prev = new System.Windows.Forms.Button();
+			this.searchString = new System.Windows.Forms.ComboBox();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -185,6 +187,8 @@
 			// 
 			// splitContainer5.Panel2
 			// 
+			this.splitContainer5.Panel2.Controls.Add(this.label1);
+			this.splitContainer5.Panel2.Controls.Add(this.searchString);
 			this.splitContainer5.Panel2.Controls.Add(this.docFileHtml);
 			this.splitContainer5.Size = new System.Drawing.Size(564, 552);
 			this.splitContainer5.SplitterDistance = 285;
@@ -234,12 +238,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.docFileHtml.IsWebBrowserContextMenuEnabled = false;
-			this.docFileHtml.Location = new System.Drawing.Point(6, 3);
+			this.docFileHtml.Location = new System.Drawing.Point(6, 46);
 			this.docFileHtml.MinimumSize = new System.Drawing.Size(20, 20);
 			this.docFileHtml.Name = "docFileHtml";
 			this.docFileHtml.ScriptErrorsSuppressed = true;
 			this.docFileHtml.ScrollBarsEnabled = false;
-			this.docFileHtml.Size = new System.Drawing.Size(266, 546);
+			this.docFileHtml.Size = new System.Drawing.Size(266, 503);
 			this.docFileHtml.TabIndex = 0;
 			// 
 			// next
@@ -265,6 +269,26 @@
 			this.prev.UseVisualStyleBackColor = true;
 			this.prev.Click += new System.EventHandler(this.prev_Click);
 			// 
+			// searchString
+			// 
+			this.searchString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.searchString.FormattingEnabled = true;
+			this.searchString.Location = new System.Drawing.Point(6, 19);
+			this.searchString.Name = "searchString";
+			this.searchString.Size = new System.Drawing.Size(266, 21);
+			this.searchString.TabIndex = 1;
+			this.searchString.TextUpdate += new System.EventHandler(this.searchString_TextUpdate);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(3, 3);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(41, 13);
+			this.label1.TabIndex = 12;
+			this.label1.Text = "Search";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +313,7 @@
 			this.splitContainer5.Panel1.ResumeLayout(false);
 			this.splitContainer5.Panel1.PerformLayout();
 			this.splitContainer5.Panel2.ResumeLayout(false);
+			this.splitContainer5.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
 			this.splitContainer5.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -312,6 +337,8 @@
 		private System.Windows.Forms.Button prev;
 		private System.Windows.Forms.WebBrowser docFileHtml;
 		private System.Windows.Forms.SplitContainer splitContainer5;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ComboBox searchString;
     }
 }
 
