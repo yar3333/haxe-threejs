@@ -21,5 +21,5 @@ extern class JSONLoader extends Loader
 
 	function loadAjaxJSON(context:JSONLoader, url:String, callback:Geometry->Array<Material>->Void, ?texturePath:String, ?callbackProgress:Progress->Void) : Void;
 
-	function parse(json:String, texturePath:String) : Dynamic;
+	function parse(json:Dynamic, ?texturePath:String) : { geometry: Geometry, ?materials:Array<Material> };
 }

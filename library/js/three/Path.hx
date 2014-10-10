@@ -8,7 +8,7 @@ import js.html.*;
 @:native("THREE.Path")
 extern class Path extends CurvePath
 {
-	function new(?points:Vector2) : Void;
+	function new(?points:Array<Vector2>) : Void;
 
 	var actions : Array<PathAction>;
 
@@ -22,9 +22,9 @@ extern class Path extends CurvePath
 	function absarc(aX:Float, aY:Float, aRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
 	function ellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
 	function absellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
-	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector>{})
+	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector2>{})
 	override function getSpacedPoints(?divisions:Float) : Array<Vector>;
-	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector>{})
+	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector2>{})
 	override function getPoints(?divisions:Float) : Array<Vector>;
 	function toShapes() : Array<Shape>;
 }
