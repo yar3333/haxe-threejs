@@ -9,8 +9,7 @@ The aim of this library - automated (regex-based) conversion from typescript to 
 
 Use make command (in my case I have mingw on Windows):
 
-```
-#!shell
+```shell
 make library
 ```
 
