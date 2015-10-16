@@ -3,7 +3,7 @@ library: library/js
 library/js: raw
 	haxelib run refactor extract raw *.hx library/js extract_classes.rules
 	haxelib run refactor extract raw *.hx library/js extract_vars.rules postprocess_vars.rules
-	haxelib run refactor reindent library/js *.hx 4 4 4 4 -4
+	haxelib run refactor reindent library/js *.hx 4 4 4 4 -- -4
 	haxelib run refactor process library/js *.hx postprocess.rules
 	haxelib run refactor process -es -ec library/js *.hx beauty.rules
 	mv library/js/threejs library/js/three
