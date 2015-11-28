@@ -1,3 +1,7 @@
+JS_GIT = https://github.com/mrdoob/three.js.git
+TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
+TS_SRC = threejs/three.d.ts
+
 library: library/js
 
 library/js: raw
@@ -17,15 +21,15 @@ raw: native-ts
 native-js:
 	git init native-js
 	cd native-js && \
-	git remote add origin https://github.com/yar3333/three.js.git && \
+	git remote add origin $(JS_GIT) && \
 	git pull origin master
 
 native-ts:
 	git init native-ts
 	cd native-ts && \
-	git remote add origin https://github.com/yar3333/DefinitelyTyped.git && \
+	git remote add origin $(TS_GIT) && \
 	git config core.sparsecheckout true && \
-	echo threejs/three.d.ts>> .git/info/sparse-checkout && \
+	echo $(TS_SRC)>> .git/info/sparse-checkout && \
 	git pull origin master
 
 clean:
