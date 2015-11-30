@@ -15,7 +15,7 @@ library/js: raw
 	cp -r manual/* library
 
 raw: native-ts
-	haxelib run refactor convert -es native-ts *.ts raw ![.]ts$$!.hx! ts_to_haxe.rules
+	haxelib run refactor convert -es native-ts *.ts raw %[.]ts$$%.hx% ts_to_haxe.rules
 	haxelib run refactor process -es -ec raw *.hx beauty_haxe.rules
 
 native-js:
