@@ -4,8 +4,8 @@
   "tags": ["js","three","threejs"],
   "description": "Externs for three.js. Automated conversion from typescript (https://github.com/borisyankov/DefinitelyTyped/blob/master/threejs/three.d.ts).",
   "contributors": ["yar3333"],
-  "releasenote": "README fix.",
-  "version": "68.0.4",
+  "releasenote": "Readme fix.",
+  "version": "68.0.5",
   "url": "https://bitbucket.org/yar3333/haxe-threejs",
   "dependencies": null
 }
