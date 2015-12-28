@@ -15,5 +15,6 @@ extern class LineBasicMaterial extends Material
 	var fog : Bool;
 
 	@:overload(function():LineBasicMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:LineBasicMaterial) : LineBasicMaterial;
 }

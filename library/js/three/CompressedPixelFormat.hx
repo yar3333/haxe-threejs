@@ -3,7 +3,8 @@ package js.three;
 import js.html.*;
 
 // Compressed texture formats
-@:native("THREE.CompressedPixelFormat")
+// DDS / ST3C Compressed texture formats
+@:native("THREE")
 extern enum CompressedPixelFormat
 {
 	RGB_S3TC_DXT1_Format;

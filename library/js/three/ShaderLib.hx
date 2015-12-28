@@ -14,5 +14,6 @@ extern class ShaderLib implements Dynamic<Shader>
 	static var normal : Shader;
 	static var normalmap : Shader;
 	static var cube : Shader;
+	static var equirect : Shader;
 	static var depthRGBA : Shader;
 }

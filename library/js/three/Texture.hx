@@ -1,45 +1,13 @@
 package js.three;
 
 import js.html.*;
+import haxe.extern.EitherType;
 
 @:native("THREE.Texture")
 extern class Texture
 {
-	@:overload(function(
-		image: js.html.CanvasElement,
-		?mapping:Mapping,
-		?wrapS:Wrapping,
-		?wrapT:Wrapping,
-		?magFilter:TextureFilter,
-		?minFilter:TextureFilter,
-		?format:PixelFormat,
-		?type:TextureDataType,
-		?anisotropy:Float
-		):Void{})
-	@:overload(function(
-		image: js.html.ImageElement,
-		?mapping:MappingConstructor,
-		?wrapS:Wrapping,
-		?wrapT:Wrapping,
-		?magFilter:TextureFilter,
-		?minFilter:TextureFilter,
-		?format:PixelFormat,
-		?type:TextureDataType,
-		?anisotropy:Float
-		):Void{})
-	@:overload(function(
-		image: js.html.CanvasElement,
-		?mapping:MappingConstructor,
-		?wrapS:Wrapping,
-		?wrapT:Wrapping,
-		?magFilter:TextureFilter,
-		?minFilter:TextureFilter,
-		?format:PixelFormat,
-		?type:TextureDataType,
-		?anisotropy:Float
-		):Void{})
 	function new(
-		image: Dynamic, // HTMLImageElement or HTMLCanvasElement
+		image: EitherType<js.html.ImageElement, EitherType<CanvasElement, VideoElement>>,
 		?mapping:Mapping,
 		?wrapS:Wrapping,
 		?wrapT:Wrapping,
@@ -47,20 +15,21 @@ extern class Texture
 		?minFilter:TextureFilter,
 		?format:PixelFormat,
 		?type:TextureDataType,
-		?anisotropy:Float
+		?anisotropy:Int
 		) : Void;
 
 	var id : Int;
 	var uuid : String;
 	var name : String;
-	var image : Dynamic; // HTMLImageElement or ImageData ;
+	var sourceFile : String;
+	var image : Dynamic;// HTMLImageElement or ImageData ;
 	var mipmaps : Array<ImageData>;
 	var mapping : Mapping;
 	var wrapS : Wrapping;
 	var wrapT : Wrapping;
 	var magFilter : TextureFilter;
 	var minFilter : TextureFilter;
-	var anisotropy : Float;
+	var anisotropy : Int;
 	var format : PixelFormat;
 	var type : TextureDataType;
 	var offset : Vector2;
@@ -69,14 +38,17 @@ extern class Texture
 	var premultiplyAlpha : Bool;
 	var flipY : Bool;
 	var unpackAlignment : Float;
+	var version : Float;
 	var needsUpdate : Bool;
 	var onUpdate : Void->Void;
 	static var DEFAULT_IMAGE : Dynamic;
 	static var DEFAULT_MAPPING : Dynamic;
 
 	function clone() : Texture;
-	function update() : Void;
+	function copy(source:Texture) : Texture;
+	function toJSON(meta:Dynamic) : Dynamic;
 	function dispose() : Void;
+	function transformUv(uv:Vector) : Void;
 
 	// EventDispatcher mixins
 	function addEventListener(type:String, listener:Dynamic->Void) : Void;

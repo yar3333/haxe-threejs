@@ -13,6 +13,7 @@ extern class Box2
 	function set(min:Vector2, max:Vector2) : Box2;
 	function setFromPoints(points:Array<Vector2>) : Box2;
 	function setFromCenterAndSize(center:Vector2, size:Vector2) : Box2;
+	function clone() : Box2;
 	function copy(box:Box2) : Box2;
 	function makeEmpty() : Box2;
 	function empty() : Bool;
@@ -31,5 +32,4 @@ extern class Box2
 	function union(box:Box2) : Box2;
 	function translate(offset:Vector2) : Box2;
 	function equals(box:Box2) : Bool;
-	function clone() : Box2;
 }

@@ -15,6 +15,10 @@ extern class LensFlare extends Object3D
 	@:overload(function(texture:Texture,?size:Float,?distance:Float,?blending:Blending,?color:Color):Void{})
 	override function add(object:Object3D) : Void;
 
-
 	function updateLensFlares() : Void;
+
+	@:overload(function():LensFlare{})
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(source:LensFlare):LensFlare{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

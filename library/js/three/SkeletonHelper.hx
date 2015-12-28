@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.SkeletonHelper")
-extern class SkeletonHelper extends Line
+extern class SkeletonHelper extends LineSegments
 {
 	function new(bone:Object3D) : Void;
 

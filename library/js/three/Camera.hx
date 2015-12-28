@@ -23,12 +23,16 @@ extern class Camera extends Object3D
 	 */
 	var projectionMatrix : Matrix4;
 
+	override function getWorldDirection(?optionalTarget:Vector3) : Vector3;
+
 	/**
 	 * This make the camera look at the vector position in local space.
 	 * @param vector point to look at
 	 */
 	override function lookAt(vector:Vector3) : Void;
 
+	@:overload(function():Camera{})
+	override function clone(?recursive:Bool) : Object3D;
 	@:overload(function(?camera:Camera):Camera{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

@@ -9,7 +9,8 @@ extern class MeshBasicMaterial extends Material
 
 	var color : Color;
 	var map : Texture;
-	var lightMap : Texture;
+	var aoMap : Texture;
+	var aoMapIntensity : Float;
 	var specularMap : Texture;
 	var alphaMap : Texture;
 	var envMap : Texture;
@@ -27,5 +28,6 @@ extern class MeshBasicMaterial extends Material
 	var morphTargets : Bool;
 
 	@:overload(function():MeshBasicMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:MeshBasicMaterial) : MeshBasicMaterial;
 }

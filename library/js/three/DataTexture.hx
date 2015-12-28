@@ -16,11 +16,12 @@ extern class DataTexture extends Texture
 		wrapT: Wrapping,
 		magFilter: TextureFilter,
 		minFilter: TextureFilter,
-		?anisotropy:Float
+		?anisotropy:Int
 	) : Void;
 
 	//var image : { data: ImageData, width:Int, height:Int };
-
-	@:overload(function():DataTexture{})
-	override function clone() : Texture;
+	//var magFilter : TextureFilter;
+	//var minFilter : TextureFilter;
+	//var flipY : Bool;
+	//var generateMipmaps : Bool;
 }

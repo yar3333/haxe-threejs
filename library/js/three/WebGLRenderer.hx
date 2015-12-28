@@ -25,11 +25,7 @@ extern class WebGLRenderer implements Renderer
 	/**
 	 * The HTML5 Canvas's 'webgl' context obtained from the canvas where the renderer will draw.
 	 */
-	//  If you are using three.d.ts with other complete definitions of webgl, context:js.html.webgl.RenderingContext is suitable.
-	//context:js.html.webgl.RenderingContext;
-	var context : Dynamic;
-
-	var devicePixelRatio : Float;
+	var context : js.html.webgl.RenderingContext;
 
 	/**
 	 * Defines whether the renderer should automatically clear its output before rendering.
@@ -56,6 +52,10 @@ extern class WebGLRenderer implements Renderer
 	 */
 	var sortObjects : Bool;
 
+	var extensions : WebGLExtensions;
+
+	var gammaFactor : Float;
+
 	/**
 	 * Default is false.
 	 */
@@ -70,11 +70,6 @@ extern class WebGLRenderer implements Renderer
 	 * Default is false.
 	 */
 	var shadowMapEnabled : Bool;
-
-	/**
-	 * Default is true.
-	 */
-	var shadowMapAutoUpdate : Bool;
 
 	/**
 	 * Defines shadow map type (unfiltered, percentage close filtering, percentage close filtering with bilinear filtering in shader)
@@ -93,11 +88,6 @@ extern class WebGLRenderer implements Renderer
 	var shadowMapDebug : Bool;
 
 	/**
-	 * Default is false.
-	 */
-	var shadowMapCascade : Bool;
-
-	/**
 	 * Default is 8.
 	 */
 	var maxMorphTargets : Float;
@@ -113,27 +103,17 @@ extern class WebGLRenderer implements Renderer
 	var autoScaleCubemaps : Bool;
 
 	/**
-	 * An array with render plugins to be applied before rendering.
-	 * Default is an empty array, or [].
-	 */
-	var renderPluginsPre : Array<RendererPlugin>;
-
-	/**
-	 * An array with render plugins to be applied after rendering.
-	 * Default is an empty array, or [].
-	 */
-	var renderPluginsPost : Array<RendererPlugin>;
-
-	/**
 	 * An object with a series of statistical information about the graphics board memory and the rendering process. Useful for debugging or just for the sake of curiosity. The object contains the following fields:
 	 */
-	var info : {
+	var info :
+	{
 		memory: {
 			programs: Float,
 			geometries: Float,
 			textures: Float
 		},
-		render : {
+		render :
+		{
 			calls: Float,
 			vertices: Int,
 			faces: Int,
@@ -141,22 +121,31 @@ extern class WebGLRenderer implements Renderer
 		}
 	};
 
-	var shadowMapPlugin : ShadowMapPlugin;
+	var shadowMap : WebGLShadowMapInstance;
 
 	/**
 	 * Return the WebGL context.
 	 */
 	function getContext() : js.html.webgl.RenderingContext;
 
-	/**
-	 * Return a Boolean true if the context supports vertex textures.
-	 */
+	function forceContextLoss() : Void;
+
+	var capabilities : WebGLCapabilities;
+
+	/** Deprecated, use capabilities instead */
 	function supportsVertexTextures() : Bool;
 	function supportsFloatTextures() : Bool;
 	function supportsStandardDerivatives() : Bool;
 	function supportsCompressedTextureS3TC() : Bool;
-	function getMaxAnisotropy() : Int;
+	function supportsCompressedTexturePVRTC() : Bool;
+	function supportsBlendMinMax() : Bool;
 	function getPrecision() : String;
+
+	function getMaxAnisotropy() : Int;
+	function getPixelRatio() : Float;
+	function setPixelRatio(value:Float) : Void;
+	
+	function getSize() : { width: Float, height:Float };
 
 	/**
 	 * Resizes the output canvas to (width, height), and also sets the viewport to fit that size, starting in (0, 0).
@@ -185,12 +174,14 @@ extern class WebGLRenderer implements Renderer
 	@:overload(function(color:Int, ?alpha:Float):Void{})
 	function setClearColor(color:Color, ?alpha:Float) : Void;
 
+	function setClearAlpha(alpha:Float) : Void;
+
 	/**
 	 * Sets the clear color, using hex for the color and alpha for the opacity.
 	 *
 	 * @example
 	 * // Creates a renderer with black background
-	 * var renderer = new THREE.WebGLRenderer();
+	 * renderer = new THREE.WebGLRenderer();
 	 * renderer.setSize(200, 100);
 	 * renderer.setClearColorHex(0x000000, 1);
 	 */
@@ -208,7 +199,7 @@ extern class WebGLRenderer implements Renderer
 
 	/**
 	 * Tells the renderer to clear its color, depth or stencil drawing buffer(s).
-	 * If no parameters are passed, no buffer will be cleared.
+	 * Arguments default to true
 	 */
 	function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
 
@@ -216,16 +207,8 @@ extern class WebGLRenderer implements Renderer
 	function clearDepth() : Void;
 	function clearStencil() : Void;
 	function clearTarget(renderTarget:WebGLRenderTarget, color:Bool, depth:Bool, stencil:Bool) : Void;
-
-	/**
-	 * Initialises the postprocessing plugin, and adds it to the renderPluginsPost array.
-	 */
-	function addPostPlugin(plugin:RendererPlugin) : Void;
-
-	/**
-	 * Initialises the preprocessing plugin, and adds it to the renderPluginsPre array.
-	 */
-	function addPrePlugin(plugin:RendererPlugin) : Void;
+	function resetGLState() : Void;
+	function dispose() : Void;
 
 	/**
 	 * Tells the shadow map plugin to update using the passed scene and camera parameters.
@@ -249,7 +232,6 @@ extern class WebGLRenderer implements Renderer
 	@:overload(function(scene:Scene,camera:Camera,?renderTarget:RenderTarget,?forceClear:Bool):Void{})
 	function render(scene:Scene, camera:Camera) : Void;
 	function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, object:Object3D) : Void;
-	function initMaterial(material:Material, lights:Array<Light>, fog:Fog, object:Object3D) : Void;
 
 	/**
 	 * Used for setting the gl frontFace, cullFace states in the GPU, thus enabling/disabling face culling when rendering.
@@ -262,6 +244,8 @@ extern class WebGLRenderer implements Renderer
 	function setDepthTest(depthTest:Bool) : Void;
 	function setDepthWrite(depthWrite:Bool) : Void;
 	function setBlending(blending:Blending, blendEquation:BlendingEquation, blendSrc:BlendingSrcFactor, blendDst:BlendingDstFactor) : Void;
+	function uploadTexture(texture:Texture) : Void;
 	function setTexture(texture:Texture, slot:Float) : Void;
 	function setRenderTarget(renderTarget:RenderTarget) : Void;
+	function readRenderTargetPixels(renderTarget:RenderTarget, x:Float, y:Float, width:Float, height:Float, buffer:Dynamic) : Void;
 }

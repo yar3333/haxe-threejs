@@ -11,6 +11,8 @@ extern class ImageLoader
 {
 	function new(?manager:LoadingManager) : Void;
 
+	var cache : Cache;
+	var manager : LoadingManager;
 	var crossOrigin : String;
 
 	/**

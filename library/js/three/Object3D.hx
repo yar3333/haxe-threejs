@@ -25,10 +25,14 @@ extern class Object3D
 	 */
 	var name : String;
 
+	var type : String;
+
 	/**
 	 * Object's parent in the scene graph.
 	 */
 	var parent : Object3D;
+
+	var channels : Channels;
 
 	/**
 	 * Array with object's children.
@@ -60,10 +64,9 @@ extern class Object3D
 	 */
 	var scale : Vector3;
 
-	/**
-	 * Override depth-sorting order if non null.
-	 */
-	var renderDepth : Float;
+	var modelViewMatrix : { value: Matrix4 };
+
+	var normalMatrix : { value: Matrix3 };
 
 	/**
 	 * When this is set, then the rotationMatrix gets calculated every frame.
@@ -110,6 +113,8 @@ extern class Object3D
 	 */
 	var frustumCulled : Bool;
 
+	var renderOrder : Float;
+
 	/**
 	 * An object that can be used to store custom data about the Object3d. It should not hold references to functions as these will not be cloned.
 	 */
@@ -119,14 +124,7 @@ extern class Object3D
 	 *
 	 */
 	static var DefaultUp : Vector3;
-
-
-	/**
-	 * Order of axis for Euler angles.
-	 * @deprected
-	 */
-	var eulerOrder : String;
-
+	static var DefaultMatrixAutoUpdate : Vector3;
 
 	/**
 	 * This updates the position, rotation and scale with the matrix.
@@ -237,35 +235,36 @@ extern class Object3D
 	 */
 	function remove(object:Object3D) : Void;
 
-	/**
-	 *
-	 */
-	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
-
-	/**
-	 * Translates object along arbitrary axis by distance.
-	 * @param distance Distance.
-	 * @param axis Translation direction.
-	 */
-	function traverse(callback:Object3D->Dynamic) : Void;
+	/* deprecated */
+	function getChildByName(name:String) : Object3D;
 
 	/**
 	 * Searches through the object's children and returns the first with a matching id, optionally recursive.
 	 * @param id  Unique number of the object instance
-	 * @param recursive  Boolean whether to search through the children's children. Default is false.
 	 */
-	function getObjectById(id:String, recursive:Bool) : Object3D;
-
+	function getObjectById(id:Int) : Object3D;
 
 	/**
 	 * Searches through the object's children and returns the first with a matching name, optionally recursive.
 	 * @param name  String to match to the children's Object3d.name property.
-	 * @param recursive  Boolean whether to search through the children's children. Default is false.
 	 */
-	function getObjectByName(name:String, ?recursive:Bool) : Object3D;
+	function getObjectByName(name:String) : Object3D;
 
+	function getObjectByProperty(name:String, value:String) : Object3D;
 
-	function getChildByName(name:String, ?recursive:Bool) : Object3D;
+	function getWorldPosition(?optionalTarget:Vector3) : Vector3;
+	function getWorldQuaternion(?optionalTarget:Quaternion) : Quaternion;
+	function getWorldRotation(?optionalTarget:Euler) : Euler;
+	function getWorldScale(?optionalTarget:Vector3) : Vector3;
+	function getWorldDirection(?optionalTarget:Vector3) : Vector3;
+
+	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
+
+	function traverse(callback:Object3D->Dynamic) : Void;
+
+	function traverseVisible(callback:Object3D->Dynamic) : Void;
+
+	function traverseAncestors(callback:Object3D->Dynamic) : Void;
 
 	/**
 	 * Updates local transform.
@@ -277,12 +276,16 @@ extern class Object3D
 	 */
 	function updateMatrixWorld(force:Bool) : Void;
 
+	function toJSON(?meta:Dynamic) : Dynamic;
+
+	function clone(?recursive:Bool) : Object3D;
+
 	/**
 	 *
 	 * @param object
 	 * @param recursive
 	 */
-	function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	function copy(source:Object3D, ?recursive:Bool) : Object3D;
 
 	// EventDispatcher mixins
 	function addEventListener(type:String, listener:Dynamic->Void) : Void;

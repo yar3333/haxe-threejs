@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.CameraHelper")
-extern class CameraHelper extends Line
+extern class CameraHelper extends LineSegments
 {
 	function new(camera:Camera) : Void;
 

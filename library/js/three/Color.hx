@@ -3,10 +3,10 @@ package js.three;
 import js.html.*;
 
 /**
- * Represents a color. See also {@link ColorUtils }.
+ * Represents a color. See also {@link ColorUtils}.
  *
  * @example
- * color = new THREE.Color(0xff0000);
+ * color = new THREE.Color( 0xff0000 );
  *
  * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Color.js">src/math/Color.js</a>
  */
@@ -63,6 +63,11 @@ extern class Color
 	function setStyle(style:String) : Color;
 
 	/**
+	 * Clones this color.
+	 */
+	function clone() : Color;
+
+	/**
 	 * Copies given color.
 	 * @param color Color to copy.
 	 */
@@ -72,13 +77,13 @@ extern class Color
 	 * Copies given color making conversion from gamma to linear space.
 	 * @param color Color to copy.
 	 */
-	function copyGammaToLinear(color:Color) : Color;
+	function copyGammaToLinear(color:Color, ?gammaFactor:Float) : Color;
 
 	/**
 	 * Copies given color making conversion from linear to gamma space.
 	 * @param color Color to copy.
 	 */
-	function copyLinearToGamma(color:Color) : Color;
+	function copyLinearToGamma(color:Color, ?gammaFactor:Float) : Color;
 
 	/**
 	 * Converts this color from gamma to linear space.
@@ -117,11 +122,6 @@ extern class Color
 	function multiplyScalar(s:Float) : Color;
 	function lerp(color:Color, alpha:Float) : Color;
 	function equals(color:Color) : Bool;
-	function fromArray(rgb:Array<Float>) : Color;
-	function toArray() : Array<Float>;
-
-	/**
-	 * Clones this color.
-	 */
-	function clone() : Color;
+	function fromArray(rgb:Array<Float>, ?offset:Float) : Color;
+	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 }

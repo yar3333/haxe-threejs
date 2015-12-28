@@ -1,6 +1,7 @@
 package js.three;
 
 import js.html.*;
+import haxe.extern.EitherType;
 
 /**
  * This is a superefficent class for geometries because it saves all data in buffers.
@@ -17,29 +18,69 @@ extern class BufferGeometry
 	 */
 	function new() : Void;
 
+	static var MaxIndex : Int;
+
 	/**
 	 * Unique number of this buffergeometry instance
 	 */
 	var id : Int;
 	var uuid : String;
 	var name : String;
-	var attributes : Array<BufferAttribute>;
-	var drawcalls : Array<{ start: Int, count:Float, index:Int }>;
-	var offsets : Array<{ start: Int, count:Float, index:Int }>;
-	var boundingBox : BoundingBox3D;
+	var type : String;
+	var index : BufferAttribute;
+	var attributes: Array<EitherType<BufferAttribute, InterleavedBufferAttribute>>;
+	var morphAttributes : Dynamic;
+	var groups : Array<{ start: Int, count:Int, ?materialIndex:Int }>;
+	var boundingBox : Box3;
 	var boundingSphere : BoundingSphere;
+	var drawRange : { start: Int, count:Int };
 
-	@:overload(function(name:String, array:Dynamic, itemSize:Float):Dynamic{})
-	function addAttribute(name:String, attribute:BufferAttribute) : Dynamic;
-	function getAttribute(name:String) : Dynamic;
-	function addDrawCall(start:Int, count:Float, index:Int) : Void;
+	/** Deprecated. */
+	function addIndex(index:BufferAttribute) : Void;
+
+	function getIndex() : BufferAttribute;
+	function setIndex(index:BufferAttribute) : Void;
+
+	/** Deprecated. This overloaded method is deprecated. */
+	@:overload(function(name:String, attribute:EitherType<BufferAttribute, InterleavedBufferAttribute>):Void{})
+	function addAttribute(name:String, array:Dynamic, itemSize:Float) : Dynamic;
+	function getAttribute(name:String) : EitherType<BufferAttribute, InterleavedBufferAttribute>;
+	function removeAttribute(name:String) : Void;
+
+	/** Deprecated. */
+	function drawcalls() : Dynamic;
+	/** Deprecated. */
+	function offsets() : Dynamic;
+
+	/** Deprecated. Use addGroup */
+	function addDrawCall(start:Int, count:Int, ?index:Int) : Void;
+	/** Deprecated. */
+	function clearDrawCalls() : Void;
+	function addGroup(start:Int, count:Int, ?materialIndex:Int) : Void;
+	function clearGroups() : Void;
+
+	function setDrawRange(start:Int, count:Int) : Void;
 
 	/**
 	 * Bakes matrix transform directly into vertex coordinates.
 	 */
 	function applyMatrix(matrix:Matrix4) : Void;
 
+	function rotateX(angle:Float) : BufferGeometry;
+	function rotateY(angle:Float) : BufferGeometry;
+	function rotateZ(angle:Float) : BufferGeometry;
+	function translate(x:Float, y:Float, z:Float) : BufferGeometry;
+	function scale(x:Float, y:Float, z:Float) : BufferGeometry;
+	function lookAt(v:Vector3) : Void;
+
+	function center() : Vector3;
+
+	function setFromObject(object:Object3D) : Void;
+	function updateFromObject(object:Object3D) : Void;
+
 	function fromGeometry(geometry:Geometry, ?settings:Dynamic) : BufferGeometry;
+
+	function fromDirectGeometry(geometry:DirectGeometry) : BufferGeometry;
 
 	/**
 	 * Computes bounding box of the geometry, updating Geometry.boundingBox attribute.
@@ -63,26 +104,19 @@ extern class BufferGeometry
 	 */
 	function computeVertexNormals() : Void;
 
-	/**
-	 * Computes vertex tangents.
-	 * Based on http://www.terathon.com/code/tangent.html
-	 * Geometry must have vertex UVs (layer 0 will be used).
-	 */
-	function computeTangents() : Void;
-
-	function computeOffsets(indexBufferSize:Float) : Void;
-	function merge() : Void;
+	function computeOffsets(size:Float) : Void;
+	function merge(geometry:BufferGeometry, offset:Float) : BufferGeometry;
 	function normalizeNormals() : Void;
-	function reorderBuffers(indexBuffer:Float, indexMap:Array<Float>, vertexCount:Int) : Void;
+	function toJSON() : Dynamic;
 	function clone() : BufferGeometry;
+	function copy(source:BufferGeometry) : BufferGeometry;
 
 	/**
 	 * Disposes the object from memory.
 	 * You need to call this when you want the bufferGeometry removed while the application is running.
 	 */
 	function dispose() : Void;
-
-
+	
 	// EventDispatcher mixins
 	function addEventListener(type:String, listener:Dynamic->Void) : Void;
 	function hasEventListener(type:String, listener:Dynamic->Void) : Void;

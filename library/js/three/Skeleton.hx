@@ -19,4 +19,5 @@ extern class Skeleton
 	function calculateInverses(bone:Bone) : Void;
 	function pose() : Void;
 	function update() : Void;
+	function clone() : Skeleton;
 }

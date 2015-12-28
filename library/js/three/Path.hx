@@ -6,7 +6,7 @@ import js.html.*;
  * a 2d path representation, comprising of points, lines, and cubes, similar to the html5 2d canvas api. It extends CurvePath.
  */
 @:native("THREE.Path")
-extern class Path extends CurvePath
+extern class Path extends CurvePath<Vector2>
 {
 	function new(?points:Array<Vector2>) : Void;
 
@@ -20,11 +20,9 @@ extern class Path extends CurvePath
 	function splineThru(pts:Array<Vector2>) : Void;
 	function arc(aX:Float, aY:Float, aRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
 	function absarc(aX:Float, aY:Float, aRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
-	function ellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
-	function absellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
-	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector2>{})
-	override function getSpacedPoints(?divisions:Float) : Array<Vector>;
-	@:overload(function(?divisions:Float,?closedPath:Bool):Array<Vector2>{})
-	override function getPoints(?divisions:Float) : Array<Vector>;
+	function ellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
+	function absellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
+	function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
+	function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
 	function toShapes() : Array<Shape>;
 }

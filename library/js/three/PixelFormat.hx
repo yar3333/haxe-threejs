@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 // Pixel formats
-@:native("THREE.PixelFormat")
+@:native("THREE")
 extern enum PixelFormat
 {
 	AlphaFormat;
@@ -11,4 +11,5 @@ extern enum PixelFormat
 	RGBAFormat;
 	LuminanceFormat;
 	LuminanceAlphaFormat;
+	RGBEFormat;
 }

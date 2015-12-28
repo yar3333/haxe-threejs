@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.GridHelper")
-extern class GridHelper extends Line
+extern class GridHelper extends LineSegments
 {
 	function new(size:Int, step:Int) : Void;
 

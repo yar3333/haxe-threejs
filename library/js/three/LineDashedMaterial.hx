@@ -16,5 +16,6 @@ extern class LineDashedMaterial extends Material
 	var fog : Bool;
 
 	@:overload(function():LineDashedMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:LineDashedMaterial) : LineDashedMaterial;
 }

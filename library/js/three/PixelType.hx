@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 // Pixel types
-@:native("THREE.PixelType")
+@:native("THREE")
 extern enum PixelType
 {
 	UnsignedShort4444Type;

@@ -40,7 +40,7 @@ extern class Spline
 	 * Returns the length of the spline when using nSubDivisions.
 	 * @param nSubDivisions number of subdivisions between control points. Default is 100.
 	 */
-	function getLength(?nSubDivisions:Float) : { chunks: Array<Float>, total:Float };
+	function getLength(?nSubDivisions:Float) : { chunks: Array<Float>, total:Int };
 
 	/**
 	 * Modifies the spline so that it looks similar to the original but has its points distributed in such way that moving along the spline it's done at a more or less constant speed. The points should also appear more uniformly spread along the curve.

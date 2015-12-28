@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 // Data types
-@:native("THREE.TextureDataType")
+@:native("THREE")
 extern enum TextureDataType
 {
 	UnsignedByteType;
@@ -13,4 +13,5 @@ extern enum TextureDataType
 	IntType;
 	UnsignedIntType;
 	FloatType;
+	HalfFloatType;
 }

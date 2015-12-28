@@ -5,6 +5,6 @@ import js.html.*;
 @:native("THREE.Progress")
 extern interface Progress
 {
-	var total : Float;
-	var loaded : Float;
+	var total : Int;
+	var loaded : Int;
 }

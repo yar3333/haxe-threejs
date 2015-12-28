@@ -7,10 +7,6 @@ extern class OctahedronGeometry extends PolyhedronGeometry
 {
 	function new(radius:Float, detail:Int) : Void;
 
-	var parameters : {
-		radius: Float,
-		detail: Int
-	};
-	var radius : Float;
-	var detail : Int;
+	@:overload(function():OctahedronGeometry{})
+	override function clone() : Geometry;
 }

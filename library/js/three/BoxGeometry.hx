@@ -17,17 +17,18 @@ extern class BoxGeometry extends Geometry
 	 * @param heightSegments — Number of segmented faces along the height of the sides.
 	 * @param depthSegments — Number of segmented faces along the depth of the sides.
 	 */
-	function new(width:Float, height:Float, depth:Float, ?widthSegments:Float, ?heightSegments:Float, ?depthSegments:Float) : Void;
+	function new(width:Float, height:Float, depth:Float, ?widthSegments:Float, ?heightSegments:Int, ?depthSegments:Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		width: Float,
 		height: Float,
 		depth: Float,
 		widthSegments: Float,
-		heightSegments: Float,
+		heightSegments: Int,
 		depthSegments: Float
 	};
-	var widthSegments : Float;
-	var heightSegments : Float;
-	var depthSegments : Float;
+
+	@:overload(function():BoxGeometry{})
+	override function clone() : Geometry;
 }

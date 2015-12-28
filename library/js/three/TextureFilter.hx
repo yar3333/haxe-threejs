@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 // Filters
-@:native("THREE.TextureFilter")
+@:native("THREE")
 extern enum TextureFilter
 {
 	NearestFilter;

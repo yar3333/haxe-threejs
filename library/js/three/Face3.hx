@@ -6,9 +6,9 @@ import js.html.*;
  * Triangle face.
  *
  * # Example
- *     var normal = new THREE.Vector3(0, 1, 0);
- *     var color = new THREE.Color(0xffaa00);
- *     var face = new THREE.Face3(0, 1, 2, normal, color, 0);
+ *     var normal = new THREE.Vector3( 0, 1, 0 );
+ *     var color = new THREE.Color( 0xffaa00 );
+ *     var face = new THREE.Face3( 0, 1, 2, normal, color, 0 );
  *
  * @source https://github.com/mrdoob/three.js/blob/master/src/core/Face3.js
  */
@@ -69,7 +69,7 @@ extern class Face3
 	var vertexTangents : Array<Float>;
 
 	/**
-	 * Material index (points to {@link Geometry.materials }).
+	 * Material index (points to {@link Geometry.materials}).
 	 */
 	var materialIndex : Int;
 

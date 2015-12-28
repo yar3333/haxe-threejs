@@ -4,7 +4,7 @@ import js.html.*;
 
 // TEXTURE CONSTANTS
 // Operations
-@:native("THREE.Combine")
+@:native("THREE")
 extern enum Combine
 {
 	MultiplyOperation;

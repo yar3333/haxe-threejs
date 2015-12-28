@@ -5,16 +5,16 @@ import js.html.*;
 @:native("THREE.CircleGeometry")
 extern class CircleGeometry extends Geometry
 {
-	function new(?radius:Float, ?segments:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	function new(?radius:Float, ?segments:Int, ?thetaStart:Float, ?thetaLength:Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		radius: Float,
-		segments: Float,
+		segments: Int,
 		thetaStart: Float,
 		thetaLength: Float
 	};
-	var radius : Float;
-	var segments : Float;
-	var thetaStart : Float;
-	var thetaLength : Float;
+
+	@:overload(function():CircleGeometry{})
+	override function clone() : Geometry;
 }

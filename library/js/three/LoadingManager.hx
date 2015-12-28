@@ -10,6 +10,8 @@ extern class LoadingManager
 {
 	function new(?onLoad:Void->Void, ?onProgress:String->Float->Float->Void, ?onError:Void->Void) : Void;
 
+	var onStart : Void->Void;
+
 	/**
 	 * Will be called when load starts.
 	 * The default is a function with empty body.
@@ -30,4 +32,5 @@ extern class LoadingManager
 
 	function itemStart(url:String) : Void;
 	function itemEnd(url:String) : Void;
+	function itemError(url:String) : Void;
 }

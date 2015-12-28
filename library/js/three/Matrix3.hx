@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 /**
- * (class Matrix3 implements Matrix&lt;Matrix3&gt; )
+ * ( class Matrix3 implements Matrix&lt;Matrix3&gt; )
  */
 @:native("THREE.Matrix3")
 extern class Matrix3 implements Matrix
@@ -26,9 +26,12 @@ extern class Matrix3 implements Matrix
 	function set(n11:Float, n12:Float, n13:Float, n21:Float, n22:Float, n23:Float, n31:Float, n32:Float, n33:Float) : Matrix3;
 	@:overload(function():Matrix3{})
 	function identity() : Matrix;
+	@:overload(function():Matrix3{})
+	function clone() : Matrix;
 	@:overload(function(m:Matrix3):Matrix3{})
 	function copy(m:Matrix) : Matrix;
 	function applyToVector3Array(array:Array<Float>, ?offset:Float, ?length:Float) : Array<Float>;
+	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
 	@:overload(function(s:Float):Matrix3{})
 	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
@@ -50,6 +53,4 @@ extern class Matrix3 implements Matrix
 	function transposeIntoArray(r:Array<Float>) : Array<Float>;
 	function fromArray(array:Array<Float>) : Matrix3;
 	function toArray() : Array<Float>;
-	@:overload(function():Matrix3{})
-	function clone() : Matrix;
 }

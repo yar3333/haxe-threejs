@@ -19,22 +19,16 @@ extern class SphereGeometry extends Geometry
 	 * @param thetaStart — specify vertical starting angle. Default is 0.
 	 * @param thetaLength — specify vertical sweep angle size. Default is Math.PI.
 	 */
-	function new(radius:Float, ?widthSegments:Float, ?heightSegments:Float, ?phiStart:Float, ?phiLength:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	function new(radius:Float, ?widthSegments:Float, ?heightSegments:Int, ?phiStart:Float, ?phiLength:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		radius: Float,
 		widthSegments: Float,
-		heightSegments: Float,
+		heightSegments: Int,
 		phiStart: Float,
 		phiLength: Float,
 		thetaStart: Float,
 		thetaLength: Float
-	};
-	var radius : Float;
-	var widthSegments : Float;
-	var heightSegments : Float;
-	var phiStart : Float;
-	var phiLength : Float;
-	var thetaStart : Float;
-	var thetaLength : Float;
+	}
 }

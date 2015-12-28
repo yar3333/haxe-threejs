@@ -5,18 +5,17 @@ import js.html.*;
 @:native("THREE.TorusGeometry")
 extern class TorusGeometry extends Geometry
 {
-	function new(?radius:Float, ?tube:Float, ?radialSegments:Float, ?tubularSegments:Float, ?arc:Float) : Void;
+	function new(?radius:Float, ?tube:Float, ?radialSegments:Int, ?tubularSegments:Float, ?arc:Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		radius: Float,
 		tube: Float,
-		radialSegments: Float,
+		radialSegments: Int,
 		tubularSegments: Float,
 		arc: Float
 	};
-	var radius : Float;
-	var tube : Float;
-	var radialSegments : Float;
-	var tubularSegments : Float;
-	var arc : Float;
+
+	@:overload(function():TorusGeometry{})
+	override function clone() : Geometry;
 }

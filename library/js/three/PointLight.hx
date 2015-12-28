@@ -3,17 +3,17 @@ package js.three;
 import js.html.*;
 
 /**
- * Affects objects using {@link MeshLambertMaterial } or {@link MeshPhongMaterial }.
+ * Affects objects using {@link MeshLambertMaterial} or {@link MeshPhongMaterial}.
  *
  * @example
- * var light = new THREE.PointLight(0xff0000, 1, 100);
- * light.position.set(50, 50, 50);
- * scene.add(light);
+ * var light = new THREE.PointLight( 0xff0000, 1, 100 );
+ * light.position.set( 50, 50, 50 );
+ * scene.add( light );
  */
 @:native("THREE.PointLight")
 extern class PointLight extends Light
 {
-	function new(?hex:Int, ?intensity:Float, ?distance:Float) : Void;
+	function new(?hex:Int, ?intensity:Float, ?distance:Float, ?decay:Float) : Void;
 
 	/*
 	 * Light's intensity.
@@ -27,6 +27,12 @@ extern class PointLight extends Light
 	 */
 	var distance : Float;
 
-	@:overload(function():PointLight{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	var decay : Float;
+
+	var shadow : LightShadow;
+
+	@:overload(function(?recursive:Bool):PointLight{})
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(source:PointLight):PointLight{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

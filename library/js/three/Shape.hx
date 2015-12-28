@@ -14,15 +14,11 @@ extern class Shape extends Path
 
 	function extrude(?options:Dynamic) : ExtrudeGeometry;
 	function makeGeometry(?options:Dynamic) : ShapeGeometry;
-	function getPointsHoles(divisions:Float) : Array<Array<Vector2>>;
-	function getSpacedPointsHoles(divisions:Float) : Array<Array<Vector2>>;
-	function extractAllPoints(divisions:Float) : {
+	function getPointsHoles(divisions:Int) : Array<Array<Vector2>>;
+	function extractAllPoints(divisions:Int) :
+	{
 		shape : Array<Vector2>,
 		holes : Array<Array<Vector2>>
 	};
-	function extractPoints(divisions:Float) : Array<Vector2>;
-	function extractAllSpacedPoints(divisions:Vector2) : {
-		shape : Array<Vector2>,
-		holes : Array<Array<Vector2>>
-	};
+	function extractPoints(divisions:Int) : Array<Vector2>;
 }

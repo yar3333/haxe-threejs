@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 // Wrapping modes
-@:native("THREE.Wrapping")
+@:native("THREE")
 extern enum Wrapping
 {
 	RepeatWrapping;

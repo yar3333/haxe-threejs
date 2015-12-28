@@ -6,14 +6,14 @@ import js.html.*;
  * 3D vector.
  *
  * @example
- * a = new THREE.Vector3(1, 0, 0);
- * b = new THREE.Vector3(0, 1, 0);
+ * a = new THREE.Vector3( 1, 0, 0 );
+ * b = new THREE.Vector3( 0, 1, 0 );
  * c = new THREE.Vector3();
- * c.crossVectors(a, b);
+ * c.crossVectors( a, b );
  *
  * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Vector3.js">src/math/Vector3.js</a>
  *
- * (class Vector3 implements Vector<Vector3>)
+ * ( class Vector3 implements Vector<Vector3> )
  */
 @:native("THREE.Vector3")
 extern class Vector3 implements Vector
@@ -46,7 +46,11 @@ extern class Vector3 implements Vector
 
 	function setComponent(index:Int, value:Float) : Void;
 	function getComponent(index:Int) : Float;
-
+	/**
+	 * Clones this vector.
+	 */
+	@:overload(function():Vector3{})
+	function clone() : Vector;
 	/**
 	 * Copies value of v to this vector.
 	 */
@@ -56,9 +60,11 @@ extern class Vector3 implements Vector
 	/**
 	 * Adds v to this vector.
 	 */
-	@:overload(function(a:Dynamic):Vector3{})
+	@:overload(function(a:Vector3):Vector3{})
 	function add(v:Vector) : Vector;
 	function addScalar(s:Float) : Vector3;
+	@:overload(function(v:Vector3, s:Float):Vector3{})
+	function addScaledVector(v:Vector3, s:Float) : Vector3;
 
 	/**
 	 * Sets this vector to a + b.
@@ -71,6 +77,8 @@ extern class Vector3 implements Vector
 	 */
 	@:overload(function(a:Vector3):Vector3{})
 	function sub(v:Vector) : Vector;
+
+	function subScalar(s:Float) : Vector3;
 
 	/**
 	 * Sets this vector to a - b.
@@ -91,12 +99,14 @@ extern class Vector3 implements Vector
 	function applyMatrix4(m:Matrix4) : Vector3;
 	function applyProjection(m:Matrix4) : Vector3;
 	function applyQuaternion(q:Quaternion) : Vector3;
+	function project(camrea:Camera) : Vector3;
+	function unproject(camera:Camera) : Vector3;
 	function transformDirection(m:Matrix4) : Vector3;
 	function divide(v:Vector3) : Vector3;
 
 	/**
 	 * Divides this vector by scalar s.
-	 * Set vector to (0, 0, 0) if s == 0.
+	 * Set vector to ( 0, 0, 0 ) if s == 0.
 	 */
 	@:overload(function(s:Float):Vector3{})
 	function divideScalar(s:Float) : Vector;
@@ -104,6 +114,7 @@ extern class Vector3 implements Vector
 	function max(v:Vector3) : Vector3;
 	function clamp(min:Vector3, max:Vector3) : Vector3;
 	function clampScalar(min:Float, max:Float) : Vector3;
+	function clampLength(min:Float, max:Float) : Vector3;
 	function floor() : Vector3;
 	function ceil() : Vector3;
 	function round() : Vector3;
@@ -151,6 +162,8 @@ extern class Vector3 implements Vector
 	@:overload(function(v:Vector3,alpha:Float):Vector3{})
 	function lerp(v:Vector, alpha:Float) : Vector;
 
+	function lerpVectors(v1:Vector3, v2:Vector3, alpha:Float) : Vector3;
+
 	/**
 	 * Sets this vector to cross product of itself and v.
 	 */
@@ -186,12 +199,10 @@ extern class Vector3 implements Vector
 	 */
 	@:overload(function(v:Vector3):Bool{})
 	function equals(v:Vector) : Bool;
-	function fromArray(xyz:Array<Float>) : Vector3;
-	function toArray() : Array<Float>;
 
-	/**
-	 * Clones this vector.
-	 */
-	@:overload(function():Vector3{})
-	function clone() : Vector;
+	function fromArray(xyz:Array<Float>, ?offset:Float) : Vector3;
+
+	function toArray(?xyz:Array<Float>, ?offset:Float) : Array<Float>;
+
+	function fromAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector3;
 }

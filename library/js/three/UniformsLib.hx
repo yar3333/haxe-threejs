@@ -6,10 +6,14 @@ import js.html.*;
 extern class UniformsLib
 {
 	static var common : Dynamic;
-	static var bump : Dynamic;
+	static var aomap : Dynamic;
+	static var lightmap : Dynamic;
+	static var emissivemap : Dynamic;
+	static var bumpmap : Dynamic;
 	static var normalmap : Dynamic;
+	static var displacementmap : Dynamic;
 	static var fog : Dynamic;
 	static var lights : Dynamic;
-	static var particle : Dynamic;
+	static var points : Dynamic;
 	static var shadowmap : Dynamic;
 }

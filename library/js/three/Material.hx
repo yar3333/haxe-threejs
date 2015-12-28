@@ -22,6 +22,8 @@ extern class Material
 	 */
 	var name : String;
 
+	var type : String;
+
 	/**
 	 * Defines which of the face sides will be rendered - front, back or both.
 	 * Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSide.
@@ -34,23 +36,23 @@ extern class Material
 	var opacity : Float;
 
 	/**
-	 * Defines whether this material is transparent. This has an effect on rendering, as transparent objects need an special treatment, and are rendered after the opaque (i.e. non transparent) objects. For a working example of this behaviour, check the {@link WebGLRenderer } code.
+	 * Defines whether this material is transparent. This has an effect on rendering, as transparent objects need an special treatment, and are rendered after the opaque (i.e. non transparent) objects. For a working example of this behaviour, check the {@link WebGLRenderer} code.
 	 * Default is false.
 	 */
 	var transparent : Bool;
 
 	/**
-	 * Which blending to use when displaying objects with this material. Default is {@link NormalBlending }.
+	 * Which blending to use when displaying objects with this material. Default is {@link NormalBlending}.
 	 */
 	var blending : Blending;
 
 	/**
-	 * Blending source. It's one of the blending mode constants defined in Three.js. Default is {@link SrcAlphaFactor }.
+	 * Blending source. It's one of the blending mode constants defined in Three.js. Default is {@link SrcAlphaFactor}.
 	 */
 	var blendSrc : BlendingDstFactor;
 
 	/**
-	 * Blending destination. It's one of the blending mode constants defined in Three.js. Default is {@link OneMinusSrcAlphaFactor }.
+	 * Blending destination. It's one of the blending mode constants defined in Three.js. Default is {@link OneMinusSrcAlphaFactor}.
 	 */
 	var blendDst : BlendingSrcFactor;
 
@@ -58,6 +60,12 @@ extern class Material
 	 * Blending equation to use when applying blending. It's one of the constants defined in Three.js. Default is AddEquation.
 	 */
 	var blendEquation : BlendingEquation;
+
+	var blendSrcAlpha : Float;
+	var blendDstAlpha : Float;
+	var blendEquationAlpha : Float;
+
+	var depthFunc : DepthModes;
 
 	/**
 	 * Whether to have depth test enabled when rendering this material. Default is true.
@@ -69,6 +77,10 @@ extern class Material
 	 * When drawing 2D overlays it can be useful to disable the depth writing in order to layer several things together without creating z-index artifacts.
 	 */
 	var depthWrite : Bool;
+
+	var colorWrite : Bool;
+
+	var precision : Dynamic;
 
 	/**
 	 * Whether to use polygon offset. Default is false. This corresponds to the POLYGON_OFFSET_FILL WebGL feature.
@@ -107,7 +119,10 @@ extern class Material
 	var needsUpdate : Bool;
 
 	function setValues(values:Dynamic) : Void;
-	function clone(?material:Material) : Material;
+	function toJSON(?meta:Dynamic) : Dynamic;
+	@:overload(function(?source:Material):Material{})
+	function clone() : Material;
+	function update() : Void;
 	function dispose() : Void;
 
 	// EventDispatcher mixins

@@ -21,8 +21,6 @@ extern class Scene extends Object3D
 	var overrideMaterial : Material;
 	var autoUpdate : Bool;
 
-	/**
-	 * Default is false.
-	 */
-	//var matrixAutoUpdate : Bool;
+	@:overload(function(source:Scene):Scene{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

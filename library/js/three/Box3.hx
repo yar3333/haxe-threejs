@@ -14,6 +14,7 @@ extern class Box3
 	function setFromPoints(points:Array<Vector3>) : Box3;
 	function setFromCenterAndSize(center:Vector3, size:Vector3) : Box3;
 	function setFromObject(object:Object3D) : Box3;
+	function clone() : Box3;
 	function copy(box:Box3) : Box3;
 	function makeEmpty() : Box3;
 	function empty() : Bool;
@@ -34,5 +35,4 @@ extern class Box3
 	function applyMatrix4(matrix:Matrix4) : Box3;
 	function translate(offset:Vector3) : Box3;
 	function equals(box:Box3) : Bool;
-	function clone() : Box3;
 }

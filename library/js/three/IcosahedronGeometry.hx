@@ -7,10 +7,6 @@ extern class IcosahedronGeometry extends PolyhedronGeometry
 {
 	function new(radius:Float, detail:Int) : Void;
 
-	var parameters : {
-		radius: Float,
-		detail: Int
-	};
-	var radius : Float;
-	var detail : Int;
+	@:overload(function():IcosahedronGeometry{})
+	override function clone() : Geometry;
 }

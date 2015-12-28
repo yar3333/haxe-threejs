@@ -6,10 +6,10 @@ import js.html.*;
  * JavaScript events for custom objects
  *
  * # Example
- *     var Car = function() {
+ *     var Car = function () {
  *
- *         EventDispatcher.call(this);
- *         this.start = function() {
+ *         EventDispatcher.call( this );
+ *         this.start = function () {
  *
  *             this.dispatchEvent( { type: 'start', message: 'vroom vroom!' } );
  *
@@ -18,9 +18,9 @@ import js.html.*;
  *     };
  *
  *     var car = new Car();
- *     car.addEventListener('start', function(event) {
+ *     car.addEventListener( 'start', function ( event ) {
  *
- *         alert(event.message);
+ *         alert( event.message );
  *
  *     } );
  *     car.start();

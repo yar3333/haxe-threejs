@@ -10,6 +10,7 @@ extern class Line3
 	var end : Vector3;
 
 	function set(?start:Vector3, ?end:Vector3) : Line3;
+	function clone() : Line3;
 	function copy(line:Line3) : Line3;
 	function center(?optionalTarget:Vector3) : Vector3;
 	function delta(?optionalTarget:Vector3) : Vector3;
@@ -20,5 +21,4 @@ extern class Line3
 	function closestPointToPoint(point:Vector3, ?clampToLine:Bool, ?optionalTarget:Vector3) : Vector3;
 	function applyMatrix4(matrix:Matrix4) : Line3;
 	function equals(line:Line3) : Bool;
-	function clone() : Line3;
 }

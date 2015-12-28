@@ -18,17 +18,7 @@ import js.html.*;
 @:native("THREE.Loader")
 extern class Loader
 {
-	function new(?showStatus:Bool) : Void;
-
-	/**
-	 * If true, show loading status in the statusDomElement.
-	 */
-	var showStatus : Bool;
-
-	/**
-	 * This is the recipient of status messages.
-	 */
-	var statusDomElement : HtmlElement;
+	function new() : Void;
 
 	/**
 	 * Will be called when load starts.
@@ -54,12 +44,9 @@ extern class Loader
 	 */
 	var crossOrigin : String;
 
-	function addStatusElement() : HtmlElement;
-	function updateProgress(progress:Progress) : Void;
 	function extractUrlBase(url:String) : String;
 	function initMaterials(materials:Array<Material>, texturePath:String) : Array<Material>;
-	function needsTangents(materials:Array<Material>) : Bool;
-	function createMaterial(m:Material, texturePath:String) : Bool;
+	function createMaterial(m:Material, texturePath:String, ?crossOrigin:String) : Bool;
 
 	static var Handlers : LoaderHandler;
 }

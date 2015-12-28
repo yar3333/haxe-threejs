@@ -3,10 +3,9 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.Cache")
-extern class Cache
+extern interface Cache
 {
-	function new() : Void;
-
+	var enabled : Bool;
 	var files : Array<Dynamic>;
 
 	function add(key:String, file:Dynamic) : Void;

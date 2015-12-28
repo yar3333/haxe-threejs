@@ -6,7 +6,7 @@ import js.html.*;
 extern class CubeTexture extends Texture
 {
 	function new(
-		images: Array<Dynamic>, // HTMLImageElement or HTMLCanvasElement
+		images: Array<Dynamic>,// HTMLImageElement or HTMLCanvasElement
 		?mapping:Mapping,
 		?wrapS:Wrapping,
 		?wrapT:Wrapping,
@@ -14,11 +14,11 @@ extern class CubeTexture extends Texture
 		?minFilter:TextureFilter,
 		?format:PixelFormat,
 		?type:TextureDataType,
-		?anisotropy:Float
+		?anisotropy:Int
 	) : Void;
 
 	var images : Array<Dynamic>;
 
-	@:overload(function(?texture:CubeTexture):CubeTexture{})
-	override function clone() : Texture;
+	@:overload(function(source:CubeTexture):CubeTexture{})
+	override function copy(source:Texture) : Texture;
 }

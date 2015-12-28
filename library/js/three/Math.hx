@@ -10,19 +10,12 @@ extern interface Math
 	/**
 	 * Clamps the x to be between a and b.
 	 *
-	 * @param x Value to be clamped.
-	 * @param a Minimum value
-	 * @param b Maximum value.
+	 * @param value Value to be clamped.
+	 * @param min Minimum value
+	 * @param max Maximum value.
 	 */
-	function clamp(x:Float, a:Float, b:Float) : Float;
-
-	/**
-	 * Clamps the x to be larger than a.
-	 *
-	 * @param x — Value to be clamped.
-	 * @param a — Minimum value
-	 */
-	function clampBottom(x:Float, a:Float) : Float;
+	function clamp(value:Float, min:Float, max:Float) : Float;
+	function euclideanModulo(n:Int, m:Float) : Float;
 
 	/**
 	 * Linear mapping of x from range [a1, a2] to range [b1, b2].
@@ -60,14 +53,13 @@ extern interface Math
 	 */
 	function randFloatSpread(range:Float) : Float;
 
-	/**
-	 * Returns -1 if x is less than 0, 1 if x is greater than 0, and 0 if x is zero.
-	 */
-	function sign(x:Float) : Float;
-
 	function degToRad(degrees:Float) : Float;
 
 	function radToDeg(radians:Float) : Float;
 
 	function isPowerOfTwo(value:Float) : Bool;
+
+	function nearestPowerOfTwo(value:Float) : Float;
+
+	function nextPowerOfTwo(value:Float) : Float;
 }

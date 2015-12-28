@@ -10,6 +10,8 @@ extern class HemisphereLight extends Light
 	var groundColor : Color;
 	var intensity : Float;
 
-	@:overload(function():HemisphereLight{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	@:overload(function(?recursive:Bool):HemisphereLight{})
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(source:HemisphereLight):HemisphereLight{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

@@ -11,7 +11,8 @@ extern class Sprite extends Object3D
 	var material : SpriteMaterial;
 
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
-	override function updateMatrix() : Void;
-	@:overload(function(?object:Sprite):Sprite{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	@:overload(function():Sprite{})
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(?source:Sprite):Sprite{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

@@ -6,8 +6,8 @@ import js.html.*;
  * This light's color gets applied to all the objects in the scene globally.
  *
  * # example
- *     light = new THREE.AmbientLight(0x404040); // soft white light
- *     scene.add(light);
+ *     light = new THREE.AmbientLight( 0x404040 ); // soft white light
+ *     scene.add( light );
  *
  * @source https://github.com/mrdoob/three.js/blob/master/src/lights/AmbientLight.js
  */
@@ -20,6 +20,8 @@ extern class AmbientLight extends Light
 	 */
 	function new(?hex:Int) : Void;
 
-	@:overload(function():AmbientLight{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	@:overload(function(?recursive:Bool):AmbientLight{})
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(source:AmbientLight):AmbientLight{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

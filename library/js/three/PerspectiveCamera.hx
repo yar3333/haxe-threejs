@@ -6,8 +6,8 @@ import js.html.*;
  * Camera with perspective projection.
  *
  * # example
- *     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
- *     scene.add(camera);
+ *     var camera = new THREE.PerspectiveCamera( 45, width / height, 1, 1000 );
+ *     scene.add( camera );
  *
  * @source https://github.com/mrdoob/three.js/blob/master/src/cameras/PerspectiveCamera.js
  */
@@ -21,6 +21,8 @@ extern class PerspectiveCamera extends Camera
 	 * @param far Camera frustum far plane. Default value is 2000.
 	 */
 	function new(?fov:Float, ?aspect:Float, ?near:Float, ?far:Float) : Void;
+
+	var zoom : Float;
 
 	/**
 	 * Camera frustum vertical field of view, from bottom to top of view, in degrees.
@@ -68,17 +70,17 @@ extern class PerspectiveCamera extends Camera
 	 *     var fullHeight = h * 2;
 	 *
 	 *     // A
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 0, h * 0, w, h);
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 0, h * 0, w, h );
 	 *     // B
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 1, h * 0, w, h);
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 1, h * 0, w, h );
 	 *     // C
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 2, h * 0, w, h);
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 2, h * 0, w, h );
 	 *     // D
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 0, h * 1, w, h);
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 0, h * 1, w, h );
 	 *     // E
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 1, h * 1, w, h);
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 1, h * 1, w, h );
 	 *     // F
-	 *     camera.setViewOffset(fullWidth, fullHeight, w * 2, h * 1, w, h); Note there is no reason monitors have to be the same size or in a grid.
+	 *     camera.setViewOffset( fullWidth, fullHeight, w * 2, h * 1, w, h ); Note there is no reason monitors have to be the same size or in a grid.
 	 *
 	 * @param fullWidth full width of multiview setup
 	 * @param fullHeight full height of multiview setup
@@ -94,5 +96,8 @@ extern class PerspectiveCamera extends Camera
 	 */
 	function updateProjectionMatrix() : Void;
 	@:overload(function():PerspectiveCamera{})
-	override function clone(?object:Object3D, ?recursive:Bool) : Object3D;
+	override function clone(?recursive:Bool) : Object3D;
+	@:overload(function(source:PerspectiveCamera):PerspectiveCamera{})
+	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
+	override function toJSON(?meta:Dynamic) : Dynamic;
 }

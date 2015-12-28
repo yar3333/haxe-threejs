@@ -7,10 +7,10 @@ import js.html.*;
  *
  * # Example
  *     var geometry = new THREE.Geometry();
- *     geometry.vertices.push(new THREE.Vector3(-10, 10, 0) );
- *     geometry.vertices.push(new THREE.Vector3(-10, -10, 0) );
- *     geometry.vertices.push(new THREE.Vector3(10, -10, 0) );
- *     geometry.faces.push(new THREE.Face3(0, 1, 2) );
+ *     geometry.vertices.push( new THREE.Vector3( -10, 10, 0 ) );
+ *     geometry.vertices.push( new THREE.Vector3( -10, -10, 0 ) );
+ *     geometry.vertices.push( new THREE.Vector3( 10, -10, 0 ) );
+ *     geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
  *     geometry.computeBoundingSphere();
  *
  * @see https://github.com/mrdoob/three.js/blob/master/src/core/Geometry.js
@@ -31,6 +31,8 @@ extern class Geometry
 	 * Name for this geometry. Default is an empty string.
 	 */
 	var name : String;
+
+	var type : String;
 
 	/**
 	 * The array of vertices hold every position of points of the model.
@@ -70,13 +72,6 @@ extern class Geometry
 	var morphTargets : Array<MorphTarget>;
 
 	/**
-	 * Array of morph colors. Morph colors have similar structure as morph targets, each color set is a Javascript object:
-	 *
-	 *     morphColor = { name: "colorName", colors: [ new THREE.Color(), ... ] }
-	 */
-	var morphColors : Array<MorphColor>;
-
-	/**
 	 * Array of morph normals. Morph normals have similar structure as morph targets, each normal set is a Javascript object:
 	 *
 	 *     morphNormal = { name: "NormalName", normals: [ new THREE.Vector3(), ... ] }
@@ -101,24 +96,12 @@ extern class Geometry
 	/**
 	 * Bounding box.
 	 */
-	var boundingBox : BoundingBox3D;
+	var boundingBox : Box3;
 
 	/**
 	 * Bounding sphere.
 	 */
 	var boundingSphere : BoundingSphere;
-
-	/**
-	 * True if geometry has tangents. Set in Geometry.computeTangents.
-	 */
-	var hasTangents : Bool;
-
-	/**
-	 * Set to true if attribute buffers will need to change in runtime (using "dirty" flags).
-	 * Unless set to true internal typed arrays corresponding to buffers will be deleted once sent to GPU.
-	 * Defaults to true.
-	 */
-	inline function dynamicGet() : Bool return untyped this["dynamic"];
 
 	/**
 	 * Set to true if the vertices array has been updated.
@@ -141,11 +124,6 @@ extern class Geometry
 	var normalsNeedUpdate : Bool;
 
 	/**
-	 * Set to true if the tangents in the faces has been updated.
-	 */
-	var tangentsNeedUpdate : Bool;
-
-	/**
 	 * Set to true if the colors array has been updated.
 	 */
 	var colorsNeedUpdate : Bool;
@@ -154,11 +132,6 @@ extern class Geometry
 	 * Set to true if the linedistances array has been updated.
 	 */
 	var lineDistancesNeedUpdate : Bool;
-
-	/**
-	 * Set to true if an array has changed in length.
-	 */
-	var buffersNeedUpdate : Bool;
 
 	/**
 	 *
@@ -170,10 +143,22 @@ extern class Geometry
 	 */
 	function applyMatrix(matrix:Matrix4) : Void;
 
+	function rotateX(angle:Float) : Geometry;
+	function rotateY(angle:Float) : Geometry;
+	function rotateZ(angle:Float) : Geometry;
+
+	function translate(x:Float, y:Float, z:Float) : Geometry;
+	function scale(x:Float, y:Float, z:Float) : Geometry;
+	function lookAt(vector:Vector3) : Void;
+	
+	function fromBufferGeometry(geometry:BufferGeometry) : Geometry;
+
 	/**
 	 *
 	 */
 	function center() : Vector3;
+
+	function normalize() : Geometry;
 
 	/**
 	 * Computes face normals.
@@ -191,17 +176,10 @@ extern class Geometry
 	 */
 	function computeMorphNormals() : Void;
 
-	/**
-	 * Computes vertex tangents.
-	 * Based on <a href="http://www.terathon.com/code/tangent.html">http://www.terathon.com/code/tangent.html</a>
-	 * Geometry must have vertex UVs (layer 0 will be used).
-	 */
-	function computeTangents() : Void;
-
 	function computeLineDistances() : Void;
 
 	/**
-	 * Computes bounding box of the geometry, updating {@link Geometry.boundingBox } attribute.
+	 * Computes bounding box of the geometry, updating {@link Geometry.boundingBox} attribute.
 	 */
 	function computeBoundingBox() : Void;
 
@@ -213,25 +191,35 @@ extern class Geometry
 
 	function merge(geometry:Geometry, matrix:Matrix, materialIndexOffset:Float) : Void;
 
+	function mergeMesh(mesh:Mesh) : Void;
+
 	/**
 	 * Checks for duplicate vertices using hashmap.
 	 * Duplicated vertices are removed and faces' vertices are updated.
 	 */
 	function mergeVertices() : Float;
 
-	function makeGroups(usesFaceMaterial:Bool, maxVerticesInGroup:Float) : Void;
+	function sortFacesByMaterialIndex() : Void;
+
+	function toJSON() : Dynamic;
 
 	/**
 	 * Creates a new clone of the Geometry.
 	 */
 	function clone() : Geometry;
 
+	function copy(source:Geometry) : Geometry;
+
 	/**
 	 * Removes The object from memory.
 	 * Don't forget to call this method when you remove an geometry because it can cuase meomory leaks.
 	 */
 	function dispose() : Void;
-
+	
+	//These properties do not exist in a normal Geometry class, but if you use the instance that was passed by JSONLoader, it will be added.
+	var bones : Array<Bone>;
+	var animation : AnimationClip;
+	var animations : Array<AnimationClip>;
 
 	// EventDispatcher mixins
 	function addEventListener(type:String, listener:Dynamic->Void) : Void;

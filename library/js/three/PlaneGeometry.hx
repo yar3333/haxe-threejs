@@ -5,16 +5,16 @@ import js.html.*;
 @:native("THREE.PlaneGeometry")
 extern class PlaneGeometry extends Geometry
 {
-	function new(width:Float, height:Float, ?widthSegments:Float, ?heightSegments:Float) : Void;
+	function new(width:Float, height:Float, ?widthSegments:Float, ?heightSegments:Int) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		width: Float,
 		height: Float,
 		widthSegments: Float,
-		heightSegments: Float
+		heightSegments: Int
 	};
-	var width : Float;
-	var height : Float;
-	var widthSegments : Float;
-	var heightSegments : Float;
+
+	@:overload(function():PlaneGeometry{})
+	override function clone() : Geometry;
 }

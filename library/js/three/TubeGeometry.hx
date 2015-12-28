@@ -5,23 +5,25 @@ import js.html.*;
 @:native("THREE.TubeGeometry")
 extern class TubeGeometry extends Geometry
 {
-	function new(path:Path, ?segments:Float, ?radius:Float, ?radiusSegments:Float, ?closed:Bool) : Void;
+	function new(path:Path, ?segments:Int, ?radius:Float, ?radiusSegments:Int, ?closed:Bool, ?taper:Float->Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		path: Path,
-		segments: Float,
+		segments: Int,
 		radius: Float,
-		radialSegments: Float,
-		closed: Bool
+		radialSegments: Int,
+		closed: Bool,
+		taper:Float->Float;// NoTaper or SinusoidalTaper;
 	};
-	var path : Path;
-	var segments : Float;
-	var radius : Float;
-	var radialSegments : Float;
-	var closed : Bool;
 	var tangents : Array<Vector3>;
 	var normals : Array<Vector3>;
 	var binormals : Array<Vector3>;
 
-	function FrenetFrames(path:Path, segments:Float, closed:Bool) : Void;
+	static function NoTaper(?u:Float) : Float;
+	static function SinusoidalTaper(u:Float) : Float;
+	static function FrenetFrames(path:Path, segments:Int, closed:Bool) : Void;
+
+	@:overload(function():TubeGeometry{})
+	override function clone() : Geometry;
 }

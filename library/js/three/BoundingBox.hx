@@ -7,7 +7,8 @@ extern interface BoundingBox
 {
 	var minX : Float;
 	var minY : Float;
+	@:optional var minZ : Float;
 	var maxX : Float;
 	var maxY : Float;
-	var centroid : Vector;
+	@:optional var maxZ : Float;
 }

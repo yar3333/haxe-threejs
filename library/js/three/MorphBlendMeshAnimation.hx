@@ -5,8 +5,8 @@ import js.html.*;
 @:native("THREE.MorphBlendMeshAnimation")
 extern interface MorphBlendMeshAnimation
 {
-	var startFrame : Float;
-	var endFrame : Float;
+	var start : Float;
+	var end : Float;
 	var length : Float;
 	var fps : Float;
 	var duration : Float;

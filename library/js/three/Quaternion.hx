@@ -7,9 +7,9 @@ import js.html.*;
  *
  * @example
  * var quaternion = new THREE.Quaternion();
- * quaternion.setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI / 2);
- * var vector = new THREE.Vector3(1, 0, 0);
- * vector.applyQuaternion(quaternion);
+ * quaternion.setFromAxisAngle( new THREE.Vector3( 0, 1, 0 ), Math.PI / 2 );
+ * var vector = new THREE.Vector3( 1, 0, 0 );
+ * vector.applyQuaternion( quaternion );
  */
 @:native("THREE.Quaternion")
 extern class Quaternion
@@ -33,6 +33,11 @@ extern class Quaternion
 	function set(x:Float, y:Float, z:Float, w:Float) : Quaternion;
 
 	/**
+	 * Clones this quaternion.
+	 */
+	function clone() : Quaternion;
+
+	/**
 	 * Copies values of q to this quaternion.
 	 */
 	function copy(q:Quaternion) : Quaternion;
@@ -53,7 +58,7 @@ extern class Quaternion
 	 * Sets this quaternion from rotation component of m. Adapted from http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/index.htm.
 	 */
 	function setFromRotationMatrix(m:Matrix4) : Quaternion;
-	function setFromUnitVectors(vFrom:Vector3, vTo:Vector4) : Quaternion;
+	function setFromUnitVectors(vFrom:Vector3, vTo:Vector3) : Quaternion;
 	/**
 	 * Inverts this quaternion.
 	 */
@@ -90,14 +95,11 @@ extern class Quaternion
 	function multiplyVector3(vector:Vector3) : Vector3;
 	function slerp(qb:Quaternion, t:Float) : Quaternion;
 	function equals(v:Quaternion) : Bool;
-	function fromArray(n:Array<Float>) : Quaternion;
-	function toArray() : Array<Float>;
-	var onChange : Void->Void;
+	@:overload(function(xyzw:Array<Float>, ?offset:Float):Quaternion{})
+	function fromArray(n:Array<Int>) : Quaternion;
+	function toArray(?xyzw:Array<Float>, ?offset:Float) : Array<Float>;
 
-	/**
-	 * Clones this quaternion.
-	 */
-	function clone() : Quaternion;
+	var onChange : Void->Void;
 
 	/**
 	 * Adapted from http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/.

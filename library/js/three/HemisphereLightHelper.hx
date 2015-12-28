@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.HemisphereLightHelper")
 extern class HemisphereLightHelper extends Object3D
 {
-	function new(light:Light, sphereSize:Float, arrowLength:Float, domeSize:Float) : Void;
+	function new(light:Light, sphereSize:Float) : Void;
 
 	var light : Light;
 	var colors : Array<Color>;

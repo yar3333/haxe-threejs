@@ -10,12 +10,15 @@ import js.html.*;
 extern class TextureLoader
 {
 	function new(?manager:LoadingManager) : Void;
+
+	var manager : LoadingManager;
 	var crossOrigin : String;
+
 	/**
 	 * Begin loading from url
 	 *
 	 * @param url
 	 */
-	function load(url:String, onLoad:Texture->Void) : Void;
+	function load(url:String, ?onLoad:Texture->Void) : Texture;
 	function setCrossOrigin(crossOrigin:String) : Void;
 }

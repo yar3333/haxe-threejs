@@ -6,13 +6,10 @@ import js.html.*;
 extern class MeshLambertMaterial extends Material
 {
 	function new(?parameters:MeshLambertMaterialParameters) : Void;
+
 	var color : Color;
-	var ambient : Color;
 	var emissive : Color;
-	var wrapAround : Bool;
-	var wrapRGB : Vector3;
 	var map : Texture;
-	var lightMap : Texture;
 	var specularMap : Texture;
 	var alphaMap : Texture;
 	var envMap : Texture;
@@ -20,7 +17,6 @@ extern class MeshLambertMaterial extends Material
 	var reflectivity : Float;
 	var refractionRatio : Float;
 	var fog : Bool;
-	var shading : Shading;
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
 	var wireframeLinecap : String;
@@ -31,5 +27,6 @@ extern class MeshLambertMaterial extends Material
 	var morphNormals : Bool;
 
 	@:overload(function():MeshLambertMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:MeshLambertMaterial) : MeshLambertMaterial;
 }

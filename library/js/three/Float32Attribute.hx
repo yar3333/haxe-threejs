@@ -8,5 +8,5 @@ import js.html.*;
 @:native("THREE.Float32Attribute")
 extern class Float32Attribute extends BufferAttribute
 {
-	function new(data:Dynamic, itemSize:Float) : Void;
+	function new(array:Dynamic, itemSize:Float) : Void;
 }

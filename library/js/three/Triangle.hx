@@ -13,6 +13,7 @@ extern class Triangle
 
 	function set(a:Vector3, b:Vector3, c:Vector3) : Triangle;
 	function setFromPointsAndIndices(points:Array<Vector3>, i0:Float, i1:Float, i2:Float) : Triangle;
+	function clone() : Triangle;
 	function copy(triangle:Triangle) : Triangle;
 	function area() : Float;
 	function midpoint(?optionalTarget:Vector3) : Vector3;
@@ -21,7 +22,6 @@ extern class Triangle
 	function barycoordFromPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
 	function containsPoint(point:Vector3) : Bool;
 	function equals(triangle:Triangle) : Bool;
-	function clone() : Triangle;
 
 	static inline function normal_(a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3 return untyped js.three.Triangle.normal(a, b, c, optionalTarget);
 	static inline function barycoordFromPoint_(point:Vector3, a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3 return untyped js.three.Triangle.barycoordFromPoint(a, b, c, optionalTarget);

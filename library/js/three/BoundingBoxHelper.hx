@@ -5,10 +5,10 @@ import js.html.*;
 @:native("THREE.BoundingBoxHelper")
 extern class BoundingBoxHelper extends Mesh
 {
-	function new(object:Object3D, ?hex:Int) : Void;
+	function new(?object:Object3D, ?hex:Int) : Void;
 
 	var object : Object3D;
-	var box : Array<Box3>;
+	var box : Box3;
 
 	function update() : Void;
 }

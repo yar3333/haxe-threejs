@@ -2,6 +2,7 @@ package js.three;
 
 import js.html.*;
 
+// Extras / Curves /////////////////////////////////////////////////////////////////////
 @:native("THREE.ArcCurve")
 extern class ArcCurve extends EllipseCurve
 {

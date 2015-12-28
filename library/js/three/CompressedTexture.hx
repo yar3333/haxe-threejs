@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-// Textures /////////////////////////////////////////////////////////////////////
 @:native("THREE.CompressedTexture")
 extern class CompressedTexture extends Texture
 {
@@ -17,13 +16,11 @@ extern class CompressedTexture extends Texture
 		?wrapT:Wrapping,
 		?magFilter:TextureFilter,
 		?minFilter:TextureFilter,
-		?anisotropy:Float
+		?anisotropy:Int
 	) : Void;
 
 	//var image : { width: Int, height:Int };
 	//var mipmaps : Array<ImageData>;
+	//var flipY : Bool;
 	//var generateMipmaps : Bool;
-
-	@:overload(function():CompressedTexture{})
-	override function clone() : Texture;
 }

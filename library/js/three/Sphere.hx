@@ -12,6 +12,7 @@ extern class Sphere
 
 	function set(center:Vector3, radius:Float) : Sphere;
 	function setFromPoints(points:Array<Vector3>, ?optionalCenter:Vector3) : Sphere;
+	function clone() : Sphere;
 	function copy(sphere:Sphere) : Sphere;
 	function empty() : Bool;
 	function containsPoint(point:Vector3) : Bool;
@@ -22,6 +23,4 @@ extern class Sphere
 	function applyMatrix4(matrix:Matrix4) : Sphere;
 	function translate(offset:Vector3) : Sphere;
 	function equals(sphere:Sphere) : Bool;
-
-	function clone() : Sphere;
 }

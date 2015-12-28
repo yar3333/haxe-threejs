@@ -7,20 +7,24 @@ extern class MeshPhongMaterial extends Material
 {
 	function new(?parameters:MeshPhongMaterialParameters) : Void;
 
-	var color : Color; // diffuse
-	var ambient : Color;
+	var color : Color;// diffuse
 	var emissive : Color;
 	var specular : Color;
 	var shininess : Float;
 	var metal : Bool;
-	var wrapAround : Bool;
-	var wrapRGB : Vector3;
 	var map : Texture;
 	var lightMap : Texture;
+	var lightMapIntensity : Float;
+	var aoMap : Texture;
+	var aoMapIntensity : Float;
+	var emissiveMap : Texture;
 	var bumpMap : Texture;
 	var bumpScale : Float;
 	var normalMap : Texture;
 	var normalScale : Vector2;
+	var displacementMap : Texture;
+	var displacementScale : Float;
+	var displacementBias : Float;
 	var specularMap : Texture;
 	var alphaMap : Texture;
 	var envMap : Texture;
@@ -39,5 +43,6 @@ extern class MeshPhongMaterial extends Material
 	var morphNormals : Bool;
 
 	@:overload(function():MeshPhongMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:MeshPhongMaterial) : MeshPhongMaterial;
 }

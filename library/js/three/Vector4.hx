@@ -5,7 +5,7 @@ import js.html.*;
 /**
  * 4D vector.
  *
- * (class Vector4 implements Vector<Vector4>)
+ * ( class Vector4 implements Vector<Vector4> )
  */
 @:native("THREE.Vector4")
 extern class Vector4 implements Vector
@@ -43,7 +43,11 @@ extern class Vector4 implements Vector
 
 	function setComponent(index:Int, value:Float) : Void;
 	function getComponent(index:Int) : Float;
-
+	/**
+	 * Clones this vector.
+	 */
+	@:overload(function():Vector4{})
+	function clone() : Vector;
 	/**
 	 * Copies value of v to this vector.
 	 */
@@ -62,12 +66,14 @@ extern class Vector4 implements Vector
 	 */
 	@:overload(function(a:Vector4,b:Vector4):Vector4{})
 	function addVectors(a:Vector, b:Vector) : Vector;
-
+	function addScaledVector(v:Vector4, s:Float) : Vector4;
 	/**
 	 * Subtracts v from this vector.
 	 */
 	@:overload(function(v:Vector4):Vector4{})
 	function sub(v:Vector) : Vector;
+
+	function subScalar(s:Float) : Vector4;
 
 	/**
 	 * Sets this vector to a - b.
@@ -84,7 +90,7 @@ extern class Vector4 implements Vector
 
 	/**
 	 * Divides this vector by scalar s.
-	 * Set vector to (0, 0, 0) if s == 0.
+	 * Set vector to ( 0, 0, 0 ) if s == 0.
 	 */
 	@:overload(function(s:Float):Vector4{})
 	function divideScalar(s:Float) : Vector;
@@ -141,7 +147,7 @@ extern class Vector4 implements Vector
 	/**
 	 * Normalizes this vector and multiplies it by l.
 	 */
-	@:overload(function(l:Float):Vector4{})
+	@:overload(function(length:Float):Vector4{})
 	function setLength(l:Float) : Vector;
 
 	/**
@@ -150,20 +156,19 @@ extern class Vector4 implements Vector
 	@:overload(function(v:Vector4,alpha:Float):Vector4{})
 	function lerp(v:Vector, alpha:Float) : Vector;
 
+	function lerpVectors(v1:Vector4, v2:Vector4, alpha:Float) : Vector4;
+
 	/**
 	 * Checks for strict equality of this vector and v.
 	 */
 	@:overload(function(v:Vector4):Bool{})
 	function equals(v:Vector) : Bool;
 
-	function fromArray(xyzw:Array<Float>) : Array<Float>;
-	function toArray() : Array<Float>;
+	function fromArray(xyzw:Array<Float>, ?offset:Float) : Vector4;
 
-	/**
-	 * Clones this vector.
-	 */
-	@:overload(function():Vector4{})
-	function clone() : Vector;
+	function toArray(?xyzw:Array<Float>, ?offset:Float) : Array<Float>;
+
+	function fromAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector4;
 
 	/**
 	 * Unsupported.

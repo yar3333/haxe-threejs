@@ -13,5 +13,6 @@ extern class SpriteMaterial extends Material
 	var fog : Bool;
 
 	@:overload(function():SpriteMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:SpriteMaterial) : SpriteMaterial;
 }

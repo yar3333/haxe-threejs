@@ -11,5 +11,6 @@ extern class MeshDepthMaterial extends Material
 	var wireframeLinewidth : Float;
 
 	@:overload(function():MeshDepthMaterial{})
-	override function clone(?material:Material) : Material;
+	override function clone() : Material;
+	function copy(source:MeshDepthMaterial) : MeshDepthMaterial;
 }

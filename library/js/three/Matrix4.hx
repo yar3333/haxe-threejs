@@ -14,11 +14,11 @@ import js.html.*;
  * var alpha = 0;
  * var beta = Math.PI;
  * var gamma = Math.PI/2;
- * m1.makeRotationX(alpha);
- * m2.makeRotationY(beta);
- * m3.makeRotationZ(gamma);
- * m.multiplyMatrices(m1, m2);
- * m.multiply(m3);
+ * m1.makeRotationX( alpha );
+ * m2.makeRotationY( beta );
+ * m3.makeRotationZ( gamma );
+ * m.multiplyMatrices( m1, m2 );
+ * m.multiply( m3 );
  */
 @:native("THREE.Matrix4")
 extern class Matrix4 implements Matrix
@@ -43,13 +43,13 @@ extern class Matrix4 implements Matrix
 	 */
 	@:overload(function():Matrix4{})
 	function identity() : Matrix;
-
-	/**
-	 * Copies a matrix m into this matrix.
-	 */
+	@:overload(function():Matrix4{})
+	function clone() : Matrix;
 	@:overload(function(m:Matrix4):Matrix4{})
 	function copy(m:Matrix) : Matrix;
 	function copyPosition(m:Matrix4) : Matrix4;
+	function extractBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
+	function makeBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
 
 	/**
 	 * Copies the rotation component of the supplied matrix m into this matrix rotation component.
@@ -84,7 +84,7 @@ extern class Matrix4 implements Matrix
 	@:overload(function(s:Float):Matrix4{})
 	function multiplyScalar(s:Float) : Matrix;
 	function applyToVector3Array(array:Array<Float>, ?offset:Float, ?length:Float) : Array<Float>;
-
+	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
 	/**
 	 * Computes determinant of this matrix.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
@@ -169,7 +169,7 @@ extern class Matrix4 implements Matrix
 	 * Decomposes this matrix into the translation, rotation and scale components.
 	 * If parameters are not passed, new instances will be created.
 	 */
-	function decompose(?translation:Vector3, ?rotation:Quaternion, ?scale:Vector3) : Array<Dynamic>; // [Vector3, Quaternion, Vector3]
+	function decompose(?translation:Vector3, ?rotation:Quaternion, ?scale:Vector3) : Array<Dynamic>;// [Vector3, Quaternion, Vector3]
 
 	/**
 	 * Creates a frustum matrix.
@@ -185,11 +185,7 @@ extern class Matrix4 implements Matrix
 	 * Creates an orthographic projection matrix.
 	 */
 	function makeOrthographic(left:Float, right:Float, top:Float, bottom:Float, near:Float, far:Float) : Matrix4;
+	function equals(matrix:Matrix4) : Bool;
 	function fromArray(array:Array<Float>) : Matrix4;
 	function toArray() : Array<Float>;
-	/**
-	 * Clones this matrix.
-	 */
-	@:overload(function():Matrix4{})
-	function clone() : Matrix;
 }

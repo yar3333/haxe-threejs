@@ -2,6 +2,7 @@ package js.three;
 
 import js.html.*;
 
+// Renderers / WebGL / Plugins /////////////////////////////////////////////////////////////////////
 @:native("THREE.RendererPlugin")
 extern interface RendererPlugin
 {

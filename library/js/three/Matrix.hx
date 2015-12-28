@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 /**
- * (interface Matrix&lt;T&gt; )
+ * ( interface Matrix&lt;T&gt; )
  */
 @:native("THREE.Matrix")
 extern interface Matrix
@@ -14,34 +14,34 @@ extern interface Matrix
 	var elements : Float32Array;
 
 	/**
-	 * identity() : T;
+	 * identity():T;
 	 */
 	function identity() : Matrix;
 
 	/**
-	 * copy(m:T) : T;
+	 * copy(m:T):T;
 	 */
 	function copy(m:Matrix) : Matrix;
 
 	/**
-	 * multiplyScalar(s:Float) : T;
+	 * multiplyScalar(s:Float):T;
 	 */
 	function multiplyScalar(s:Float) : Matrix;
 
 	function determinant() : Float;
 
 	/**
-	 * getInverse(matrix:T, ?throwOnInvertible:Bool) : T;
+	 * getInverse(matrix:T, ?throwOnInvertible:Bool):T;
 	 */
 	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
 
 	/**
-	 * transpose() : T;
+	 * transpose():T;
 	 */
 	function transpose() : Matrix;
 
 	/**
-	 * clone() : T;
+	 * clone():T;
 	 */
 	function clone() : Matrix;
 }

@@ -13,20 +13,20 @@ extern class CylinderGeometry extends Geometry
 	 * @param heightSegments — Number of rows of faces along the height of the cylinder.
 	 * @param openEnded - A Boolean indicating whether or not to cap the ends of the cylinder.
 	 */
-	function new(?radiusTop:Float, ?radiusBottom:Float, ?height:Float, ?radiusSegments:Float, ?heightSegments:Float, ?openEnded:Bool) : Void;
+	function new(?radiusTop:Float, ?radiusBottom:Float, ?height:Float, ?radiusSegments:Int, ?heightSegments:Int, ?openEnded:Bool, ?thetaStart:Float, ?thetaLength:Float) : Void;
 
-	var parameters : {
+	var parameters :
+	{
 		radiusTop: Float,
 		radiusBottom: Float,
 		height: Float,
-		radialSegments: Float,
-		heightSegments: Float,
-		openEnded: Bool
+		radialSegments: Int,
+		heightSegments: Int,
+		openEnded: Bool,
+		thetaStart: Float,
+		thetaLength: Float
 	};
-	var radiusTop : Float;
-	var radiusBottom : Float;
-	var height : Float;
-	var radialSegments : Float;
-	var heightSegments : Float;
-	var openEnded : Bool;
+
+	@:overload(function():CylinderGeometry{})
+	override function clone() : Geometry;
 }
