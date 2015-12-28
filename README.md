@@ -30,3 +30,10 @@ Key project files:
  * extract_classes.rules - regexs to find classes/interfaces (used to split raw haxe file to separate class files);
  * extract_vars.rules - regexs to find & save exported vars;
  * postprocess_vars.rules - regexs to process exported vars files.
+
+Tips:
+
+```haxe
+import js.three.Embed;    // use this to embed three.js into output js file
+import js.three.EmbedMin; // use this to embed three.min.js into output js file
+```
