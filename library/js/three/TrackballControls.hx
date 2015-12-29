@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.TrackballControls")
 extern class TrackballControls extends EventDispatcher
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/TrackballControls.js");

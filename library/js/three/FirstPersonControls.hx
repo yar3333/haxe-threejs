@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.FirstPersonControls")
 extern class FirstPersonControls
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/FirstPersonControls.js");

@@ -5,7 +5,7 @@ extern class Stats
 {
 	private static function __init__() : Void
 	{
-		#if !noEmbedJS
+		#if !threejs_noEmbed
 			haxe.macro.Compiler.includeFile("js/three/utils/Stats.js");
 		#end
 	}

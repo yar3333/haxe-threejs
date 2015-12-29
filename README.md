@@ -33,7 +33,6 @@ Key project files:
 
 Tips:
 
-```haxe
-import js.three.Embed;    // use this to embed three.js into output js file
-import js.three.EmbedMin; // use this to embed three.min.js into output js file
-```
+ * to embed main uncompressed threejs file: `import js.three.Embed;`
+ * to embed main minified threejs file: `import js.three.EmbedMin;`
+ * to stop embedding additinal threejs files (from `examples` folder of the original sources) use compiler option: `-D threejs-noEmbed`

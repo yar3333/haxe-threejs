@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.ShaderPass")
 extern class ShaderPass
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/ShaderPass.js");

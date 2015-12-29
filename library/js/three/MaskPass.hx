@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.MaskPass")
 extern class MaskPass
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/MaskPass.js");

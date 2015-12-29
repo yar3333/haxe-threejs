@@ -6,7 +6,7 @@ import js.three.Projector;
 @:native("THREE.CanvasRenderer")
 extern class CanvasRenderer implements Renderer
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/CanvasRenderer.js");

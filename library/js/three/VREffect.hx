@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.VREffect")
 extern class VREffect
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/VREffect.js");

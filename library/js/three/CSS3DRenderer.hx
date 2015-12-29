@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.CSS3DRenderer")
 extern class CSS3DRenderer
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/CSS3DRenderer.js");

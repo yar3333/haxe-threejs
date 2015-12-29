@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.TransformControls")
 extern class TransformControls extends Object3D
 {
-	#if !noEmbedJS
+	#if !threejs_noEmbed
 	static function __init__() : Void
 	{
 		haxe.macro.Compiler.includeFile("js/three/TransformControls.js");
