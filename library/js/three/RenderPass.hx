@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.RenderPass")
 extern class RenderPass
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/RenderPass.js");
+	}
+	#end
+	
 	@:overload(function(scene:Scene, camera:Camera, ?overrideMaterial:Material, ?clearColor:String, ?clearAlpha:Float):Void{})
 	@:overload(function(scene:Scene, camera:Camera, ?overrideMaterial:Material, ?clearColor:Float, ?clearAlpha:Float):Void{})
 	function new(scene:Scene, camera:Camera, ?overrideMaterial:Material, ?clearColor:Color, ?clearAlpha:Float) : Void;

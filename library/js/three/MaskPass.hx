@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.MaskPass")
 extern class MaskPass
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/MaskPass.js");
+	}
+	#end
+	
 	function new(scene:Scene, camera:Camera) : Void;
 
 	var scene : Scene;

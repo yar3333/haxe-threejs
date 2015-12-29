@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.TrackballControls")
 extern class TrackballControls extends EventDispatcher
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/TrackballControls.js");
+	}
+	#end
+	
 	function new(object:Camera, ?domElement:HtmlElement) : Void;
 
 	var object : Camera;

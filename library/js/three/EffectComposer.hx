@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.EffectComposer")
 extern class EffectComposer
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/EffectComposer.js");
+	}
+	#end
+	
 	function new(renderer:WebGLRenderer, ?renderTarget:WebGLRenderTarget) : Void;
 
 	var renderTarget1 : WebGLRenderTarget;

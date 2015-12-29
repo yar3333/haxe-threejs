@@ -8,6 +8,13 @@ import js.html.*;
 @:native("THREE.Projector")
 extern class Projector
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/Projector.js");
+	}
+	#end
+	
 	function new() : Void;
 	
 	// deprecated.

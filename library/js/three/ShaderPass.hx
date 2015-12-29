@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.ShaderPass")
 extern class ShaderPass
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/ShaderPass.js");
+	}
+	#end
+	
 	function new(shader:Shader, ?textureID:String) : Void;
 
 	var textureID : String;

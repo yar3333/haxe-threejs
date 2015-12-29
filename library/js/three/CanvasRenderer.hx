@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.CanvasRenderer")
 extern class CanvasRenderer implements Renderer
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/CanvasRenderer.js");
+	}
+	#end
+	
 	function new(?parameters:CanvasRendererParameters) : Void;
 
 	var domElement : js.html.CanvasElement;

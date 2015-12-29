@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.VRControls")
 extern class VRControls
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/VRControls.js");
+	}
+	#end
+	
 	function new(camera:Camera, ?callback:String->Void) : Void;
 
 	/**

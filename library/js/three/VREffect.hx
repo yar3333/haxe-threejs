@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.VREffect")
 extern class VREffect
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/VREffect.js");
+	}
+	#end
+	
 	function new(renderer:Renderer, ?callback:String->Void) : Void;
 	function render(scene:Scene, camera:Camera) : Void;
 	function setSize(width:Float, height:Float) : Void;

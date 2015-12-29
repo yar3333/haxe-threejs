@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.OrbitControls")
 extern class OrbitControls
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/OrbitControls.js");
+	}
+	#end
+	
 	function new(object:Camera, ?domElement:HtmlElement) : Void;
 
 	var object : Camera;

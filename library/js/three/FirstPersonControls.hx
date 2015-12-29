@@ -5,6 +5,13 @@ import js.html.*;
 @:native("THREE.FirstPersonControls")
 extern class FirstPersonControls
 {
+	#if !noEmbedJS
+	static function __init__() : Void
+	{
+		haxe.macro.Compiler.includeFile("js/three/FirstPersonControls.js");
+	}
+	#end
+	
 	function new(object:Camera, ?domElement:HtmlElement) : Void;
 	var object : Object3D;
 	var target : Vector3;
