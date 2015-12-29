@@ -1,6 +1,7 @@
 package js.three;
 
 import js.html.*;
+import js.three.Projector;
 
 @:native("THREE.RenderableVertex")
 extern class RenderableVertex

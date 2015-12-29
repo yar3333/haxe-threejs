@@ -1,6 +1,5 @@
 import js.Browser;
 import js.three.*;
-import js.three.Projector;
 
 // webgl_geometry_colors
 class Main
