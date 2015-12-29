@@ -8,6 +8,6 @@ extern class CubeTextureLoader
 	function new(?manager:LoadingManager) : Void;
 
 	var manager : LoadingManager;
-	function load(urls:Array<string>, ?onLoad:CubeTexture->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
+	function load(urls:Array<String>, ?onLoad:CubeTexture->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
 	function setCrossOrigin(crossOrigin:String) : Void;
 }

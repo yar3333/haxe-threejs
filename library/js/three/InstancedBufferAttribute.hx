@@ -8,7 +8,7 @@ import js.html.*;
 @:native("THREE.InstancedBufferAttribute")
 extern class InstancedBufferAttribute extends BufferAttribute
 {
-	function new(data:ArrayLike<number>, itemSize:Float, ?meshPerAttribute:Float) : Void;
+	function new(data:ArrayBufferView, itemSize:Float, ?meshPerAttribute:Float) : Void;
 	var meshPerAttribute : Float;
 
 	@:overload(function():InstancedBufferAttribute{})

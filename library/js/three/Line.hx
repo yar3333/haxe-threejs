@@ -6,14 +6,14 @@ import js.html.*;
 extern class Line extends Object3D
 {
 	function new(
-		?geometry:Geometry | BufferGeometry,
-		?material:LineDashedMaterial | LineBasicMaterial | ShaderMaterial,
+		?geometry:haxe.extern.EitherType<Geometry, BufferGeometry>,
+		?material:haxe.extern.EitherType<haxe.extern.EitherType<LineDashedMaterial, LineBasicMaterial>, ShaderMaterial>,
 		?mode:Float
 	) : Void;
-
-	geometry: Geometry|BufferGeometry;
+	
+	var geometry : haxe.extern.EitherType<Geometry, BufferGeometry>;
 	var material : Material;// LineDashedMaterial or LineBasicMaterial or ShaderMaterial
-
+	
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 	@:overload(function():Line{})
 	override function clone(?recursive:Bool) : Object3D;

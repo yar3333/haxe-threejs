@@ -1,13 +1,12 @@
 package js.three;
 
 import js.html.*;
-import haxe.extern.EitherType;
 
 @:native("THREE.Texture")
 extern class Texture
 {
 	function new(
-		image: EitherType<js.html.ImageElement, EitherType<CanvasElement, VideoElement>>,
+		image: haxe.extern.EitherType<haxe.extern.EitherType<js.html.ImageElement, js.html.CanvasElement>, VideoElement>,
 		?mapping:Mapping,
 		?wrapS:Wrapping,
 		?wrapT:Wrapping,

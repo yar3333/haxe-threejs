@@ -8,8 +8,8 @@ import js.html.*;
 @:native("THREE.InterleavedBuffer")
 extern class InterleavedBuffer
 {
-	function new(array:Array<Float>, stride:Float) : Void;
-	var array: Array<Float>;
+	function new(array:ArrayBufferView, stride:Float) : Void;
+	var array : ArrayBufferView;
 	var stride : Float;
 	inline function dynamicGet() : Bool return untyped this["dynamic"];
 	var updateRange : { offset:Float, count:Int };
@@ -23,5 +23,5 @@ extern class InterleavedBuffer
 	function clone() : InterleavedBuffer;
 	function copy(source:InterleavedBuffer) : InterleavedBuffer;
 	function copyAt(index1:Float, attribute:InterleavedBufferAttribute, index2:Float) : InterleavedBuffer;
-	function set(value:Array<Float>, index:Int) : InterleavedBuffer;
+	function set(value:ArrayBufferView, index:Int) : InterleavedBuffer;
 }

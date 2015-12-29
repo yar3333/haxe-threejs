@@ -6,8 +6,8 @@ import js.html.*;
 extern class LineSegments extends Line
 {
 	function new(
-		?geometry:Geometry | BufferGeometry,
-		?material:LineDashedMaterial | LineBasicMaterial | ShaderMaterial,
+		?geometry:haxe.extern.EitherType<Geometry, BufferGeometry>,
+		?material:haxe.extern.EitherType<haxe.extern.EitherType<LineDashedMaterial, LineBasicMaterial>, ShaderMaterial>,
 		?mode:Float
 	) : Void;
 

@@ -1,6 +1,6 @@
 JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
-TS_SRC = threejs/three.d.ts
+TS_SRC = threejs
 
 library: library/js
 

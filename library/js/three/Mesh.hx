@@ -1,7 +1,6 @@
 package js.three;
 
 import js.html.*;
-import haxe.extern.EitherType;
 
 @:native("THREE.Mesh")
 extern class Mesh extends Object3D
@@ -9,7 +8,7 @@ extern class Mesh extends Object3D
 	@:overload(function(?geometry:BufferGeometry, ?material:Material):Void{})
 	function new(?geometry:Geometry, ?material:Material) : Void;
 
-	var geometry : EitherType<Geometry, BufferGeometry>;
+	var geometry : haxe.extern.EitherType<Geometry, BufferGeometry>;
 	var material : Material;
 
 	function updateMorphTargets() : Void;

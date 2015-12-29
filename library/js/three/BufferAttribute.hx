@@ -8,10 +8,10 @@ import js.html.*;
 @:native("THREE.BufferAttribute")
 extern class BufferAttribute
 {
-	function new(array:Array<Float>, itemSize:Float) : Void;// array parameter should be TypedArray.
+	function new(array:ArrayBufferView, itemSize:Float) : Void;// array parameter should be TypedArray.
 
 	var uuid : String;
-	var array: Array<Float>;
+	var array : ArrayBufferView;
 	var itemSize : Float;
 	inline function dynamicGet() : Bool return untyped this["dynamic"];
 	var updateRange : { offset:Float, count:Int };
@@ -27,13 +27,13 @@ extern class BufferAttribute
 	function clone() : BufferAttribute;
 	function copy(source:BufferAttribute) : BufferAttribute;
 	function copyAt(index1:Float, attribute:BufferAttribute, index2:Float) : BufferAttribute;
-	function copyArray(array:Array<Float>) : BufferAttribute;
+	function copyArray(array:ArrayBufferView) : BufferAttribute;
 	function copyColorsArray(colors:Array<{ r:Float, g:Float, b:Float }>) : BufferAttribute;
 	function copyIndicesArray(indices:Array<{ a:Float, b:Float, c:Float }>) : BufferAttribute;
 	function copyVector2sArray(vectors:Array<{ x:Float, y:Float }>) : BufferAttribute;
 	function copyVector3sArray(vectors:Array<{ x:Float, y:Float, z:Float }>) : BufferAttribute;
 	function copyVector4sArray(vectors:Array<{ x:Float, y:Float, z:Float, w:Float }>) : BufferAttribute;
-	function set(value:Array<Float>, ?offset:Float) : BufferAttribute;
+	function set(value:ArrayBufferView, ?offset:Float) : BufferAttribute;
 	function getX(index:Int) : Float;
 	function setX(index:Int, x:Float) : BufferAttribute;
 	function getY(index:Int) : Float;

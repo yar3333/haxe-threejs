@@ -1,7 +1,6 @@
 package js.three;
 
 import js.html.*;
-import haxe.extern.EitherType;
 
 /**
  * This is a superefficent class for geometries because it saves all data in buffers.
@@ -28,7 +27,7 @@ extern class BufferGeometry
 	var name : String;
 	var type : String;
 	var index : BufferAttribute;
-	var attributes: Array<EitherType<BufferAttribute, InterleavedBufferAttribute>>;
+	var attributes: Array<haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>>;
 	var morphAttributes : Dynamic;
 	var groups : Array<{ start: Int, count:Int, ?materialIndex:Int }>;
 	var boundingBox : Box3;
@@ -42,9 +41,9 @@ extern class BufferGeometry
 	function setIndex(index:BufferAttribute) : Void;
 
 	/** Deprecated. This overloaded method is deprecated. */
-	@:overload(function(name:String, attribute:EitherType<BufferAttribute, InterleavedBufferAttribute>):Void{})
+	@:overload(function(name:String, attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>):Void{})
 	function addAttribute(name:String, array:Dynamic, itemSize:Float) : Dynamic;
-	function getAttribute(name:String) : EitherType<BufferAttribute, InterleavedBufferAttribute>;
+	function getAttribute(name:String) : haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>;
 	function removeAttribute(name:String) : Void;
 
 	/** Deprecated. */

@@ -15,8 +15,8 @@ extern class Points extends Object3D
 	 * @param material An instance of Material (optional).
 	 */
 	function new(
-		geometry: Geometry | BufferGeometry,
-		?material:PointsMaterial | ShaderMaterial
+		geometry: haxe.extern.EitherType<Geometry, BufferGeometry>,
+		?material:haxe.extern.EitherType<PointsMaterial, ShaderMaterial>
 	) : Void;
 
 	/**

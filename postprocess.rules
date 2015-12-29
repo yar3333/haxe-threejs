@@ -17,6 +17,8 @@ THREE_ENUMS = THREE_ENUMS|PixelType|PixelFormat|CompressedPixelFormat
 
 TYPEDEFS = [_a-zA-Z][_a-zA-Z0-9]*Parameters
 
+/([:]\s*)ArrayLike\b/$1ArrayBufferView/
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 ID = \b[_a-zA-Z][_a-zA-Z0-9]*\b
@@ -90,4 +92,4 @@ FUNC_PREFIX	setAnimationLabel	FUNC_TO_VAR	(?:start|end)FUNC_VAR_TO_FLOAT
 /@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s+extends\s+(ID)\s*\{/typedef $1 =\n{\n\t>$2,\n/s
 /@:native\([^)]+\)\s+extern\s+interface\s+(TYPEDEFS)\s*\{/typedef $1 =\n{/s
 
-
+/([:,<]\s*)THREE.(ID)/$1$2/

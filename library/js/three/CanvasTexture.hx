@@ -7,7 +7,7 @@ import js.html.*;
 extern class CanvasTexture extends Texture
 {
 	function new(
-		canvas: js.html.ImageElement | HTMLCanvasElement | HTMLVideoElement,
+		canvas: haxe.extern.EitherType<haxe.extern.EitherType<ImageElement, CanvasElement>, VideoElement>,
 		?mapping:Mapping,
 		?wrapS:Wrapping,
 		?wrapT:Wrapping,

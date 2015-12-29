@@ -8,7 +8,7 @@ import js.html.*;
 @:native("THREE.InstancedInterleavedBuffer")
 extern class InstancedInterleavedBuffer extends InterleavedBuffer
 {
-	function new(array:ArrayLike<number>, stride:Float, ?meshPerAttribute:Float) : Void;
+	function new(array:ArrayBufferView, stride:Float, ?meshPerAttribute:Float) : Void;
 	var meshPerAttribute : Float;
 
 	@:overload(function():InstancedInterleavedBuffer{})

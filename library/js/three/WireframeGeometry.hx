@@ -5,5 +5,5 @@ import js.html.*;
 @:native("THREE.WireframeGeometry")
 extern class WireframeGeometry extends BufferGeometry
 {
-	function new(geometry:Geometry | BufferGeometry) : Void;
+	function new(geometry:haxe.extern.EitherType<Geometry, BufferGeometry>) : Void;
 }
