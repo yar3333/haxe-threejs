@@ -1,5 +1,6 @@
 import js.Browser;
 import js.three.*;
+import js.three.Projector;
 
 class Main
 {

@@ -1,5 +1,6 @@
-import js.three.*;
 import js.Browser;
+import js.three.*;
+import js.three.Projector;
 
 // port of canvas_geometry_earth.html
 class Main

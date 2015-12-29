@@ -1,5 +1,6 @@
 import js.Browser;
 import js.three.*;
+import js.three.Projector;
 
 // webgl_geometry_colors
 class Main
@@ -68,8 +69,8 @@ class Main
         }
         var materials : Array<Material> = 
 		[
-            new MeshLambertMaterial({ color:0xffffff, shading:Shading.FlatShading, vertexColors:Colors.VertexColors }),
-            new MeshLambertMaterial({ color:0x000000, shading:Shading.FlatShading, wireframe:true, transparent:true })
+            new MeshLambertMaterial({ color:0xffffff, vertexColors:Colors.VertexColors }),
+            new MeshLambertMaterial({ color:0x000000, wireframe:true, transparent:true })
         ];
         var group1 = SceneUtils.createMultiMaterialObject(geometry, materials);
         group1.position.x = -400;
