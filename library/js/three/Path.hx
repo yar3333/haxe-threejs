@@ -22,7 +22,7 @@ extern class Path extends CurvePath<Vector2>
 	function absarc(aX:Float, aY:Float, aRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
 	function ellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
 	function absellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
-	function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
-	function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
+	//function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
+	//function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
 	function toShapes() : Array<Shape>;
 }

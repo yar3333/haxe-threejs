@@ -25,13 +25,15 @@ extern class Curve<T:Vector>
 	 * Get sequence of points using getPoint( t )
 	 * getPoints(?divisions:Int): Array<T>;
 	 */
-	function getPoints(?divisions:Int) : Array<T>;
+	//function getPoints(?divisions:Int) : Array<T>;
+	function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
 
 	/**
 	 * Get sequence of equi-spaced points using getPointAt( u )
 	 * getSpacedPoints(?divisions:Int): Array<T>;
 	 */
-	function getSpacedPoints(?divisions:Int) : Array<T>;
+	//function getSpacedPoints(?divisions:Int) : Array<T>;
+	function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
 
 	/**
 	 * Get total curve arc length
