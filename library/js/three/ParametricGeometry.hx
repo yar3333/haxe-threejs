@@ -9,8 +9,8 @@ extern class ParametricGeometry extends Geometry
 
 	var parameters :
 	{
-		func:Float->Float->Vector3;
+		func:Float->Float->Vector3,
 		slices: Int,
 		stacks: Int
-	}
+	};
 }

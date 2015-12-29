@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.WebGLStateInstance")
-extern interface WebGLStateInstance
+extern class WebGLStateInstance
 {
 	function new(gl:Dynamic, extensions:Dynamic, paramThreeToGL:Dynamic) : Void;
 	function init() : Void;

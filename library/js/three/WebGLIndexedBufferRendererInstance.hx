@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.WebGLIndexedBufferRendererInstance")
-extern interface WebGLIndexedBufferRendererInstance
+extern class WebGLIndexedBufferRendererInstance
 {
 	function new(gl:Dynamic, properties:Dynamic, info:Dynamic) : Void;
 	function setMode(value:Dynamic) : Void;

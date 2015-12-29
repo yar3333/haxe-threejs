@@ -13,5 +13,5 @@ extern class LatheGeometry extends Geometry
 		segments: Int,
 		phiStart: Float,
 		phiLength: Float
-	}
+	};
 }

@@ -6,7 +6,7 @@ import js.html.*;
 extern class AnimationUtils
 {
 	static function getEqualsFunc(exemplarValue:Dynamic) : Bool;
-	clone<T>(exemplarValue:T) : T;
+	static function clone<T>(exemplarValue:T) : T;
 	static function lerp(a:Dynamic, b:Dynamic, alpha:Float, interTrack:Bool) : Dynamic;
 	static function lerp_object(a:Dynamic, b:Dynamic, alpha:Float) : Dynamic;
 	static function slerp_object(a:Dynamic, b:Dynamic, alpha:Float) : Dynamic;

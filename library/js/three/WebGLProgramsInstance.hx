@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.WebGLProgramsInstance")
-extern interface WebGLProgramsInstance
+extern class WebGLProgramsInstance
 {
 	function new(renderer:WebGLRenderer, capabilities:Dynamic) : Void;
 

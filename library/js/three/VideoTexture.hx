@@ -6,7 +6,7 @@ import js.html.*;
 extern class VideoTexture extends Texture
 {
 	function new(
-		video: HTMLVideoElement,
+		video: VideoElement,
 		?mapping:Mapping,
 		?wrapS:Wrapping,
 		?wrapT:Wrapping,

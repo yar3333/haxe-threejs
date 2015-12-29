@@ -8,7 +8,7 @@ extern class AnimationAction
 {
 	function new(clip:AnimationClip, ?startTime:Float, ?timeScale:Float, ?weight:Float, ?loop:Bool) : Void;
 
-	clip: AnimationClip
+	var clip: AnimationClip;
 	var localRoot : Mesh;
 	var startTime : Float;
 	var timeScale : Float;

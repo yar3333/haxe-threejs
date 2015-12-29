@@ -14,7 +14,7 @@ extern class TubeGeometry extends Geometry
 		radius: Float,
 		radialSegments: Int,
 		closed: Bool,
-		taper:Float->Float;// NoTaper or SinusoidalTaper;
+		taper: Float->Float // NoTaper or SinusoidalTaper;
 	};
 	var tangents : Array<Vector3>;
 	var normals : Array<Vector3>;

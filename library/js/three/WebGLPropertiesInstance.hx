@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.WebGLPropertiesInstance")
-extern interface WebGLPropertiesInstance
+extern class WebGLPropertiesInstance
 {
 	function new() : Void;
 

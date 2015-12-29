@@ -11,7 +11,7 @@ typedef PointsMaterialParameters =
 	@:optional var map : Texture;
 	@:optional var size : Float;
 	@:optional var sizeAttenuation : Bool;
-	?blending:Blending,
+	@:optional var blending : Blending;
 	@:optional var depthTest : Bool;
 	@:optional var depthWrite : Bool;
 	@:optional var vertexColors : Colors;

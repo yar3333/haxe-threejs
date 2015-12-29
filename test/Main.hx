@@ -2,6 +2,7 @@ import js.Browser.window;
 import js.Browser.document;
 import js.three.*;
 import js.three.Embed; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
+import js.three.EmbedMin; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
 
 class Main
 {

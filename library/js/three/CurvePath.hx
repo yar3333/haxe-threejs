@@ -7,14 +7,14 @@ extern class CurvePath<T:Vector> extends Curve<T>
 {
 	function new() : Void;
 
-	curves: Curve<T>[];
+	var curves : Array<Curve<T>>;
 	var autoClose : Bool;
 
 	function add(curve:Curve<T>) : Void;
 	function checkConnection() : Bool;
 	function closePath() : Void;
 	function getPoint(t:Float) : T;
-	function getLength() : Float;
+	function getLength() : Int;
 	function getCurveLengths() : Array<Float>;
 	function createPointsGeometry(divisions:Int) : Geometry;
 	function createSpacedPointsGeometry(divisions:Int) : Geometry;

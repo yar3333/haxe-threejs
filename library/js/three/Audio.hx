@@ -7,10 +7,10 @@ extern class Audio extends Object3D
 {
 	function new(listener:AudioListener) : Void;
 	//var type : String;
-	var context : AudioContext;
-	var source : AudioBufferSourceNode;
-	var gain : GainNode;
-	var panner : PannerNode;
+	var context : js.html.audio.AudioContext;
+	var source : js.html.audio.AudioBufferSourceNode;
+	var gain : js.html.audio.GainNode;
+	var panner : js.html.audio.PannerNode;
 	var autoplay : Bool;
 	var startTime : Float;
 	var playbackRate : Float;

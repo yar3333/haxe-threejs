@@ -1,6 +1,6 @@
 package js.three;
 
-class Embed
+class EmbedMin
 {
 	static function __init__() : Void
 	{

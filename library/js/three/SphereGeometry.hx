@@ -30,5 +30,5 @@ extern class SphereGeometry extends Geometry
 		phiLength: Float,
 		thetaStart: Float,
 		thetaLength: Float
-	}
+	};
 }
