@@ -1,7 +1,7 @@
 {
   "name": "threejs",
   "license": "BSD",
-  "tags": ["js","three","threejs"],
+  "tags": ["js","three","threejs","extern"],
   "description": "Externs for three.js. Automated conversion from typescript (https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/threejs).",
   "contributors": ["yar3333"],
   "releasenote": "Upgrade to r73. Some improvements.",
