@@ -15,7 +15,9 @@ haxelib install refactor
 make
 ```
 
-Project folders:
+### Project structure
+
+Folders:
 
  * native-ts - original typescript files (automatically downloaded if not exist - git must be installed);
  * raw - one big haxe file - result of the conversion TypeScript->Haxe;
@@ -24,15 +26,20 @@ Project folders:
  * documentator - C# application to help writing documentation and fix typescript;
  * native-js - original three.js files (used by documentator only).
 
-Key project files:
+Files:
 
  * postprocess.rules - edit this to fix Float->Int;
  * extract_classes.rules - regexs to find classes/interfaces (used to split raw haxe file to separate class files);
  * extract_vars.rules - regexs to find & save exported vars;
  * postprocess_vars.rules - regexs to process exported vars files.
 
-Tips:
+### Embedding
 
- * to embed main uncompressed threejs file: `import js.three.Embed;`
- * to embed main minified threejs file: `import js.three.EmbedMin;`
- * to stop embedding additinal threejs files (from `examples` folder of the original sources) use compiler option: `-D threejs-noEmbed`
+By default, main `three.js` file does not embedded.
+Small external files (placed in the `example` folder of the original ThreeJS) embedded automatically on imports.
+
+You can control embedding:
+
+ * to embed main uncompressed `three.js` file: `import js.three.Embed;`
+ * to embed main minified `three-min.js` file: `import js.three.EmbedMin;`
+ * to stop auto embedding small files use compiler option: `-D threejs-noEmbed`
