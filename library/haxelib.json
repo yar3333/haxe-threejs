@@ -4,8 +4,8 @@
   "tags": ["js","three","threejs","extern"],
   "description": "Externs for three.js. Automated conversion from typescript (https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/threejs).",
   "contributors": ["yar3333"],
-  "releasenote": "Remove console.log from THREE.CanvasRenderer.",
-  "version": "73.0.1",
+  "releasenote": "Traverse methods fix.",
+  "version": "73.0.2",
   "url": "https://bitbucket.org/yar3333/haxe-threejs",
   "dependencies": {}
 }
