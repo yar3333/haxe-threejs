@@ -260,11 +260,11 @@ extern class Object3D
 
 	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 
-	function traverse(callback:Object3D->Dynamic) : Void;
+	function traverse(callback:Object3D->Void) : Void;
 
-	function traverseVisible(callback:Object3D->Dynamic) : Void;
+	function traverseVisible(callback:Object3D->Void) : Void;
 
-	function traverseAncestors(callback:Object3D->Dynamic) : Void;
+	function traverseAncestors(callback:Object3D->Void) : Void;
 
 	/**
 	 * Updates local transform.
