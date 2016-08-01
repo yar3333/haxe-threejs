@@ -10,9 +10,9 @@ namespace ThreejsDocumentator
 {
     public partial class MainForm : Form
     {
-		string typeScriptFile = @"..\..\..\native-ts\threejs\three.d.ts";
-		string javaScriptDir  = @"..\..\..\native-js\src";
-		string docDir         = @"..\..\..\native-js\docs";
+		string typeScriptFile = @"..\..\native-ts\threejs\three.d.ts";
+		string javaScriptDir  = @"..\..\native-js\src";
+		string docDir         = @"..\..\native-js\docs";
         
         public MainForm()
         {
@@ -21,6 +21,12 @@ namespace ThreejsDocumentator
 
         void MainForm_Load(object sender, EventArgs e)
         {
+			if (!Directory.Exists(javaScriptDir))
+			{
+				MessageBox.Show("Please, run 'make native-js' in the base directory.");
+				Close();
+			}
+
 			typeScriptFile = Path.GetFullPath(typeScriptFile);
 			javaScriptDir = Path.GetFullPath(javaScriptDir);
 			docDir = Path.GetFullPath(docDir);
