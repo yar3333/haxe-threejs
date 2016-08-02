@@ -5,15 +5,24 @@ The aim of this library - fully automated (regex-based) conversion from TypeScri
  * For conversion used [refactor](http://lib.haxe.org/p/refactor) haxe library.
  * Original typescript code: [three.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/threejs/three.d.ts).
 
+
 ### How to update library ###
 
-```shell
-# install refactor library:
-haxelib install refactor
+ * Install refactor library:
+	```shell
+	haxelib install refactor
+	```
+ * Edit Makefile and change ThreeJS version to desired at the `TAG = rXX` line.
+ * Run in the root repo's folder (in my case I use MinGW on Windows):
+	```shell
+	make rebuild
+	```
+ * Manually check files. Documentator helps your:
+	* edit `TAG = rXX` line in `Makefile`
+	* run `make native-js`
+	* goto `documentator/bin` and run `ThreejsDocumentator.exe`
+	* after correcting typescript, run `make rebuild` again
 
-# run in the root repo's folder (in my case I use MinGW on Windows):
-make
-```
 
 ### Project structure
 
@@ -32,6 +41,7 @@ Files:
  * extract_classes.rules - regexs to find classes/interfaces (used to split raw haxe file to separate class files);
  * extract_vars.rules - regexs to find & save exported vars;
  * postprocess_vars.rules - regexs to process exported vars files.
+
 
 ### Embedding
 

@@ -1,3 +1,5 @@
+TAG = r73
+
 JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
 TS_SRC = threejs
@@ -22,7 +24,8 @@ native-js:
 	git init native-js
 	cd native-js && \
 	git remote add origin $(JS_GIT) && \
-	git pull origin master
+	git pull origin master --tags && \
+	git checkout tags/$(TAG)
 
 native-ts:
 	git init native-ts
