@@ -9,7 +9,4 @@ extern class AudioListener extends Object3D
 
 	//var type : String;
 	var context : js.html.audio.AudioContext;
-
-	@:overload(function(?force:Bool):Void{})
-	override function updateMatrixWorld(force:Bool) : Void;
 }
