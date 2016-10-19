@@ -14,8 +14,6 @@ extern class Mesh extends Object3D
 	function updateMorphTargets() : Void;
 	function getMorphTargetIndexByName(name:String) : Float;
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
-	@:overload(function():Mesh{})
-	override function clone(?recursive:Bool) : Object3D;
 	@:overload(function(source:Mesh):Mesh{})
 	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 }

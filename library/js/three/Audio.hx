@@ -35,6 +35,5 @@ extern class Audio extends Object3D
 	function getRolloffFactor() : Float;
 	function setVolume(value:Float) : Void;
 	function getVolume() : Float;
-	@:overload(function(?force:Bool):Void{})
-	override function updateMatrixWorld(force:Bool) : Void;
+	override function updateMatrixWorld(?force:Bool) : Void;
 }

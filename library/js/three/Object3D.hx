@@ -274,7 +274,7 @@ extern class Object3D
 	/**
 	 * Updates global transform of the object and its children.
 	 */
-	function updateMatrixWorld(force:Bool) : Void;
+	function updateMatrixWorld(?force:Bool) : Void;
 
 	function toJSON(?meta:Dynamic) : Dynamic;
 
