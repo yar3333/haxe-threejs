@@ -3,7 +3,7 @@
 The aim of this library - fully automated (regex-based) conversion from TypeScript to Haxe.
 
  * For conversion used [refactor](http://lib.haxe.org/p/refactor) haxe library.
- * Original typescript code: [three.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/threejs/three.d.ts).
+ * Original typescript code: [three.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/three/index.d.ts).
 
 
 ### How to update library ###
