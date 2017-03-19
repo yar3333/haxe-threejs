@@ -95,8 +95,7 @@ extern class PerspectiveCamera extends Camera
 	 * Updates the camera projection matrix. Must be called after change of parameters.
 	 */
 	function updateProjectionMatrix() : Void;
-	@:overload(function():PerspectiveCamera{})
-	override function clone(?recursive:Bool) : Object3D;
+	override function clone(?recursive:Bool) : PerspectiveCamera;
 	@:overload(function(source:PerspectiveCamera):PerspectiveCamera{})
 	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
 	override function toJSON(?meta:Dynamic) : Dynamic;
