@@ -9,7 +9,7 @@ extern class CTMLoader extends Loader
 	/**
 	 * load multiple CTM parts defined in JSON.
 	 */
-	function loadParts(url:String, callback:Dynamic, parameters:Dynamic) : Dynamic;
+	function loadParts(url:String, callback:Void->Dynamic, parameters:Dynamic) : Dynamic;
 	/**
 	 * Load CTMLoader compressed models
 	 */
@@ -17,5 +17,5 @@ extern class CTMLoader extends Loader
 	/**
 	 * create buffergeometry by ctm file.
 	 */
-	function createModel(file:String, callback:Dynamic) : Dynamic;
+	function createModel(file:String, callback:Void->Dynamic) : Dynamic;
 }
