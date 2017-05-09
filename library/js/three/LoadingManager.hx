@@ -28,7 +28,7 @@ extern class LoadingManager
 	/**
 	 * Handles and keeps track of loaded and pending data.
 	 */
-	function new(?onLoad:Void, ?onProgress:String->Float->Float->Void, ?onError:Void) : Void;
+	function new(?onLoad:Void->Void, ?onProgress:String->Float->Float->Void, ?onError:Void->Void) : Void;
 	function itemStart(url:String) : Void;
 	function itemEnd(url:String) : Void;
 	function itemError(url:String) : Void;
