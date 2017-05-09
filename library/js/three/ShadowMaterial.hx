@@ -6,5 +6,5 @@ import js.html.*;
 extern class ShadowMaterial extends ShaderMaterial
 {
 	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

@@ -5,5 +5,5 @@ import js.html.*;
 @:native("THREE.Group")
 extern class Group extends Object3D
 {
-	override function new() : Void;
+	function new() : Void;
 }

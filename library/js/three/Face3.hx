@@ -58,6 +58,9 @@ extern class Face3
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/core/Face3.js
 	 */
+	@:overload(function(a:Float, b:Float, c:Float, ?normal:Vector3, ?vertexColors:Array<Color>, ?materialIndex:Float):Void{})
+	@:overload(function(a:Float, b:Float, c:Float, ?vertexNormals:Array<Vector3>, ?color:Color, ?materialIndex:Float):Void{})
+	@:overload(function(a:Float, b:Float, c:Float, ?vertexNormals:Array<Vector3>, ?vertexColors:Array<Color>, ?materialIndex:Float):Void{})
 	function new(a:Float, b:Float, c:Float, ?normal:Vector3, ?color:Color, ?materialIndex:Float) : Void;
 	/**
 	 * Triangle face.
@@ -69,7 +72,6 @@ extern class Face3
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/core/Face3.js
 	 */
-	function new(a:Float, b:Float, c:Float, ?normal:Vector3, ?vertexColors:Array<Color>, ?materialIndex:Float) : Void;
 	/**
 	 * Triangle face.
 	 * 
@@ -80,7 +82,6 @@ extern class Face3
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/core/Face3.js
 	 */
-	function new(a:Float, b:Float, c:Float, ?vertexNormals:Array<Vector3>, ?color:Color, ?materialIndex:Float) : Void;
 	/**
 	 * Triangle face.
 	 * 
@@ -91,7 +92,6 @@ extern class Face3
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/core/Face3.js
 	 */
-	function new(a:Float, b:Float, c:Float, ?vertexNormals:Array<Vector3>, ?vertexColors:Array<Color>, ?materialIndex:Float) : Void;
 	function clone() : Face3;
 	function copy(source:Face3) : Face3;
 }

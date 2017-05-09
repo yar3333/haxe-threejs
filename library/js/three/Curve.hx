@@ -58,5 +58,5 @@ extern class Curve<T:Vector>
 	/**
 	 * @deprecated since r84.
 	 */
-	static function create(constructorFunc:Function, getPointFunc:Function) : Function;
+	static function create(constructorFunc:haxe.Constraints.Function, getPointFunc:haxe.Constraints.Function) : haxe.Constraints.Function;
 }

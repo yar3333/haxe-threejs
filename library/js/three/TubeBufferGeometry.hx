@@ -11,5 +11,5 @@ extern class TubeBufferGeometry extends BufferGeometry
 	var binormals : Array<Vector3>;
 
 	@:overload(function(path:Curve<Vector3>,?segments:Int,?radius:Float,?radiusSegments:Int,?closed:Bool):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

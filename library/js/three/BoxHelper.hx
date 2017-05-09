@@ -6,6 +6,6 @@ import js.html.*;
 extern class BoxHelper extends LineSegments
 {
 	@:overload(function(?object:Object3D,?color:Color):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function update(object:Object3D) : Void;
 }

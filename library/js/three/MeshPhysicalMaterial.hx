@@ -11,5 +11,5 @@ extern class MeshPhysicalMaterial extends MeshStandardMaterial
 	var clearCoatRoughness : Float;
 
 	@:overload(function(parameters:MeshPhysicalMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

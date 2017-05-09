@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.CanvasRendererParameters")
 extern interface CanvasRendererParameters
 {
-	@:optional var canvas : HTMLCanvasElement;
+	@:optional var canvas : CanvasElement;
 	@:optional var devicePixelRatio : Float;
 	@:optional var alpha : Bool;
 }

@@ -9,7 +9,7 @@ extern class SkeletonHelper extends LineSegments
 	var root : Object3D;
 
 	@:overload(function(bone:Object3D):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function getBoneList(object:Object3D) : Array<Bone>;
 	function update() : Void;
 }

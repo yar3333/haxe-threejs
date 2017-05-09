@@ -6,5 +6,5 @@ import js.html.*;
 extern class LineSegments extends Line
 {
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:haxe.extern.EitherType<LineDashedMaterial,haxe.extern.EitherType<LineBasicMaterial,ShaderMaterial>>,?mode:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

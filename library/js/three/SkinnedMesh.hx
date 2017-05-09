@@ -11,19 +11,19 @@ extern class SkinnedMesh extends Mesh
 	var skeleton : Skeleton;
 
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshBasicMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
+	@:overload(function():Void{})
+	@:overload(function():Void{})
+	@:overload(function():Void{})
+	@:overload(function():Void{})
+	@:overload(function():Void{})
+	@:overload(function():Void{})
+	function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshDepthMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MultiMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshLambertMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshNormalMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshPhongMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:ShaderMaterial,?useVertexTexture:Bool):Void{})
-	override function new() : Void;
 	function bind(skeleton:Skeleton, bindMatrix:Matrix4) : Void;
 	function pose() : Void;
 	function normalizeSkinWeights() : Void;

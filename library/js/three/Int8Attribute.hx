@@ -12,5 +12,5 @@ extern class Int8Attribute extends BufferAttribute
 	 * @deprecated THREE.Int8Attribute has been removed. Use new THREE.Int8BufferAttribute() instead.
 	 */
 	@:overload(function(array:Dynamic,itemSize:Float):Void{})
-	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

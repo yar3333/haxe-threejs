@@ -12,12 +12,12 @@ extern class CurvePath<T:Vector> extends Curve<T>
 	function add(curve:Curve<T>) : Void;
 	function checkConnection() : Bool;
 	function closePath() : Void;
-	function getPoint(t:Float) : T;
-	function getLength() : Float;
-	function updateArcLengths() : Void;
+	override function getPoint(t:Float) : T;
+	override function getLength() : Float;
+	override function updateArcLengths() : Void;
 	function getCurveLengths() : Array<Float>;
-	function getSpacedPoints(divisions:Int) : Array<T>;
-	function getPoints(divisions:Int) : Array<T>;
+	override function getSpacedPoints(divisions:Int) : Array<T>;
+	override function getPoints(divisions:Int) : Array<T>;
 	function createPointsGeometry(divisions:Int) : Geometry;
 	function createSpacedPointsGeometry(divisions:Int) : Geometry;
 	function createGeometry(points:Array<T>) : Geometry;

@@ -6,5 +6,5 @@ import js.html.*;
 extern class ConeBufferGeometry extends BufferGeometry
 {
 	@:overload(function(?radius:Float,?height:Float,?radialSegment:Float,?heightSegment:Float,?openEnded:Bool,?thetaStart:Float,?thetaLength:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

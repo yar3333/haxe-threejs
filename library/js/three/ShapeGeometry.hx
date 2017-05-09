@@ -6,9 +6,9 @@ import js.html.*;
 extern class ShapeGeometry extends Geometry
 {
 	@:overload(function(shape:Shape,?options:Dynamic):Void{})
-	override function new() : Void;
+	@:overload(function():Void{})
+	function new() : Void;
 	@:overload(function(shapes:Array<Shape>,?options:Dynamic):Void{})
-	override function new() : Void;
 	function addShapeList(shapes:Array<Shape>, options:Dynamic) : ShapeGeometry;
 	function addShape(shape:Shape, options:Dynamic) : Void;
 }

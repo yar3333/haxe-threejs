@@ -6,7 +6,7 @@ import js.html.*;
 extern class GridHelper extends LineSegments
 {
 	@:overload(function(size:Float,divisions:Int,?color1:haxe.extern.EitherType<Color,Float>,?color2:haxe.extern.EitherType<Color,Float>):Void{})
-	override function new() : Void;
+	function new() : Void;
 	/**
 	 * @deprecated
 	 */

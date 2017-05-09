@@ -8,5 +8,5 @@ extern class DepthTexture extends Texture
 	//var image : { var width : Float; var height : Float; };
 
 	@:overload(function(width:Float,heighht:Float,?type:TextureDataType,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?anisotropy:Int):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

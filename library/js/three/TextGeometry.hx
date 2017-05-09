@@ -8,5 +8,5 @@ extern class TextGeometry extends ExtrudeGeometry
 	var parameters : { var font : Font; var size : Float; var height : Float; var curveSegments : Float; var bevelEnabled : Bool; var bevelThickness : Float; var bevelSize : Float; };
 
 	@:overload(function(text:String,?parameters:TextGeometryParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

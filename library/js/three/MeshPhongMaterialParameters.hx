@@ -8,7 +8,7 @@ extern interface MeshPhongMaterialParameters extends MaterialParameters
 	/**
 	 * geometry color in hexadecimal. Default is 0xffffff. 
 	 */
-	@:optional var color : haxe.extern.EitherType<Float, String>;
+	@:optional var color : haxe.extern.EitherType<Int, String>;
 	@:optional var specular : Float;
 	@:optional var shininess : Float;
 	@:optional var opacity : Float;

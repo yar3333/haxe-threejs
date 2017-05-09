@@ -6,5 +6,5 @@ import js.html.*;
 extern class IcosahedronGeometry extends PolyhedronGeometry
 {
 	@:overload(function(radius:Float,detail:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

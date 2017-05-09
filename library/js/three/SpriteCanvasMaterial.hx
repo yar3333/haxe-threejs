@@ -8,6 +8,6 @@ extern class SpriteCanvasMaterial extends Material
 	var color : Color;
 
 	@:overload(function(?parameters:SpriteCanvasMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function program(context:CanvasRenderingContext2D, color:Color) : Void;
 }

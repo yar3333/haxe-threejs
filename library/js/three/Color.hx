@@ -34,6 +34,9 @@ extern class Color
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Color.js">src/math/Color.js</a>
 	 */
+	@:overload(function(?color:String):Void{})
+	@:overload(function(?color:Float):Void{})
+	@:overload(function(r:Float, g:Float, b:Float):Void{})
 	function new(?color:Color) : Void;
 	/**
 	 * Represents a color. See also {@link ColorUtils}.
@@ -43,7 +46,6 @@ extern class Color
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Color.js">src/math/Color.js</a>
 	 */
-	function new(?color:String) : Void;
 	/**
 	 * Represents a color. See also {@link ColorUtils}.
 	 * 
@@ -52,7 +54,6 @@ extern class Color
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Color.js">src/math/Color.js</a>
 	 */
-	function new(?color:Int) : Void;
 	/**
 	 * Represents a color. See also {@link ColorUtils}.
 	 * 
@@ -61,10 +62,9 @@ extern class Color
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/math/Color.js">src/math/Color.js</a>
 	 */
-	function new(r:Float, g:Float, b:Float) : Void;
+	@:overload(function(color:Float):Color{})
+	@:overload(function(color:String):Color{})
 	function set(color:Color) : Color;
-	function set(color:Int) : Color;
-	function set(color:String) : Color;
 	function setScalar(scalar:Float) : Color;
 	function setHex(hex:Int) : Color;
 	/**

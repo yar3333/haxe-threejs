@@ -1,4 +1,4 @@
-package js.three.PropertyBinding;
+package js.three.propertyBinding;
 
 import js.html.*;
 

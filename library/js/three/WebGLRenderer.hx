@@ -16,11 +16,11 @@ extern class WebGLRenderer
 	 * A Canvas where the renderer draws its output.
 	 * This is automatically created by the renderer in the constructor (if not provided already); you just need to add it to your page.
 	 */
-	var domElement : HTMLCanvasElement;
+	var domElement : CanvasElement;
 	/**
 	 * The HTML5 Canvas's 'webgl' context obtained from the canvas where the renderer will draw.
 	 */
-	var context : WebGLRenderingContext;
+	var context : js.html.webgl.RenderingContext;
 	/**
 	 * Defines whether the renderer should automatically clear its output before rendering.
 	 */
@@ -96,7 +96,7 @@ extern class WebGLRenderer
 	/**
 	 * Return the WebGL context.
 	 */
-	function getContext() : WebGLRenderingContext;
+	function getContext() : js.html.webgl.RenderingContext;
 	function getContextAttributes() : Dynamic;
 	function forceContextLoss() : Void;
 	function getMaxAnisotropy() : Int;
@@ -127,15 +127,15 @@ extern class WebGLRenderer
 	/**
 	 * Sets the clear color, using color for the color and alpha for the opacity.
 	 */
+	@:overload(function(color:String, alpha:Float):Void{})
+	@:overload(function(color:Float, alpha:Float):Void{})
 	function setClearColor(color:Color, alpha:Float) : Void;
 	/**
 	 * Sets the clear color, using color for the color and alpha for the opacity.
 	 */
-	function setClearColor(color:String, alpha:Float) : Void;
 	/**
 	 * Sets the clear color, using color for the color and alpha for the opacity.
 	 */
-	function setClearColor(color:Int, alpha:Float) : Void;
 	/**
 	 * Returns a float with the current clear alpha. Ranges from 0 to 1.
 	 */
@@ -155,7 +155,7 @@ extern class WebGLRenderer
 	/**
 	 * Tells the shadow map plugin to update using the passed scene and camera parameters.
 	 */
-	function renderBufferImmediate(object:Object3D, program:Object, material:Material) : Void;
+	function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
 	function renderBufferDirect(camera:Camera, fog:Fog, material:Material, geometryGroup:Dynamic, object:Object3D) : Void;
 	/**
 	 * Render a scene using a camera.

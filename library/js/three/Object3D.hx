@@ -96,7 +96,7 @@ extern class Object3D extends EventDispatcher
 	/**
 	 * Base class for scene graph objects
 	 */
-	override function new() : Void;
+	function new() : Void;
 	/**
 	 * This updates the position, rotation and scale with the matrix.
 	 */

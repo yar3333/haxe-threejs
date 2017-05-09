@@ -7,7 +7,7 @@ extern class FirstPersonControls
 {
 	var object : Object3D;
 	var target : Vector3;
-	var domElement : haxe.extern.EitherType<HTMLCanvasElement, HTMLDocument>;
+	var domElement : haxe.extern.EitherType<CanvasElement, HTMLDocument>;
 	var enabled : Bool;
 	var movementSpeed : Float;
 	var lookSpeed : Float;
@@ -36,7 +36,7 @@ extern class FirstPersonControls
 	var freeze : Bool;
 	var mouseDragOn : Bool;
 
-	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	function new(object:Camera, ?domElement:js.html.Element) : Void;
 	function update(delta:Float) : Void;
 	function dispose() : Void;
 }

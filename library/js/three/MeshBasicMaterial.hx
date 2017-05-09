@@ -23,8 +23,8 @@ extern class MeshBasicMaterial extends Material
 	var skinning : Bool;
 	var morphTargets : Bool;
 
-	@:overload(function(?parameters:MeshBasicMaterialParameters):Void{})
-	override function new() : Void;
+	@:overload(function(parameters:MeshBasicMaterialParameters):Void{})
+	function new() : Void;
 	@:overload(function(parameters:MeshBasicMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 }

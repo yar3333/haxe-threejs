@@ -6,5 +6,5 @@ import js.html.*;
 extern class Uint8ClampedBufferAttribute extends BufferAttribute
 {
 	@:overload(function(array:haxe.extern.EitherType<Iterable<Float>,haxe.extern.EitherType<ArrayLike<Float>,ArrayBuffer>>,itemSize:Float):Void{})
-	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

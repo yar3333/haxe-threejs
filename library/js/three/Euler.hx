@@ -9,7 +9,7 @@ extern class Euler
 	var y : Float;
 	var z : Float;
 	var order : String;
-	var onChangeCallback : Function;
+	var onChangeCallback : haxe.Constraints.Function;
 	var RotationOrders : Array<String>;
 	var DefaultOrder : String;
 
@@ -25,5 +25,5 @@ extern class Euler
 	function fromArray(xyzo:Array<Dynamic>) : Euler;
 	function toArray(array:Array<Float>, offset:Float) : Array<Float>;
 	function toVector3(optionalResult:Vector3) : Vector3;
-	function onChange(callback:Function) : Void;
+	function onChange(callback:haxe.Constraints.Function) : Void;
 }

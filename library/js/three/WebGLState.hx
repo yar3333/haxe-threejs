@@ -7,7 +7,7 @@ extern class WebGLState
 {
 	var buffers : { var color : WebGLColorBuffer; var depth : WebGLDepthBuffer; var stencil : WebGLStencilBuffer; };
 
-	function new(gl:Dynamic, extensions:Dynamic, paramThreeToGL:Function) : Void;
+	function new(gl:Dynamic, extensions:Dynamic, paramThreeToGL:haxe.Constraints.Function) : Void;
 	function init() : Void;
 	function initAttributes() : Void;
 	function enableAttribute(attribute:String) : Void;
@@ -20,10 +20,10 @@ extern class WebGLState
 	function setColorWrite(colorWrite:Float) : Void;
 	function setDepthTest(depthTest:Float) : Void;
 	function setDepthWrite(depthWrite:Float) : Void;
-	function setDepthFunc(depthFunc:Function) : Void;
+	function setDepthFunc(depthFunc:haxe.Constraints.Function) : Void;
 	function setStencilTest(stencilTest:Bool) : Void;
 	function setStencilWrite(stencilWrite:Dynamic) : Void;
-	function setStencilFunc(stencilFunc:Function, stencilRef:Dynamic, stencilMask:Float) : Void;
+	function setStencilFunc(stencilFunc:haxe.Constraints.Function, stencilRef:Dynamic, stencilMask:Float) : Void;
 	function setStencilOp(stencilFail:Dynamic, stencilZFail:Dynamic, stencilZPass:Dynamic) : Void;
 	function setFlipSided(flipSided:Float) : Void;
 	function setCullFace(cullFace:CullFace) : Void;

@@ -12,7 +12,7 @@ extern class LineDashedMaterial extends Material
 	var gapSize : Float;
 
 	@:overload(function(?parameters:LineDashedMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(parameters:LineDashedMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 }

@@ -12,5 +12,5 @@ extern class Float32Attribute extends BufferAttribute
 	 * @deprecated THREE.Float32Attribute has been removed. Use new THREE.Float32BufferAttribute() instead.
 	 */
 	@:overload(function(array:Dynamic,itemSize:Float):Void{})
-	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

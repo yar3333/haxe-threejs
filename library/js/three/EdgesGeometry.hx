@@ -6,5 +6,5 @@ import js.html.*;
 extern class EdgesGeometry extends BufferGeometry
 {
 	@:overload(function(geometry:BufferGeometry,thresholdAngle:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

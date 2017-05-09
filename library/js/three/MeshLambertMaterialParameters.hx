@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.MeshLambertMaterialParameters")
 extern interface MeshLambertMaterialParameters extends MaterialParameters
 {
-	@:optional var color : haxe.extern.EitherType<Float, String>;
+	@:optional var color : haxe.extern.EitherType<Int, String>;
 	@:optional var emissive : haxe.extern.EitherType<Float, String>;
 	@:optional var emissiveIntensity : Float;
 	@:optional var emissiveMap : Texture;

@@ -6,5 +6,5 @@ import js.html.*;
 extern class WireframeGeometry extends BufferGeometry
 {
 	@:overload(function(geometry:haxe.extern.EitherType<Geometry,BufferGeometry>):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

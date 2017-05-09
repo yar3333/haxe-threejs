@@ -6,7 +6,7 @@ import js.html.*;
 extern class TrackballControls extends EventDispatcher
 {
 	var object : Camera;
-	var domElement : HTMLElement;
+	var domElement : js.html.Element;
 	var enabled : Bool;
 	var screen : { var left : Float; var top : Float; var width : Float; var height : Float; };
 	var rotateSpeed : Float;
@@ -26,8 +26,8 @@ extern class TrackballControls extends EventDispatcher
 	var target0 : Vector3;
 	var up0 : Vector3;
 
-	@:overload(function(object:Camera,?domElement:HTMLElement):Void{})
-	override function new() : Void;
+	@:overload(function(object:Camera,?domElement:js.html.Element):Void{})
+	function new() : Void;
 	function update() : Void;
 	function reset() : Void;
 	function checkDistances() : Void;

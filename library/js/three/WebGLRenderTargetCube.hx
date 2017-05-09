@@ -9,5 +9,5 @@ extern class WebGLRenderTargetCube extends WebGLRenderTarget
 	var activeMipMapLevel : Float;
 
 	@:overload(function(width:Float,height:Float,?options:WebGLRenderTargetOptions):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

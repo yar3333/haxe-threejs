@@ -6,5 +6,5 @@ import js.html.*;
 extern class WireframeHelper extends LineSegments
 {
 	@:overload(function(object:Object3D,?hex:Int):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

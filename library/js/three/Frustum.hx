@@ -21,8 +21,8 @@ extern class Frustum
 	function clone() : Frustum;
 	function copy(frustum:Frustum) : Frustum;
 	function setFromMatrix(m:Matrix4) : Frustum;
+	@:overload(function(sprite:Sprite):Bool{})
 	function intersectsObject(object:Object3D) : Bool;
-	function intersectsObject(sprite:Sprite) : Bool;
 	function intersectsSphere(sphere:Sphere) : Bool;
 	function intersectsBox(box:Box3) : Bool;
 	function containsPoint(point:Vector3) : Bool;

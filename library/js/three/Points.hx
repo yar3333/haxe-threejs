@@ -25,6 +25,6 @@ extern class Points extends Object3D
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/objects/ParticleSystem.js">src/objects/ParticleSystem.js</a>
 	 */
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:Material):Void{})
-	override function new() : Void;
+	function new() : Void;
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 }

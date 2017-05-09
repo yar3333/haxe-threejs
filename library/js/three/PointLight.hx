@@ -32,5 +32,5 @@ extern class PointLight extends Light
 	 * scene.add( light );
 	 */
 	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float,?distance:Float,?decay:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }
