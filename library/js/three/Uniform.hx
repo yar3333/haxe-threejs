@@ -10,7 +10,8 @@ extern class Uniform
 	 */
 	var type : String;
 	var value : Dynamic;
-	var dynamic : Bool;
+	var dynamic_(get, null) : Bool;
+	inline function get_dynamic_() : Bool return (cast this)['dynamic'];
 	var onUpdateCallback : Function;
 
 	function new(value:Dynamic) : Void;

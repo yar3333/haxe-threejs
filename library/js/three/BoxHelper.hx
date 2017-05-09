@@ -5,6 +5,7 @@ import js.html.*;
 @:native("THREE.BoxHelper")
 extern class BoxHelper extends LineSegments
 {
-	function new(?object:Object3D, ?color:Color) : Void;
+	@:overload(function(?object:Object3D,?color:Color):Void{})
+	override function new() : Void;
 	function update(object:Object3D) : Void;
 }

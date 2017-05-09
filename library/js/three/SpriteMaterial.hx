@@ -9,6 +9,8 @@ extern class SpriteMaterial extends Material
 	var map : Texture;
 	var rotation : Float;
 
-	function new(?parameters:SpriteMaterialParameters) : Void;
-	function setValues(parameters:SpriteMaterialParameters) : Void;
+	@:overload(function(?parameters:SpriteMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:SpriteMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

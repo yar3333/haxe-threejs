@@ -14,7 +14,7 @@ import js.html.*;
 @:native("THREE.AmbientLight")
 extern class AmbientLight extends Light
 {
-	var castShadow : Bool;
+	//var castShadow : Bool;
 
 	/**
 	 * This light's color gets applied to all the objects in the scene globally.
@@ -25,5 +25,6 @@ extern class AmbientLight extends Light
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/lights/AmbientLight.js
 	 */
-	function new(?hex:haxe.extern.EitherType<Float, String>, ?intensity:Float) : Void;
+	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	override function new() : Void;
 }

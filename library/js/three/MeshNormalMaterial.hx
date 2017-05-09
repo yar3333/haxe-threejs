@@ -9,6 +9,8 @@ extern class MeshNormalMaterial extends Material
 	var wireframeLinewidth : Float;
 	var morphTargets : Bool;
 
-	function new(?parameters:MeshNormalMaterialParameters) : Void;
-	function setValues(parameters:MeshNormalMaterialParameters) : Void;
+	@:overload(function(?parameters:MeshNormalMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:MeshNormalMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

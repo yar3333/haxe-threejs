@@ -5,5 +5,6 @@ import js.html.*;
 @:native("THREE.WireframeHelper")
 extern class WireframeHelper extends LineSegments
 {
-	function new(object:Object3D, ?hex:Int) : Void;
+	@:overload(function(object:Object3D,?hex:Int):Void{})
+	override function new() : Void;
 }

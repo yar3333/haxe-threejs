@@ -5,5 +5,6 @@ import js.html.*;
 @:native("THREE.Float32BufferAttribute")
 extern class Float32BufferAttribute extends BufferAttribute
 {
-	function new(array:haxe.extern.EitherType<Iterable<Float>, haxe.extern.EitherType<ArrayLike<Float>, ArrayBuffer>>, itemSize:Float) : Void;
+	@:overload(function(array:haxe.extern.EitherType<Iterable<Float>,haxe.extern.EitherType<ArrayLike<Float>,ArrayBuffer>>,itemSize:Float):Void{})
+	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

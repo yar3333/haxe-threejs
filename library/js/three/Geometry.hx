@@ -125,7 +125,7 @@ extern class Geometry extends EventDispatcher
 	 * 
 	 * @see https://github.com/mrdoob/three.js/blob/master/src/core/Geometry.js
 	 */
-	function new() : Void;
+	override function new() : Void;
 	/**
 	 * Bakes matrix transform directly into vertex coordinates.
 	 */
@@ -185,8 +185,8 @@ extern class Geometry extends EventDispatcher
 	 * Don't forget to call this method when you remove an geometry because it can cuase meomory leaks.
 	 */
 	function dispose() : Void;
-	function addEventListener(type:String, listener:Event->Void) : Void;
-	function hasEventListener(type:String, listener:Event->Void) : Void;
-	function removeEventListener(type:String, listener:Event->Void) : Void;
-	function dispatchEvent(event:{ var type : String; }) : Void;
+	override function addEventListener(type:String, listener:Event->Void) : Void;
+	override function hasEventListener(type:String, listener:Event->Void) : Void;
+	override function removeEventListener(type:String, listener:Event->Void) : Void;
+	override function dispatchEvent(event:{ var type : String; }) : Void;
 }

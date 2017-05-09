@@ -10,7 +10,7 @@ extern class Light extends Object3D
 {
 	var color : Color;
 	var intensity : Float;
-	var receiveShadow : Bool;
+	//var receiveShadow : Bool;
 	var shadow : LightShadow;
 	/**
 	 * @deprecated Use shadow.camera.fov instead.
@@ -56,5 +56,6 @@ extern class Light extends Object3D
 	/**
 	 * Abstract base class for lights.
 	 */
-	function new(?hex:haxe.extern.EitherType<Float, String>, ?intensity:Float) : Void;
+	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	override function new() : Void;
 }

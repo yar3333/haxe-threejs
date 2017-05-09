@@ -7,6 +7,7 @@ extern class ImmediateRenderObject extends Object3D
 {
 	var material : Material;
 
-	function new(material:Material) : Void;
+	@:overload(function(material:Material):Void{})
+	override function new() : Void;
 	function render(renderCallback:Function) : Void;
 }

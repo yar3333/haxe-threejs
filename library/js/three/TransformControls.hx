@@ -7,7 +7,8 @@ extern class TransformControls extends Object3D
 {
 	var object : Object3D;
 
-	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	@:overload(function(object:Camera,?domElement:HTMLElement):Void{})
+	override function new() : Void;
 	function update() : Void;
 	function detach() : Void;
 	function attach(object:Object3D) : Void;

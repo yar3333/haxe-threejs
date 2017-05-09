@@ -13,14 +13,14 @@ import js.html.*;
 @:native("THREE.PointLight")
 extern class PointLight extends Light
 {
-	var intensity : Float;
+	//var intensity : Float;
 	/**
 	 * If non-zero, light will attenuate linearly from maximum intensity at light position down to zero at distance.
 	 * Default — 0.0.
 	 */
 	var distance : Float;
 	var decay : Float;
-	var shadow : LightShadow;
+	//var shadow : LightShadow;
 	var power : Float;
 
 	/**
@@ -31,5 +31,6 @@ extern class PointLight extends Light
 	 * light.position.set( 50, 50, 50 );
 	 * scene.add( light );
 	 */
-	function new(?hex:haxe.extern.EitherType<Float, String>, ?intensity:Float, ?distance:Float, ?decay:Float) : Void;
+	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float,?distance:Float,?decay:Float):Void{})
+	override function new() : Void;
 }

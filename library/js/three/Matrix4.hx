@@ -55,9 +55,12 @@ extern class Matrix4
 	/**
 	 * Resets this matrix to identity.
 	 */
-	function identity() : Matrix4;
-	function clone() : Matrix4;
-	function copy(m:Matrix4) : Matrix4;
+	@:overload(function():Matrix4{})
+	function identity() : Matrix;
+	@:overload(function():Matrix4{})
+	function clone() : Matrix;
+	@:overload(function(m:Matrix4):Matrix4{})
+	function copy(m:Matrix) : Matrix;
 	function copyPosition(m:Matrix4) : Matrix4;
 	function extractBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
 	function makeBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
@@ -88,7 +91,8 @@ extern class Matrix4
 	/**
 	 * Multiplies this matrix by s.
 	 */
-	function multiplyScalar(s:Float) : Matrix4;
+	@:overload(function(s:Float):Matrix4{})
+	function multiplyScalar(s:Float) : Matrix;
 	function applyToBuffer(buffer:BufferAttribute, offset:Float, length:Float) : BufferAttribute;
 	/**
 	 * Computes determinant of this matrix.
@@ -98,7 +102,8 @@ extern class Matrix4
 	/**
 	 * Transposes this matrix.
 	 */
-	function transpose() : Matrix4;
+	@:overload(function():Matrix4{})
+	function transpose() : Matrix;
 	/**
 	 * Sets the position component for this matrix from vector v.
 	 */
@@ -107,7 +112,8 @@ extern class Matrix4
 	 * Sets this matrix to the inverse of matrix m.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm.
 	 */
-	function getInverse(m:Matrix4, throwOnDegeneratee:Bool) : Matrix4;
+	@:overload(function(m:Matrix4,throwOnDegeneratee:Bool):Matrix4{})
+	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	/**
 	 * Multiplies the columns of this matrix by vector v.
 	 */

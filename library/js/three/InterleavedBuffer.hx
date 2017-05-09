@@ -10,7 +10,8 @@ extern class InterleavedBuffer
 {
 	var array : ArrayLike<Float>;
 	var stride : Float;
-	var dynamic : Bool;
+	var dynamic_(get, null) : Bool;
+	inline function get_dynamic_() : Bool return (cast this)['dynamic'];
 	var updateRange : { var offset : Float; var count : Float; };
 	var version : Float;
 	var length : Float;
@@ -21,7 +22,7 @@ extern class InterleavedBuffer
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InterleavedBuffer.js">src/core/InterleavedBuffer.js</a>
 	 */
 	function new(array:ArrayLike<Float>, stride:Float) : Void;
-	function setDynamic(dynamic:Bool) : InterleavedBuffer;
+	function setDynamic(dynamic_:Bool) : InterleavedBuffer;
 	function clone() : InterleavedBuffer;
 	function copy(source:InterleavedBuffer) : InterleavedBuffer;
 	function copyAt(index1:Float, attribute:InterleavedBufferAttribute, index2:Float) : InterleavedBuffer;

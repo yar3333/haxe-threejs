@@ -41,6 +41,8 @@ extern class MeshPhongMaterial extends Material
 	 */
 	var metal : Bool;
 
-	function new(?parameters:MeshPhongMaterialParameters) : Void;
-	function setValues(parameters:MeshPhongMaterialParameters) : Void;
+	@:overload(function(?parameters:MeshPhongMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:MeshPhongMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

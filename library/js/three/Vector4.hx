@@ -51,40 +51,48 @@ extern class Vector4
 	/**
 	 * Clones this vector.
 	 */
-	function clone() : Vector4;
+	@:overload(function():Vector4{})
+	function clone() : Vector;
 	/**
 	 * Copies value of v to this vector.
 	 */
-	function copy(v:Vector4) : Vector4;
+	@:overload(function(v:Vector4):Vector4{})
+	function copy(v:Vector) : Vector;
 	/**
 	 * Adds v to this vector.
 	 */
-	function add(v:Vector4) : Vector4;
+	@:overload(function(v:Vector4):Vector4{})
+	function add(v:Vector) : Vector;
 	function addScalar(s:Float) : Vector4;
 	/**
 	 * Sets this vector to a + b.
 	 */
-	function addVectors(a:Vector4, b:Vector4) : Vector4;
+	@:overload(function(a:Vector4,b:Vector4):Vector4{})
+	function addVectors(a:Vector, b:Vector) : Vector;
 	function addScaledVector(v:Vector4, s:Float) : Vector4;
 	/**
 	 * Subtracts v from this vector.
 	 */
-	function sub(v:Vector4) : Vector4;
+	@:overload(function(v:Vector4):Vector4{})
+	function sub(v:Vector) : Vector;
 	function subScalar(s:Float) : Vector4;
 	/**
 	 * Sets this vector to a - b.
 	 */
-	function subVectors(a:Vector4, b:Vector4) : Vector4;
+	@:overload(function(a:Vector4,b:Vector4):Vector4{})
+	function subVectors(a:Vector, b:Vector) : Vector;
 	/**
 	 * Multiplies this vector by scalar s.
 	 */
-	function multiplyScalar(s:Float) : Vector4;
+	@:overload(function(s:Float):Vector4{})
+	function multiplyScalar(s:Float) : Vector;
 	function applyMatrix4(m:Matrix4) : Vector4;
 	/**
 	 * Divides this vector by scalar s.
 	 * Set vector to ( 0, 0, 0 ) if s == 0.
 	 */
-	function divideScalar(s:Float) : Vector4;
+	@:overload(function(s:Float):Vector4{})
+	function divideScalar(s:Float) : Vector;
 	/**
 	 * http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
 	 */
@@ -104,11 +112,13 @@ extern class Vector4
 	/**
 	 * Inverts this vector.
 	 */
-	function negate() : Vector4;
+	@:overload(function():Vector4{})
+	function negate() : Vector;
 	/**
 	 * Computes dot product of this vector and v.
 	 */
-	function dot(v:Vector4) : Float;
+	@:overload(function(v:Vector4):Float{})
+	function dot(v:Vector) : Float;
 	/**
 	 * Computes squared length of this vector.
 	 */
@@ -121,20 +131,24 @@ extern class Vector4
 	/**
 	 * Normalizes this vector.
 	 */
-	function normalize() : Vector4;
+	@:overload(function():Vector4{})
+	function normalize() : Vector;
 	/**
 	 * Normalizes this vector and multiplies it by l.
 	 */
-	function setLength(length:Float) : Vector4;
+	@:overload(function(length:Float):Vector4{})
+	function setLength(l:Float) : Vector;
 	/**
 	 * Linearly interpolate between this vector and v with alpha factor.
 	 */
-	function lerp(v:Vector4, alpha:Float) : Vector4;
+	@:overload(function(v:Vector4,alpha:Float):Vector4{})
+	function lerp(v:Vector, alpha:Float) : Vector;
 	function lerpVectors(v1:Vector4, v2:Vector4, alpha:Float) : Vector4;
 	/**
 	 * Checks for strict equality of this vector and v.
 	 */
-	function equals(v:Vector4) : Bool;
+	@:overload(function(v:Vector4):Bool{})
+	function equals(v:Vector) : Bool;
 	function fromArray(xyzw:Array<Float>, offset:Float) : Vector4;
 	function toArray(xyzw:Array<Float>, offset:Float) : Array<Float>;
 	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector4;

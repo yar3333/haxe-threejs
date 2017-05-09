@@ -10,7 +10,8 @@ extern class TubeGeometry extends Geometry
 	var normals : Array<Vector3>;
 	var binormals : Array<Vector3>;
 
-	function new(path:Curve<Vector3>, ?segments:Int, ?radius:Float, ?radiusSegments:Int, ?closed:Bool, ?taper:Float->Float) : Void;
+	@:overload(function(path:Curve<Vector3>,?segments:Int,?radius:Float,?radiusSegments:Int,?closed:Bool,?taper:Float->Float):Void{})
+	override function new() : Void;
 	static function NoTaper(u:Float) : Float;
 	static function SinusoidalTaper(u:Float) : Float;
 	static function FrenetFrames(path:Path, segments:Int, closed:Bool) : Void;

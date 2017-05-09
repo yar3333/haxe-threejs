@@ -8,6 +8,7 @@ extern class Sprite extends Object3D
 	var geometry : BufferGeometry;
 	var material : SpriteMaterial;
 
-	function new(?material:Material) : Void;
-	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
+	@:overload(function(?material:Material):Void{})
+	override function new() : Void;
+	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 }

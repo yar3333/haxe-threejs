@@ -7,5 +7,6 @@ extern class ParametricGeometry extends Geometry
 {
 	var parameters : { var func : Float->Float->Vector3; var slices : Float; var stacks : Float; };
 
-	function new(func:Float->Float->Vector3, slices:Float, stacks:Float) : Void;
+	@:overload(function(func:Float->Float->Vector3,slices:Float,stacks:Float):Void{})
+	override function new() : Void;
 }

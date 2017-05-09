@@ -5,5 +5,6 @@ import js.html.*;
 @:native("THREE.AxisHelper")
 extern class AxisHelper extends LineSegments
 {
-	function new(?size:Float) : Void;
+	@:overload(function(?size:Float):Void{})
+	override function new() : Void;
 }

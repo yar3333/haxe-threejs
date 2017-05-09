@@ -56,7 +56,8 @@ extern class WebGLRenderTarget extends EventDispatcher
 	 */
 	var generateMipmaps : Dynamic;
 
-	function new(width:Float, height:Float, ?options:WebGLRenderTargetOptions) : Void;
+	@:overload(function(width:Float,height:Float,?options:WebGLRenderTargetOptions):Void{})
+	override function new() : Void;
 	function setSize(width:Float, height:Float) : Void;
 	function clone() : WebGLRenderTarget;
 	function copy(source:WebGLRenderTarget) : WebGLRenderTarget;

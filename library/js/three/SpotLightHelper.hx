@@ -7,7 +7,8 @@ extern class SpotLightHelper extends Object3D
 {
 	var light : Light;
 
-	function new(light:Light) : Void;
+	@:overload(function(light:Light):Void{})
+	override function new() : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

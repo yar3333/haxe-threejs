@@ -28,6 +28,8 @@ extern class MeshLambertMaterial extends Material
 	var morphTargets : Bool;
 	var morphNormals : Bool;
 
-	function new(?parameters:MeshLambertMaterialParameters) : Void;
-	function setValues(parameters:MeshLambertMaterialParameters) : Void;
+	@:overload(function(?parameters:MeshLambertMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:MeshLambertMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

@@ -162,7 +162,8 @@ extern class WebGLRenderer
 	 * The render is done to the renderTarget (if specified) or to the canvas as usual.
 	 * If forceClear is true, the canvas will be cleared before rendering, even if the renderer's autoClear property is false.
 	 */
-	function render(scene:Scene, camera:Camera, renderTarget:RenderTarget, forceClear:Bool) : Void;
+	@:overload(function(scene:Scene,camera:Camera,renderTarget:RenderTarget,forceClear:Bool):Void{})
+	function render(scene:Scene, camera:Camera) : Void;
 	/**
 	 * Used for setting the gl frontFace, cullFace states in the GPU, thus enabling/disabling face culling when rendering.
 	 * If cullFace is false, culling will be disabled.

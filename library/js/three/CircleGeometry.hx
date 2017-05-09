@@ -7,5 +7,6 @@ extern class CircleGeometry extends Geometry
 {
 	var parameters : { var radius : Float; var segments : Float; var thetaStart : Float; var thetaLength : Float; };
 
-	function new(?radius:Float, ?segments:Int, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	@:overload(function(?radius:Float,?segments:Int,?thetaStart:Float,?thetaLength:Float):Void{})
+	override function new() : Void;
 }

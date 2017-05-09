@@ -13,5 +13,6 @@ extern class SphereGeometry extends Geometry
 	/**
 	 * A class for generating sphere geometries
 	 */
-	function new(radius:Float, ?widthSegments:Float, ?heightSegments:Int, ?phiStart:Float, ?phiLength:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	@:overload(function(radius:Float,?widthSegments:Float,?heightSegments:Int,?phiStart:Float,?phiLength:Float,?thetaStart:Float,?thetaLength:Float):Void{})
+	override function new() : Void;
 }

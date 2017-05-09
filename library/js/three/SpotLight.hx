@@ -17,7 +17,7 @@ extern class SpotLight extends Light
 	 * Light's intensity.
 	 * Default — 1.0.
 	 */
-	var intensity : Float;
+	//var intensity : Float;
 	/**
 	 * If non-zero, light will attenuate linearly from maximum intensity at light position down to zero at distance.
 	 * Default — 0.0.
@@ -30,12 +30,13 @@ extern class SpotLight extends Light
 	 */
 	var exponent : Float;
 	var decay : Float;
-	var shadow : SpotLightShadow;
+	//var shadow : SpotLightShadow;
 	var power : Float;
 	var penumbra : Float;
 
 	/**
 	 * A point light that can cast shadow in one direction.
 	 */
-	function new(?hex:haxe.extern.EitherType<Float, String>, ?intensity:Float, ?distance:Float, ?angle:Float, ?exponent:Float, ?decay:Float) : Void;
+	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float,?distance:Float,?angle:Float,?exponent:Float,?decay:Float):Void{})
+	override function new() : Void;
 }

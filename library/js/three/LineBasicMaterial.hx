@@ -10,6 +10,8 @@ extern class LineBasicMaterial extends Material
 	var linecap : String;
 	var linejoin : String;
 
-	function new(?parameters:LineBasicMaterialParameters) : Void;
-	function setValues(parameters:LineBasicMaterialParameters) : Void;
+	@:overload(function(?parameters:LineBasicMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:LineBasicMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

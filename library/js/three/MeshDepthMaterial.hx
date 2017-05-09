@@ -8,6 +8,8 @@ extern class MeshDepthMaterial extends Material
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
 
-	function new(?parameters:MeshDepthMaterialParameters) : Void;
-	function setValues(parameters:MeshDepthMaterialParameters) : Void;
+	@:overload(function(?parameters:MeshDepthMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:MeshDepthMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

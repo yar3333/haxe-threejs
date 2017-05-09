@@ -11,10 +11,11 @@ extern class LOD extends Object3D
 	 */
 	var objects : Array<Dynamic>;
 
-	function new() : Void;
+	override function new() : Void;
 	function addLevel(object:Object3D, distance:Float) : Void;
 	function getObjectForDistance(distance:Float) : Object3D;
-	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
+	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 	function update(camera:Camera) : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	@:overload(function(meta:Dynamic):Dynamic{})
+	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 }

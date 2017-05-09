@@ -107,7 +107,7 @@ extern class Material extends EventDispatcher
 	/**
 	 * Materials describe the appearance of objects. They are defined in a (mostly) renderer-independent way, so you don't have to rewrite materials if you decide to use a different renderer.
 	 */
-	function new() : Void;
+	override function new() : Void;
 	function setValues(parameters:MaterialParameters) : Void;
 	function toJSON(meta:Dynamic) : Dynamic;
 	function clone() : Material;
