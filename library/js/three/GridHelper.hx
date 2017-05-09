@@ -5,7 +5,8 @@ import js.html.*;
 @:native("THREE.GridHelper")
 extern class GridHelper extends LineSegments
 {
-	function new(size:Float, divisions:Int, ?color1:haxe.extern.EitherType<Color, Float>, ?color2:haxe.extern.EitherType<Color, Float>) : Void;
+	@:overload(function(size:Float,divisions:Int,?color1:haxe.extern.EitherType<Color,Float>,?color2:haxe.extern.EitherType<Color,Float>):Void{})
+	override function new() : Void;
 	/**
 	 * @deprecated
 	 */

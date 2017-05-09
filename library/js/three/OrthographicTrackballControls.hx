@@ -29,7 +29,8 @@ extern class OrthographicTrackballControls extends EventDispatcher
 	var top0 : Float;
 	var bottom0 : Float;
 
-	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	@:overload(function(object:Camera,?domElement:HTMLElement):Void{})
+	override function new() : Void;
 	function update() : Void;
 	function reset() : Void;
 	function checkDistances() : Void;

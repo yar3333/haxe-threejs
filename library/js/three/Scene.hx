@@ -22,6 +22,7 @@ extern class Scene extends Object3D
 	/**
 	 * Scenes allow you to set up what and where is to be rendered by three.js. This is where you place objects, lights and cameras.
 	 */
-	function new() : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	override function new() : Void;
+	@:overload(function(meta:Dynamic):Dynamic{})
+	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 }

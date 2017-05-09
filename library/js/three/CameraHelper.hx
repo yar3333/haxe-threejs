@@ -8,6 +8,7 @@ extern class CameraHelper extends LineSegments
 	var camera : Camera;
 	var pointMap : Dynamic<Array<Float>>;
 
-	function new(camera:Camera) : Void;
+	@:overload(function(camera:Camera):Void{})
+	override function new() : Void;
 	function update() : Void;
 }

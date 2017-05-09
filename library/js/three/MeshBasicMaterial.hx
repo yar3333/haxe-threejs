@@ -15,7 +15,7 @@ extern class MeshBasicMaterial extends Material
 	var combine : Combine;
 	var reflectivity : Float;
 	var refractionRatio : Float;
-	var shading : Shading;
+	//var shading : Shading;
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
 	var wireframeLinecap : String;
@@ -23,6 +23,8 @@ extern class MeshBasicMaterial extends Material
 	var skinning : Bool;
 	var morphTargets : Bool;
 
-	function new(?parameters:MeshBasicMaterialParameters) : Void;
-	function setValues(parameters:MeshBasicMaterialParameters) : Void;
+	@:overload(function(?parameters:MeshBasicMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:MeshBasicMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

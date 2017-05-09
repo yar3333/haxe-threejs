@@ -26,7 +26,8 @@ extern class TrackballControls extends EventDispatcher
 	var target0 : Vector3;
 	var up0 : Vector3;
 
-	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	@:overload(function(object:Camera,?domElement:HTMLElement):Void{})
+	override function new() : Void;
 	function update() : Void;
 	function reset() : Void;
 	function checkDistances() : Void;

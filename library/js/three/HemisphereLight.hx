@@ -6,7 +6,8 @@ import js.html.*;
 extern class HemisphereLight extends Light
 {
 	var groundColor : Color;
-	var intensity : Float;
+	//var intensity : Float;
 
-	function new(?skyColorHex:haxe.extern.EitherType<Float, String>, ?groundColorHex:haxe.extern.EitherType<Float, String>, ?intensity:Float) : Void;
+	@:overload(function(?skyColorHex:haxe.extern.EitherType<Float,String>,?groundColorHex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	override function new() : Void;
 }

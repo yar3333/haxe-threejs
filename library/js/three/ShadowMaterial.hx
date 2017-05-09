@@ -5,5 +5,6 @@ import js.html.*;
 @:native("THREE.ShadowMaterial")
 extern class ShadowMaterial extends ShaderMaterial
 {
-	function new(?parameters:ShaderMaterialParameters) : Void;
+	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
+	override function new() : Void;
 }

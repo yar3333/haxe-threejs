@@ -11,7 +11,8 @@ extern class BufferAttribute
 	var uuid : String;
 	var array : ArrayLike<Float>;
 	var itemSize : Float;
-	var dynamic : Bool;
+	var dynamic_(get, null) : Bool;
+	inline function get_dynamic_() : Bool return (cast this)['dynamic'];
 	var updateRange : { var offset : Float; var count : Float; };
 	var version : Float;
 	var normalized : Bool;
@@ -26,7 +27,7 @@ extern class BufferAttribute
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js">src/core/BufferAttribute.js</a>
 	 */
 	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
-	function setDynamic(dynamic:Bool) : BufferAttribute;
+	function setDynamic(dynamic_:Bool) : BufferAttribute;
 	function clone() : BufferAttribute;
 	function copy(source:BufferAttribute) : BufferAttribute;
 	function copyAt(index1:Float, attribute:BufferAttribute, index2:Float) : BufferAttribute;

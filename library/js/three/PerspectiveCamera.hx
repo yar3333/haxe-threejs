@@ -45,7 +45,8 @@ extern class PerspectiveCamera extends Camera
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/cameras/PerspectiveCamera.js
 	 */
-	function new(?fov:Float, ?aspect:Float, ?near:Float, ?far:Float) : Void;
+	@:overload(function(?fov:Float,?aspect:Float,?near:Float,?far:Float):Void{})
+	override function new() : Void;
 	function setFocalLength(focalLength:Float) : Void;
 	function getFocalLength() : Float;
 	function getEffectiveFOV() : Float;
@@ -87,7 +88,8 @@ extern class PerspectiveCamera extends Camera
 	 * Updates the camera projection matrix. Must be called after change of parameters.
 	 */
 	function updateProjectionMatrix() : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	@:overload(function(meta:Dynamic):Dynamic{})
+	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 	/**
 	 * @deprecated
 	 */

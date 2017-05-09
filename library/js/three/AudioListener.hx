@@ -5,11 +5,11 @@ import js.html.*;
 @:native("THREE.AudioListener")
 extern class AudioListener extends Object3D
 {
-	var type : String;
+	//var type : String;
 	var context : AudioContext;
 	var gain : GainNode;
 
-	function new() : Void;
+	override function new() : Void;
 	function getInput() : GainNode;
 	function removeFilter() : Void;
 	function setFilter(value:Dynamic) : Void;

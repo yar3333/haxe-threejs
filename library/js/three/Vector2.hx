@@ -46,40 +46,48 @@ extern class Vector2
 	/**
 	 * Clones this vector.
 	 */
-	function clone() : Vector2;
+	@:overload(function():Vector2{})
+	function clone() : Vector;
 	/**
 	 * Copies value of v to this vector.
 	 */
-	function copy(v:Vector2) : Vector2;
+	@:overload(function(v:Vector2):Vector2{})
+	function copy(v:Vector) : Vector;
 	/**
 	 * Adds v to this vector.
 	 */
-	function add(v:Vector2) : Vector2;
+	@:overload(function(v:Vector2):Vector2{})
+	function add(v:Vector) : Vector;
 	/**
 	 * Sets this vector to a + b.
 	 */
 	function addScalar(s:Float) : Vector2;
-	function addVectors(a:Vector2, b:Vector2) : Vector2;
+	@:overload(function(a:Vector2,b:Vector2):Vector2{})
+	function addVectors(a:Vector, b:Vector) : Vector;
 	function addScaledVector(v:Vector2, s:Float) : Vector2;
 	/**
 	 * Subtracts v from this vector.
 	 */
-	function sub(v:Vector2) : Vector2;
+	@:overload(function(v:Vector2):Vector2{})
+	function sub(v:Vector) : Vector;
 	/**
 	 * Sets this vector to a - b.
 	 */
-	function subVectors(a:Vector2, b:Vector2) : Vector2;
+	@:overload(function(a:Vector2,b:Vector2):Vector2{})
+	function subVectors(a:Vector, b:Vector) : Vector;
 	function multiply(v:Vector2) : Vector2;
 	/**
 	 * Multiplies this vector by scalar s.
 	 */
-	function multiplyScalar(scalar:Float) : Vector2;
+	@:overload(function(scalar:Float):Vector2{})
+	function multiplyScalar(s:Float) : Vector;
 	function divide(v:Vector2) : Vector2;
 	/**
 	 * Divides this vector by scalar s.
 	 * Set vector to ( 0, 0 ) if s == 0.
 	 */
-	function divideScalar(s:Float) : Vector2;
+	@:overload(function(s:Float):Vector2{})
+	function divideScalar(s:Float) : Vector;
 	function min(v:Vector2) : Vector2;
 	function max(v:Vector2) : Vector2;
 	function clamp(min:Vector2, max:Vector2) : Vector2;
@@ -92,11 +100,13 @@ extern class Vector2
 	/**
 	 * Inverts this vector.
 	 */
-	function negate() : Vector2;
+	@:overload(function():Vector2{})
+	function negate() : Vector;
 	/**
 	 * Computes dot product of this vector and v.
 	 */
-	function dot(v:Vector2) : Float;
+	@:overload(function(v:Vector2):Float{})
+	function dot(v:Vector) : Float;
 	/**
 	 * Computes squared length of this vector.
 	 */
@@ -109,7 +119,8 @@ extern class Vector2
 	/**
 	 * Normalizes this vector.
 	 */
-	function normalize() : Vector2;
+	@:overload(function():Vector2{})
+	function normalize() : Vector;
 	/**
 	 * computes the angle in radians with respect to the positive x-axis
 	 */
@@ -117,22 +128,27 @@ extern class Vector2
 	/**
 	 * Computes distance of this vector to v.
 	 */
-	function distanceTo(v:Vector2) : Float;
+	@:overload(function(v:Vector2):Float{})
+	function distanceTo(?v:Vector) : Float;
 	/**
 	 * Computes squared distance of this vector to v.
 	 */
-	function distanceToSquared(v:Vector2) : Float;
+	@:overload(function(v:Vector2):Float{})
+	function distanceToSquared(?v:Vector) : Float;
 	function distanceToManhattan(v:Vector2) : Float;
 	/**
 	 * Normalizes this vector and multiplies it by l.
 	 */
-	function setLength(length:Float) : Vector2;
-	function lerp(v:Vector2, alpha:Float) : Vector2;
+	@:overload(function(length:Float):Vector2{})
+	function setLength(l:Float) : Vector;
+	@:overload(function(v:Vector2,alpha:Float):Vector2{})
+	function lerp(v:Vector, alpha:Float) : Vector;
 	function lerpVectors(v1:Vector2, v2:Vector2, alpha:Float) : Vector2;
 	/**
 	 * Checks for strict equality of this vector and v.
 	 */
-	function equals(v:Vector2) : Bool;
+	@:overload(function(v:Vector2):Bool{})
+	function equals(v:Vector) : Bool;
 	function fromArray(xy:Array<Float>, offset:Float) : Vector2;
 	function toArray(xy:Array<Float>, offset:Float) : Array<Float>;
 	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector2;

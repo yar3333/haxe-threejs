@@ -62,35 +62,42 @@ extern class Vector3
 	/**
 	 * Clones this vector.
 	 */
-	function clone() : Vector3;
+	@:overload(function():Vector3{})
+	function clone() : Vector;
 	/**
 	 * Copies value of v to this vector.
 	 */
-	function copy(v:Vector3) : Vector3;
+	@:overload(function(v:Vector3):Vector3{})
+	function copy(v:Vector) : Vector;
 	/**
 	 * Adds v to this vector.
 	 */
-	function add(a:Vector3) : Vector3;
+	@:overload(function(a:Vector3):Vector3{})
+	function add(v:Vector) : Vector;
 	function addScalar(s:Float) : Vector3;
 	function addScaledVector(v:Vector3, s:Float) : Vector3;
 	/**
 	 * Sets this vector to a + b.
 	 */
-	function addVectors(a:Vector3, b:Vector3) : Vector3;
+	@:overload(function(a:Vector3,b:Vector3):Vector3{})
+	function addVectors(a:Vector, b:Vector) : Vector;
 	/**
 	 * Subtracts v from this vector.
 	 */
-	function sub(a:Vector3) : Vector3;
+	@:overload(function(a:Vector3):Vector3{})
+	function sub(v:Vector) : Vector;
 	function subScalar(s:Float) : Vector3;
 	/**
 	 * Sets this vector to a - b.
 	 */
-	function subVectors(a:Vector3, b:Vector3) : Vector3;
+	@:overload(function(a:Vector3,b:Vector3):Vector3{})
+	function subVectors(a:Vector, b:Vector) : Vector;
 	function multiply(v:Vector3) : Vector3;
 	/**
 	 * Multiplies this vector by scalar s.
 	 */
-	function multiplyScalar(s:Float) : Vector3;
+	@:overload(function(s:Float):Vector3{})
+	function multiplyScalar(s:Float) : Vector;
 	function multiplyVectors(a:Vector3, b:Vector3) : Vector3;
 	function applyEuler(euler:Euler) : Vector3;
 	function applyAxisAngle(axis:Vector3, angle:Float) : Vector3;
@@ -105,7 +112,8 @@ extern class Vector3
 	 * Divides this vector by scalar s.
 	 * Set vector to ( 0, 0, 0 ) if s == 0.
 	 */
-	function divideScalar(s:Float) : Vector3;
+	@:overload(function(s:Float):Vector3{})
+	function divideScalar(s:Float) : Vector;
 	function min(v:Vector3) : Vector3;
 	function max(v:Vector3) : Vector3;
 	function clamp(min:Vector3, max:Vector3) : Vector3;
@@ -118,11 +126,13 @@ extern class Vector3
 	/**
 	 * Inverts this vector.
 	 */
-	function negate() : Vector3;
+	@:overload(function():Vector3{})
+	function negate() : Vector;
 	/**
 	 * Computes dot product of this vector and v.
 	 */
-	function dot(v:Vector3) : Float;
+	@:overload(function(v:Vector3):Float{})
+	function dot(v:Vector) : Float;
 	/**
 	 * Computes squared length of this vector.
 	 */
@@ -139,12 +149,15 @@ extern class Vector3
 	/**
 	 * Normalizes this vector.
 	 */
-	function normalize() : Vector3;
+	@:overload(function():Vector3{})
+	function normalize() : Vector;
 	/**
 	 * Normalizes this vector and multiplies it by l.
 	 */
-	function setLength(l:Float) : Vector3;
-	function lerp(v:Vector3, alpha:Float) : Vector3;
+	@:overload(function(l:Float):Vector3{})
+	function setLength(l:Float) : Vector;
+	@:overload(function(v:Vector3,alpha:Float):Vector3{})
+	function lerp(v:Vector, alpha:Float) : Vector;
 	function lerpVectors(v1:Vector3, v2:Vector3, alpha:Float) : Vector3;
 	/**
 	 * Sets this vector to cross product of itself and v.
@@ -161,11 +174,13 @@ extern class Vector3
 	/**
 	 * Computes distance of this vector to v.
 	 */
-	function distanceTo(v:Vector3) : Float;
+	@:overload(function(v:Vector3):Float{})
+	function distanceTo(?v:Vector) : Float;
 	/**
 	 * Computes squared distance of this vector to v.
 	 */
-	function distanceToSquared(v:Vector3) : Float;
+	@:overload(function(v:Vector3):Float{})
+	function distanceToSquared(?v:Vector) : Float;
 	function distanceToManhattan(v:Vector3) : Float;
 	function setFromSpherical(s:Spherical) : Vector3;
 	function setFromMatrixPosition(m:Matrix4) : Vector3;
@@ -174,7 +189,8 @@ extern class Vector3
 	/**
 	 * Checks for strict equality of this vector and v.
 	 */
-	function equals(v:Vector3) : Bool;
+	@:overload(function(v:Vector3):Bool{})
+	function equals(v:Vector) : Bool;
 	function fromArray(xyz:Array<Float>, offset:Float) : Vector3;
 	function toArray(xyz:Array<Float>, offset:Float) : Array<Float>;
 	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector3;

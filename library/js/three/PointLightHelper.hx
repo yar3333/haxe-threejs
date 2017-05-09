@@ -7,7 +7,8 @@ extern class PointLightHelper extends Object3D
 {
 	var light : Light;
 
-	function new(light:Light, sphereSize:Float) : Void;
+	@:overload(function(light:Light,sphereSize:Float):Void{})
+	override function new() : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

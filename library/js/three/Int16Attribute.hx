@@ -11,5 +11,6 @@ extern class Int16Attribute extends BufferAttribute
 	/**
 	 * @deprecated THREE.Int16Attribute has been removed. Use new THREE.Int16BufferAttribute() instead.
 	 */
-	function new(array:Dynamic, itemSize:Float) : Void;
+	@:overload(function(array:Dynamic,itemSize:Float):Void{})
+	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

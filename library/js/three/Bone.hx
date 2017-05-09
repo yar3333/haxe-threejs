@@ -7,5 +7,6 @@ extern class Bone extends Object3D
 {
 	var skin : SkinnedMesh;
 
-	function new(skin:SkinnedMesh) : Void;
+	@:overload(function(skin:SkinnedMesh):Void{})
+	override function new() : Void;
 }

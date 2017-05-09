@@ -50,12 +50,14 @@ extern class OrthographicCamera extends Camera
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/cameras/OrthographicCamera.js">src/cameras/OrthographicCamera.js</a>
 	 */
-	function new(left:Float, right:Float, top:Float, bottom:Float, ?near:Float, ?far:Float) : Void;
+	@:overload(function(left:Float,right:Float,top:Float,bottom:Float,?near:Float,?far:Float):Void{})
+	override function new() : Void;
 	/**
 	 * Updates the camera projection matrix. Must be called after change of parameters.
 	 */
 	function updateProjectionMatrix() : Void;
 	function setViewOffset(fullWidth:Float, fullHeight:Float, offsetX:Float, offsetY:Float, width:Float, height:Float) : Void;
 	function clearViewOffset() : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	@:overload(function(meta:Dynamic):Dynamic{})
+	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 }

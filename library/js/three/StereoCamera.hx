@@ -10,6 +10,6 @@ extern class StereoCamera extends Camera
 	var cameraL : PerspectiveCamera;
 	var cameraR : PerspectiveCamera;
 
-	function new() : Void;
+	override function new() : Void;
 	function update(camera:PerspectiveCamera) : Void;
 }

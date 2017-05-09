@@ -8,6 +8,7 @@ extern class FaceNormalsHelper extends LineSegments
 	var object : Object3D;
 	var size : Float;
 
-	function new(object:Object3D, ?size:Float, ?hex:Int, ?linewidth:Float) : Void;
+	@:overload(function(object:Object3D,?size:Float,?hex:Int,?linewidth:Float):Void{})
+	override function new() : Void;
 	function update(object:Object3D) : Void;
 }

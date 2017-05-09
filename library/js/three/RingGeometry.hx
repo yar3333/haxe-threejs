@@ -7,5 +7,6 @@ extern class RingGeometry extends Geometry
 {
 	var parameters : { var innerRadius : Float; var outerRadius : Float; var thetaSegments : Float; var phiSegments : Float; var thetaStart : Float; var thetaLength : Float; };
 
-	function new(?innerRadius:Float, ?outerRadius:Float, ?thetaSegments:Float, ?phiSegments:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	@:overload(function(?innerRadius:Float,?outerRadius:Float,?thetaSegments:Float,?phiSegments:Float,?thetaStart:Float,?thetaLength:Float):Void{})
+	override function new() : Void;
 }

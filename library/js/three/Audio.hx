@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.Audio")
 extern class Audio extends Object3D
 {
-	var type : String;
+	//var type : String;
 	var context : AudioContext;
 	var source : AudioBufferSourceNode;
 	var gain : GainNode;
@@ -17,7 +17,8 @@ extern class Audio extends Object3D
 	var sourceType : String;
 	var filters : Array<Dynamic>;
 
-	function new(listener:AudioListener) : Void;
+	@:overload(function(listener:AudioListener):Void{})
+	override function new() : Void;
 	function getOutput() : GainNode;
 	function setNodeSource(audioNode:AudioBufferSourceNode) : Audio;
 	function setBuffer(audioBuffer:AudioBuffer) : Audio;

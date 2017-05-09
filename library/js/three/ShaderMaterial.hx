@@ -12,7 +12,7 @@ extern class ShaderMaterial extends Material
 	var linewidth : Float;
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
-	var lights : Bool;
+	//var lights : Bool;
 	var clipping : Bool;
 	var skinning : Bool;
 	var morphTargets : Bool;
@@ -25,7 +25,9 @@ extern class ShaderMaterial extends Material
 	var defaultAttributeValues : Dynamic;
 	var index0AttributeName : String;
 
-	function new(?parameters:ShaderMaterialParameters) : Void;
-	function setValues(parameters:ShaderMaterialParameters) : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:ShaderMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
+	override function toJSON(meta:Dynamic) : Dynamic;
 }

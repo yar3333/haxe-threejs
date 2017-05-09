@@ -9,7 +9,8 @@ extern class HemisphereLightHelper extends Object3D
 	var colors : Array<Color>;
 	var lightSphere : Mesh;
 
-	function new(light:Light, sphereSize:Float) : Void;
+	@:overload(function(light:Light,sphereSize:Float):Void{})
+	override function new() : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

@@ -10,6 +10,8 @@ extern class PointsMaterial extends Material
 	var size : Float;
 	var sizeAttenuation : Bool;
 
-	function new(?parameters:PointsMaterialParameters) : Void;
-	function setValues(parameters:PointsMaterialParameters) : Void;
+	@:overload(function(?parameters:PointsMaterialParameters):Void{})
+	override function new() : Void;
+	@:overload(function(parameters:PointsMaterialParameters):Void{})
+	override function setValues(parameters:MaterialParameters) : Void;
 }

@@ -5,7 +5,8 @@ import js.html.*;
 @:native("THREE.CompressedTexture")
 extern class CompressedTexture extends Texture
 {
-	var image : { var width : Float; var height : Float; };
+	//var image : { var width : Float; var height : Float; };
 
-	function new(mipmaps:Array<ImageData>, width:Float, height:Float, ?format:PixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:TextureFilter, ?minFilter:TextureFilter, ?anisotropy:Int, ?encoding:TextureEncoding) : Void;
+	@:overload(function(mipmaps:Array<ImageData>,width:Float,height:Float,?format:PixelFormat,?type:TextureDataType,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?anisotropy:Int,?encoding:TextureEncoding):Void{})
+	override function new() : Void;
 }

@@ -11,5 +11,6 @@ extern class Float64Attribute extends BufferAttribute
 	/**
 	 * @deprecated THREE.Float64Attribute has been removed. Use new THREE.Float64BufferAttribute() instead.
 	 */
-	function new(array:Dynamic, itemSize:Float) : Void;
+	@:overload(function(array:Dynamic,itemSize:Float):Void{})
+	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

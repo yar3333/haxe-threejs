@@ -8,7 +8,8 @@ extern class DirectionalLightHelper extends Object3D
 	var light : Light;
 	var lightPlane : Line;
 
-	function new(light:Light, ?size:Float) : Void;
+	@:overload(function(light:Light,?size:Float):Void{})
+	override function new() : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

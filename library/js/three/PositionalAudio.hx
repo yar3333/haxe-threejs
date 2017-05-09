@@ -7,7 +7,8 @@ extern class PositionalAudio extends Audio
 {
 	var panner : PannerNode;
 
-	function new(listener:AudioListener) : Void;
+	@:overload(function(listener:AudioListener):Void{})
+	override function new() : Void;
 	function setRefDistance(value:Float) : Void;
 	function getRefDistance() : Float;
 	function setRolloffFactor(value:Float) : Void;

@@ -19,18 +19,24 @@ extern class Matrix3
 	 */
 	function new() : Void;
 	function set(n11:Float, n12:Float, n13:Float, n21:Float, n22:Float, n23:Float, n31:Float, n32:Float, n33:Float) : Matrix3;
-	function identity() : Matrix3;
-	function clone() : Matrix3;
-	function copy(m:Matrix3) : Matrix3;
+	@:overload(function():Matrix3{})
+	function identity() : Matrix;
+	@:overload(function():Matrix3{})
+	function clone() : Matrix;
+	@:overload(function(m:Matrix3):Matrix3{})
+	function copy(m:Matrix) : Matrix;
 	function setFromMatrix4(m:Matrix4) : Matrix3;
 	function applyToBuffer(buffer:BufferAttribute, offset:Float, length:Float) : BufferAttribute;
-	function multiplyScalar(s:Float) : Matrix3;
+	@:overload(function(s:Float):Matrix3{})
+	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
-	function getInverse(matrix:Matrix3, throwOnDegenerate:Bool) : Matrix3;
+	@:overload(function(matrix:Matrix3,throwOnDegenerate:Bool):Matrix3{})
+	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	/**
 	 * Transposes this matrix in place.
 	 */
-	function transpose() : Matrix3;
+	@:overload(function():Matrix3{})
+	function transpose() : Matrix;
 	function getNormalMatrix(matrix4:Matrix4) : Matrix3;
 	/**
 	 * Transposes this matrix into the supplied array r, and returns itself.
@@ -43,6 +49,7 @@ extern class Matrix3
 	 */
 	function multiplyVector3(vector:Vector3) : Dynamic;
 	function multiplyVector3Array(a:Dynamic) : Dynamic;
-	function getInverse(matrix:Matrix4, throwOnDegenerate:Bool) : Matrix3;
+	@:overload(function(matrix:Matrix4,throwOnDegenerate:Bool):Matrix3{})
+	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	function flattenToArrayOffset(array:Array<Float>, offset:Float) : Array<Float>;
 }

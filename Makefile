@@ -6,9 +6,9 @@ TS_SRC = types/three
 
 build: native-ts
 	haxelib run refactor dts_to_haxe --out-dir library --root-package js.three --native-namespace THREE --log-level warn --import js.html.* --type-mapper fix_types.rules native-ts
+	haxelib run refactor override library
 	#haxelib run refactor process library/js *.hx postprocess.rules
-	#haxelib run refactor override library
-	#cp -r manual/* library
+	cp -r manual/* library
 
 native-ts:
 	git init native-ts

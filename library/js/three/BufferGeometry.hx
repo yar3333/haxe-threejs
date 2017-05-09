@@ -40,7 +40,7 @@ extern class BufferGeometry extends EventDispatcher
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/BufferGeometry.js">src/core/BufferGeometry.js</a>
 	 */
-	function new() : Void;
+	override function new() : Void;
 	function getIndex() : BufferAttribute;
 	function setIndex(index:BufferAttribute) : Void;
 	function addAttribute(name:String, attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>) : BufferGeometry;

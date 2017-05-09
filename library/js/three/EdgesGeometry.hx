@@ -5,5 +5,6 @@ import js.html.*;
 @:native("THREE.EdgesGeometry")
 extern class EdgesGeometry extends BufferGeometry
 {
-	function new(geometry:BufferGeometry, thresholdAngle:Float) : Void;
+	@:overload(function(geometry:BufferGeometry,thresholdAngle:Float):Void{})
+	override function new() : Void;
 }
