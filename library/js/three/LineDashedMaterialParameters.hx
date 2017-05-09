@@ -2,15 +2,12 @@ package js.three;
 
 import js.html.*;
 
-typedef LineDashedMaterialParameters =
+@:native("THREE.LineDashedMaterialParameters")
+extern interface LineDashedMaterialParameters extends MaterialParameters
 {
-	>MaterialParameters,
-
-	@:optional var color : Int;
+	@:optional var color : haxe.extern.EitherType<Float, String>;
 	@:optional var linewidth : Float;
 	@:optional var scale : Float;
 	@:optional var dashSize : Float;
 	@:optional var gapSize : Float;
-	@:optional var vertexColors : Colors;
-	@:optional var fog : Bool;
 }

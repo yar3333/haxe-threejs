@@ -8,27 +8,53 @@ import js.html.*;
 @:native("THREE.Light")
 extern class Light extends Object3D
 {
-	function new(?hex:Int) : Void;
-
 	var color : Color;
-	//var receiveShadow : Bool;
+	var intensity : Float;
+	var receiveShadow : Bool;
+	var shadow : LightShadow;
+	/**
+	 * @deprecated Use shadow.camera.fov instead.
+	 */
+	var shadowCameraFov : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.left instead.
+	 */
+	var shadowCameraLeft : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.right instead.
+	 */
+	var shadowCameraRight : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.top instead.
+	 */
+	var shadowCameraTop : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.bottom instead.
+	 */
+	var shadowCameraBottom : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.near instead.
+	 */
+	var shadowCameraNear : Dynamic;
+	/**
+	 * @deprecated Use shadow.camera.far instead.
+	 */
+	var shadowCameraFar : Dynamic;
+	/**
+	 * @deprecated Use shadow.bias instead.
+	 */
+	var shadowBias : Dynamic;
+	/**
+	 * @deprecated Use shadow.mapSize.width instead.
+	 */
+	var shadowMapWidth : Dynamic;
+	/**
+	 * @deprecated Use shadow.mapSize.height instead.
+	 */
+	var shadowMapHeight : Dynamic;
 
-	var shadowCameraFov : Float;
-	var shadowCameraLeft : Float;
-	var shadowCameraRight : Float;
-	var shadowCameraTop : Float;
-	var shadowCameraBottom : Float;
-	var shadowCameraNear : Float;
-	var shadowCameraFar : Float;
-	var shadowBias : Float;
-	var shadowDarkness : Float;
-	var shadowMapWidth : Float;
-	var shadowMapHeight : Float;
-
-	@:overload(function(?recursive:Bool):Light{})
-	override function clone(?recursive:Bool) : Object3D;
-	@:overload(function(source:Light):Light{})
-	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
-	@:overload(function(meta:Dynamic):Dynamic{})
-	override function toJSON(?meta:Dynamic) : Dynamic;
+	/**
+	 * Abstract base class for lights.
+	 */
+	function new(?hex:haxe.extern.EitherType<Float, String>, ?intensity:Float) : Void;
 }

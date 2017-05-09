@@ -3,15 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.StringKeyframeTrack")
-extern class StringKeyframeTrack
+extern class StringKeyframeTrack extends KeyframeTrack
 {
-	function new() : Void;
-
-	var result : Dynamic;
-
-	function setResult(value:Dynamic) : Void;
-	function lerpValues(value0:Dynamic, value1:Dynamic, alpha:Float) : Dynamic;
-	function compareValues(value0:Dynamic, value1:Dynamic) : Bool;
-	function clone() : StringKeyframeTrack;
-	function parse(json:Dynamic) : StringKeyframeTrack;
+	function new(name:String, times:Array<Dynamic>, values:Array<Dynamic>, interpolation:InterpolationModes) : Void;
 }

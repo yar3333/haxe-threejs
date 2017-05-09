@@ -2,11 +2,7 @@ package js.three;
 
 import js.html.*;
 
-// colors
-@:native("THREE")
+@:native("THREE.Colors")
 extern enum Colors
 {
-	NoColors;
-	FaceColors;
-	VertexColors;
 }

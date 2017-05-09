@@ -2,11 +2,7 @@ package js.three;
 
 import js.html.*;
 
-// Shadowing Type
-@:native("THREE")
+@:native("THREE.ShadowMapType")
 extern enum ShadowMapType
 {
-	BasicShadowMap;
-	PCFShadowMap;
-	PCFSoftShadowMap;
 }

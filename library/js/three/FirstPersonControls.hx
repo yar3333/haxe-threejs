@@ -5,17 +5,10 @@ import js.html.*;
 @:native("THREE.FirstPersonControls")
 extern class FirstPersonControls
 {
-	#if !threejs_noEmbed
-	static function __init__() : Void
-	{
-		haxe.macro.Compiler.includeFile("js/three/FirstPersonControls.js");
-	}
-	#end
-	
-	function new(object:Camera, ?domElement:HtmlElement) : Void;
 	var object : Object3D;
 	var target : Vector3;
-	var domElement : js.html.CanvasElement;
+	var domElement : haxe.extern.EitherType<HTMLCanvasElement, HTMLDocument>;
+	var enabled : Bool;
 	var movementSpeed : Float;
 	var lookSpeed : Float;
 	var noFly : Bool;
@@ -23,8 +16,9 @@ extern class FirstPersonControls
 	var autoForward : Bool;
 	var activeLook : Bool;
 	var heightSpeed : Bool;
-	var heightCoef : Bool;
-	var heightMin : Bool;
+	var heightCoef : Float;
+	var heightMin : Float;
+	var heightMax : Float;
 	var constrainVertical : Bool;
 	var verticalMin : Float;
 	var verticalMax : Float;
@@ -41,5 +35,8 @@ extern class FirstPersonControls
 	var moveRight : Bool;
 	var freeze : Bool;
 	var mouseDragOn : Bool;
-	function update(?delta:Float) : Void;
+
+	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	function update(delta:Float) : Void;
+	function dispose() : Void;
 }

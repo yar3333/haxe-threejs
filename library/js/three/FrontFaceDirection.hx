@@ -2,9 +2,7 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE")
+@:native("THREE.FrontFaceDirection")
 extern enum FrontFaceDirection
 {
-	FrontFaceDirectionCW;
-	FrontFaceDirectionCCW;
 }

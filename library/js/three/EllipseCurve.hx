@@ -5,8 +5,6 @@ import js.html.*;
 @:native("THREE.EllipseCurve")
 extern class EllipseCurve extends Curve<Vector2>
 {
-	function new(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
-
 	var aX : Float;
 	var aY : Float;
 	var xRadius : Float;
@@ -15,4 +13,6 @@ extern class EllipseCurve extends Curve<Vector2>
 	var aEndAngle : Float;
 	var aClockwise : Bool;
 	var aRotation : Float;
+
+	function new(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
 }

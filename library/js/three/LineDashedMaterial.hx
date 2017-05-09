@@ -5,17 +5,12 @@ import js.html.*;
 @:native("THREE.LineDashedMaterial")
 extern class LineDashedMaterial extends Material
 {
-	function new(?parameters:LineDashedMaterialParameters) : Void;
-
 	var color : Color;
 	var linewidth : Float;
 	var scale : Float;
 	var dashSize : Float;
 	var gapSize : Float;
-	var vertexColors : Colors;
-	var fog : Bool;
 
-	@:overload(function():LineDashedMaterial{})
-	override function clone() : Material;
-	function copy(source:LineDashedMaterial) : LineDashedMaterial;
+	function new(?parameters:LineDashedMaterialParameters) : Void;
+	function setValues(parameters:LineDashedMaterialParameters) : Void;
 }

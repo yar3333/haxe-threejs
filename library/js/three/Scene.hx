@@ -8,19 +8,20 @@ import js.html.*;
 @:native("THREE.Scene")
 extern class Scene extends Object3D
 {
-	function new() : Void;
-
 	/**
 	 * A fog instance defining the type of fog that affects everything rendered in the scene. Default is null.
 	 */
 	var fog : IFog;
-
 	/**
 	 * If not null, it will force everything in the scene to be rendered with that material. Default is null.
 	 */
 	var overrideMaterial : Material;
 	var autoUpdate : Bool;
+	var background : Dynamic;
 
-	@:overload(function(source:Scene):Scene{})
-	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
+	/**
+	 * Scenes allow you to set up what and where is to be rendered by three.js. This is where you place objects, lights and cameras.
+	 */
+	function new() : Void;
+	function toJSON(meta:Dynamic) : Dynamic;
 }

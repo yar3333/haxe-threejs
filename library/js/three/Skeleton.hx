@@ -5,8 +5,6 @@ import js.html.*;
 @:native("THREE.Skeleton")
 extern class Skeleton
 {
-	function new(bones:Array<Bone>, ?boneInverses:Array<Matrix4>, ?useVertexTexture:Bool) : Void;
-
 	var useVertexTexture : Bool;
 	var identityMatrix : Matrix4;
 	var bones : Array<Bone>;
@@ -16,6 +14,7 @@ extern class Skeleton
 	var boneTexture : DataTexture;
 	var boneInverses : Array<Matrix4>;
 
+	function new(bones:Array<Bone>, ?boneInverses:Array<Matrix4>, ?useVertexTexture:Bool) : Void;
 	function calculateInverses(bone:Bone) : Void;
 	function pose() : Void;
 	function update() : Void;

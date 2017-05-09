@@ -5,12 +5,10 @@ import js.html.*;
 @:native("THREE.DirectionalLightHelper")
 extern class DirectionalLightHelper extends Object3D
 {
-	function new(light:Light, ?size:Float) : Void;
-
 	var light : Light;
 	var lightPlane : Line;
-	var targetLine : Line;
 
+	function new(light:Light, ?size:Float) : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

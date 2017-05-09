@@ -2,10 +2,9 @@ package js.three;
 
 import js.html.*;
 
-typedef SpriteCanvasMaterialParameters =
+@:native("THREE.SpriteCanvasMaterialParameters")
+extern interface SpriteCanvasMaterialParameters extends MaterialParameters
 {
-	>MaterialParameters,
-
 	@:optional var color : Int;
-	@:optional var program : Dynamic->Color->Void;
+	@:optional var program : CanvasRenderingContext2D->Color->Void;
 }

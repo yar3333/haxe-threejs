@@ -2,12 +2,10 @@ package js.three;
 
 import js.html.*;
 
+/**
+ * @deprecated since 0.84.0. Use DataTextureLoader (renamed)
+ */
 @:native("THREE.BinaryTextureLoader")
-extern class BinaryTextureLoader
+extern class BinaryTextureLoader extends DataTextureLoader
 {
-	function new(?manager:LoadingManager) : Void;
-
-	var manager : LoadingManager;
-	function load(url:String, onLoad:DataTexture->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
-	function setCrossOrigin(crossOrigin:String) : Void;
 }

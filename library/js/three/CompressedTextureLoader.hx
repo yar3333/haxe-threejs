@@ -5,9 +5,10 @@ import js.html.*;
 @:native("THREE.CompressedTextureLoader")
 extern class CompressedTextureLoader
 {
-	function new(?manager:LoadingManager) : Void;
-
 	var manager : LoadingManager;
-	function load(url:String, onLoad:CompressedTexture->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
-	function setCrossOrigin(crossOrigin:String) : Void;
+	var path : String;
+
+	function new(?manager:LoadingManager) : Void;
+	function load(url:String, onLoad:CompressedTexture->Void, onProgress:ProgressEvent->Void, onError:ErrorEvent->Void) : Void;
+	function setPath(path:String) : CompressedTextureLoader;
 }

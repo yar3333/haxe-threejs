@@ -2,9 +2,6 @@ package js.three;
 
 import js.html.*;
 
-/**
- * ( interface Matrix&lt;T&gt; )
- */
 @:native("THREE.Matrix")
 extern interface Matrix
 {
@@ -17,29 +14,23 @@ extern interface Matrix
 	 * identity():T;
 	 */
 	function identity() : Matrix;
-
 	/**
 	 * copy(m:T):T;
 	 */
 	function copy(m:Matrix) : Matrix;
-
 	/**
-	 * multiplyScalar(s:Float):T;
+	 * multiplyScalar(s:number):T;
 	 */
 	function multiplyScalar(s:Float) : Matrix;
-
 	function determinant() : Float;
-
 	/**
-	 * getInverse(matrix:T, ?throwOnInvertible:Bool):T;
+	 * getInverse(matrix:T, throwOnInvertible?:boolean):T;
 	 */
-	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
-
+	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	/**
 	 * transpose():T;
 	 */
 	function transpose() : Matrix;
-
 	/**
 	 * clone():T;
 	 */

@@ -8,32 +8,35 @@ import js.html.*;
 @:native("THREE.BufferAttribute")
 extern class BufferAttribute
 {
-	function new(array:ArrayBufferView, itemSize:Float) : Void;// array parameter should be TypedArray.
-
 	var uuid : String;
-	var array : ArrayBufferView;
+	var array : ArrayLike<Float>;
 	var itemSize : Float;
-	inline function dynamicGet() : Bool return untyped this["dynamic"];
-	var updateRange : { offset:Float, count:Int };
+	var dynamic : Bool;
+	var updateRange : { var offset : Float; var count : Float; };
 	var version : Float;
-
+	var normalized : Bool;
 	var needsUpdate : Bool;
-	/** Deprecated, use count instead */
-	var length : Float;
 	var count : Int;
+	/**
+	 * @deprecated Use count instead.
+	 */
+	var length : Float;
 
-	function setDynamic(dynamic_:Bool) : BufferAttribute;
-	@:overload(function():BufferAttribute{})
+	/**
+	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js">src/core/BufferAttribute.js</a>
+	 */
+	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function setDynamic(dynamic:Bool) : BufferAttribute;
 	function clone() : BufferAttribute;
 	function copy(source:BufferAttribute) : BufferAttribute;
 	function copyAt(index1:Float, attribute:BufferAttribute, index2:Float) : BufferAttribute;
-	function copyArray(array:ArrayBufferView) : BufferAttribute;
-	function copyColorsArray(colors:Array<{ r:Float, g:Float, b:Float }>) : BufferAttribute;
-	function copyIndicesArray(indices:Array<{ a:Float, b:Float, c:Float }>) : BufferAttribute;
-	function copyVector2sArray(vectors:Array<{ x:Float, y:Float }>) : BufferAttribute;
-	function copyVector3sArray(vectors:Array<{ x:Float, y:Float, z:Float }>) : BufferAttribute;
-	function copyVector4sArray(vectors:Array<{ x:Float, y:Float, z:Float, w:Float }>) : BufferAttribute;
-	function set(value:ArrayBufferView, ?offset:Float) : BufferAttribute;
+	function copyArray(array:ArrayLike<Float>) : BufferAttribute;
+	function copyColorsArray(colors:Array<{ var r : Float; var g : Float; var b : Float; }>) : BufferAttribute;
+	function copyIndicesArray(indices:Array<{ var a : Float; var b : Float; var c : Float; }>) : BufferAttribute;
+	function copyVector2sArray(vectors:Array<{ var x : Float; var y : Float; }>) : BufferAttribute;
+	function copyVector3sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; }>) : BufferAttribute;
+	function copyVector4sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; var w : Float; }>) : BufferAttribute;
+	function set(value:ArrayLike<Float>, offset:Float) : BufferAttribute;
 	function getX(index:Int) : Float;
 	function setX(index:Int, x:Float) : BufferAttribute;
 	function getY(index:Int) : Float;

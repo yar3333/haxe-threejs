@@ -1,0 +1,71 @@
+# integers ==========================
+
+*anisotropy => Int if Float
+*color => Int if Float
+*count => Int if Float
+*curveSegments => Int if Float
+*divisions => Int if Float
+*faces => Int if Float
+*format => Int if Float
+*heightSegments => Int if Float
+.hex => Int if Float
+*id => Int if Float
+*index => Int if Float
+*interpoltionType => Int if Float
+*loaded => Int if Float
+*magFilter => Int if Float
+*minFilter => Int if Float
+*n => Int if Float
+*radialSegments => Int if Float
+*radiusSegments => Int if Float
+*segments => Int if Float
+*shadowCascadeHeight => Int if Float
+*shadowCascadeWidth => Int if Float
+*total => Int if Float
+*type => Int if Float
+*vertices => Int if Float
+*vi1 => Int if Float
+*vi2 => Int if Float
+*wrapS => Int if Float
+*wrapT => Int if Float
+
+@getMaxAnisotropy => Int if Float
+@getHex => Int if Float
+
+js.three.CanvasRenderer@width => Int if Float
+js.three.CanvasRenderer@height => Int if Float
+js.three.CompressedTexture@width => Int if Float
+js.three.CompressedTexture@height => Int if Float
+js.three.DataTexture@width => Int if Float
+js.three.DataTexture@height => Int if Float
+js.three.Face3@a => Int if Float
+js.three.Face3@b => Int if Float
+js.three.Face3@c => Int if Float
+js.three.Face3@d => Int if Float
+js.three.GridHelper@size => Int if Float
+js.three.GridHelper@step => Int if Float
+js.three.GridHelper@colorCenterLine => Int if Float
+js.three.GridHelper@colorGrid => Int if Float
+
+js.three.OctahedronGeometry@detail => Int if Float
+js.three.ParametricGeometry@slices => Int if Float
+js.three.ParametricGeometry@stacks => Int if Float
+js.three.DirectionalLight@shadowMapWidth => Int if Float
+js.three.DirectionalLight@shadowMapHeight => Int if Float
+js.three.BufferGeometry@start => Int if Float
+js.three.IcosahedronGeometry@detail => Int if Float
+
+@getNextKeyWith.h => Int if Float
+@getNextKeyWith.key => Int if Float
+
+@getPrevKeyWith.h => Int if Float
+@getPrevKeyWith.key => Int if Float
+
+@createAnimation.start => Int if Float
+@createAnimation.end => Int if Float
+
+@setFrameRange.start => Int if Float
+@setFrameRange.end => Int if Float
+
+@setAnimationLabel.start => Int if Float
+@setAnimationLabel.end => Int if Float

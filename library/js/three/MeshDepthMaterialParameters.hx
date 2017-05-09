@@ -2,10 +2,9 @@ package js.three;
 
 import js.html.*;
 
-typedef MeshDepthMaterialParameters =
+@:native("THREE.MeshDepthMaterialParameters")
+extern interface MeshDepthMaterialParameters extends MaterialParameters
 {
-	>MaterialParameters,
-
 	@:optional var wireframe : Bool;
 	@:optional var wireframeLinewidth : Float;
 }

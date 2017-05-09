@@ -5,11 +5,9 @@ import js.html.*;
 @:native("THREE.SpotLightHelper")
 extern class SpotLightHelper extends Object3D
 {
-	function new(light:Light, sphereSize:Float, arrowLength:Float) : Void;
-
 	var light : Light;
-	var cone : Mesh;
 
+	function new(light:Light) : Void;
 	function dispose() : Void;
 	function update() : Void;
 }

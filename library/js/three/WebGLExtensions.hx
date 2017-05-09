@@ -5,7 +5,6 @@ import js.html.*;
 @:native("THREE.WebGLExtensions")
 extern class WebGLExtensions
 {
-	function new(gl:Dynamic) : Void;// WebGLRenderingContext
-
+	function new(gl:WebGLRenderingContext) : Void;
 	function get(name:String) : Dynamic;
 }

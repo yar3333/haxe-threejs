@@ -5,19 +5,7 @@ import js.html.*;
 @:native("THREE.TorusKnotGeometry")
 extern class TorusKnotGeometry extends Geometry
 {
+	var parameters : { var radius : Float; var tube : Float; var radialSegments : Float; var tubularSegments : Float; var p : Float; var q : Float; var heightScale : Float; };
+
 	function new(?radius:Float, ?tube:Float, ?radialSegments:Int, ?tubularSegments:Float, ?p:Float, ?q:Float, ?heightScale:Float) : Void;
-
-	var parameters :
-	{
-		radius: Float,
-		tube: Float,
-		radialSegments: Int,
-		tubularSegments: Float,
-		p: Float,
-		q: Float,
-		heightScale: Float
-	};
-
-	@:overload(function():TorusKnotGeometry{})
-	override function clone() : Geometry;
 }

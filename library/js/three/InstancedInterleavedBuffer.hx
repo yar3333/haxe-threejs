@@ -8,11 +8,10 @@ import js.html.*;
 @:native("THREE.InstancedInterleavedBuffer")
 extern class InstancedInterleavedBuffer extends InterleavedBuffer
 {
-	function new(array:ArrayBufferView, stride:Float, ?meshPerAttribute:Float) : Void;
 	var meshPerAttribute : Float;
 
-	@:overload(function():InstancedInterleavedBuffer{})
-	override function clone() : InterleavedBuffer;
-	@:overload(function(source:InstancedInterleavedBuffer):InstancedInterleavedBuffer{})
-	override function copy(source:InterleavedBuffer) : InterleavedBuffer;
+	/**
+	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
+	 */
+	function new(array:ArrayLike<Float>, stride:Float, ?meshPerAttribute:Float) : Void;
 }

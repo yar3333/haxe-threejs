@@ -2,11 +2,7 @@ package js.three;
 
 import js.html.*;
 
-// shading
-@:native("THREE")
+@:native("THREE.Shading")
 extern enum Shading
 {
-	NoShading;
-	FlatShading;
-	SmoothShading;
 }
