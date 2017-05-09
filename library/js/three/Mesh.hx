@@ -5,15 +5,14 @@ import js.html.*;
 @:native("THREE.Mesh")
 extern class Mesh extends Object3D
 {
-	@:overload(function(?geometry:BufferGeometry, ?material:Material):Void{})
-	function new(?geometry:Geometry, ?material:Material) : Void;
-
 	var geometry : haxe.extern.EitherType<Geometry, BufferGeometry>;
 	var material : Material;
+	var drawMode : TrianglesDrawModes;
 
+	function new(?geometry:Geometry, ?material:Material) : Void;
+	function new(?geometry:BufferGeometry, ?material:Material) : Void;
+	function setDrawMode(drawMode:TrianglesDrawModes) : Void;
 	function updateMorphTargets() : Void;
 	function getMorphTargetIndexByName(name:String) : Float;
-	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
-	@:overload(function(source:Mesh):Mesh{})
-	override function copy(source:Object3D, ?recursive:Bool) : Object3D;
+	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 }

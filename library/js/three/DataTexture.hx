@@ -5,23 +5,7 @@ import js.html.*;
 @:native("THREE.DataTexture")
 extern class DataTexture extends Texture
 {
-	function new(
-		data: ImageData,
-		width: Int,
-		height: Int,
-		format: PixelFormat,
-		type: TextureDataType,
-		mapping: Mapping,
-		wrapS: Wrapping,
-		wrapT: Wrapping,
-		magFilter: TextureFilter,
-		minFilter: TextureFilter,
-		?anisotropy:Int
-	) : Void;
+	var image : ImageData;
 
-	//var image : { data: ImageData, width:Int, height:Int };
-	//var magFilter : TextureFilter;
-	//var minFilter : TextureFilter;
-	//var flipY : Bool;
-	//var generateMipmaps : Bool;
+	function new(data:haxe.extern.EitherType<ArrayBuffer, haxe.extern.EitherType<Int8Array, haxe.extern.EitherType<Uint8Array, haxe.extern.EitherType<Uint8ClampedArray, haxe.extern.EitherType<Int16Array, haxe.extern.EitherType<Uint16Array, haxe.extern.EitherType<Int32Array, haxe.extern.EitherType<Uint32Array, haxe.extern.EitherType<Float32Array, Float64Array>>>>>>>>>, width:Float, height:Float, format:PixelFormat, type:TextureDataType, mapping:Mapping, wrapS:Wrapping, wrapT:Wrapping, magFilter:TextureFilter, minFilter:TextureFilter, ?anisotropy:Int, ?encoding:TextureEncoding) : Void;
 }

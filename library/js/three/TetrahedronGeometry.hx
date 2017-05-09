@@ -6,7 +6,4 @@ import js.html.*;
 extern class TetrahedronGeometry extends PolyhedronGeometry
 {
 	function new(?radius:Float, ?detail:Float) : Void;
-
-	@:overload(function():TetrahedronGeometry{})
-	override function clone() : Geometry;
 }

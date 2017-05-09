@@ -5,27 +5,21 @@ import js.html.*;
 @:native("THREE.PropertyBinding")
 extern class PropertyBinding
 {
-	function new(rootNode:Dynamic, trackName:String) : Void;
-
-	var rootNode : Dynamic;
-	var trackName : String;
-	var referenceCount : Int;
-	var originalValue : Dynamic;
-	var directoryName : String;
-	var nodeName : String;
-	var objectName : String;
-	var objectIndex : Int;
-	var propertyName : String;
-	var propertyIndex : Int;
+	var path : String;
+	var parsedPath : Dynamic;
 	var node : Dynamic;
-	var cumulativeValue : Float;
-	var cumulativeWeight : Float;
+	var rootNode : Dynamic;
+	var BindingType : Dynamic<Float>;
+	var Versioning : Dynamic<Float>;
+	var GetterByBindingType : Array<Function>;
+	var SetterByBindingTypeAndVersioning : Array<Array<Function>>;
 
-	function reset() : Void;
-	function accumulate(value:Dynamic, weight:Float) : Void;
-	function unbind() : Void;
+	function new(rootNode:Dynamic, path:String, ?parsedPath:Dynamic) : Void;
+	function getValue(targetArray:Dynamic, offset:Float) : Dynamic;
+	function setValue(sourceArray:Dynamic, offset:Float) : Void;
 	function bind() : Void;
-	function apply() : Void;
-	function parseTrackName(trackName:String) : Dynamic;
-	function findNode(root:Dynamic, nodeName:String) : Dynamic;
+	function unbind() : Void;
+	static function create(root:Dynamic, path:Dynamic, parsedPath:Dynamic) : haxe.extern.EitherType<PropertyBinding, PropertyBinding.Composite>;
+	static function parseTrackName(trackName:String) : Dynamic;
+	static function findNode(root:Dynamic, nodeName:String) : Dynamic;
 }

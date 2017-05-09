@@ -5,9 +5,8 @@ import js.html.*;
 @:native("THREE.ClearMaskPass")
 extern class ClearMaskPass
 {
-	function new() : Void;
-
 	var enabled : Bool;
 
+	function new() : Void;
 	function render(renderer:WebGLRenderer, writeBuffer:WebGLRenderTarget, readBuffer:WebGLRenderTarget, delta:Float) : Void;
 }

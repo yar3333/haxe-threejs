@@ -3,25 +3,13 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.Texture")
-extern class Texture
+extern class Texture extends EventDispatcher
 {
-	function new(
-		image: haxe.extern.EitherType<haxe.extern.EitherType<js.html.ImageElement, js.html.CanvasElement>, VideoElement>,
-		?mapping:Mapping,
-		?wrapS:Wrapping,
-		?wrapT:Wrapping,
-		?magFilter:TextureFilter,
-		?minFilter:TextureFilter,
-		?format:PixelFormat,
-		?type:TextureDataType,
-		?anisotropy:Int
-		) : Void;
-
 	var id : Int;
 	var uuid : String;
 	var name : String;
 	var sourceFile : String;
-	var image : Dynamic;// HTMLImageElement or ImageData ;
+	var image : Dynamic;
 	var mipmaps : Array<ImageData>;
 	var mapping : Mapping;
 	var wrapS : Wrapping;
@@ -37,21 +25,17 @@ extern class Texture
 	var premultiplyAlpha : Bool;
 	var flipY : Bool;
 	var unpackAlignment : Float;
+	var encoding : TextureEncoding;
 	var version : Float;
 	var needsUpdate : Bool;
-	var onUpdate : Void->Void;
-	static var DEFAULT_IMAGE : Dynamic;
-	static var DEFAULT_MAPPING : Dynamic;
+	var onUpdate : Void;
+	var DEFAULT_IMAGE : Dynamic;
+	var DEFAULT_MAPPING : Dynamic;
 
+	function new(?image:haxe.extern.EitherType<HTMLImageElement, haxe.extern.EitherType<HTMLCanvasElement, HTMLVideoElement>>, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:TextureFilter, ?minFilter:TextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Int, ?encoding:TextureEncoding) : Void;
 	function clone() : Texture;
 	function copy(source:Texture) : Texture;
 	function toJSON(meta:Dynamic) : Dynamic;
 	function dispose() : Void;
 	function transformUv(uv:Vector) : Void;
-
-	// EventDispatcher mixins
-	function addEventListener(type:String, listener:Dynamic->Void) : Void;
-	function hasEventListener(type:String, listener:Dynamic->Void) : Void;
-	function removeEventListener(type:String, listener:Dynamic->Void) : Void;
-	function dispatchEvent(event: { type: String, target:Dynamic }) : Void;
 }

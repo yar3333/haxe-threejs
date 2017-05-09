@@ -2,18 +2,11 @@ package js.three;
 
 import js.html.*;
 
-typedef PointsMaterialParameters =
+@:native("THREE.PointsMaterialParameters")
+extern interface PointsMaterialParameters extends MaterialParameters
 {
-	>MaterialParameters,
-
-	@:optional var color : Int;
-	@:optional var opacity : Float;
+	@:optional var color : haxe.extern.EitherType<Float, String>;
 	@:optional var map : Texture;
 	@:optional var size : Float;
 	@:optional var sizeAttenuation : Bool;
-	@:optional var blending : Blending;
-	@:optional var depthTest : Bool;
-	@:optional var depthWrite : Bool;
-	@:optional var vertexColors : Colors;
-	@:optional var fog : Bool;
 }

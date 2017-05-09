@@ -5,11 +5,8 @@ import js.html.*;
 @:native("THREE.SpriteCanvasMaterial")
 extern class SpriteCanvasMaterial extends Material
 {
-	function new(?parameters:SpriteCanvasMaterialParameters) : Void;
-
 	var color : Color;
 
-	function program(context:Dynamic, color:Color) : Void;
-	@:overload(function():SpriteCanvasMaterial{})
-	override function clone() : Material;
+	function new(?parameters:SpriteCanvasMaterialParameters) : Void;
+	function program(context:CanvasRenderingContext2D, color:Color) : Void;
 }

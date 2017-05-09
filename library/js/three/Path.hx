@@ -8,10 +8,12 @@ import js.html.*;
 @:native("THREE.Path")
 extern class Path extends CurvePath<Vector2>
 {
+	var currentPoint : Vector2;
+
+	/**
+	 * a 2d path representation, comprising of points, lines, and cubes, similar to the html5 2d canvas api. It extends CurvePath.
+	 */
 	function new(?points:Array<Vector2>) : Void;
-
-	var actions : Array<PathAction>;
-
 	function fromPoints(vectors:Array<Vector2>) : Void;
 	function moveTo(x:Float, y:Float) : Void;
 	function lineTo(x:Float, y:Float) : Void;
@@ -22,7 +24,4 @@ extern class Path extends CurvePath<Vector2>
 	function absarc(aX:Float, aY:Float, aRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool) : Void;
 	function ellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
 	function absellipse(aX:Float, aY:Float, xRadius:Float, yRadius:Float, aStartAngle:Float, aEndAngle:Float, aClockwise:Bool, aRotation:Float) : Void;
-	//function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
-	//function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
-	function toShapes() : Array<Shape>;
 }

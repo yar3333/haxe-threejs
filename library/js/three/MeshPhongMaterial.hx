@@ -5,18 +5,16 @@ import js.html.*;
 @:native("THREE.MeshPhongMaterial")
 extern class MeshPhongMaterial extends Material
 {
-	function new(?parameters:MeshPhongMaterialParameters) : Void;
-
-	var color : Color;// diffuse
-	var emissive : Color;
+	var color : Color;
 	var specular : Color;
 	var shininess : Float;
-	var metal : Bool;
 	var map : Texture;
 	var lightMap : Texture;
 	var lightMapIntensity : Float;
 	var aoMap : Texture;
 	var aoMapIntensity : Float;
+	var emissive : Color;
+	var emissiveIntensity : Float;
 	var emissiveMap : Texture;
 	var bumpMap : Texture;
 	var bumpScale : Float;
@@ -31,18 +29,18 @@ extern class MeshPhongMaterial extends Material
 	var combine : Combine;
 	var reflectivity : Float;
 	var refractionRatio : Float;
-	var fog : Bool;
-	var shading : Shading;
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
 	var wireframeLinecap : String;
 	var wireframeLinejoin : String;
-	var vertexColors : Colors;
 	var skinning : Bool;
 	var morphTargets : Bool;
 	var morphNormals : Bool;
+	/**
+	 * @deprecated
+	 */
+	var metal : Bool;
 
-	@:overload(function():MeshPhongMaterial{})
-	override function clone() : Material;
-	function copy(source:MeshPhongMaterial) : MeshPhongMaterial;
+	function new(?parameters:MeshPhongMaterialParameters) : Void;
+	function setValues(parameters:MeshPhongMaterialParameters) : Void;
 }

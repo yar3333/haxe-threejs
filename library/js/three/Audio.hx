@@ -5,35 +5,40 @@ import js.html.*;
 @:native("THREE.Audio")
 extern class Audio extends Object3D
 {
-	function new(listener:AudioListener) : Void;
-	//var type : String;
-	var context : js.html.audio.AudioContext;
-	var source : js.html.audio.AudioBufferSourceNode;
-	var gain : js.html.audio.GainNode;
-	var panner : js.html.audio.PannerNode;
+	var type : String;
+	var context : AudioContext;
+	var source : AudioBufferSourceNode;
+	var gain : GainNode;
 	var autoplay : Bool;
 	var startTime : Float;
 	var playbackRate : Float;
+	var hasPlaybackControl : Bool;
 	var isPlaying : Bool;
+	var sourceType : String;
+	var filters : Array<Dynamic>;
 
-	function load(file:String) : Audio;
-	function play() : Void;
-	function pause() : Void;
-	function stop() : Void;
-	function connect() : Void;
-	function disconnect() : Void;
-	function setFilter(value:Dynamic) : Void;
+	function new(listener:AudioListener) : Void;
+	function getOutput() : GainNode;
+	function setNodeSource(audioNode:AudioBufferSourceNode) : Audio;
+	function setBuffer(audioBuffer:AudioBuffer) : Audio;
+	function play() : Audio;
+	function pause() : Audio;
+	function stop() : Audio;
+	function connect() : Audio;
+	function disconnect() : Audio;
+	function getFilters() : Array<Dynamic>;
+	function setFilter(value:Array<Dynamic>) : Audio;
 	function getFilter() : Dynamic;
-	function setPlaybackRate(value:Float) : Void;
+	function setFilter(filter:Dynamic) : Audio;
+	function setPlaybackRate(value:Float) : Audio;
 	function getPlaybackRate() : Float;
-
-	function setLoop(value:Bool) : Void;
+	function onEnded() : Void;
 	function getLoop() : Bool;
-	function setRefDistance(value:Float) : Void;
-	function getRefDistance() : Float;
-	function setRolloffFactor(value:Float) : Void;
-	function getRolloffFactor() : Float;
-	function setVolume(value:Float) : Void;
+	function setLoop(value:Bool) : Void;
 	function getVolume() : Float;
-	override function updateMatrixWorld(?force:Bool) : Void;
+	function setVolume(value:Float) : Audio;
+	/**
+	 * @deprecated Use AudioLoader instead.
+	 */
+	function load(file:String) : Audio;
 }

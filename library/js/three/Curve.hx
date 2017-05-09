@@ -11,61 +11,52 @@ extern class Curve<T:Vector>
 {
 	/**
 	 * Returns a vector for point t of the curve where t is between 0 and 1
-	 * getPoint(t: Float): T;
+	 * getPoint(t: number): T;
 	 */
 	function getPoint(t:Float) : T;
-
 	/**
 	 * Returns a vector for point at relative position in curve according to arc length
-	 * getPointAt(u: Float): T;
+	 * getPointAt(u: number): T;
 	 */
 	function getPointAt(u:Float) : T;
-
 	/**
 	 * Get sequence of points using getPoint( t )
-	 * getPoints(?divisions:Int): Array<T>;
+	 * getPoints(divisions?: number): T[];
 	 */
-	//function getPoints(?divisions:Int) : Array<T>;
-	function getPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
-
+	function getPoints(divisions:Int) : Array<T>;
 	/**
 	 * Get sequence of equi-spaced points using getPointAt( u )
-	 * getSpacedPoints(?divisions:Int): Array<T>;
+	 * getSpacedPoints(divisions?: number): T[];
 	 */
-	//function getSpacedPoints(?divisions:Int) : Array<T>;
-	function getSpacedPoints(?divisions:Int, ?closedPath:Bool) : Array<Vector2>;
-
+	function getSpacedPoints(divisions:Int) : Array<T>;
 	/**
 	 * Get total curve arc length
 	 */
 	function getLength() : Float;
-
 	/**
 	 * Get list of cumulative segment lengths
 	 */
-	function getLengths(?divisions:Int) : Array<Float>;
-
+	function getLengths(divisions:Int) : Array<Float>;
 	/**
 	 * Update the cumlative segment distance cache
 	 */
 	function updateArcLengths() : Void;
-
 	/**
 	 * Given u ( 0 .. 1 ), get a t to find p. This gives you points which are equi distance
 	 */
 	function getUtoTmapping(u:Float, distance:Float) : Float;
-
 	/**
 	 * Returns a unit vector tangent at t. If the subclassed curve do not implement its tangent derivation, 2 points a small delta apart will be used to find its gradient which seems to give a reasonable approximation
-	 * getTangent(t: Float): T;
+	 * getTangent(t: number): T;
 	 */
 	function getTangent(t:Float) : T;
-
 	/**
 	 * Returns tangent at equidistance point u on the curve
-	 * getTangentAt(u: Float): T;
+	 * getTangentAt(u: number): T;
 	 */
 	function getTangentAt(u:Float) : T;
-
-	static function create(constructorFunc:Dynamic, getPointFunc:Dynamic) : Dynamic;
+	/**
+	 * @deprecated since r84.
+	 */
+	static function create(constructorFunc:Function, getPointFunc:Function) : Function;
 }

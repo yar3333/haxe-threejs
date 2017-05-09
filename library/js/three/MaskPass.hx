@@ -5,15 +5,6 @@ import js.html.*;
 @:native("THREE.MaskPass")
 extern class MaskPass
 {
-	#if !threejs_noEmbed
-	static function __init__() : Void
-	{
-		haxe.macro.Compiler.includeFile("js/three/MaskPass.js");
-	}
-	#end
-	
-	function new(scene:Scene, camera:Camera) : Void;
-
 	var scene : Scene;
 	var camera : Camera;
 	var enabled : Bool;
@@ -21,5 +12,6 @@ extern class MaskPass
 	var needsSwap : Bool;
 	var inverse : Bool;
 
+	function new(scene:Scene, camera:Camera) : Void;
 	function render(renderer:WebGLRenderer, writeBuffer:WebGLRenderTarget, readBuffer:WebGLRenderTarget, delta:Float) : Void;
 }

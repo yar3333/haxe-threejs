@@ -5,9 +5,12 @@ import js.html.*;
 @:native("THREE.CubeTextureLoader")
 extern class CubeTextureLoader
 {
-	function new(?manager:LoadingManager) : Void;
-
 	var manager : LoadingManager;
-	function load(urls:Array<String>, ?onLoad:CubeTexture->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
-	function setCrossOrigin(crossOrigin:String) : Void;
+	var corssOrigin : String;
+	var path : String;
+
+	function new(?manager:LoadingManager) : Void;
+	function load(urls:Array<String>, onLoad:CubeTexture->Void, onProgress:ProgressEvent->Void, onError:ErrorEvent->Void) : Void;
+	function setCrossOrigin(crossOrigin:String) : CubeTextureLoader;
+	function setPath(path:String) : CubeTextureLoader;
 }

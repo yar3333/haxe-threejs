@@ -1,13 +1,10 @@
 package js.three;
 
 import js.html.*;
-import js.three.Projector;
 
 @:native("THREE.RenderableFace")
 extern class RenderableFace
 {
-	function new() : Void;
-
 	var id : Int;
 	var v1 : RenderableVertex;
 	var v2 : RenderableVertex;
@@ -19,4 +16,6 @@ extern class RenderableFace
 	var material : Material;
 	var uvs : Array<Array<Vector2>>;
 	var z : Float;
+
+	function new() : Void;
 }

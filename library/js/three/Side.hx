@@ -2,11 +2,7 @@ package js.three;
 
 import js.html.*;
 
-// side
-@:native("THREE")
+@:native("THREE.Side")
 extern enum Side
 {
-	FrontSide;
-	BackSide;
-	DoubleSide;
 }

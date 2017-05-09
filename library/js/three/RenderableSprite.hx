@@ -1,13 +1,10 @@
 package js.three;
 
 import js.html.*;
-import js.three.Projector;
 
 @:native("THREE.RenderableSprite")
 extern class RenderableSprite
 {
-	function new() : Void;
-
 	var id : Int;
 	var object : Dynamic;
 	var x : Float;
@@ -16,4 +13,6 @@ extern class RenderableSprite
 	var rotation : Float;
 	var scale : Vector2;
 	var material : Material;
+
+	function new() : Void;
 }

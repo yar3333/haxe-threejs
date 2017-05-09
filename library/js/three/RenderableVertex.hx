@@ -1,17 +1,15 @@
 package js.three;
 
 import js.html.*;
-import js.three.Projector;
 
 @:native("THREE.RenderableVertex")
 extern class RenderableVertex
 {
-	function new() : Void;
-
 	var position : Vector3;
 	var positionWorld : Vector3;
 	var positionScreen : Vector4;
 	var visible : Bool;
 
+	function new() : Void;
 	function copy(vertex:RenderableVertex) : Void;
 }
