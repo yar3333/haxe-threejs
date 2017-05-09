@@ -11,7 +11,7 @@ extern class TubeGeometry extends Geometry
 	var binormals : Array<Vector3>;
 
 	@:overload(function(path:Curve<Vector3>,?segments:Int,?radius:Float,?radiusSegments:Int,?closed:Bool,?taper:Float->Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 	static function NoTaper(u:Float) : Float;
 	static function SinusoidalTaper(u:Float) : Float;
 	static function FrenetFrames(path:Path, segments:Int, closed:Bool) : Void;

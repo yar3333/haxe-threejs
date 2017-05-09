@@ -9,7 +9,7 @@ extern class MorphBlendMesh extends Mesh
 	var animationsList : Array<MorphBlendMeshAnimation>;
 
 	@:overload(function(geometry:Geometry,material:Material):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function createAnimation(name:String, start:Int, end:Int, fps:Float) : Void;
 	function autoCreateAnimations(fps:Float) : Void;
 	function setAnimationDirectionForward(name:String) : Void;

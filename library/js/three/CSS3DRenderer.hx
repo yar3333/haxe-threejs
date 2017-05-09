@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.CSS3DRenderer")
 extern class CSS3DRenderer
 {
-	var domElement : HTMLElement;
+	var domElement : js.html.Element;
 
 	function new() : Void;
 	function setSize(width:Float, height:Float) : Void;

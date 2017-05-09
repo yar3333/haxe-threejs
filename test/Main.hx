@@ -1,8 +1,8 @@
 import js.Browser.window;
 import js.Browser.document;
 import js.three.*;
-import js.three.Embed; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
-import js.three.EmbedMin; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
+//import js.three.Embed; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
+//import js.three.EmbedMin; // include three.js into output js (also, you can use EmbedMin to include three.min.js)
 
 class Main
 {
@@ -12,11 +12,11 @@ class Main
 		var camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		
 		var renderer = new WebGLRenderer();
-		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setSize(window.innerWidth, window.innerHeight, true);
 		document.body.appendChild(renderer.domElement);
 		
 		var geometry = new BoxGeometry(1, 1, 1);
-		var material = new MeshBasicMaterial({ color:0x00ff00 });
+		var material = new MeshBasicMaterial((cast { color:0x00ff00 } : MeshBasicMaterialParameters));
 		var cube = new Mesh(geometry, material);
 		scene.add(cube);
 		

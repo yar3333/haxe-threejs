@@ -6,9 +6,9 @@ import js.html.*;
 extern class Audio extends Object3D
 {
 	//var type : String;
-	var context : AudioContext;
-	var source : AudioBufferSourceNode;
-	var gain : GainNode;
+	var context : js.html.audio.AudioContext;
+	var source : js.html.audio.AudioBufferSourceNode;
+	var gain : js.html.audio.GainNode;
 	var autoplay : Bool;
 	var startTime : Float;
 	var playbackRate : Float;
@@ -18,9 +18,9 @@ extern class Audio extends Object3D
 	var filters : Array<Dynamic>;
 
 	@:overload(function(listener:AudioListener):Void{})
-	override function new() : Void;
-	function getOutput() : GainNode;
-	function setNodeSource(audioNode:AudioBufferSourceNode) : Audio;
+	function new() : Void;
+	function getOutput() : js.html.audio.GainNode;
+	function setNodeSource(audioNode:js.html.audio.AudioBufferSourceNode) : Audio;
 	function setBuffer(audioBuffer:AudioBuffer) : Audio;
 	function play() : Audio;
 	function pause() : Audio;
@@ -28,9 +28,9 @@ extern class Audio extends Object3D
 	function connect() : Audio;
 	function disconnect() : Audio;
 	function getFilters() : Array<Dynamic>;
+	@:overload(function(filter:Dynamic):Audio{})
 	function setFilter(value:Array<Dynamic>) : Audio;
 	function getFilter() : Dynamic;
-	function setFilter(filter:Dynamic) : Audio;
 	function setPlaybackRate(value:Float) : Audio;
 	function getPlaybackRate() : Float;
 	function onEnded() : Void;

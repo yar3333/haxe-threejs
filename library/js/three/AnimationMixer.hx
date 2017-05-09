@@ -9,7 +9,7 @@ extern class AnimationMixer extends EventDispatcher
 	var timeScale : Float;
 
 	@:overload(function(root:Dynamic):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function clipAction(clip:AnimationClip, root:Dynamic) : AnimationAction;
 	function existingAction(clip:AnimationClip, root:Dynamic) : AnimationAction;
 	function stopAllAction(clip:AnimationClip, root:Dynamic) : AnimationMixer;

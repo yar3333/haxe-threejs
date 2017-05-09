@@ -18,7 +18,7 @@ extern class Quaternion
 	var y : Float;
 	var z : Float;
 	var w : Float;
-	var onChangeCallback : Function;
+	var onChangeCallback : haxe.Constraints.Function;
 
 	/**
 	 * Implementation of a quaternion. This is used for rotating things without incurring in the dreaded gimbal lock issue, amongst other advantages.
@@ -84,11 +84,11 @@ extern class Quaternion
 	function multiplyQuaternions(a:Quaternion, b:Quaternion) : Quaternion;
 	function slerp(qb:Quaternion, t:Float) : Quaternion;
 	function equals(v:Quaternion) : Bool;
+	@:overload(function(xyzw:Array<Float>, offset:Float):Quaternion{})
 	function fromArray(n:Array<Float>) : Quaternion;
+	@:overload(function(xyzw:Array<Float>, offset:Float):Array<Float>{})
 	function toArray() : Array<Float>;
-	function fromArray(xyzw:Array<Float>, offset:Float) : Quaternion;
-	function toArray(xyzw:Array<Float>, offset:Float) : Array<Float>;
-	function onChange(callback:Function) : Quaternion;
+	function onChange(callback:haxe.Constraints.Function) : Quaternion;
 	/**
 	 * Adapted from http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/.
 	 */

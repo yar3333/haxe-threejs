@@ -8,5 +8,5 @@ extern class CubeTexture extends Texture
 	var images : Dynamic;
 
 	@:overload(function(?images:Array<Dynamic>,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?format:PixelFormat,?type:TextureDataType,?anisotropy:Int,?encoding:TextureEncoding):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

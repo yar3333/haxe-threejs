@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.LoaderHandler")
 extern interface LoaderHandler
 {
-	var handlers : Array<(RegExp | Loader)>;
+	var handlers : Array<haxe.extern.EitherType<RegExp, Loader>>;
 
 	function add(regex:RegExp, loader:Loader) : Void;
 	function get(file:String) : Loader;

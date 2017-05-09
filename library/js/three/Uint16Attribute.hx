@@ -12,5 +12,5 @@ extern class Uint16Attribute extends BufferAttribute
 	 * @deprecated THREE.Uint16Attribute has been removed. Use new THREE.Uint16BufferAttribute() instead.
 	 */
 	@:overload(function(array:Dynamic,itemSize:Float):Void{})
-	override function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
 }

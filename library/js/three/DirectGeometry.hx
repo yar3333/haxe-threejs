@@ -33,7 +33,7 @@ extern class DirectGeometry extends EventDispatcher
 	/**
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/DirectGeometry.js">src/core/DirectGeometry.js</a>
 	 */
-	override function new() : Void;
+	function new() : Void;
 	function computeBoundingBox() : Void;
 	function computeBoundingSphere() : Void;
 	function computeGroups(geometry:Geometry) : Void;

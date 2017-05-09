@@ -22,17 +22,17 @@ extern class Loader
 	 * Will be called when load starts.
 	 * The default is a function with empty body.
 	 */
-	var onLoadStart : Void;
+	var onLoadStart : Void->Void;
 	/**
 	 * Will be called while load progresses.
 	 * The default is a function with empty body.
 	 */
-	var onLoadProgress : Void;
+	var onLoadProgress : Void->Void;
 	/**
 	 * Will be called when load completes.
 	 * The default is a function with empty body.
 	 */
-	var onLoadComplete : Void;
+	var onLoadComplete : Void->Void;
 	/**
 	 * default — null.
 	 * If set, assigns the crossOrigin attribute of the image to the value of crossOrigin, prior to starting the load.

@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.CTMLoader")
 extern class CTMLoader extends Loader
 {
-	override function new() : Void;
+	function new() : Void;
 	/**
 	 * load multiple CTM parts defined in JSON.
 	 */

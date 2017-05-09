@@ -38,5 +38,5 @@ extern class SpotLight extends Light
 	 * A point light that can cast shadow in one direction.
 	 */
 	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float,?distance:Float,?angle:Float,?exponent:Float,?decay:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

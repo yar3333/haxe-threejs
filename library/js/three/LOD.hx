@@ -11,7 +11,7 @@ extern class LOD extends Object3D
 	 */
 	var objects : Array<Dynamic>;
 
-	override function new() : Void;
+	function new() : Void;
 	function addLevel(object:Object3D, distance:Float) : Void;
 	function getObjectForDistance(distance:Float) : Object3D;
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;

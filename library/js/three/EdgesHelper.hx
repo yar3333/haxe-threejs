@@ -6,5 +6,5 @@ import js.html.*;
 extern class EdgesHelper extends LineSegments
 {
 	@:overload(function(object:Object3D,?hex:Int,?thresholdAngle:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

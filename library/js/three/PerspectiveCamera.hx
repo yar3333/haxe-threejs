@@ -46,7 +46,7 @@ extern class PerspectiveCamera extends Camera
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/cameras/PerspectiveCamera.js
 	 */
 	@:overload(function(?fov:Float,?aspect:Float,?near:Float,?far:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function setFocalLength(focalLength:Float) : Void;
 	function getFocalLength() : Float;
 	function getEffectiveFOV() : Float;

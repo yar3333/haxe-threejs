@@ -8,5 +8,5 @@ extern class TorusKnotBufferGeometry extends BufferGeometry
 	var parameters : { var radius : Float; var tube : Float; var radialSegments : Float; var tubularSegments : Float; var p : Float; var q : Float; var heightScale : Float; };
 
 	@:overload(function(?radius:Float,?tube:Float,?radialSegments:Int,?tubularSegments:Float,?p:Float,?q:Float,?heightScale:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

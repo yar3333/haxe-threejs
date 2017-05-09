@@ -5,10 +5,10 @@ import js.html.*;
 @:native("THREE.PositionalAudio")
 extern class PositionalAudio extends Audio
 {
-	var panner : PannerNode;
+	var panner : js.html.audio.PannerNode;
 
 	@:overload(function(listener:AudioListener):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function setRefDistance(value:Float) : Void;
 	function getRefDistance() : Float;
 	function setRolloffFactor(value:Float) : Void;

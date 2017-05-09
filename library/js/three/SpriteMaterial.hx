@@ -10,7 +10,7 @@ extern class SpriteMaterial extends Material
 	var rotation : Float;
 
 	@:overload(function(?parameters:SpriteMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(parameters:SpriteMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 }

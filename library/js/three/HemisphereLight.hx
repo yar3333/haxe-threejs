@@ -9,5 +9,5 @@ extern class HemisphereLight extends Light
 	//var intensity : Float;
 
 	@:overload(function(?skyColorHex:haxe.extern.EitherType<Float,String>,?groundColorHex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

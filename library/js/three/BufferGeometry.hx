@@ -40,9 +40,10 @@ extern class BufferGeometry extends EventDispatcher
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/BufferGeometry.js">src/core/BufferGeometry.js</a>
 	 */
-	override function new() : Void;
+	function new() : Void;
 	function getIndex() : BufferAttribute;
 	function setIndex(index:BufferAttribute) : Void;
+	@:overload(function(name:Dynamic, array:Dynamic, itemSize:Dynamic):Dynamic{})
 	function addAttribute(name:String, attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>) : BufferGeometry;
 	function getAttribute(name:String) : haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>;
 	function removeAttribute(name:String) : BufferGeometry;
@@ -92,5 +93,4 @@ extern class BufferGeometry extends EventDispatcher
 	function addIndex(index:Dynamic) : Void;
 	function addDrawCall(start:Dynamic, count:Dynamic, indexOffset:Dynamic) : Void;
 	function clearDrawCalls() : Void;
-	function addAttribute(name:Dynamic, array:Dynamic, itemSize:Dynamic) : Dynamic;
 }

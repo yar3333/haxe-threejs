@@ -8,5 +8,5 @@ extern class CatmullRomCurve3 extends Curve<Vector3>
 	var points : Array<Vector3>;
 
 	function new(?points:Array<Vector3>) : Void;
-	function getPoint(t:Float) : Vector3;
+	override function getPoint(t:Float) : Vector3;
 }

@@ -1,4 +1,12 @@
-# integers ==========================
+HTMLImageElement => ImageElement
+HTMLCanvasElement => CanvasElement
+HTMLVideoElement => VideoElement
+AudioContext => js.html.audio.AudioContext
+AudioBufferSourceNode => js.html.audio.AudioBufferSourceNode
+GainNode => js.html.audio.GainNode
+PannerNode => js.html.audio.PannerNode
+WebGLRenderingContext => js.html.webgl.RenderingContext
+HTMLElement => js.html.Element
 
 *anisotropy => Int if Float
 *color => Int if Float
@@ -28,6 +36,7 @@
 *vi2 => Int if Float
 *wrapS => Int if Float
 *wrapT => Int if Float
+*color => haxe.extern.EitherType<Int, String> if haxe.extern.EitherType<Float, String>
 
 @getMaxAnisotropy => Int if Float
 @getHex => Int if Float

@@ -8,7 +8,7 @@ extern interface WebGLRendererParameters
 	/**
 	 * A Canvas where the renderer draws its output.
 	 */
-	@:optional var canvas : HTMLCanvasElement;
+	@:optional var canvas : CanvasElement;
 	/**
 	 * shader precision. Can be "highp", "mediump" or "lowp".
 	 */

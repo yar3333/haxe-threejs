@@ -28,12 +28,12 @@ extern class Texture extends EventDispatcher
 	var encoding : TextureEncoding;
 	var version : Float;
 	var needsUpdate : Bool;
-	var onUpdate : Void;
+	var onUpdate : Void->Void;
 	var DEFAULT_IMAGE : Dynamic;
 	var DEFAULT_MAPPING : Dynamic;
 
-	@:overload(function(?image:haxe.extern.EitherType<HTMLImageElement,haxe.extern.EitherType<HTMLCanvasElement,HTMLVideoElement>>,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?format:PixelFormat,?type:TextureDataType,?anisotropy:Int,?encoding:TextureEncoding):Void{})
-	override function new() : Void;
+	@:overload(function(?image:haxe.extern.EitherType<ImageElement,haxe.extern.EitherType<CanvasElement,VideoElement>>,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?format:PixelFormat,?type:TextureDataType,?anisotropy:Int,?encoding:TextureEncoding):Void{})
+	function new() : Void;
 	function clone() : Texture;
 	function copy(source:Texture) : Texture;
 	function toJSON(meta:Dynamic) : Dynamic;

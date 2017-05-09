@@ -9,6 +9,6 @@ extern class BoundingBoxHelper extends Mesh
 	var box : Box3;
 
 	@:overload(function(?object:Object3D,?hex:Int):Void{})
-	override function new() : Void;
+	function new() : Void;
 	function update() : Void;
 }

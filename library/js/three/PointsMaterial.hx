@@ -11,7 +11,7 @@ extern class PointsMaterial extends Material
 	var sizeAttenuation : Bool;
 
 	@:overload(function(?parameters:PointsMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(parameters:PointsMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 }

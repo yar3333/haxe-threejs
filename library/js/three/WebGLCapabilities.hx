@@ -19,7 +19,7 @@ extern class WebGLCapabilities
 	var floatFragmentTextures : Dynamic;
 	var floatVertexTextures : Dynamic;
 
-	function new(gl:WebGLRenderingContext, extensions:Dynamic, parameters:WebGLCapabilitiesParameters) : Void;
+	function new(gl:js.html.webgl.RenderingContext, extensions:Dynamic, parameters:WebGLCapabilitiesParameters) : Void;
 	function getMaxAnisotropy() : Int;
 	function getMaxPrecision(precision:String) : String;
 }

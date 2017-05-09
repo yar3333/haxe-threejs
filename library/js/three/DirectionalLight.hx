@@ -39,5 +39,5 @@ extern class DirectionalLight extends Light
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/lights/DirectionalLight.js">src/lights/DirectionalLight.js</a>
 	 */
 	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

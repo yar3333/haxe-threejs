@@ -11,7 +11,7 @@ extern class InterleavedBuffer
 	var array : ArrayLike<Float>;
 	var stride : Float;
 	var dynamic_(get, null) : Bool;
-	inline function get_dynamic_() : Bool return (cast this)['dynamic'];
+	inline function get_dynamic_() : Bool return (cast this)[cast 'dynamic'];
 	var updateRange : { var offset : Float; var count : Float; };
 	var version : Float;
 	var length : Float;
@@ -23,9 +23,9 @@ extern class InterleavedBuffer
 	 */
 	function new(array:ArrayLike<Float>, stride:Float) : Void;
 	function setDynamic(dynamic_:Bool) : InterleavedBuffer;
+	@:overload(function():InterleavedBuffer{})
 	function clone() : InterleavedBuffer;
 	function copy(source:InterleavedBuffer) : InterleavedBuffer;
 	function copyAt(index1:Float, attribute:InterleavedBufferAttribute, index2:Float) : InterleavedBuffer;
 	function set(value:ArrayLike<Float>, index:Int) : InterleavedBuffer;
-	function clone() : InterleavedBuffer;
 }

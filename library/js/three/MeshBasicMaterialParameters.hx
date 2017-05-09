@@ -5,7 +5,7 @@ import js.html.*;
 @:native("THREE.MeshBasicMaterialParameters")
 extern interface MeshBasicMaterialParameters extends MaterialParameters
 {
-	@:optional var color : haxe.extern.EitherType<Float, String>;
+	@:optional var color : haxe.extern.EitherType<Int, String>;
 	@:optional var opacity : Float;
 	@:optional var map : Texture;
 	@:optional var aoMap : Texture;

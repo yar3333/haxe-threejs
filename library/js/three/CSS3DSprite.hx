@@ -6,5 +6,5 @@ import js.html.*;
 extern class CSS3DSprite extends CSS3DObject
 {
 	@:overload(function(element:Dynamic):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

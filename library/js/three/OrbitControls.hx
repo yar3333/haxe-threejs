@@ -6,7 +6,7 @@ import js.html.*;
 extern class OrbitControls
 {
 	var object : Camera;
-	var domElement : haxe.extern.EitherType<HTMLElement, HTMLDocument>;
+	var domElement : haxe.extern.EitherType<js.html.Element, HTMLDocument>;
 	var enabled : Bool;
 	var target : Vector3;
 	var center : Vector3;
@@ -30,7 +30,7 @@ extern class OrbitControls
 	var enableDamping : Bool;
 	var dampingFactor : Float;
 
-	function new(object:Camera, ?domElement:HTMLElement) : Void;
+	function new(object:Camera, ?domElement:js.html.Element) : Void;
 	function rotateLeft(angle:Float) : Void;
 	function rotateUp(angle:Float) : Void;
 	function panLeft(distance:Float) : Void;

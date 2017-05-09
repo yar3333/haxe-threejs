@@ -37,7 +37,7 @@ extern class MeshStandardMaterial extends Material
 	var morphNormals : Bool;
 
 	@:overload(function(?parameters:MeshStandardMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(parameters:MeshStandardMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 }

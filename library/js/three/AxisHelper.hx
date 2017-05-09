@@ -6,5 +6,5 @@ import js.html.*;
 extern class AxisHelper extends LineSegments
 {
 	@:overload(function(?size:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

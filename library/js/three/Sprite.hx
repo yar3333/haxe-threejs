@@ -9,6 +9,6 @@ extern class Sprite extends Object3D
 	var material : SpriteMaterial;
 
 	@:overload(function(?material:Material):Void{})
-	override function new() : Void;
+	function new() : Void;
 	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 }

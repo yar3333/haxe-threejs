@@ -26,7 +26,7 @@ extern class ShaderMaterial extends Material
 	var index0AttributeName : String;
 
 	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(parameters:ShaderMaterialParameters):Void{})
 	override function setValues(parameters:MaterialParameters) : Void;
 	override function toJSON(meta:Dynamic) : Dynamic;

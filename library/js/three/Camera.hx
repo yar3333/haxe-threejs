@@ -20,7 +20,7 @@ extern class Camera extends Object3D
 	/**
 	 * Abstract base class for cameras. This class should always be inherited when you build a new camera.
 	 */
-	override function new() : Void;
+	function new() : Void;
 	override function getWorldDirection(optionalTarget:Vector3) : Vector3;
 	/**
 	 * This make the camera look at the vector position in local space.

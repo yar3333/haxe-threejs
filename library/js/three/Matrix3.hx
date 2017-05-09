@@ -31,6 +31,7 @@ extern class Matrix3
 	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
 	@:overload(function(matrix:Matrix3,throwOnDegenerate:Bool):Matrix3{})
+	@:overload(function(matrix:Matrix, throwOnInvertible:Bool):Matrix{})
 	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	/**
 	 * Transposes this matrix in place.
@@ -50,6 +51,5 @@ extern class Matrix3
 	function multiplyVector3(vector:Vector3) : Dynamic;
 	function multiplyVector3Array(a:Dynamic) : Dynamic;
 	@:overload(function(matrix:Matrix4,throwOnDegenerate:Bool):Matrix3{})
-	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
 	function flattenToArrayOffset(array:Array<Float>, offset:Float) : Array<Float>;
 }

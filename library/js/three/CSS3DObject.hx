@@ -8,5 +8,5 @@ extern class CSS3DObject extends Object3D
 	var element : Dynamic;
 
 	@:overload(function(element:Dynamic):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

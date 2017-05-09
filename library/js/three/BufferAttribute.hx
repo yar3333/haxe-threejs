@@ -12,7 +12,7 @@ extern class BufferAttribute
 	var array : ArrayLike<Float>;
 	var itemSize : Float;
 	var dynamic_(get, null) : Bool;
-	inline function get_dynamic_() : Bool return (cast this)['dynamic'];
+	inline function get_dynamic_() : Bool return (cast this)[cast 'dynamic'];
 	var updateRange : { var offset : Float; var count : Float; };
 	var version : Float;
 	var normalized : Bool;

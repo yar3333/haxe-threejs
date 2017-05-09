@@ -57,5 +57,5 @@ extern class Light extends Object3D
 	 * Abstract base class for lights.
 	 */
 	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

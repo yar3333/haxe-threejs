@@ -14,7 +14,7 @@ extern class InstancedBufferGeometry extends BufferGeometry
 	/**
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js">src/core/InstancedBufferGeometry.js</a>
 	 */
-	override function new() : Void;
+	function new() : Void;
 	@:overload(function(start:Float,count:Int,instances:Float):Void{})
 	override function addGroup(start:Float, count:Int, materialIndex:Float) : Void;
 }

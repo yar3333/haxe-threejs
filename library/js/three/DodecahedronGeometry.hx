@@ -8,5 +8,5 @@ extern class DodecahedronGeometry extends Geometry
 	var parameters : { var radius : Float; var detail : Float; };
 
 	@:overload(function(radius:Float,detail:Float):Void{})
-	override function new() : Void;
+	function new() : Void;
 }

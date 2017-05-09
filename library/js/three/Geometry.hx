@@ -125,7 +125,7 @@ extern class Geometry extends EventDispatcher
 	 * 
 	 * @see https://github.com/mrdoob/three.js/blob/master/src/core/Geometry.js
 	 */
-	override function new() : Void;
+	function new() : Void;
 	/**
 	 * Bakes matrix transform directly into vertex coordinates.
 	 */
