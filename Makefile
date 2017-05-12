@@ -15,6 +15,7 @@ build: native-ts
 	                                 native-ts
 	haxelib run refactor override library
 	#haxelib run refactor process library/js *.hx postprocess.rules
+	haxelib run refactor processFile library/js/three/Vector4.hx fix_special_Vector4.rules
 	cp -r manual/* library
 
 native-ts:

@@ -157,7 +157,6 @@ extern class Vector4
 	 * Not supported.
 	 */
 	function distanceTo(?v:Vector) : Float;
-	
 	/**
 	 * Not supported.
 	 */
