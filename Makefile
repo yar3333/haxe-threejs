@@ -21,7 +21,6 @@ build: native-ts
 	haxelib run refactor processFile library/js/three/CurvePath.hx postfixes/CurvePath.rules
 	haxelib run refactor processFile library/js/three/LineCurve3.hx postfixes/LineCurve3.rules
 	haxelib run refactor processFile library/js/three/QuadraticBezierCurve3.hx postfixes/QuadraticBezierCurve3.rules
-	haxelib run refactor processFile library/js/three/Object3D.hx postfixes/Object3D.rules
 	
 	cp -r manual/* library
 
