@@ -15,7 +15,14 @@ build: native-ts
 	                                 native-ts
 	haxelib run refactor override library
 	#haxelib run refactor process library/js *.hx postprocess.rules
-	haxelib run refactor processFile library/js/three/Vector4.hx fix_special_Vector4.rules
+	
+	haxelib run refactor processFile library/js/three/Vector4.hx postfixes/Vector4.rules
+	haxelib run refactor processFile library/js/three/CatmullRomCurve3.hx postfixes/CatmullRomCurve3.rules
+	haxelib run refactor processFile library/js/three/CubicBezierCurve3.hx postfixes/CubicBezierCurve3.rules
+	haxelib run refactor processFile library/js/three/CurvePath.hx postfixes/CurvePath.rules
+	haxelib run refactor processFile library/js/three/LineCurve3.hx postfixes/LineCurve3.rules
+	haxelib run refactor processFile library/js/three/QuadraticBezierCurve3.hx postfixes/QuadraticBezierCurve3.rules
+	
 	cp -r manual/* library
 
 native-ts:
