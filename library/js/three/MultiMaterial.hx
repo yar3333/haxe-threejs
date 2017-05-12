@@ -9,5 +9,6 @@ extern class MultiMaterial extends Material
 
 	@:overload(function(?materials:Array<Material>):Void{})
 	function new() : Void;
-	override function toJSON(meta:Dynamic) : Dynamic;
+	@:overload(function(meta:Dynamic):Dynamic{})
+	override function toJSON(?meta:Dynamic) : Dynamic;
 }

@@ -19,7 +19,7 @@ extern class PropertyBinding
 	function setValue(sourceArray:Dynamic, offset:Float) : Void;
 	function bind() : Void;
 	function unbind() : Void;
-	static function create(root:Dynamic, path:Dynamic, parsedPath:Dynamic) : haxe.extern.EitherType<PropertyBinding, js.three.propertyBinding.Composite>;
+	static function create(root:Dynamic, path:Dynamic, ?parsedPath:Dynamic) : haxe.extern.EitherType<PropertyBinding, js.three.propertyBinding.Composite>;
 	static function parseTrackName(trackName:String) : Dynamic;
 	static function findNode(root:Dynamic, nodeName:String) : Dynamic;
 }

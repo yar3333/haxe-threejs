@@ -24,8 +24,9 @@ extern class SkinnedMesh extends Mesh
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshNormalMaterial,?useVertexTexture:Bool):Void{})
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:MeshPhongMaterial,?useVertexTexture:Bool):Void{})
 	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:ShaderMaterial,?useVertexTexture:Bool):Void{})
-	function bind(skeleton:Skeleton, bindMatrix:Matrix4) : Void;
+	function bind(skeleton:Skeleton, ?bindMatrix:Matrix4) : Void;
 	function pose() : Void;
 	function normalizeSkinWeights() : Void;
+	@:overload(function(?force:Bool):Void{})
 	override function updateMatrixWorld(force:Bool) : Void;
 }

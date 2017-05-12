@@ -93,7 +93,7 @@ extern class Matrix4
 	 */
 	@:overload(function(s:Float):Matrix4{})
 	function multiplyScalar(s:Float) : Matrix;
-	function applyToBuffer(buffer:BufferAttribute, offset:Float, length:Float) : BufferAttribute;
+	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
 	/**
 	 * Computes determinant of this matrix.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
@@ -112,8 +112,8 @@ extern class Matrix4
 	 * Sets this matrix to the inverse of matrix m.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm.
 	 */
-	@:overload(function(m:Matrix4,throwOnDegeneratee:Bool):Matrix4{})
-	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
+	@:overload(function(m:Matrix4,?throwOnDegeneratee:Bool):Matrix4{})
+	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
 	/**
 	 * Multiplies the columns of this matrix by vector v.
 	 */
@@ -152,7 +152,7 @@ extern class Matrix4
 	 * Decomposes this matrix into the translation, rotation and scale components.
 	 * If parameters are not passed, new instances will be created.
 	 */
-	function decompose(translation:Vector3, rotation:Quaternion, scale:Vector3) : Array<Dynamic>;
+	function decompose(?translation:Vector3, ?rotation:Quaternion, ?scale:Vector3) : Array<Dynamic>;
 	/**
 	 * Creates a frustum matrix.
 	 * Creates a perspective projection matrix.
@@ -168,7 +168,7 @@ extern class Matrix4
 	 */
 	function makeOrthographic(left:Float, right:Float, top:Float, bottom:Float, near:Float, far:Float) : Matrix4;
 	function equals(matrix:Matrix4) : Bool;
-	function fromArray(array:Array<Float>, offset:Float) : Matrix4;
+	function fromArray(array:Array<Float>, ?offset:Float) : Matrix4;
 	function toArray() : Array<Float>;
 	/**
 	 * @deprecated

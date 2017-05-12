@@ -1,1 +1,1 @@
-@}\s*$@\t\n\t/**\n\t * Not supported.\n\t */\n\tfunction distanceTo(?v:Vector) : Float;\n\t/**\n\t * Not supported.\n\t */\n\tfunction distanceToSquared(?v:Vector) : Float;\n}@
+@}\s*$@\t\n\t/**\n\t * Not supported.\n\t */\n\tfunction distanceTo(v:Vector) : Float;\n\t/**\n\t * Not supported.\n\t */\n\tfunction distanceToSquared(v:Vector) : Float;\n}@

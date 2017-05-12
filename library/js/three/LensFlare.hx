@@ -13,6 +13,6 @@ extern class LensFlare extends Object3D
 	function new() : Void;
 	@:overload(function(object:Object3D):Void{})
 	override function add(object:Object3D) : Void;
-	@:overload(function(texture:Texture,size:Float,distance:Float,blending:Blending,color:Color):Void{})
+	@:overload(function(texture:Texture,?size:Float,?distance:Float,?blending:Blending,?color:Color):Void{})
 	function updateLensFlares() : Void;
 }

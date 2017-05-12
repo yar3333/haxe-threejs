@@ -56,5 +56,5 @@ extern class Loader
 	function new() : Void;
 	function extractUrlBase(url:String) : String;
 	function initMaterials(materials:Array<Material>, texturePath:String) : Array<Material>;
-	function createMaterial(m:Material, texturePath:String, crossOrigin:String) : Bool;
+	function createMaterial(m:Material, texturePath:String, ?crossOrigin:String) : Bool;
 }

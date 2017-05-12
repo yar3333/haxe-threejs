@@ -149,16 +149,16 @@ extern class Vector4
 	 */
 	@:overload(function(v:Vector4):Bool{})
 	function equals(v:Vector) : Bool;
-	function fromArray(xyzw:Array<Float>, offset:Float) : Vector4;
-	function toArray(xyzw:Array<Float>, offset:Float) : Array<Float>;
-	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector4;
+	function fromArray(xyzw:Array<Float>, ?offset:Float) : Vector4;
+	function toArray(?xyzw:Array<Float>, ?offset:Float) : Array<Float>;
+	function fromBufferAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector4;
 	
 	/**
 	 * Not supported.
 	 */
-	function distanceTo(?v:Vector) : Float;
+	function distanceTo(v:Vector) : Float;
 	/**
 	 * Not supported.
 	 */
-	function distanceToSquared(?v:Vector) : Float;
+	function distanceToSquared(v:Vector) : Float;
 }

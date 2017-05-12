@@ -10,5 +10,5 @@ extern class GridHelper extends LineSegments
 	/**
 	 * @deprecated
 	 */
-	function setColors(color1:haxe.extern.EitherType<Color, Float>, color2:haxe.extern.EitherType<Color, Float>) : Void;
+	function setColors(?color1:haxe.extern.EitherType<Color, Float>, ?color2:haxe.extern.EitherType<Color, Float>) : Void;
 }

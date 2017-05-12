@@ -10,7 +10,7 @@ extern class Sphere
 
 	function new(?center:Vector3, ?radius:Float) : Void;
 	function set(center:Vector3, radius:Float) : Sphere;
-	function setFromPoints(points:Array<Vector3>, optionalCenter:Vector3) : Sphere;
+	function setFromPoints(points:Array<Vector3>, ?optionalCenter:Vector3) : Sphere;
 	function clone() : Sphere;
 	function copy(sphere:Sphere) : Sphere;
 	function empty() : Bool;
@@ -19,8 +19,8 @@ extern class Sphere
 	function intersectsSphere(sphere:Sphere) : Bool;
 	function intersectsBox(box:Box3) : Bool;
 	function intersectsPlane(plane:Plane) : Bool;
-	function clampPoint(point:Vector3, optionalTarget:Vector3) : Vector3;
-	function getBoundingBox(optionalTarget:Box3) : Box3;
+	function clampPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
+	function getBoundingBox(?optionalTarget:Box3) : Box3;
 	function applyMatrix4(matrix:Matrix4) : Sphere;
 	function translate(offset:Vector3) : Sphere;
 	function equals(sphere:Sphere) : Bool;

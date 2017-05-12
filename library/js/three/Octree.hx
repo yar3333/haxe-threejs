@@ -7,8 +7,8 @@ extern class Octree
 {
 	function new(?parameters:Dynamic) : Void;
 	function update() : Void;
-	function add(object:Dynamic, options:Dynamic) : Dynamic;
-	function addDeferred(object:Dynamic, options:Dynamic) : Dynamic;
+	function add(object:Dynamic, ?options:Dynamic) : Dynamic;
+	function addDeferred(object:Dynamic, ?options:Dynamic) : Dynamic;
 	function addObjectData(object:Dynamic, part:Dynamic) : Dynamic;
 	function remove(object:Dynamic) : Dynamic;
 	function extend(octree:Octree) : Dynamic;

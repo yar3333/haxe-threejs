@@ -16,8 +16,8 @@ extern class Box2
 	function copy(box:Box2) : Box2;
 	function makeEmpty() : Box2;
 	function isEmpty() : Bool;
-	function getCenter(optionalTarget:Vector2) : Vector2;
-	function getSize(optionalTarget:Vector2) : Vector2;
+	function getCenter(?optionalTarget:Vector2) : Vector2;
+	function getSize(?optionalTarget:Vector2) : Vector2;
 	function expandByPoint(point:Vector2) : Box2;
 	function expandByVector(vector:Vector2) : Box2;
 	function expandByScalar(scalar:Float) : Box2;
@@ -25,7 +25,7 @@ extern class Box2
 	function containsBox(box:Box2) : Bool;
 	function getParameter(point:Vector2) : Vector2;
 	function intersectsBox(box:Box2) : Bool;
-	function clampPoint(point:Vector2, optionalTarget:Vector2) : Vector2;
+	function clampPoint(point:Vector2, ?optionalTarget:Vector2) : Vector2;
 	function distanceToPoint(point:Vector2) : Float;
 	function intersect(box:Box2) : Box2;
 	function union(box:Box2) : Box2;

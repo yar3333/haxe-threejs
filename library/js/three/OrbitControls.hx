@@ -31,10 +31,10 @@ extern class OrbitControls
 	var dampingFactor : Float;
 
 	function new(object:Camera, ?domElement:js.html.Element) : Void;
-	function rotateLeft(angle:Float) : Void;
-	function rotateUp(angle:Float) : Void;
-	function panLeft(distance:Float) : Void;
-	function panUp(distance:Float) : Void;
+	function rotateLeft(?angle:Float) : Void;
+	function rotateUp(?angle:Float) : Void;
+	function panLeft(?distance:Float) : Void;
+	function panUp(?distance:Float) : Void;
 	function pan(deltaX:Float, deltaY:Float) : Void;
 	function dollyIn(dollyScale:Float) : Void;
 	function dollyOut(dollyScale:Float) : Void;

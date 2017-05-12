@@ -154,11 +154,11 @@ extern class Object3D extends EventDispatcher
 	 */
 	function getObjectByName(name:String) : Object3D;
 	function getObjectByProperty(name:String, value:String) : Object3D;
-	function getWorldPosition(optionalTarget:Vector3) : Vector3;
-	function getWorldQuaternion(optionalTarget:Quaternion) : Quaternion;
-	function getWorldRotation(optionalTarget:Euler) : Euler;
-	function getWorldScale(optionalTarget:Vector3) : Vector3;
-	function getWorldDirection(optionalTarget:Vector3) : Vector3;
+	function getWorldPosition(?optionalTarget:Vector3) : Vector3;
+	function getWorldQuaternion(?optionalTarget:Quaternion) : Quaternion;
+	function getWorldRotation(?optionalTarget:Euler) : Euler;
+	function getWorldScale(?optionalTarget:Vector3) : Vector3;
+	function getWorldDirection(?optionalTarget:Vector3) : Vector3;
 	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 	function traverse(callback:Object3D->Void) : Void;
 	function traverseVisible(callback:Object3D->Void) : Void;
@@ -171,9 +171,9 @@ extern class Object3D extends EventDispatcher
 	 * Updates global transform of the object and its children.
 	 */
 	function updateMatrixWorld(force:Bool) : Void;
-	function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
-	function clone(recursive:Bool) : Object3D;
-	function copy(source:Object3D, recursive:Bool) : Object3D;
+	function toJSON(?meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
+	function clone(?recursive:Bool) : Object3D;
+	function copy(source:Object3D, ?recursive:Bool) : Object3D;
 	function getChildByName(name:String) : Object3D;
 	function translate(distance:Float, axis:Vector3) : Object3D;
 }

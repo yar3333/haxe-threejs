@@ -147,7 +147,7 @@ extern class Geometry extends EventDispatcher
 	 * Computes vertex normals by averaging face normals.
 	 * Face normals must be existing / computed beforehand.
 	 */
-	function computeVertexNormals(areaWeighted:Bool) : Void;
+	function computeVertexNormals(?areaWeighted:Bool) : Void;
 	/**
 	 * Compute vertex normals, but duplicating face normals.
 	 */
@@ -166,7 +166,7 @@ extern class Geometry extends EventDispatcher
 	 * Neither bounding boxes or bounding spheres are computed by default. They need to be explicitly computed, otherwise they are null.
 	 */
 	function computeBoundingSphere() : Void;
-	function merge(geometry:Geometry, matrix:Matrix, materialIndexOffset:Float) : Void;
+	function merge(geometry:Geometry, matrix:Matrix, ?materialIndexOffset:Float) : Void;
 	function mergeMesh(mesh:Mesh) : Void;
 	/**
 	 * Checks for duplicate vertices using hashmap.

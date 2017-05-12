@@ -47,7 +47,7 @@ extern class BufferGeometry extends EventDispatcher
 	function addAttribute(name:String, attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>) : BufferGeometry;
 	function getAttribute(name:String) : haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>;
 	function removeAttribute(name:String) : BufferGeometry;
-	function addGroup(start:Float, count:Int, materialIndex:Float) : Void;
+	function addGroup(start:Float, count:Int, ?materialIndex:Float) : Void;
 	function clearGroups() : Void;
 	function setDrawRange(start:Float, count:Int) : Void;
 	/**
@@ -63,7 +63,7 @@ extern class BufferGeometry extends EventDispatcher
 	function center() : Vector3;
 	function setFromObject(object:Object3D) : Void;
 	function updateFromObject(object:Object3D) : Void;
-	function fromGeometry(geometry:Geometry, settings:Dynamic) : BufferGeometry;
+	function fromGeometry(geometry:Geometry, ?settings:Dynamic) : BufferGeometry;
 	function fromDirectGeometry(geometry:DirectGeometry) : BufferGeometry;
 	/**
 	 * Computes bounding box of the geometry, updating Geometry.boundingBox attribute.
@@ -91,6 +91,6 @@ extern class BufferGeometry extends EventDispatcher
 	 */
 	function dispose() : Void;
 	function addIndex(index:Dynamic) : Void;
-	function addDrawCall(start:Dynamic, count:Dynamic, indexOffset:Dynamic) : Void;
+	function addDrawCall(start:Dynamic, count:Dynamic, ?indexOffset:Dynamic) : Void;
 	function clearDrawCalls() : Void;
 }

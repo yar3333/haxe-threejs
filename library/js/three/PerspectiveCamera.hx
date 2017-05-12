@@ -88,10 +88,10 @@ extern class PerspectiveCamera extends Camera
 	 * Updates the camera projection matrix. Must be called after change of parameters.
 	 */
 	function updateProjectionMatrix() : Void;
-	@:overload(function(meta:Dynamic):Dynamic{})
-	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
+	@:overload(function(?meta:Dynamic):Dynamic{})
+	override function toJSON(?meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 	/**
 	 * @deprecated
 	 */
-	function setLens(focalLength:Float, frameHeight:Float) : Void;
+	function setLens(focalLength:Float, ?frameHeight:Float) : Void;
 }

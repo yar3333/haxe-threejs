@@ -175,12 +175,12 @@ extern class Vector3
 	 * Computes distance of this vector to v.
 	 */
 	@:overload(function(v:Vector3):Float{})
-	function distanceTo(?v:Vector) : Float;
+	function distanceTo(v:Vector) : Float;
 	/**
 	 * Computes squared distance of this vector to v.
 	 */
 	@:overload(function(v:Vector3):Float{})
-	function distanceToSquared(?v:Vector) : Float;
+	function distanceToSquared(v:Vector) : Float;
 	function distanceToManhattan(v:Vector3) : Float;
 	function setFromSpherical(s:Spherical) : Vector3;
 	function setFromMatrixPosition(m:Matrix4) : Vector3;
@@ -191,9 +191,9 @@ extern class Vector3
 	 */
 	@:overload(function(v:Vector3):Bool{})
 	function equals(v:Vector) : Bool;
-	function fromArray(xyz:Array<Float>, offset:Float) : Vector3;
-	function toArray(xyz:Array<Float>, offset:Float) : Array<Float>;
-	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector3;
+	function fromArray(xyz:Array<Float>, ?offset:Float) : Vector3;
+	function toArray(?xyz:Array<Float>, ?offset:Float) : Array<Float>;
+	function fromBufferAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector3;
 	/**
 	 * @deprecated
 	 */

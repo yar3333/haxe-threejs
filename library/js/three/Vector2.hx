@@ -129,12 +129,12 @@ extern class Vector2
 	 * Computes distance of this vector to v.
 	 */
 	@:overload(function(v:Vector2):Float{})
-	function distanceTo(?v:Vector) : Float;
+	function distanceTo(v:Vector) : Float;
 	/**
 	 * Computes squared distance of this vector to v.
 	 */
 	@:overload(function(v:Vector2):Float{})
-	function distanceToSquared(?v:Vector) : Float;
+	function distanceToSquared(v:Vector) : Float;
 	function distanceToManhattan(v:Vector2) : Float;
 	/**
 	 * Normalizes this vector and multiplies it by l.
@@ -149,8 +149,8 @@ extern class Vector2
 	 */
 	@:overload(function(v:Vector2):Bool{})
 	function equals(v:Vector) : Bool;
-	function fromArray(xy:Array<Float>, offset:Float) : Vector2;
-	function toArray(xy:Array<Float>, offset:Float) : Array<Float>;
-	function fromBufferAttribute(attribute:BufferAttribute, index:Int, offset:Float) : Vector2;
+	function fromArray(xy:Array<Float>, ?offset:Float) : Vector2;
+	function toArray(?xy:Array<Float>, ?offset:Float) : Array<Float>;
+	function fromBufferAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector2;
 	function rotateAround(center:Vector2, angle:Float) : Vector2;
 }
