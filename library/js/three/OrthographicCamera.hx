@@ -58,6 +58,6 @@ extern class OrthographicCamera extends Camera
 	function updateProjectionMatrix() : Void;
 	function setViewOffset(fullWidth:Float, fullHeight:Float, offsetX:Float, offsetY:Float, width:Float, height:Float) : Void;
 	function clearViewOffset() : Void;
-	@:overload(function(meta:Dynamic):Dynamic{})
-	override function toJSON(meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
+	@:overload(function(?meta:Dynamic):Dynamic{})
+	override function toJSON(?meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 }

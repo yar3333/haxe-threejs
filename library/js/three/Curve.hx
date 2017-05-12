@@ -23,12 +23,12 @@ extern class Curve<T:Vector>
 	 * Get sequence of points using getPoint( t )
 	 * getPoints(divisions?: number): T[];
 	 */
-	function getPoints(divisions:Int) : Array<T>;
+	function getPoints(?divisions:Int) : Array<T>;
 	/**
 	 * Get sequence of equi-spaced points using getPointAt( u )
 	 * getSpacedPoints(divisions?: number): T[];
 	 */
-	function getSpacedPoints(divisions:Int) : Array<T>;
+	function getSpacedPoints(?divisions:Int) : Array<T>;
 	/**
 	 * Get total curve arc length
 	 */
@@ -36,7 +36,7 @@ extern class Curve<T:Vector>
 	/**
 	 * Get list of cumulative segment lengths
 	 */
-	function getLengths(divisions:Int) : Array<Float>;
+	function getLengths(?divisions:Int) : Array<Float>;
 	/**
 	 * Update the cumlative segment distance cache
 	 */

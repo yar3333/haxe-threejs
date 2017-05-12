@@ -45,7 +45,7 @@ extern class Quaternion
 	/**
 	 * Sets this quaternion from rotation specified by Euler angles.
 	 */
-	function setFromEuler(euler:Euler, update:Bool) : Quaternion;
+	function setFromEuler(euler:Euler, ?update:Bool) : Quaternion;
 	/**
 	 * Sets this quaternion from rotation specified by axis and angle.
 	 * Adapted from http://www.euclideanspace.com/maths/geometry/rotations/conversions/angleToQuaternion/index.htm.
@@ -84,9 +84,9 @@ extern class Quaternion
 	function multiplyQuaternions(a:Quaternion, b:Quaternion) : Quaternion;
 	function slerp(qb:Quaternion, t:Float) : Quaternion;
 	function equals(v:Quaternion) : Bool;
-	@:overload(function(xyzw:Array<Float>, offset:Float):Quaternion{})
+	@:overload(function(xyzw:Array<Float>, ?offset:Float):Quaternion{})
 	function fromArray(n:Array<Float>) : Quaternion;
-	@:overload(function(xyzw:Array<Float>, offset:Float):Array<Float>{})
+	@:overload(function(?xyzw:Array<Float>, ?offset:Float):Array<Float>{})
 	function toArray() : Array<Float>;
 	function onChange(callback:haxe.Constraints.Function) : Quaternion;
 	/**

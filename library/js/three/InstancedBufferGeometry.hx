@@ -16,5 +16,5 @@ extern class InstancedBufferGeometry extends BufferGeometry
 	 */
 	function new() : Void;
 	@:overload(function(start:Float,count:Int,instances:Float):Void{})
-	override function addGroup(start:Float, count:Int, materialIndex:Float) : Void;
+	override function addGroup(start:Float, count:Int, ?materialIndex:Float) : Void;
 }

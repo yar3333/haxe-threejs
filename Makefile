@@ -14,7 +14,6 @@ build: native-ts
 	                                 --typedef-file fix_force_typedefs.list \
 	                                 native-ts
 	haxelib run refactor override library
-	#haxelib run refactor process library/js *.hx postprocess.rules
 	
 	haxelib run refactor processFile library/js/three/Vector4.hx postfixes/Vector4.rules
 	haxelib run refactor processFile library/js/three/CatmullRomCurve3.hx postfixes/CatmullRomCurve3.rules
@@ -22,6 +21,7 @@ build: native-ts
 	haxelib run refactor processFile library/js/three/CurvePath.hx postfixes/CurvePath.rules
 	haxelib run refactor processFile library/js/three/LineCurve3.hx postfixes/LineCurve3.rules
 	haxelib run refactor processFile library/js/three/QuadraticBezierCurve3.hx postfixes/QuadraticBezierCurve3.rules
+	haxelib run refactor processFile library/js/three/Object3D.hx postfixes/Object3D.rules
 	
 	cp -r manual/* library
 

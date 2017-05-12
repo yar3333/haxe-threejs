@@ -109,7 +109,7 @@ extern class Material extends EventDispatcher
 	 */
 	function new() : Void;
 	function setValues(parameters:MaterialParameters) : Void;
-	function toJSON(meta:Dynamic) : Dynamic;
+	function toJSON(?meta:Dynamic) : Dynamic;
 	function clone() : Material;
 	function copy(source:Material) : Material;
 	function update() : Void;

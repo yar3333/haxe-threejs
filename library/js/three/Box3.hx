@@ -18,8 +18,8 @@ extern class Box3
 	function copy(box:Box3) : Box3;
 	function makeEmpty() : Box3;
 	function isEmpty() : Bool;
-	function getCenter(optionalTarget:Vector3) : Vector3;
-	function getSize(optionalTarget:Vector3) : Vector3;
+	function getCenter(?optionalTarget:Vector3) : Vector3;
+	function getSize(?optionalTarget:Vector3) : Vector3;
 	function expandByPoint(point:Vector3) : Box3;
 	function expandByVector(vector:Vector3) : Box3;
 	function expandByScalar(scalar:Float) : Box3;
@@ -30,9 +30,9 @@ extern class Box3
 	function intersectsBox(box:Box3) : Bool;
 	function intersectsSphere(sphere:Sphere) : Bool;
 	function intersectsPlane(plane:Plane) : Bool;
-	function clampPoint(point:Vector3, optionalTarget:Vector3) : Vector3;
+	function clampPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
 	function distanceToPoint(point:Vector3) : Float;
-	function getBoundingSphere(optionalTarget:Sphere) : Sphere;
+	function getBoundingSphere(?optionalTarget:Sphere) : Sphere;
 	function intersect(box:Box3) : Box3;
 	function union(box:Box3) : Box3;
 	function applyMatrix4(matrix:Matrix4) : Box3;

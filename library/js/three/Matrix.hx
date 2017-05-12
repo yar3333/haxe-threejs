@@ -26,7 +26,7 @@ extern interface Matrix
 	/**
 	 * getInverse(matrix:T, throwOnInvertible?:boolean):T;
 	 */
-	function getInverse(matrix:Matrix, throwOnInvertible:Bool) : Matrix;
+	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
 	/**
 	 * transpose():T;
 	 */

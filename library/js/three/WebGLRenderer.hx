@@ -107,11 +107,11 @@ extern class WebGLRenderer
 	/**
 	 * Resizes the output canvas to (width, height), and also sets the viewport to fit that size, starting in (0, 0).
 	 */
-	function setSize(width:Float, height:Float, updateStyle:Bool) : Void;
+	function setSize(width:Float, height:Float, ?updateStyle:Bool) : Void;
 	/**
 	 * Sets the viewport to render from (x, y) to (x + width, y + height).
 	 */
-	function setViewport(x:Float, y:Float, width:Float, height:Float) : Void;
+	function setViewport(?x:Float, ?y:Float, ?width:Float, ?height:Float) : Void;
 	/**
 	 * Sets the scissor area from (x, y) to (x + width, y + height).
 	 */
@@ -127,9 +127,9 @@ extern class WebGLRenderer
 	/**
 	 * Sets the clear color, using color for the color and alpha for the opacity.
 	 */
-	@:overload(function(color:String, alpha:Float):Void{})
-	@:overload(function(color:Float, alpha:Float):Void{})
-	function setClearColor(color:Color, alpha:Float) : Void;
+	@:overload(function(color:String, ?alpha:Float):Void{})
+	@:overload(function(color:Float, ?alpha:Float):Void{})
+	function setClearColor(color:Color, ?alpha:Float) : Void;
 	/**
 	 * Sets the clear color, using color for the color and alpha for the opacity.
 	 */
@@ -145,7 +145,7 @@ extern class WebGLRenderer
 	 * Tells the renderer to clear its color, depth or stencil drawing buffer(s).
 	 * Arguments default to true
 	 */
-	function clear(color:Bool, depth:Bool, stencil:Bool) : Void;
+	function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
 	function clearColor() : Void;
 	function clearDepth() : Void;
 	function clearStencil() : Void;
@@ -162,13 +162,13 @@ extern class WebGLRenderer
 	 * The render is done to the renderTarget (if specified) or to the canvas as usual.
 	 * If forceClear is true, the canvas will be cleared before rendering, even if the renderer's autoClear property is false.
 	 */
-	@:overload(function(scene:Scene,camera:Camera,renderTarget:RenderTarget,forceClear:Bool):Void{})
+	@:overload(function(scene:Scene,camera:Camera,?renderTarget:RenderTarget,?forceClear:Bool):Void{})
 	function render(scene:Scene, camera:Camera) : Void;
 	/**
 	 * Used for setting the gl frontFace, cullFace states in the GPU, thus enabling/disabling face culling when rendering.
 	 * If cullFace is false, culling will be disabled.
 	 */
-	function setFaceCulling(cullFace:CullFace, frontFace:FrontFaceDirection) : Void;
+	function setFaceCulling(?cullFace:CullFace, ?frontFace:FrontFaceDirection) : Void;
 	/**
 	 * @deprecated
 	 */

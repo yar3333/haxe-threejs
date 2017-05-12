@@ -15,6 +15,6 @@ extern class Raycaster
 	function new(?origin:Vector3, ?direction:Vector3, ?near:Float, ?far:Float) : Void;
 	function set(origin:Vector3, direction:Vector3) : Void;
 	function setFromCamera(coords:{ var x : Float; var y : Float; }, camera:Camera) : Void;
-	function intersectObject(object:Object3D, recursive:Bool) : Array<Intersection>;
-	function intersectObjects(objects:Array<Object3D>, recursive:Bool) : Array<Intersection>;
+	function intersectObject(object:Object3D, ?recursive:Bool) : Array<Intersection>;
+	function intersectObjects(objects:Array<Object3D>, ?recursive:Bool) : Array<Intersection>;
 }

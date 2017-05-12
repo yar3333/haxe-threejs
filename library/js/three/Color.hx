@@ -91,11 +91,11 @@ extern class Color
 	/**
 	 * Copies given color making conversion from gamma to linear space.
 	 */
-	function copyGammaToLinear(color:Color, gammaFactor:Float) : Color;
+	function copyGammaToLinear(color:Color, ?gammaFactor:Float) : Color;
 	/**
 	 * Copies given color making conversion from linear to gamma space.
 	 */
-	function copyLinearToGamma(color:Color, gammaFactor:Float) : Color;
+	function copyLinearToGamma(color:Color, ?gammaFactor:Float) : Color;
 	/**
 	 * Converts this color from gamma to linear space.
 	 */
@@ -127,6 +127,6 @@ extern class Color
 	function multiplyScalar(s:Float) : Color;
 	function lerp(color:Color, alpha:Float) : Color;
 	function equals(color:Color) : Bool;
-	function fromArray(rgb:Array<Float>, offset:Float) : Color;
-	function toArray(array:Array<Float>, offset:Float) : Array<Float>;
+	function fromArray(rgb:Array<Float>, ?offset:Float) : Color;
+	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 }

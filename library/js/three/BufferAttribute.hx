@@ -37,7 +37,7 @@ extern class BufferAttribute
 	function copyVector2sArray(vectors:Array<{ var x : Float; var y : Float; }>) : BufferAttribute;
 	function copyVector3sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; }>) : BufferAttribute;
 	function copyVector4sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; var w : Float; }>) : BufferAttribute;
-	function set(value:ArrayLike<Float>, offset:Float) : BufferAttribute;
+	function set(value:ArrayLike<Float>, ?offset:Float) : BufferAttribute;
 	function getX(index:Int) : Float;
 	function setX(index:Int, x:Float) : BufferAttribute;
 	function getY(index:Int) : Float;

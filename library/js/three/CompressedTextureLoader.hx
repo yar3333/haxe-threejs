@@ -9,6 +9,6 @@ extern class CompressedTextureLoader
 	var path : String;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, onLoad:CompressedTexture->Void, onProgress:ProgressEvent->Void, onError:ErrorEvent->Void) : Void;
+	function load(url:String, onLoad:CompressedTexture->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Void;
 	function setPath(path:String) : CompressedTextureLoader;
 }

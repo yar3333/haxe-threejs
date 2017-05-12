@@ -22,7 +22,7 @@ extern class ImageLoader
 	/**
 	 * Begin loading from url
 	 */
-	function load(url:String, onLoad:ImageElement->Void, onProgress:ProgressEvent->Void, onError:ErrorEvent->Void) : ImageElement;
+	function load(url:String, ?onLoad:ImageElement->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : ImageElement;
 	function setCrossOrigin(crossOrigin:String) : ImageLoader;
 	function setWithCredentials(value:String) : ImageLoader;
 	function setPath(value:String) : ImageLoader;

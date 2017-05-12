@@ -15,14 +15,14 @@ extern class Triangle
 	function clone() : Triangle;
 	function copy(triangle:Triangle) : Triangle;
 	function area() : Float;
-	function midpoint(optionalTarget:Vector3) : Vector3;
-	function normal(optionalTarget:Vector3) : Vector3;
-	function plane(optionalTarget:Vector3) : Plane;
-	function barycoordFromPoint(point:Vector3, optionalTarget:Vector3) : Vector3;
+	function midpoint(?optionalTarget:Vector3) : Vector3;
+	function normal(?optionalTarget:Vector3) : Vector3;
+	function plane(?optionalTarget:Vector3) : Plane;
+	function barycoordFromPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
 	function containsPoint(point:Vector3) : Bool;
-	function closestPointToPoint(point:Vector3, optionalTarget:Vector3) : Vector3;
+	function closestPointToPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
 	function equals(triangle:Triangle) : Bool;
-	static function normal(a:Vector3, b:Vector3, c:Vector3, optionalTarget:Vector3) : Vector3;
+	static function normal(a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3;
 	static function barycoordFromPoint(point:Vector3, a:Vector3, b:Vector3, c:Vector3, optionalTarget:Vector3) : Vector3;
 	static function containsPoint(point:Vector3, a:Vector3, b:Vector3, c:Vector3) : Bool;
 }
