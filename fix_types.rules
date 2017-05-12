@@ -78,3 +78,7 @@ js.three.IcosahedronGeometry@detail => Int if Float
 
 @setAnimationLabel.start => Int if Float
 @setAnimationLabel.end => Int if Float
+
+js.three.Object3D@traverse.callback => Object3D->Void if Object3D->Dynamic
+js.three.Object3D@traverseVisible.callback => Object3D->Void if Object3D->Dynamic
+js.three.Object3D@traverseAncestors.callback => Object3D->Void if Object3D->Dynamic

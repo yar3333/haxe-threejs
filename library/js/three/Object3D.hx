@@ -160,9 +160,9 @@ extern class Object3D extends EventDispatcher
 	function getWorldScale(optionalTarget:Vector3) : Vector3;
 	function getWorldDirection(optionalTarget:Vector3) : Vector3;
 	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
-	function traverse(callback:Object3D->haxe.extern.EitherType<Dynamic, Void>) : Void;
-	function traverseVisible(callback:Object3D->haxe.extern.EitherType<Dynamic, Void>) : Void;
-	function traverseAncestors(callback:Object3D->haxe.extern.EitherType<Dynamic, Void>) : Void;
+	function traverse(callback:Object3D->Void) : Void;
+	function traverseVisible(callback:Object3D->Void) : Void;
+	function traverseAncestors(callback:Object3D->Void) : Void;
 	/**
 	 * Updates local transform.
 	 */
