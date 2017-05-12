@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.TextGeometryParameters")
-extern interface TextGeometryParameters
+typedef TextGeometryParameters =
 {
 	@:optional var font : Font;
 	@:optional var size : Float;

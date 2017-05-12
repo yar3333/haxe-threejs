@@ -5,7 +5,14 @@ TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
 TS_SRC = types/three
 
 build: native-ts
-	haxelib run refactor dts_to_haxe --out-dir library --root-package js.three --native-namespace THREE --log-level warn --import js.html.* --type-mapper fix_types.rules native-ts
+	haxelib run refactor dts_to_haxe --out-dir library \
+	                                 --root-package js.three \
+	                                 --native-namespace THREE \
+	                                 --log-level warn \
+	                                 --import js.html.* \
+	                                 --type-mapper fix_types.rules \
+	                                 --typedef-file fix_force_typedefs.list \
+	                                 native-ts
 	haxelib run refactor override library
 	#haxelib run refactor process library/js *.hx postprocess.rules
 	cp -r manual/* library

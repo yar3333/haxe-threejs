@@ -3,8 +3,8 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.MeshPhongMaterialParameters")
-extern interface MeshPhongMaterialParameters extends MaterialParameters
-{
+typedef MeshPhongMaterialParameters =
+{>MaterialParameters,
 	/**
 	 * geometry color in hexadecimal. Default is 0xffffff. 
 	 */
