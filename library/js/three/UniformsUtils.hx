@@ -6,5 +6,5 @@ import js.html.*;
 extern class UniformsUtils
 {
 	static function merge(uniforms:Array<Dynamic>) : Dynamic;
-	static function clone(uniforms_src:Dynamic) : self;
+	static function clone(uniforms_src:Dynamic) : Dynamic;
 }
