@@ -94,4 +94,6 @@ extern class PerspectiveCamera extends Camera
 	 * @deprecated
 	 */
 	function setLens(focalLength:Float, ?frameHeight:Float) : Void;
+	
+	override function clone(?recursive:Bool) : PerspectiveCamera;
 }
