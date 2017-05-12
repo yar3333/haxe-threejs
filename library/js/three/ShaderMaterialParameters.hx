@@ -3,8 +3,8 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.ShaderMaterialParameters")
-extern interface ShaderMaterialParameters extends MaterialParameters
-{
+typedef ShaderMaterialParameters =
+{>MaterialParameters,
 	@:optional var defines : Dynamic;
 	@:optional var uniforms : Dynamic;
 	@:optional var vertexShader : String;

@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.RaycasterParameters")
-extern interface RaycasterParameters
+typedef RaycasterParameters =
 {
 	@:optional var Mesh : Dynamic;
 	@:optional var Line : Dynamic;

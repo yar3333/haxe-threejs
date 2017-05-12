@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.MaterialParameters")
-extern interface MaterialParameters
+typedef MaterialParameters =
 {
 	@:optional var name : String;
 	@:optional var side : Side;

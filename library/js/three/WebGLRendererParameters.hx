@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 @:native("THREE.WebGLRendererParameters")
-extern interface WebGLRendererParameters
+typedef WebGLRendererParameters =
 {
 	/**
 	 * A Canvas where the renderer draws its output.
