@@ -5,6 +5,7 @@ TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
 TS_SRC = types/three
 
 build: native-ts
+	rm -rf library/js
 	haxelib run refactor dts_to_haxe --out-dir library \
 	                                 --root-package js.three \
 	                                 --native-namespace THREE \
@@ -41,6 +42,5 @@ native-js:
 	git checkout tags/$(TAG)
 
 clean:
-	rm -rf library/js
-
-rebuild: clean build
+	rm -rf native-ts
+	rm -rf native-js
