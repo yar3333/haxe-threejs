@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.MorphBlendMeshAnimation")
 extern interface MorphBlendMeshAnimation
 {
 	var start : Float;

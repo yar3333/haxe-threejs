@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.MeshPhysicalMaterialParameters")
 typedef MeshPhysicalMaterialParameters =
 {>MeshStandardMaterialParameters,
 	@:optional var reflectivity : Float;

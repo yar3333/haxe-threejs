@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.TextGeometryParameters")
 typedef TextGeometryParameters =
 {
 	@:optional var font : Font;

@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.VRFov")
 extern interface VRFov
 {
 	var leftTan : Float;

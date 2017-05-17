@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.ShaderMaterialParameters")
 typedef ShaderMaterialParameters =
 {>MaterialParameters,
 	@:optional var defines : Dynamic;

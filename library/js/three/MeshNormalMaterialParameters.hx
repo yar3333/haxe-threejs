@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.MeshNormalMaterialParameters")
 typedef MeshNormalMaterialParameters =
 {>MaterialParameters,
 	/**
