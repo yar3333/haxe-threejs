@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.Vector")
 extern interface Vector
 {
 	function setComponent(index:Int, value:Float) : Void;

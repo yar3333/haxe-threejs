@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.MaterialParameters")
 typedef MaterialParameters =
 {
 	@:optional var name : String;

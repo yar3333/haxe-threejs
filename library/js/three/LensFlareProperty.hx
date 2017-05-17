@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.LensFlareProperty")
 extern interface LensFlareProperty
 {
 	var texture : Texture;

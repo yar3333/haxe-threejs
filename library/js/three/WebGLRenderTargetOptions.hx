@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.WebGLRenderTargetOptions")
 extern interface WebGLRenderTargetOptions
 {
 	@:optional var wrapS : Wrapping;

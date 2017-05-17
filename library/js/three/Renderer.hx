@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.Renderer")
 extern interface Renderer
 {
 	var domElement : CanvasElement;

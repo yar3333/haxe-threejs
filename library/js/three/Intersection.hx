@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.Intersection")
 extern interface Intersection
 {
 	var distance : Float;

@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.LineBasicMaterialParameters")
 typedef LineBasicMaterialParameters =
 {>MaterialParameters,
 	@:optional var color : haxe.extern.EitherType<Int, String>;

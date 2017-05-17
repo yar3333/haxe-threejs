@@ -2,7 +2,6 @@ package js.three;
 
 import js.html.*;
 
-@:native("THREE.MeshStandardMaterialParameters")
 typedef MeshStandardMaterialParameters =
 {>MaterialParameters,
 	@:optional var color : haxe.extern.EitherType<Int, String>;
