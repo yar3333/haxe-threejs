@@ -18,7 +18,7 @@ extern class ShaderMaterial extends Material
 	var morphTargets : Bool;
 	var morphNormals : Bool;
 	/**
-	 * @deprecated Use extensions.derivatives instead.
+	 * @deprecated Use {@link ShaderMaterial#extensions.derivatives extensions.derivatives} instead.
 	 */
 	var derivatives : Dynamic;
 	var extensions : { var derivatives : Bool; var fragDepth : Bool; var drawBuffers : Bool; var shaderTextureLOD : Bool; };
@@ -28,7 +28,7 @@ extern class ShaderMaterial extends Material
 	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:ShaderMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 	@:overload(function(meta:Dynamic):Dynamic{})
 	override function toJSON(?meta:Dynamic) : Dynamic;
 }

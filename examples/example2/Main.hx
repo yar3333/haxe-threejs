@@ -9,27 +9,25 @@ class Main
         var mouseX = 0;
         var mouseY = 0;
         
-        var container = Browser.document.body;
-        
         var scene = new Scene();
         
 		var camera = new PerspectiveCamera(60, Browser.window.innerWidth / Browser.window.innerHeight, 1, 10000);
         camera.position.z = 500;
         scene.add(camera);
         
-		var mesh = new Mesh(new PlaneGeometry(300, 300, 3, 3), new MeshBasicMaterial({ map:ImageUtils.loadTexture("shadow.png"), overdraw:0.2 }));
+		var textureLoader = new TextureLoader();
+		
+		var mesh = new Mesh(new PlaneGeometry(300, 300, 3, 3), new MeshBasicMaterial({ map:textureLoader.load("shadow.png"), overdraw:0.2 }));
         mesh.position.y = -250;
         mesh.position.x = -90 * std.Math.PI / 180;
         scene.add(mesh);
         
-		var mesh = new Mesh(new SphereGeometry(200, 20, 20), new MeshBasicMaterial({ map:ImageUtils.loadTexture("land_ocean_ice_cloud_2048.jpg"), overdraw:0.2 }));
+		var mesh = new Mesh(new SphereGeometry(200, 20, 20), new MeshBasicMaterial({ map:textureLoader.load("land_ocean_ice_cloud_2048.jpg"), overdraw:0.2 }));
         scene.add(mesh);
         
-		//var renderer = new WebGLRenderer();
-		var renderer = new CanvasRenderer();
+		var renderer = new WebGLRenderer({ alpha:true });
         renderer.setSize(Browser.window.innerWidth, Browser.window.innerHeight);
 		Browser.document.body.appendChild(renderer.domElement);
-        
         
 		Browser.document.addEventListener("mousemove", function(event)
         {

@@ -11,4 +11,5 @@ typedef TextGeometryParameters =
 	@:optional var bevelEnabled : Bool;
 	@:optional var bevelThickness : Float;
 	@:optional var bevelSize : Float;
+	@:optional var bevelSegments : Float;
 }

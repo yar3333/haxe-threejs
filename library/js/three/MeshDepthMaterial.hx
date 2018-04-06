@@ -11,5 +11,5 @@ extern class MeshDepthMaterial extends Material
 	@:overload(function(?parameters:MeshDepthMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:MeshDepthMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

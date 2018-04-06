@@ -14,5 +14,5 @@ extern class LineDashedMaterial extends Material
 	@:overload(function(?parameters:LineDashedMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:LineDashedMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

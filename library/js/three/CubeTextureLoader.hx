@@ -10,7 +10,7 @@ extern class CubeTextureLoader
 	var path : String;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(urls:Array<String>, ?onLoad:CubeTexture->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Void;
+	function load(urls:Array<String>, ?onLoad:CubeTexture->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : CubeTexture;
 	function setCrossOrigin(crossOrigin:String) : CubeTextureLoader;
 	function setPath(path:String) : CubeTextureLoader;
 }

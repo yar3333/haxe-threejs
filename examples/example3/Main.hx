@@ -16,7 +16,9 @@ class Main
         light.position.normalize();
         scene.add(light);
         
-		var shadowMaterial = new MeshBasicMaterial({ map: ImageUtils.loadTexture("shadow.png") });
+		var textureLoader = new TextureLoader();
+		
+		var shadowMaterial = new MeshBasicMaterial({ map: textureLoader.load("shadow.png") });
         var shadowGeo = new PlaneGeometry(300, 300, 1, 1);
         
 		var mesh = new Mesh(shadowGeo, shadowMaterial);
@@ -89,8 +91,7 @@ class Main
         //group3.scale = group1.scale;
         scene.add(group3);
 
-        //var renderer = new WebGLRenderer({ antialias:true });
-        var renderer = new CanvasRenderer();
+        var renderer = new WebGLRenderer({ antialias:true, alpha:true });
         renderer.setSize(Browser.window.innerWidth, Browser.window.innerHeight);
 
         Browser.document.body.appendChild(renderer.domElement);

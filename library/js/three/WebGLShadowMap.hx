@@ -9,10 +9,8 @@ extern class WebGLShadowMap
 	var autoUpdate : Bool;
 	var needsUpdate : Bool;
 	var type : ShadowMapType;
-	var renderReverseSided : Bool;
-	var renderSingleSided : Bool;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link WebGLShadowMap#renderReverseSided .shadowMap.renderReverseSided} instead.
 	 */
 	var cullFace : Dynamic;
 

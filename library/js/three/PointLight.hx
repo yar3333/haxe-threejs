@@ -20,7 +20,7 @@ extern class PointLight extends Light
 	 */
 	var distance : Float;
 	var decay : Float;
-	//var shadow : LightShadow;
+	//var shadow : PointLightShadow;
 	var power : Float;
 
 	/**
@@ -31,6 +31,6 @@ extern class PointLight extends Light
 	 * light.position.set( 50, 50, 50 );
 	 * scene.add( light );
 	 */
-	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float,?distance:Float,?decay:Float):Void{})
+	@:overload(function(?color:haxe.extern.EitherType<Color,haxe.extern.EitherType<String,Float>>,?intensity:Float,?distance:Float,?decay:Float):Void{})
 	function new() : Void;
 }

@@ -4,8 +4,8 @@ import js.html.*;
 
 extern interface LoaderHandler
 {
-	var handlers : Array<haxe.extern.EitherType<RegExp, Loader>>;
+	var handlers : Array<haxe.extern.EitherType<RegExp, AnyLoader>>;
 
-	function add(regex:RegExp, loader:Loader) : Void;
-	function get(file:String) : Loader;
+	function add(regex:RegExp, loader:AnyLoader) : Void;
+	function get(file:String) : AnyLoader;
 }

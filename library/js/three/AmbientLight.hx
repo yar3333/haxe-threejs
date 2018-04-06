@@ -25,6 +25,6 @@ extern class AmbientLight extends Light
 	 * 
 	 * @source https://github.com/mrdoob/three.js/blob/master/src/lights/AmbientLight.js
 	 */
-	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	@:overload(function(?color:haxe.extern.EitherType<Color,haxe.extern.EitherType<String,Float>>,?intensity:Float):Void{})
 	function new() : Void;
 }

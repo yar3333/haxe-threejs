@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 /**
- * @deprecated Use MultiMaterial instead.
+ * @deprecated Use {@link MultiMaterial} instead.
  */
 @:native("THREE.MeshFaceMaterial")
 extern class MeshFaceMaterial extends MultiMaterial

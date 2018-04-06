@@ -12,7 +12,7 @@ extern class AudioAnalyser
 	function getFrequencyData() : Uint8Array;
 	function getAverageFrequency() : Float;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link AudioAnalyser#getFrequencyData .getFrequencyData()} instead.
 	 */
 	function getData(file:Dynamic) : Dynamic;
 }

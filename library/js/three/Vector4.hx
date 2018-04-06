@@ -127,7 +127,18 @@ extern class Vector4
 	 * Computes length of this vector.
 	 */
 	function length() : Float;
+	/**
+	 * @deprecated Use {@link Vector4#manhattanLength .manhattanLength()} instead.
+	 */
 	function lengthManhattan() : Float;
+	/**
+	 * Computes the Manhattan length of this vector.
+	 * 
+	 * @return {number}
+	 * 
+	 * @see {@link http://en.wikipedia.org/wiki/Taxicab_geometry|Wikipedia: Taxicab Geometry}
+	 */
+	function manhattanLength() : Float;
 	/**
 	 * Normalizes this vector.
 	 */

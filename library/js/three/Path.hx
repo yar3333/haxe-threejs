@@ -14,7 +14,11 @@ extern class Path extends CurvePath<Vector2>
 	 * a 2d path representation, comprising of points, lines, and cubes, similar to the html5 2d canvas api. It extends CurvePath.
 	 */
 	function new(?points:Array<Vector2>) : Void;
+	/**
+	 * @deprecated Use {@link Path#setFromPoints .setFromPoints()} instead.
+	 */
 	function fromPoints(vectors:Array<Vector2>) : Void;
+	function setFromPoints(vectors:Array<Vector2>) : Void;
 	function moveTo(x:Float, y:Float) : Void;
 	function lineTo(x:Float, y:Float) : Void;
 	function quadraticCurveTo(aCPx:Float, aCPy:Float, aX:Float, aY:Float) : Void;

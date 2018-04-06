@@ -19,8 +19,8 @@ extern class Sphere
 	function intersectsSphere(sphere:Sphere) : Bool;
 	function intersectsBox(box:Box3) : Bool;
 	function intersectsPlane(plane:Plane) : Bool;
-	function clampPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
-	function getBoundingBox(?optionalTarget:Box3) : Box3;
+	function clampPoint(point:Vector3, target:Vector3) : Vector3;
+	function getBoundingBox(target:Box3) : Box3;
 	function applyMatrix4(matrix:Matrix4) : Sphere;
 	function translate(offset:Vector3) : Sphere;
 	function equals(sphere:Sphere) : Bool;

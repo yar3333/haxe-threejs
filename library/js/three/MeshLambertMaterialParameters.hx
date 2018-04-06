@@ -4,12 +4,12 @@ import js.html.*;
 
 typedef MeshLambertMaterialParameters =
 {>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<Int, String>;
-	@:optional var emissive : haxe.extern.EitherType<Float, String>;
+	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
+	@:optional var emissive : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
 	@:optional var emissiveIntensity : Float;
 	@:optional var emissiveMap : Texture;
 	@:optional var map : Texture;
-	@:optional var lighhtMap : Texture;
+	@:optional var lightMap : Texture;
 	@:optional var lightMapIntensity : Float;
 	@:optional var aoMap : Texture;
 	@:optional var aoMapIntensity : Float;

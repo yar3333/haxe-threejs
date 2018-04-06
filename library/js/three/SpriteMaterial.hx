@@ -12,5 +12,5 @@ extern class SpriteMaterial extends Material
 	@:overload(function(?parameters:SpriteMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:SpriteMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

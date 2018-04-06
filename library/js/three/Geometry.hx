@@ -137,7 +137,7 @@ extern class Geometry extends EventDispatcher
 	function scale(x:Float, y:Float, z:Float) : Geometry;
 	function lookAt(vector:Vector3) : Void;
 	function fromBufferGeometry(geometry:BufferGeometry) : Geometry;
-	function center() : Vector3;
+	function center() : Geometry;
 	function normalize() : Geometry;
 	/**
 	 * Computes face normals.
@@ -156,7 +156,6 @@ extern class Geometry extends EventDispatcher
 	 * Computes morph normals.
 	 */
 	function computeMorphNormals() : Void;
-	function computeLineDistances() : Void;
 	/**
 	 * Computes bounding box of the geometry, updating {@link Geometry.boundingBox} attribute.
 	 */
@@ -166,13 +165,14 @@ extern class Geometry extends EventDispatcher
 	 * Neither bounding boxes or bounding spheres are computed by default. They need to be explicitly computed, otherwise they are null.
 	 */
 	function computeBoundingSphere() : Void;
-	function merge(geometry:Geometry, matrix:Matrix, ?materialIndexOffset:Float) : Void;
+	function merge(geometry:Geometry, ?matrix:Matrix, ?materialIndexOffset:Float) : Void;
 	function mergeMesh(mesh:Mesh) : Void;
 	/**
 	 * Checks for duplicate vertices using hashmap.
 	 * Duplicated vertices are removed and faces' vertices are updated.
 	 */
 	function mergeVertices() : Float;
+	function setFromPoints(points:haxe.extern.EitherType<Array<Vector2>, Array<Vector3>>) : Geometry;
 	function sortFacesByMaterialIndex() : Void;
 	function toJSON() : Dynamic;
 	/**

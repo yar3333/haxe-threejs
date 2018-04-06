@@ -41,15 +41,3 @@ Files:
  * extract_classes.rules - regexs to find classes/interfaces (used to split raw haxe file to separate class files);
  * extract_vars.rules - regexs to find & save exported vars;
  * postprocess_vars.rules - regexs to process exported vars files.
-
-
-### Embedding
-
-By default, main `three.js` file does not embedded.
-Small external files (placed in the `example` folder of the original ThreeJS) embedded automatically on imports.
-
-You can control embedding:
-
- * to embed main uncompressed `three.js` file: `import js.three.Embed;`
- * to embed main minified `three-min.js` file: `import js.three.EmbedMin;`
- * to stop auto embedding small files use compiler option: `-D threejs-noEmbed`

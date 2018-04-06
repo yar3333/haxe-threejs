@@ -18,8 +18,9 @@ extern class BufferAttribute
 	var normalized : Bool;
 	var needsUpdate : Bool;
 	var count : Int;
+	var onUpload : haxe.Constraints.Function;
 	/**
-	 * @deprecated Use count instead.
+	 * @deprecated Use {@link BufferAttribute#count .count} instead.
 	 */
 	var length : Float;
 
@@ -27,17 +28,17 @@ extern class BufferAttribute
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js">src/core/BufferAttribute.js</a>
 	 */
 	function new(array:ArrayLike<Float>, itemSize:Float, ?normalized:Bool) : Void;
+	function setArray(?array:ArrayBufferView) : Void;
 	function setDynamic(dynamic_:Bool) : BufferAttribute;
 	function clone() : BufferAttribute;
 	function copy(source:BufferAttribute) : BufferAttribute;
 	function copyAt(index1:Float, attribute:BufferAttribute, index2:Float) : BufferAttribute;
 	function copyArray(array:ArrayLike<Float>) : BufferAttribute;
 	function copyColorsArray(colors:Array<{ var r : Float; var g : Float; var b : Float; }>) : BufferAttribute;
-	function copyIndicesArray(indices:Array<{ var a : Float; var b : Float; var c : Float; }>) : BufferAttribute;
 	function copyVector2sArray(vectors:Array<{ var x : Float; var y : Float; }>) : BufferAttribute;
 	function copyVector3sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; }>) : BufferAttribute;
 	function copyVector4sArray(vectors:Array<{ var x : Float; var y : Float; var z : Float; var w : Float; }>) : BufferAttribute;
-	function set(value:ArrayLike<Float>, ?offset:Float) : BufferAttribute;
+	function set(value:haxe.extern.EitherType<ArrayLike<Float>, ArrayBufferView>, ?offset:Float) : BufferAttribute;
 	function getX(index:Int) : Float;
 	function setX(index:Int, x:Float) : BufferAttribute;
 	function getY(index:Int) : Float;

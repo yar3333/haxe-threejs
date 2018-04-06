@@ -17,7 +17,7 @@ extern class ObjectLoader
 	function parseGeometries(json:Dynamic) : Array<Dynamic>;
 	function parseMaterials(json:Dynamic, textures:Array<Texture>) : Array<Material>;
 	function parseAnimations(json:Dynamic) : Array<AnimationClip>;
-	function parseImages(json:Dynamic, onLoad:Void->Void) : Array<Dynamic>;
+	function parseImages(json:Dynamic, onLoad:Void->Void) : Dynamic<ImageElement>;
 	function parseTextures(json:Dynamic, images:Dynamic) : Array<Texture>;
 	function parseObject<T:Object3D>(data:Dynamic, geometries:Array<Dynamic>, materials:Array<Material>) : T;
 }

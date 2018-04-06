@@ -9,29 +9,25 @@ import js.html.*;
 extern class Material extends EventDispatcher
 {
 	/**
-	 * Unique number of this material instance.
+	 * Sets the alpha value to be used when running an alpha test. Default is 0.
 	 */
-	var id : Int;
-	var uuid : String;
+	var alphaTest : Float;
 	/**
-	 * Material name. Default is an empty string.
+	 * Blending destination. It's one of the blending mode constants defined in Three.js. Default is {@link OneMinusSrcAlphaFactor}.
 	 */
-	var name : String;
-	var type : String;
+	var blendDst : BlendingDstFactor;
 	/**
-	 * Defines which of the face sides will be rendered - front, back or both.
-	 * Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSide.
+	 * The tranparency of the .blendDst. Default is null.
 	 */
-	var side : Side;
+	var blendDstAlpha : Float;
 	/**
-	 * Opacity. Default is 1.
+	 * Blending equation to use when applying blending. It's one of the constants defined in Three.js. Default is {@link AddEquation}.
 	 */
-	var opacity : Float;
+	var blendEquation : BlendingEquation;
 	/**
-	 * Defines whether this material is transparent. This has an effect on rendering, as transparent objects need an special treatment, and are rendered after the opaque (i.e. non transparent) objects. For a working example of this behaviour, check the {@link WebGLRenderer} code.
-	 * Default is false.
+	 * The tranparency of the .blendEquation. Default is null.
 	 */
-	var transparent : Bool;
+	var blendEquationAlpha : Float;
 	/**
 	 * Which blending to use when displaying objects with this material. Default is {@link NormalBlending}.
 	 */
@@ -41,16 +37,28 @@ extern class Material extends EventDispatcher
 	 */
 	var blendSrc : haxe.extern.EitherType<BlendingSrcFactor, BlendingDstFactor>;
 	/**
-	 * Blending destination. It's one of the blending mode constants defined in Three.js. Default is {@link OneMinusSrcAlphaFactor}.
+	 * The tranparency of the .blendSrc. Default is null.
 	 */
-	var blendDst : BlendingDstFactor;
-	/**
-	 * Blending equation to use when applying blending. It's one of the constants defined in Three.js. Default is AddEquation.
-	 */
-	var blendEquation : BlendingEquation;
 	var blendSrcAlpha : Float;
-	var blendDstAlpha : Float;
-	var blendEquationAlpha : Float;
+	/**
+	 * Changes the behavior of clipping planes so that only their intersection is clipped, rather than their union. Default is false.
+	 */
+	var clipIntersection : Bool;
+	/**
+	 * User-defined clipping planes specified as THREE.Plane objects in world space. These planes apply to the objects this material is attached to. Points in space whose signed distance to the plane is negative are clipped (not rendered). See the WebGL / clipping /intersection example. Default is null.
+	 */
+	var clippingPlanes : Dynamic;
+	/**
+	 * Defines whether to clip shadows according to the clipping planes specified on this material. Default is false.
+	 */
+	var clipShadows : Bool;
+	/**
+	 * Whether to render the material's color. This can be used in conjunction with a mesh's .renderOrder property to create invisible objects that occlude other objects. Default is true.
+	 */
+	var colorWrite : Bool;
+	/**
+	 * Which depth function to use. Default is {@link LessEqualDepth}. See the depth mode constants for all possible values.
+	 */
 	var depthFunc : DepthModes;
 	/**
 	 * Whether to have depth test enabled when rendering this material. Default is true.
@@ -61,10 +69,40 @@ extern class Material extends EventDispatcher
 	 * When drawing 2D overlays it can be useful to disable the depth writing in order to layer several things together without creating z-index artifacts.
 	 */
 	var depthWrite : Bool;
-	var clippingPlanes : Dynamic;
-	var clipShadows : Bool;
-	var colorWrite : Bool;
-	var precision : Dynamic;
+	/**
+	 * Whether the material is affected by fog. Default is true.
+	 */
+	var fog : Bool;
+	/**
+	 * Unique number of this material instance.
+	 */
+	var id : Int;
+	/**
+	 * Used to check whether this or derived classes are materials. Default is true.
+	 * You should not change this, as it used internally for optimisation.
+	 */
+	var isMaterial : Bool;
+	/**
+	 * Whether the material is affected by lights. Default is true.
+	 */
+	var lights : Bool;
+	/**
+	 * Material name. Default is an empty string.
+	 */
+	var name : String;
+	/**
+	 * Specifies that the material needs to be updated, WebGL wise. Set it to true if you made changes that need to be reflected in WebGL.
+	 * This property is automatically set to true when instancing a new material.
+	 */
+	var needsUpdate : Bool;
+	/**
+	 * Opacity. Default is 1.
+	 */
+	var opacity : Float;
+	/**
+	 * Enables/disables overdraw. If greater than zero, polygons are drawn slightly bigger in order to fix antialiasing gaps when using the CanvasRenderer. Default is 0.
+	 */
+	var overdraw : Float;
 	/**
 	 * Whether to use polygon offset. Default is false. This corresponds to the POLYGON_OFFSET_FILL WebGL feature.
 	 */
@@ -78,40 +116,79 @@ extern class Material extends EventDispatcher
 	 */
 	var polygonOffsetUnits : Float;
 	/**
-	 * Sets the alpha value to be used when running an alpha test. Default is 0.
+	 * Override the renderer's default precision for this material. Can be "highp", "mediump" or "lowp". Defaults is null.
 	 */
-	var alphaTest : Float;
+	var precision : js.three.material.Precision;
+	/**
+	 * Whether to premultiply the alpha (transparency) value. See WebGL / Materials / Transparency for an example of the difference. Default is false.
+	 */
 	var premultipliedAlpha : Bool;
 	/**
-	 * Enables/disables overdraw. If greater than zero, polygons are drawn slightly bigger in order to fix antialiasing gaps when using the CanvasRenderer. Default is 0.
+	 * Whether to apply dithering to the color to remove the appearance of banding. Default is false.
 	 */
-	var overdraw : Float;
+	var dithering : Bool;
+	/**
+	 * Define whether the material is rendered with flat shading. Default is false.
+	 */
+	var flatShading : Bool;
+	/**
+	 * Defines which of the face sides will be rendered - front, back or both.
+	 * Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSide.
+	 */
+	var side : Side;
+	/**
+	 * Defines whether this material is transparent. This has an effect on rendering as transparent objects need special treatment and are rendered after non-transparent objects.
+	 * When set to true, the extent to which the material is transparent is controlled by setting it's .opacity property.
+	 * Default is false.
+	 */
+	var transparent : Bool;
+	/**
+	 * Value is the string 'Material'. This shouldn't be changed, and can be used to find all objects of this type in a scene.
+	 */
+	var type : String;
+	/**
+	 * UUID of this material instance. This gets automatically assigned, so this shouldn't be edited.
+	 */
+	var uuid : String;
+	/**
+	 * Defines whether vertex coloring is used. Default is THREE.NoColors. Other options are THREE.VertexColors and THREE.FaceColors.
+	 */
+	var vertexColors : Colors;
 	/**
 	 * Defines whether this material is visible. Default is true.
 	 */
 	var visible : Bool;
 	/**
-	 * Specifies that the material needs to be updated, WebGL wise. Set it to true if you made changes that need to be reflected in WebGL.
-	 * This property is automatically set to true when instancing a new material.
+	 * An object that can be used to store custom data about the Material. It should not hold references to functions as these will not be cloned.
 	 */
-	var needsUpdate : Bool;
-	var fog : Bool;
-	var lights : Bool;
-	var shading : Shading;
-	var vertexColors : Colors;
-	/**
-	 * @deprecated
-	 */
-	var warpRGB : Color;
+	var userData : Dynamic;
 
 	/**
 	 * Materials describe the appearance of objects. They are defined in a (mostly) renderer-independent way, so you don't have to rewrite materials if you decide to use a different renderer.
 	 */
 	function new() : Void;
-	function setValues(parameters:MaterialParameters) : Void;
-	function toJSON(?meta:Dynamic) : Dynamic;
+	/**
+	 * Return a new material with the same parameters as this material.
+	 */
 	function clone() : Material;
-	function copy(source:Material) : Material;
-	function update() : Void;
+	/**
+	 * Copy the parameters from the passed material into this material.
+	 */
+	function copy(material:Material) : Material;
+	/**
+	 * This disposes the material. Textures of a material don't get disposed. These needs to be disposed by {@link Texture}.
+	 */
 	function dispose() : Void;
+	/**
+	 * Sets the properties based on the values.
+	 */
+	function setValues(values:MaterialParameters) : Void;
+	/**
+	 * Convert the material to three.js JSON format.
+	 */
+	function toJSON(?meta:Dynamic) : Dynamic;
+	/**
+	 * Call .dispatchEvent ( { type: 'update' }) on the material.
+	 */
+	function update() : Void;
 }

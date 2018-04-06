@@ -16,43 +16,43 @@ extern class WebGLRenderTarget extends EventDispatcher
 	var stencilBuffer : Bool;
 	var depthTexture : Texture;
 	/**
-	 * @deprecated Use texture.wrapS instead.
+	 * @deprecated Use {@link Texture#wrapS texture.wrapS} instead.
 	 */
 	var wrapS : Dynamic;
 	/**
-	 * @deprecated Use texture.wrapT instead.
+	 * @deprecated Use {@link Texture#wrapT texture.wrapT} instead.
 	 */
 	var wrapT : Dynamic;
 	/**
-	 * @deprecated Use texture.magFilter instead.
+	 * @deprecated Use {@link Texture#magFilter texture.magFilter} instead.
 	 */
 	var magFilter : Dynamic;
 	/**
-	 * @deprecated Use texture.minFilter instead.
+	 * @deprecated Use {@link Texture#minFilter texture.minFilter} instead.
 	 */
 	var minFilter : Dynamic;
 	/**
-	 * @deprecated Use texture.anisotropy instead.
+	 * @deprecated Use {@link Texture#anisotropy texture.anisotropy} instead.
 	 */
 	var anisotropy : Dynamic;
 	/**
-	 * @deprecated Use texture.offset instead.
+	 * @deprecated Use {@link Texture#offset texture.offset} instead.
 	 */
 	var offset : Dynamic;
 	/**
-	 * @deprecated Use texture.repeat instead.
+	 * @deprecated Use {@link Texture#repeat texture.repeat} instead.
 	 */
 	var repeat : Dynamic;
 	/**
-	 * @deprecated Use texture.format instead.
+	 * @deprecated Use {@link Texture#format texture.format} instead.
 	 */
 	var format : Dynamic;
 	/**
-	 * @deprecated Use texture.type instead.
+	 * @deprecated Use {@link Texture#type texture.type} instead.
 	 */
 	var type : Dynamic;
 	/**
-	 * @deprecated Use texture.generateMipmaps instead.
+	 * @deprecated Use {@link Texture#generateMipmaps texture.generateMipmaps} instead.
 	 */
 	var generateMipmaps : Dynamic;
 

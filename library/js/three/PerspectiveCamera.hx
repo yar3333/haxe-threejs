@@ -91,7 +91,7 @@ extern class PerspectiveCamera extends Camera
 	@:overload(function(?meta:Dynamic):Dynamic{})
 	override function toJSON(?meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link PerspectiveCamera#setFocalLength .setFocalLength()} and {@link PerspectiveCamera#filmGauge .filmGauge} instead.
 	 */
 	function setLens(focalLength:Float, ?frameHeight:Float) : Void;
 	

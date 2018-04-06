@@ -71,19 +71,30 @@ extern class WebGLRenderer
 	/**
 	 * An object with a series of statistical information about the graphics board memory and the rendering process. Useful for debugging or just for the sake of curiosity. The object contains the following fields:
 	 */
-	var info : { var memory : { var geometries : Float; var textures : Float; }; var render : { var calls : Float; var vertices : Float; var faces : Float; var points : Float; }; var programs : Float; };
+	var info : { var memory : { var geometries : Float; var textures : Float; }; var render : { var calls : Float; var faces : Float; var points : Float; }; var programs : Float; };
 	var shadowMap : WebGLShadowMap;
 	var pixelRation : Float;
 	var capabilities : WebGLCapabilities;
 	var properties : WebGLProperties;
+	var renderLists : WebGLRenderLists;
 	var state : WebGLState;
 	var allocTextureUnit : Dynamic;
+	var vr : WebVRManager;
 	/**
 	 * @deprecated
 	 */
 	var gammaFactor : Float;
+	/**
+	 * @deprecated Use {@link WebGLShadowMap#enabled .shadowMap.enabled} instead.
+	 */
 	var shadowMapEnabled : Bool;
+	/**
+	 * @deprecated Use {@link WebGLShadowMap#type .shadowMap.type} instead.
+	 */
 	var shadowMapType : ShadowMapType;
+	/**
+	 * @deprecated Use {@link WebGLShadowMap#cullFace .shadowMap.cullFace} instead.
+	 */
 	var shadowMapCullFace : CullFace;
 
 	/**
@@ -99,7 +110,13 @@ extern class WebGLRenderer
 	function getContext() : js.html.webgl.RenderingContext;
 	function getContextAttributes() : Dynamic;
 	function forceContextLoss() : Void;
+	/**
+	 * @deprecated Use {@link WebGLCapabilities#getMaxAnisotropy .capabilities.getMaxAnisotropy()} instead.
+	 */
 	function getMaxAnisotropy() : Int;
+	/**
+	 * @deprecated Use {@link WebGLCapabilities#precision .capabilities.precision} instead.
+	 */
 	function getPrecision() : String;
 	function getPixelRatio() : Float;
 	function setPixelRatio(value:Float) : Void;
@@ -150,6 +167,9 @@ extern class WebGLRenderer
 	function clearDepth() : Void;
 	function clearStencil() : Void;
 	function clearTarget(renderTarget:WebGLRenderTarget, color:Bool, depth:Bool, stencil:Bool) : Void;
+	/**
+	 * @deprecated Use {@link WebGLState#reset .state.reset()} instead.
+	 */
 	function resetGLState() : Void;
 	function dispose() : Void;
 	/**
@@ -165,26 +185,52 @@ extern class WebGLRenderer
 	@:overload(function(scene:Scene,camera:Camera,?renderTarget:RenderTarget,?forceClear:Bool):Void{})
 	function render(scene:Scene, camera:Camera) : Void;
 	/**
-	 * Used for setting the gl frontFace, cullFace states in the GPU, thus enabling/disabling face culling when rendering.
-	 * If cullFace is false, culling will be disabled.
-	 */
-	function setFaceCulling(?cullFace:CullFace, ?frontFace:FrontFaceDirection) : Void;
-	/**
 	 * @deprecated
 	 */
 	function setTexture(texture:Texture, slot:Float) : Void;
 	function setTexture2D(texture:Texture, slot:Float) : Void;
 	function setTextureCube(texture:Texture, slot:Float) : Void;
+	function getRenderTarget() : RenderTarget;
+	/**
+	 * @deprecated Use {@link WebGLRenderer#getRenderTarget .getRenderTarget()} instead.
+	 */
 	function getCurrentRenderTarget() : RenderTarget;
-	function setRenderTarget(renderTarget:RenderTarget) : Void;
+	function setRenderTarget(?renderTarget:RenderTarget) : Void;
 	function readRenderTargetPixels(renderTarget:RenderTarget, x:Float, y:Float, width:Float, height:Float, buffer:Dynamic) : Void;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'OES_texture_float' )} instead.
+	 */
 	function supportsFloatTextures() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'OES_texture_half_float' )} instead.
+	 */
 	function supportsHalfFloatTextures() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'OES_standard_derivatives' )} instead.
+	 */
 	function supportsStandardDerivatives() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'WEBGL_compressed_texture_s3tc' )} instead.
+	 */
 	function supportsCompressedTextureS3TC() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'WEBGL_compressed_texture_pvrtc' )} instead.
+	 */
 	function supportsCompressedTexturePVRTC() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'EXT_blend_minmax' )} instead.
+	 */
 	function supportsBlendMinMax() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLCapabilities#vertexTextures .capabilities.vertexTextures} instead.
+	 */
 	function supportsVertexTextures() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLExtensions#get .extensions.get( 'ANGLE_instanced_arrays' )} instead.
+	 */
 	function supportsInstancedArrays() : Dynamic;
+	/**
+	 * @deprecated Use {@link WebGLRenderer#setScissorTest .setScissorTest()} instead.
+	 */
 	function enableScissorTest(boolean:Dynamic) : Dynamic;
 }

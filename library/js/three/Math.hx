@@ -23,7 +23,8 @@ extern class Math
 	/**
 	 * Random float from 0 to 1 with 16 bits of randomness.
 	 * Standard Math.random() creates repetitive patterns when applied over larger space.
-	 * @deprecated Use Math.random()
+	 * 
+	 * @deprecated Use {@link Math#random Math.random()}
 	 */
 	static function random16() : Float;
 	/**
@@ -41,6 +42,14 @@ extern class Math
 	static function degToRad(degrees:Float) : Float;
 	static function radToDeg(radians:Float) : Float;
 	static function isPowerOfTwo(value:Float) : Bool;
+	/**
+	 * @deprecated Use {@link Math#floorPowerOfTwo .floorPowerOfTwo()}
+	 */
 	static function nearestPowerOfTwo(value:Float) : Float;
+	/**
+	 * @deprecated Use {@link Math#ceilPowerOfTwo .ceilPowerOfTwo()}
+	 */
 	static function nextPowerOfTwo(value:Float) : Float;
+	static function floorPowerOfTwo(value:Float) : Float;
+	static function ceilPowerOfTwo(value:Float) : Float;
 }

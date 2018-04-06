@@ -3,7 +3,7 @@ package js.three;
 import js.html.*;
 
 /**
- * @deprecated Use Sprite instead.
+ * @deprecated Use {@link Sprite Sprite} instead.
  */
 @:native("THREE.Particle")
 extern class Particle extends Sprite

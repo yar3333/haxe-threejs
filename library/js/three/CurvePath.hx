@@ -18,7 +18,16 @@ extern class CurvePath<T:Vector> extends Curve<T>
 	function getCurveLengths() : Array<Float>;
 	override function getSpacedPoints(?divisions:Int) : Array<T>;
 	override function getPoints(?divisions:Int) : Array<T>;
+	/**
+	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
+	 */
 	function createPointsGeometry(divisions:Int) : Geometry;
+	/**
+	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
+	 */
 	function createSpacedPointsGeometry(divisions:Int) : Geometry;
+	/**
+	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
+	 */
 	function createGeometry(points:Array<T>) : Geometry;
 }
