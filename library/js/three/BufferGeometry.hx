@@ -28,9 +28,12 @@ extern class BufferGeometry extends EventDispatcher
 	var boundingSphere : Sphere;
 	var drawRange : { var start : Float; var count : Float; };
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link BufferGeometry#groups .groups} instead.
 	 */
 	var drawcalls : Dynamic;
+	/**
+	 * @deprecated Use {@link BufferGeometry#groups .groups} instead.
+	 */
 	var offsets : Dynamic;
 
 	/**
@@ -42,7 +45,7 @@ extern class BufferGeometry extends EventDispatcher
 	 */
 	function new() : Void;
 	function getIndex() : BufferAttribute;
-	function setIndex(index:BufferAttribute) : Void;
+	function setIndex(index:haxe.extern.EitherType<BufferAttribute, Array<Float>>) : Void;
 	@:overload(function(name:Dynamic, array:Dynamic, itemSize:Dynamic):Dynamic{})
 	function addAttribute(name:String, attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>) : BufferGeometry;
 	function getAttribute(name:String) : haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>;
@@ -60,8 +63,9 @@ extern class BufferGeometry extends EventDispatcher
 	function translate(x:Float, y:Float, z:Float) : BufferGeometry;
 	function scale(x:Float, y:Float, z:Float) : BufferGeometry;
 	function lookAt(v:Vector3) : Void;
-	function center() : Vector3;
-	function setFromObject(object:Object3D) : Void;
+	function center() : BufferGeometry;
+	function setFromObject(object:Object3D) : BufferGeometry;
+	function setFromPoints(points:Array<Vector3>) : BufferGeometry;
 	function updateFromObject(object:Object3D) : Void;
 	function fromGeometry(geometry:Geometry, ?settings:Dynamic) : BufferGeometry;
 	function fromDirectGeometry(geometry:DirectGeometry) : BufferGeometry;
@@ -90,7 +94,16 @@ extern class BufferGeometry extends EventDispatcher
 	 * You need to call this when you want the bufferGeometry removed while the application is running.
 	 */
 	function dispose() : Void;
+	/**
+	 * @deprecated Use {@link BufferGeometry#setIndex .setIndex()} instead.
+	 */
 	function addIndex(index:Dynamic) : Void;
+	/**
+	 * @deprecated Use {@link BufferGeometry#addGroup .addGroup()} instead.
+	 */
 	function addDrawCall(start:Dynamic, count:Dynamic, ?indexOffset:Dynamic) : Void;
+	/**
+	 * @deprecated Use {@link BufferGeometry#clearGroups .clearGroups()} instead.
+	 */
 	function clearDrawCalls() : Void;
 }

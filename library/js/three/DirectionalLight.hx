@@ -25,7 +25,7 @@ extern class DirectionalLight extends Light
 	 * Default — 1.0.
 	 */
 	//var intensity : Float;
-	//var shadow : LightShadow;
+	//var shadow : DirectionalLightShadow;
 
 	/**
 	 * Affects objects using MeshLambertMaterial or MeshPhongMaterial.
@@ -38,6 +38,6 @@ extern class DirectionalLight extends Light
 	 * 
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/lights/DirectionalLight.js">src/lights/DirectionalLight.js</a>
 	 */
-	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	@:overload(function(?color:haxe.extern.EitherType<Color,haxe.extern.EitherType<String,Float>>,?intensity:Float):Void{})
 	function new() : Void;
 }

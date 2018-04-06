@@ -16,7 +16,7 @@ extern class AnimationClip
 	function trim() : AnimationClip;
 	function optimize() : AnimationClip;
 	static function CreateFromMorphTargetSequence(name:String, morphTargetSequence:Array<MorphTarget>, fps:Float, noLoop:Bool) : AnimationClip;
-	static function findByName(clipArray:AnimationClip, name:String) : AnimationClip;
+	static function findByName(clipArray:Array<AnimationClip>, name:String) : AnimationClip;
 	static function CreateClipsFromMorphTargetSequences(morphTargets:Array<MorphTarget>, fps:Float, noLoop:Bool) : Array<AnimationClip>;
 	static function parse(json:Dynamic) : AnimationClip;
 	static function parseAnimation(animation:Dynamic, bones:Array<Bone>, nodeName:String) : AnimationClip;

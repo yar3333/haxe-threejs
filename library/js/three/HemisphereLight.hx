@@ -5,9 +5,10 @@ import js.html.*;
 @:native("THREE.HemisphereLight")
 extern class HemisphereLight extends Light
 {
+	var skyColor : Color;
 	var groundColor : Color;
 	//var intensity : Float;
 
-	@:overload(function(?skyColorHex:haxe.extern.EitherType<Float,String>,?groundColorHex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
+	@:overload(function(?skyColor:haxe.extern.EitherType<Color,haxe.extern.EitherType<String,Float>>,?groundColor:haxe.extern.EitherType<Color,haxe.extern.EitherType<String,Float>>,?intensity:Float):Void{})
 	function new() : Void;
 }

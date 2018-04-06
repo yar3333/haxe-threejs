@@ -1,4 +1,4 @@
-TAG = r84
+TAG = r91
 
 JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
@@ -44,3 +44,6 @@ native-js:
 clean:
 	rm -rf native-ts
 	rm -rf native-js
+
+
+rebuild: clean build

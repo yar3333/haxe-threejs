@@ -5,6 +5,6 @@ import js.html.*;
 @:native("THREE.OctahedronGeometry")
 extern class OctahedronGeometry extends PolyhedronGeometry
 {
-	@:overload(function(radius:Float,detail:Float):Void{})
+	@:overload(function(?radius:Float,?detail:Float):Void{})
 	function new() : Void;
 }

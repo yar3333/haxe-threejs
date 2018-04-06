@@ -21,6 +21,8 @@ extern class Texture extends EventDispatcher
 	var type : TextureDataType;
 	var offset : Vector2;
 	var repeat : Vector2;
+	var center : Vector2;
+	var rotation : Float;
 	var generateMipmaps : Bool;
 	var premultiplyAlpha : Bool;
 	var flipY : Bool;

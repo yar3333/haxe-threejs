@@ -23,8 +23,7 @@ class Main
 		camera.position.z = 500;
 		scene.add(camera);
 		
-		//var renderer = new WebGLRenderer();
-		var renderer : Renderer = new CanvasRenderer();
+		var renderer = new WebGLRenderer();
 		renderer.setSize(w, h);
 		
 		Browser.document.body.appendChild(renderer.domElement);

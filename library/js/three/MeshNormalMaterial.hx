@@ -12,5 +12,5 @@ extern class MeshNormalMaterial extends Material
 	@:overload(function(?parameters:MeshNormalMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:MeshNormalMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

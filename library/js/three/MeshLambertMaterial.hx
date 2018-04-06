@@ -10,7 +10,7 @@ extern class MeshLambertMaterial extends Material
 	var emissiveIntensity : Float;
 	var emissiveMap : Texture;
 	var map : Texture;
-	var lighhtMap : Texture;
+	var lightMap : Texture;
 	var lightMapIntensity : Float;
 	var aoMap : Texture;
 	var aoMapIntensity : Float;
@@ -31,5 +31,5 @@ extern class MeshLambertMaterial extends Material
 	@:overload(function(?parameters:MeshLambertMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:MeshLambertMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

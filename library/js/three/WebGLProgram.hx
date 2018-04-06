@@ -12,11 +12,11 @@ extern class WebGLProgram
 	var vertexShader : WebGLShader;
 	var fragmentShader : WebGLShader;
 	/**
-	 * @deprecated Use getUniforms() instead.
+	 * @deprecated Use {@link WebGLProgram#getUniforms getUniforms()} instead.
 	 */
 	var uniforms : Dynamic;
 	/**
-	 * @deprecated Use getAttributes() instead.
+	 * @deprecated Use {@link WebGLProgram#getAttributes getAttributes()} instead.
 	 */
 	var attributes : Dynamic;
 

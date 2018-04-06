@@ -95,7 +95,7 @@ extern class Quaternion
 	static function slerp(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float) : Quaternion;
 	static function slerpFlat(dst:Array<Float>, dstOffset:Float, src0:Array<Float>, srcOffset:Float, src1:Array<Float>, stcOffset1:Float, t:Float) : Quaternion;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link Vector#applyQuaternion vector.applyQuaternion( quaternion )} instead.
 	 */
 	function multiplyVector3(v:Dynamic) : Dynamic;
 }

@@ -12,7 +12,7 @@ extern class AnimationMixer extends EventDispatcher
 	function new() : Void;
 	function clipAction(clip:AnimationClip, ?root:Dynamic) : AnimationAction;
 	function existingAction(clip:AnimationClip, ?root:Dynamic) : AnimationAction;
-	function stopAllAction(clip:AnimationClip, ?root:Dynamic) : AnimationMixer;
+	function stopAllAction() : AnimationMixer;
 	function update(deltaTime:Float) : AnimationMixer;
 	function getRoot() : Dynamic;
 	function uncacheClip(clip:AnimationClip) : Void;

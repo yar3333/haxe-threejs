@@ -86,6 +86,8 @@ extern class Matrix4
 	/**
 	 * Sets this matrix to a x b and stores the result into the flat array r.
 	 * r can be either a regular Array or a TypedArray.
+	 * 
+	 * @deprecated This method has been removed completely.
 	 */
 	function multiplyToArray(a:Matrix4, b:Matrix4, r:Array<Float>) : Matrix4;
 	/**
@@ -93,7 +95,11 @@ extern class Matrix4
 	 */
 	@:overload(function(s:Float):Matrix4{})
 	function multiplyScalar(s:Float) : Matrix;
+	/**
+	 * @deprecated Use {@link Matrix4#applyToBufferAttribute matrix4.applyToBufferAttribute( attribute )} instead.
+	 */
 	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
+	function applyToBufferAttribute(attribute:BufferAttribute) : BufferAttribute;
 	/**
 	 * Computes determinant of this matrix.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
@@ -171,14 +177,35 @@ extern class Matrix4
 	function fromArray(array:Array<Float>, ?offset:Float) : Matrix4;
 	function toArray() : Array<Float>;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link Matrix4#copyPosition .copyPosition()} instead.
 	 */
 	function extractPosition(m:Matrix4) : Matrix4;
+	/**
+	 * @deprecated Use {@link Matrix4#makeRotationFromQuaternion .makeRotationFromQuaternion()} instead.
+	 */
 	function setRotationFromQuaternion(q:Quaternion) : Matrix4;
+	/**
+	 * @deprecated Use {@link Vector3#applyMatrix4 vector.applyMatrix4( matrix )} instead.
+	 */
 	function multiplyVector3(v:Dynamic) : Dynamic;
+	/**
+	 * @deprecated Use {@link Vector4#applyMatrix4 vector.applyMatrix4( matrix )} instead.
+	 */
 	function multiplyVector4(v:Dynamic) : Dynamic;
+	/**
+	 * @deprecated This method has been removed completely.
+	 */
 	function multiplyVector3Array(array:Array<Float>) : Array<Float>;
+	/**
+	 * @deprecated Use {@link Vector3#transformDirection Vector3.transformDirection( matrix )} instead.
+	 */
 	function rotateAxis(v:Dynamic) : Void;
+	/**
+	 * @deprecated Use {@link Vector3#applyMatrix4 vector.applyMatrix4( matrix )} instead.
+	 */
 	function crossVector(v:Dynamic) : Void;
+	/**
+	 * @deprecated Use {@link Matrix4#toArray .toArray()} instead.
+	 */
 	function flattenToArrayOffset(array:Array<Float>, offset:Float) : Array<Float>;
 }

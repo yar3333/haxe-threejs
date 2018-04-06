@@ -22,6 +22,7 @@ extern class InterleavedBuffer
 	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InterleavedBuffer.js">src/core/InterleavedBuffer.js</a>
 	 */
 	function new(array:ArrayLike<Float>, stride:Float) : Void;
+	function setArray(?array:ArrayBufferView) : Void;
 	function setDynamic(dynamic_:Bool) : InterleavedBuffer;
 	@:overload(function():InterleavedBuffer{})
 	function clone() : InterleavedBuffer;

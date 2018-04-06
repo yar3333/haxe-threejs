@@ -10,7 +10,7 @@ extern class MeshStandardMaterial extends Material
 	var roughness : Float;
 	var metalness : Float;
 	var map : Texture;
-	var lighhtMap : Texture;
+	var lightMap : Texture;
 	var lightMapIntensity : Float;
 	var aoMap : Texture;
 	var aoMapIntensity : Float;
@@ -39,5 +39,5 @@ extern class MeshStandardMaterial extends Material
 	@:overload(function(?parameters:MeshStandardMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:MeshStandardMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

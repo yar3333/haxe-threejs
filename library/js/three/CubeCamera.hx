@@ -9,5 +9,9 @@ extern class CubeCamera extends Object3D
 
 	@:overload(function(?near:Float,?far:Float,?cubeResolution:Float):Void{})
 	function new() : Void;
+	/**
+	 * @deprecated Use {@link CubeCamera#update .update()} instead
+	 */
 	function updateCubeMap(renderer:Renderer, scene:Scene) : Void;
+	function update(renderer:Renderer, scene:Scene) : Void;
 }

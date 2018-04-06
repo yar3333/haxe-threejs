@@ -13,5 +13,5 @@ extern class LineBasicMaterial extends Material
 	@:overload(function(?parameters:LineBasicMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:LineBasicMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

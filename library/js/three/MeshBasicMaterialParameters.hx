@@ -4,7 +4,7 @@ import js.html.*;
 
 typedef MeshBasicMaterialParameters =
 {>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<Int, String>;
+	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
 	@:optional var opacity : Float;
 	@:optional var map : Texture;
 	@:optional var aoMap : Texture;
@@ -15,7 +15,6 @@ typedef MeshBasicMaterialParameters =
 	@:optional var combine : Combine;
 	@:optional var reflectivity : Float;
 	@:optional var refractionRatio : Float;
-	@:optional var shading : Shading;
 	@:optional var wireframe : Bool;
 	@:optional var wireframeLinewidth : Float;
 	@:optional var wireframeLinecap : String;

@@ -37,12 +37,12 @@ extern class MeshPhongMaterial extends Material
 	var morphTargets : Bool;
 	var morphNormals : Bool;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link MeshStandardMaterial THREE.MeshStandardMaterial} instead.
 	 */
 	var metal : Bool;
 
 	@:overload(function(?parameters:MeshPhongMaterialParameters):Void{})
 	function new() : Void;
 	@:overload(function(parameters:MeshPhongMaterialParameters):Void{})
-	override function setValues(parameters:MaterialParameters) : Void;
+	override function setValues(values:MaterialParameters) : Void;
 }

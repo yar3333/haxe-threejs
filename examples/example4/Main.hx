@@ -5,13 +5,12 @@ class Main
 {
     public static function main()
     {
-        var container, stats;
         var camera, scene, projector, renderer;
         var mouse = { x: 0.0, y: 0.0 };
         var objects = new Array<Object3D>();
         var INTERSECTED : Dynamic = null;
 		
-		container = Browser.document.createElement('div' );
+		var container = Browser.document.createElement('div' );
         Browser.document.body.appendChild(container);
 		
         var info = Browser.document.createElement('div' );
@@ -61,17 +60,16 @@ class Main
 		
         projector = new Projector();
 		
-        //renderer = new WebGLRenderer();
-        renderer = new CanvasRenderer();
+        renderer = new WebGLRenderer();
         renderer.sortObjects = false;
         renderer.setSize(Browser.window.innerWidth, Browser.window.innerHeight);
 		
         container.appendChild(renderer.domElement);
 		
-        stats = new js.three.utils.Stats();
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.top = '0px';
-        container.appendChild(stats.domElement);
+        //var stats = new js.three.utils.Stats();
+        //stats.domElement.style.position = 'absolute';
+        //stats.domElement.style.top = '0px';
+        //container.appendChild(stats.domElement);
 		
         Browser.document.addEventListener('mousemove', function(event)
 		{
@@ -122,7 +120,8 @@ class Main
             }
 			
             renderer.render(scene, camera);
-            stats.update();
+            
+			//stats.update();
         }
     }
 }

@@ -86,12 +86,21 @@ extern class Object3D extends EventDispatcher
 	 * An object that can be used to store custom data about the Object3d. It should not hold references to functions as these will not be cloned.
 	 */
 	var userData : Dynamic;
+	/**
+	 * Used to check whether this or derived classes are Object3Ds. Default is true.
+	 * You should not change this, as it is used internally for optimisation.
+	 */
+	var isObject3D : Bool;
+	/**
+	 * Calls before rendering object
+	 */
+	var onBeforeRender : WebGLRenderer->Scene->Camera->haxe.extern.EitherType<Geometry, BufferGeometry>->Material->Group->Void;
+	/**
+	 * Calls after rendering object
+	 */
+	var onAfterRender : WebGLRenderer->Scene->Camera->haxe.extern.EitherType<Geometry, BufferGeometry>->Material->Group->Void;
 	var DefaultUp : Vector3;
 	var DefaultMatrixAutoUpdate : Bool;
-	/**
-	 * @deprecated
-	 */
-	var eulerOrder : String;
 
 	/**
 	 * Base class for scene graph objects
@@ -109,6 +118,10 @@ extern class Object3D extends EventDispatcher
 	 * Rotate an object along an axis in object space. The axis is assumed to be normalized.
 	 */
 	function rotateOnAxis(axis:Vector3, angle:Float) : Object3D;
+	/**
+	 * Rotate an object along an axis in world space. The axis is assumed to be normalized. Method Assumes no rotated parent.
+	 */
+	function rotateOnWorldAxis(axis:Vector3, angle:Float) : Object3D;
 	function rotateX(angle:Float) : Object3D;
 	function rotateY(angle:Float) : Object3D;
 	function rotateZ(angle:Float) : Object3D;
@@ -136,7 +149,11 @@ extern class Object3D extends EventDispatcher
 	/**
 	 * Rotates object to face point in space.
 	 */
+	@:overload(function(x:Float, y:Float, z:Float):Void{})
 	function lookAt(vector:Vector3) : Void;
+	/**
+	 * Rotates object to face point in space.
+	 */
 	/**
 	 * Adds object as child of this object.
 	 */
@@ -154,11 +171,10 @@ extern class Object3D extends EventDispatcher
 	 */
 	function getObjectByName(name:String) : Object3D;
 	function getObjectByProperty(name:String, value:String) : Object3D;
-	function getWorldPosition(?optionalTarget:Vector3) : Vector3;
-	function getWorldQuaternion(?optionalTarget:Quaternion) : Quaternion;
-	function getWorldRotation(?optionalTarget:Euler) : Euler;
-	function getWorldScale(?optionalTarget:Vector3) : Vector3;
-	function getWorldDirection(?optionalTarget:Vector3) : Vector3;
+	function getWorldPosition(target:Vector3) : Vector3;
+	function getWorldQuaternion(target:Quaternion) : Quaternion;
+	function getWorldScale(target:Vector3) : Vector3;
+	function getWorldDirection(target:Vector3) : Vector3;
 	function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 	function traverse(callback:Object3D->Void) : Void;
 	function traverseVisible(callback:Object3D->Void) : Void;
@@ -174,6 +190,4 @@ extern class Object3D extends EventDispatcher
 	function toJSON(?meta:{ var geometries : Dynamic; var materials : Dynamic; var textures : Dynamic; var images : Dynamic; }) : Dynamic;
 	function clone(?recursive:Bool) : Object3D;
 	function copy(source:Object3D, ?recursive:Bool) : Object3D;
-	function getChildByName(name:String) : Object3D;
-	function translate(distance:Float, axis:Vector3) : Object3D;
 }

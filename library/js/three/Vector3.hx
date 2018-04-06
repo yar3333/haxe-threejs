@@ -144,8 +144,26 @@ extern class Vector3
 	/**
 	 * Computes Manhattan length of this vector.
 	 * http://en.wikipedia.org/wiki/Taxicab_geometry
+	 * 
+	 * @deprecated Use {@link Vector3#manhattanLength .manhattanLength()} instead.
 	 */
 	function lengthManhattan() : Float;
+	/**
+	 * Computes the Manhattan length of this vector.
+	 * 
+	 * @return {number}
+	 * 
+	 * @see {@link http://en.wikipedia.org/wiki/Taxicab_geometry|Wikipedia: Taxicab Geometry}
+	 */
+	function manhattanLength() : Float;
+	/**
+	 * Computes the Manhattan length (distance) from this vector to the given vector v
+	 * 
+	 * @return {number}
+	 * 
+	 * @see {@link http://en.wikipedia.org/wiki/Taxicab_geometry|Wikipedia: Taxicab Geometry}
+	 */
+	function manhattanDistanceTo(v:Vector3) : Float;
 	/**
 	 * Normalizes this vector.
 	 */
@@ -181,6 +199,9 @@ extern class Vector3
 	 */
 	@:overload(function(v:Vector3):Float{})
 	function distanceToSquared(v:Vector) : Float;
+	/**
+	 * @deprecated Use {@link Vector3#manhattanDistanceTo .manhattanDistanceTo()} instead.
+	 */
 	function distanceToManhattan(v:Vector3) : Float;
 	function setFromSpherical(s:Spherical) : Vector3;
 	function setFromMatrixPosition(m:Matrix4) : Vector3;
@@ -195,9 +216,15 @@ extern class Vector3
 	function toArray(?xyz:Array<Float>, ?offset:Float) : Array<Float>;
 	function fromBufferAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector3;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link Vector3#setFromMatrixPosition .setFromMatrixPosition()} instead.
 	 */
 	function getPositionFromMatrix(m:Matrix4) : Vector3;
+	/**
+	 * @deprecated Use {@link Vector3#setFromMatrixScale .setFromMatrixScale()} instead.
+	 */
 	function getScaleFromMatrix(m:Matrix4) : Vector3;
+	/**
+	 * @deprecated Use {@link Vector3#setFromMatrixColumn .setFromMatrixColumn()} instead.
+	 */
 	function getColumnFromMatrix(index:Int, matrix:Matrix4) : Vector3;
 }

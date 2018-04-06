@@ -54,6 +54,9 @@ extern class Loader
 	 *          message — error message
 	 */
 	function new() : Void;
+	/**
+	 * @deprecated Use THREE.LoaderUtils.extractUrlBase() instead.
+	 */
 	function extractUrlBase(url:String) : String;
 	function initMaterials(materials:Array<Material>, texturePath:String) : Array<Material>;
 	function createMaterial(m:Material, texturePath:String, ?crossOrigin:String) : Bool;

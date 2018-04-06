@@ -26,7 +26,11 @@ extern class Matrix3
 	@:overload(function(m:Matrix3):Matrix3{})
 	function copy(m:Matrix) : Matrix;
 	function setFromMatrix4(m:Matrix4) : Matrix3;
+	/**
+	 * @deprecated Use {@link Matrix3#applyToBufferAttribute matrix3.applyToBufferAttribute( attribute )} instead.
+	 */
 	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
+	function applyToBufferAttribute(attribute:BufferAttribute) : BufferAttribute;
 	@:overload(function(s:Float):Matrix3{})
 	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
@@ -46,10 +50,25 @@ extern class Matrix3
 	function fromArray(array:Array<Float>, ?offset:Float) : Matrix3;
 	function toArray() : Array<Float>;
 	/**
-	 * @deprecated
+	 * Multiplies this matrix by m.
+	 */
+	function multiply(m:Matrix3) : Matrix3;
+	function premultiply(m:Matrix3) : Matrix3;
+	/**
+	 * Sets this matrix to a x b.
+	 */
+	function multiplyMatrices(a:Matrix3, b:Matrix3) : Matrix3;
+	/**
+	 * @deprecated Use {@link Vector3.applyMatrix3 vector.applyMatrix3( matrix )} instead.
 	 */
 	function multiplyVector3(vector:Vector3) : Dynamic;
+	/**
+	 * @deprecated This method has been removed completely.
+	 */
 	function multiplyVector3Array(a:Dynamic) : Dynamic;
 	@:overload(function(matrix:Matrix4,?throwOnDegenerate:Bool):Matrix3{})
+	/**
+	 * @deprecated Use {@link Matrix3#toArray .toArray()} instead.
+	 */
 	function flattenToArrayOffset(array:Array<Float>, offset:Float) : Array<Float>;
 }

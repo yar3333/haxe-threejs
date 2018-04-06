@@ -46,8 +46,7 @@ class Main
 		camera.updateProjectionMatrix();
         scene.add(camera);
         
-		//var renderer = new WebGLRenderer( { alpha:true } );
-		var renderer = new js.three.CanvasRenderer({ alpha:true });
+		var renderer = new WebGLRenderer( { alpha:true } );
         renderer.setSize(w, h);
         
 		//renderer.render(scene, camera, null, null);

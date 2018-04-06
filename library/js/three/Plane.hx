@@ -19,17 +19,17 @@ extern class Plane
 	function negate() : Plane;
 	function distanceToPoint(point:Vector3) : Float;
 	function distanceToSphere(sphere:Sphere) : Float;
-	function projectPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
-	function orthoPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
-	function intersectLine(line:Line3, ?optionalTarget:Vector3) : Vector3;
+	function projectPoint(point:Vector3, target:Vector3) : Vector3;
+	function orthoPoint(point:Vector3, target:Vector3) : Vector3;
+	function intersectLine(line:Line3, target:Vector3) : Vector3;
 	function intersectsLine(line:Line3) : Bool;
 	function intersectsBox(box:Box3) : Bool;
-	function coplanarPoint(?optionalTarget:Bool) : Vector3;
+	function coplanarPoint(target:Vector3) : Vector3;
 	function applyMatrix4(matrix:Matrix4, ?optionalNormalMatrix:Matrix3) : Plane;
 	function translate(offset:Vector3) : Plane;
 	function equals(plane:Plane) : Bool;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link Plane#intersectsLine .intersectsLine()} instead.
 	 */
 	function isIntersectionLine(l:Dynamic) : Dynamic;
 }

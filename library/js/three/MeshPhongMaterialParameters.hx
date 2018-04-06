@@ -7,8 +7,8 @@ typedef MeshPhongMaterialParameters =
 	/**
 	 * geometry color in hexadecimal. Default is 0xffffff. 
 	 */
-	@:optional var color : haxe.extern.EitherType<Int, String>;
-	@:optional var specular : Float;
+	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
+	@:optional var specular : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
 	@:optional var shininess : Float;
 	@:optional var opacity : Float;
 	@:optional var map : Texture;
@@ -16,7 +16,7 @@ typedef MeshPhongMaterialParameters =
 	@:optional var lightMapIntensity : Float;
 	@:optional var aoMap : Texture;
 	@:optional var aoMapIntensity : Float;
-	@:optional var emissive : Float;
+	@:optional var emissive : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
 	@:optional var emissiveIntensity : Float;
 	@:optional var emissiveMap : Texture;
 	@:optional var bumpMap : Texture;

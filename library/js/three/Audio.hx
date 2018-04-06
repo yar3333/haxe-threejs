@@ -39,7 +39,7 @@ extern class Audio extends Object3D
 	function getVolume() : Float;
 	function setVolume(value:Float) : Audio;
 	/**
-	 * @deprecated Use AudioLoader instead.
+	 * @deprecated Use {@link AudioLoader} instead.
 	 */
 	function load(file:String) : Audio;
 }

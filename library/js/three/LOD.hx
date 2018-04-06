@@ -7,7 +7,7 @@ extern class LOD extends Object3D
 {
 	var levels : Array<Dynamic>;
 	/**
-	 * @deprecated
+	 * @deprecated Use {@link LOD#levels .levels} instead.
 	 */
 	var objects : Array<Dynamic>;
 
