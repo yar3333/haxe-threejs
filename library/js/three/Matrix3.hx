@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * ( class Matrix3 implements Matrix&lt;Matrix3&gt; )

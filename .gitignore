@@ -1,4 +1,3 @@
-syntax: glob
 documentator/obj
 native-js
 native-ts
@@ -8,5 +7,4 @@ library/library.zip
 *.pdb
 *.suo
 raw
-syntax: regexp
-^bin
+/bin
