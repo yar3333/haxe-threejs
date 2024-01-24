@@ -25,5 +25,5 @@ extern class MaterialCreator
 	function create(materialName:String) : Material;
 	function createMaterial_(materialName:String) : Material;
 	function getTextureParams(value:String, matParams:Dynamic) : Dynamic;
-	function loadTexture(url:String, mapping:Dynamic, onLoad:BufferGeometry->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Texture;
+	function loadTexture(url:String, mapping:Dynamic, onLoad:BufferGeometry->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Texture;
 }

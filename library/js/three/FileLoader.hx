@@ -12,7 +12,7 @@ extern class FileLoader
 	var withCredentials : String;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, ?onLoad:String->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Dynamic;
+	function load(url:String, ?onLoad:String->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Dynamic;
 	function setMimeType(mimeType:MimeType) : FileLoader;
 	function setPath(path:String) : FileLoader;
 	function setResponseType(responseType:String) : FileLoader;

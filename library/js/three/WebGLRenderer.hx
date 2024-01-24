@@ -16,7 +16,7 @@ extern class WebGLRenderer
 	 * A Canvas where the renderer draws its output.
 	 * This is automatically created by the renderer in the constructor (if not provided already); you just need to add it to your page.
 	 */
-	var domElement : CanvasElement;
+	var domElement : js.html.CanvasElement;
 	/**
 	 * The HTML5 Canvas's 'webgl' context obtained from the canvas where the renderer will draw.
 	 */

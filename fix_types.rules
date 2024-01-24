@@ -1,12 +1,15 @@
-HTMLImageElement => ImageElement
-HTMLCanvasElement => CanvasElement
-HTMLVideoElement => VideoElement
+HTMLImageElement => js.html.ImageElement
+HTMLCanvasElement => js.html.CanvasElement
+HTMLVideoElement => js.html.VideoElement
 AudioContext => js.html.audio.AudioContext
 AudioBufferSourceNode => js.html.audio.AudioBufferSourceNode
 GainNode => js.html.audio.GainNode
 PannerNode => js.html.audio.PannerNode
 WebGLRenderingContext => js.html.webgl.RenderingContext
 HTMLElement => js.html.Element
+ImageData => js.html.ImageData
+ProgressEvent => js.html.ProgressEvent
+ErrorEvent => js.html.ErrorEvent
 
 *anisotropy => Int if Float
 *color => Int if Float

@@ -11,7 +11,7 @@ extern class OBJLoader
 	var path : String;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, onLoad:Group->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Void;
+	function load(url:String, onLoad:Group->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Void;
 	function parse(data:String) : Group;
 	function setPath(value:String) : Void;
 	function setMaterials(materials:MaterialCreator) : Void;

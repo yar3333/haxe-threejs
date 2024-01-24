@@ -14,7 +14,7 @@ extern class MTLLoader extends EventDispatcher
 
 	@:overload(function(?manager:LoadingManager):Void{})
 	function new() : Void;
-	function load(url:String, onLoad:MaterialCreator->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Void;
+	function load(url:String, onLoad:MaterialCreator->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Void;
 	function parse(text:String) : MaterialCreator;
 	function setPath(path:String) : Void;
 	function setTexturePath(path:String) : Void;

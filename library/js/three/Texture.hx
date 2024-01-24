@@ -10,7 +10,7 @@ extern class Texture extends EventDispatcher
 	var name : String;
 	var sourceFile : String;
 	var image : Dynamic;
-	var mipmaps : Array<ImageData>;
+	var mipmaps : Array<js.html.ImageData>;
 	var mapping : Mapping;
 	var wrapS : Wrapping;
 	var wrapT : Wrapping;
@@ -34,7 +34,7 @@ extern class Texture extends EventDispatcher
 	static var DEFAULT_IMAGE : Dynamic;
 	static var DEFAULT_MAPPING : Dynamic;
 
-	@:overload(function(?image:haxe.extern.EitherType<ImageElement,haxe.extern.EitherType<CanvasElement,VideoElement>>,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?format:PixelFormat,?type:TextureDataType,?anisotropy:Int,?encoding:TextureEncoding):Void{})
+	@:overload(function(?image:haxe.extern.EitherType<js.html.ImageElement,haxe.extern.EitherType<js.html.CanvasElement,js.html.VideoElement>>,?mapping:Mapping,?wrapS:Wrapping,?wrapT:Wrapping,?magFilter:TextureFilter,?minFilter:TextureFilter,?format:PixelFormat,?type:TextureDataType,?anisotropy:Int,?encoding:TextureEncoding):Void{})
 	function new() : Void;
 	function clone() : Texture;
 	function copy(source:Texture) : Texture;

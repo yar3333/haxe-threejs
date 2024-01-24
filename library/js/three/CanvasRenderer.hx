@@ -6,7 +6,7 @@ import js.lib.*;
 extern class CanvasRenderer
 	implements Renderer
 {
-	var domElement : CanvasElement;
+	var domElement : js.html.CanvasElement;
 	var autoClear : Bool;
 	var sortObjects : Bool;
 	var sortElements : Bool;

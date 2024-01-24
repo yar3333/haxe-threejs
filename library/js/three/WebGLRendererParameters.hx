@@ -7,7 +7,7 @@ typedef WebGLRendererParameters =
 	/**
 	 * A Canvas where the renderer draws its output.
 	 */
-	@:optional var canvas : CanvasElement;
+	@:optional var canvas : js.html.CanvasElement;
 	/**
 	 * shader precision. Can be "highp", "mediump" or "lowp".
 	 */

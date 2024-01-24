@@ -22,7 +22,7 @@ extern class TextureLoader
 	/**
 	 * Begin loading from url
 	 */
-	function load(url:String, ?onLoad:Texture->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Texture;
+	function load(url:String, ?onLoad:Texture->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Texture;
 	function setCrossOrigin(crossOrigin:String) : TextureLoader;
 	function setWithCredentials(value:String) : TextureLoader;
 	function setPath(path:String) : TextureLoader;

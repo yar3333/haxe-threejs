@@ -8,6 +8,6 @@ extern class FontLoader
 	var manager : LoadingManager;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, ?onLoad:Font->Void, ?onProgress:ProgressEvent->Void, ?onError:ErrorEvent->Void) : Void;
+	function load(url:String, ?onLoad:Font->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : Void;
 	function parse(json:String) : Font;
 }
