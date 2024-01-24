@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * The WebGL renderer displays your beautifully crafted scenes using WebGL, if your device supports it.
@@ -175,7 +175,7 @@ extern class WebGLRenderer
 	/**
 	 * Tells the shadow map plugin to update using the passed scene and camera parameters.
 	 */
-	function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
+	function renderBufferImmediate(object:Object3D, program:{}, material:Material) : Void;
 	function renderBufferDirect(camera:Camera, fog:Fog, material:Material, geometryGroup:Dynamic, object:Object3D) : Void;
 	/**
 	 * Render a scene using a camera.

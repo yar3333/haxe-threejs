@@ -1,6 +1,6 @@
 package js;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE")
 extern class Three

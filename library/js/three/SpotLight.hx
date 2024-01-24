@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * A point light that can cast shadow in one direction.

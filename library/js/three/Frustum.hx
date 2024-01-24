@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * Frustums are used to determine what is inside the camera's field of view. They help speed up the rendering process.

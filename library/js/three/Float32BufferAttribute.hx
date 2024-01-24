@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.Float32BufferAttribute")
 extern class Float32BufferAttribute extends BufferAttribute

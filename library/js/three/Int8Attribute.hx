@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * @deprecated THREE.Int8Attribute has been removed. Use new THREE.Int8BufferAttribute() instead.

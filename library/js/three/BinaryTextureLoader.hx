@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * @deprecated since 0.84.0. Use {@link DataTextureLoader} (renamed)

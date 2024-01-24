@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.Uint16BufferAttribute")
 extern class Uint16BufferAttribute extends BufferAttribute

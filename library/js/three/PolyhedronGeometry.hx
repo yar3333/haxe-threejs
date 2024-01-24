@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.PolyhedronGeometry")
 extern class PolyhedronGeometry extends Geometry

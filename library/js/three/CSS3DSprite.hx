@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.CSS3DSprite")
 extern class CSS3DSprite extends CSS3DObject

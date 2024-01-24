@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * This is a superefficent class for geometries because it saves all data in buffers.
@@ -12,7 +12,7 @@ import js.html.*;
 @:native("THREE.BufferGeometry")
 extern class BufferGeometry extends EventDispatcher
 {
-	var MaxIndex : Float;
+	static var MaxIndex : Float;
 	/**
 	 * Unique number of this buffergeometry instance
 	 */

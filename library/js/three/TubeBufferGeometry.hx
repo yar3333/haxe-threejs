@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.TubeBufferGeometry")
 extern class TubeBufferGeometry extends BufferGeometry

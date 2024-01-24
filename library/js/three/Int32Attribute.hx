@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * @deprecated THREE.Int32Attribute has been removed. Use new THREE.Int32BufferAttribute() instead.

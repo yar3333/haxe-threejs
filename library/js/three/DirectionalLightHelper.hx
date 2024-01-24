@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.DirectionalLightHelper")
 extern class DirectionalLightHelper extends Object3D

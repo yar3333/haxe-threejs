@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * @deprecated THREE.Float32Attribute has been removed. Use new THREE.Float32BufferAttribute() instead.

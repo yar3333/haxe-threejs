@@ -1,6 +1,6 @@
 package js.three.propertyBinding;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.PropertyBinding.Composite")
 extern class Composite

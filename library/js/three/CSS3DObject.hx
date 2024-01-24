@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.CSS3DObject")
 extern class CSS3DObject extends Object3D

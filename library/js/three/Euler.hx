@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.Euler")
 extern class Euler
@@ -10,8 +10,8 @@ extern class Euler
 	var z : Float;
 	var order : String;
 	var onChangeCallback : haxe.Constraints.Function;
-	var RotationOrders : Array<String>;
-	var DefaultOrder : String;
+	static var RotationOrders : Array<String>;
+	static var DefaultOrder : String;
 
 	function new(?x:Float, ?y:Float, ?z:Float, ?order:String) : Void;
 	function set(x:Float, y:Float, z:Float, ?order:String) : Euler;

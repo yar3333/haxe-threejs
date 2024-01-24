@@ -158,7 +158,7 @@ extern class Matrix4
 	 * Decomposes this matrix into the translation, rotation and scale components.
 	 * If parameters are not passed, new instances will be created.
 	 */
-	function decompose(?translation:Vector3, ?rotation:Quaternion, ?scale:Vector3) : Array<Dynamic>;
+	function decompose(?translation:Vector3, ?rotation:Quaternion, ?scale:Vector3) : Array<{}>;
 	/**
 	 * Creates a frustum matrix.
 	 * Creates a perspective projection matrix.

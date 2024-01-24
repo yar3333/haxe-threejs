@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.CatmullRomCurve3")
 extern class CatmullRomCurve3 extends Curve<Vector3>

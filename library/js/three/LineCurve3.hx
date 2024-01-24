@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.LineCurve3")
 extern class LineCurve3 extends Curve<Vector3>

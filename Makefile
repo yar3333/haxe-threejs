@@ -1,4 +1,5 @@
 TAG = r91
+DEFINITELY_TYPED_COMMIT_HASH = db7a840e4fe9685b2087e0529859ae5c75b6216d
 
 JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
@@ -10,7 +11,7 @@ build: native-ts
 	                                 --root-package js.three \
 	                                 --native-namespace THREE \
 	                                 --log-level warn \
-	                                 --import js.html.* \
+	                                 --import js.lib.* \
 	                                 --type-mapper fix_types.rules \
 	                                 --typedef-file fix_force_typedefs.list \
 	                                 native-ts
@@ -32,7 +33,8 @@ native-ts:
 	git remote add origin $(TS_GIT) && \
 	git config core.sparsecheckout true && \
 	echo $(TS_SRC)>> .git/info/sparse-checkout && \
-	git pull origin master
+	git pull origin master && \
+	git checkout $(DEFINITELY_TYPED_COMMIT_HASH)
 
 native-js:
 	git init native-js

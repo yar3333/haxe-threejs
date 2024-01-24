@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * @deprecated Use {@link EdgesGeometry THREE.EdgesGeometry}

@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.CubicBezierCurve3")
 extern class CubicBezierCurve3 extends Curve<Vector3>

@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * Base class for implementing loaders.
@@ -38,7 +38,7 @@ extern class Loader
 	 * If set, assigns the crossOrigin attribute of the image to the value of crossOrigin, prior to starting the load.
 	 */
 	var crossOrigin : String;
-	var Handlers : LoaderHandler;
+	static var Handlers : LoaderHandler;
 
 	/**
 	 * Base class for implementing loaders.

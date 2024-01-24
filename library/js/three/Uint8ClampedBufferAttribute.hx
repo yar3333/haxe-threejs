@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.Uint8ClampedBufferAttribute")
 extern class Uint8ClampedBufferAttribute extends BufferAttribute

@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 /**
  * Base class for scene graph objects
@@ -99,8 +99,8 @@ extern class Object3D extends EventDispatcher
 	 * Calls after rendering object
 	 */
 	var onAfterRender : WebGLRenderer->Scene->Camera->haxe.extern.EitherType<Geometry, BufferGeometry>->Material->Group->Void;
-	var DefaultUp : Vector3;
-	var DefaultMatrixAutoUpdate : Bool;
+	static var DefaultUp : Vector3;
+	static var DefaultMatrixAutoUpdate : Bool;
 
 	/**
 	 * Base class for scene graph objects

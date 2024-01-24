@@ -1,6 +1,6 @@
 package js.three;
 
-import js.html.*;
+import js.lib.*;
 
 @:native("THREE.PlaneHelper")
 extern class PlaneHelper extends LineSegments
