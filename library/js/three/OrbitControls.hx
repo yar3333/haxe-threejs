@@ -6,7 +6,7 @@ import js.lib.*;
 extern class OrbitControls
 {
 	var object : Camera;
-	var domElement : haxe.extern.EitherType<js.html.Element, HTMLDocument>;
+	var domElement : haxe.extern.EitherType<js.html.Element, js.html.HTMLDocument>;
 	var enabled : Bool;
 	var target : Vector3;
 	var center : Vector3;

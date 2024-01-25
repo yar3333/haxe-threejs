@@ -7,7 +7,7 @@ extern class FirstPersonControls
 {
 	var object : Object3D;
 	var target : Vector3;
-	var domElement : haxe.extern.EitherType<js.html.CanvasElement, HTMLDocument>;
+	var domElement : haxe.extern.EitherType<js.html.CanvasElement, js.html.HTMLDocument>;
 	var enabled : Bool;
 	var movementSpeed : Float;
 	var lookSpeed : Float;

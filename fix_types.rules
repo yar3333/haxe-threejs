@@ -10,6 +10,9 @@ HTMLElement => js.html.Element
 ImageData => js.html.ImageData
 ProgressEvent => js.html.ProgressEvent
 ErrorEvent => js.html.ErrorEvent
+CanvasRenderingContext2D => js.html.CanvasRenderingContext2D
+HTMLDocument => js.html.HTMLDocument
+MimeType => js.html.MimeType
 
 *anisotropy => Int if Float
 *color => Int if Float
