@@ -35,6 +35,7 @@ native-ts:
 	echo $(TS_SRC)>> .git/info/sparse-checkout && \
 	git pull origin master && \
 	git checkout $(DEFINITELY_TYPED_COMMIT_HASH)
+	rm -rf native-ts/.git
 
 native-js:
 	git init native-js
