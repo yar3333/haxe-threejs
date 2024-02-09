@@ -4,22 +4,32 @@ import js.lib.*;
 
 /**
  * 4D vector.
- * 
- * ( class Vector4 implements Vector<Vector4> )
  */
 @:native("THREE.Vector4")
 extern class Vector4
-	implements Vector
 {
+	/**
+	 * @default 0
+	 */
 	var x : Float;
+	/**
+	 * @default 0
+	 */
 	var y : Float;
+	/**
+	 * @default 0
+	 */
 	var z : Float;
+	/**
+	 * @default 0
+	 */
 	var w : Float;
+	var width : Float;
+	var height : Float;
+	var isVector4(default, null) : Bool;
 
 	/**
 	 * 4D vector.
-	 * 
-	 * ( class Vector4 implements Vector<Vector4> )
 	 */
 	function new(?x:Float, ?y:Float, ?z:Float, ?w:Float) : Void;
 	/**
@@ -46,64 +56,57 @@ extern class Vector4
 	 * Sets w component of this vector.
 	 */
 	function setW(w:Float) : Vector4;
-	function setComponent(index:Int, value:Float) : Void;
-	function getComponent(index:Int) : Float;
+	function setComponent(index:Float, value:Float) : Vector4;
+	function getComponent(index:Float) : Float;
 	/**
 	 * Clones this vector.
 	 */
-	@:overload(function():Vector4{})
-	function clone() : Vector;
+	function clone() : Vector4;
 	/**
 	 * Copies value of v to this vector.
 	 */
-	@:overload(function(v:Vector4):Vector4{})
-	function copy(v:Vector) : Vector;
+	function copy(v:Vector4Like) : Vector4;
 	/**
 	 * Adds v to this vector.
 	 */
-	@:overload(function(v:Vector4):Vector4{})
-	function add(v:Vector) : Vector;
-	function addScalar(s:Float) : Vector4;
+	function add(v:Vector4Like) : Vector4;
+	function addScalar(scalar:Float) : Vector4;
 	/**
 	 * Sets this vector to a + b.
 	 */
-	@:overload(function(a:Vector4,b:Vector4):Vector4{})
-	function addVectors(a:Vector, b:Vector) : Vector;
-	function addScaledVector(v:Vector4, s:Float) : Vector4;
+	function addVectors(a:Vector4Like, b:Vector4Like) : Vector4;
+	function addScaledVector(v:Vector4Like, s:Float) : Vector4;
 	/**
 	 * Subtracts v from this vector.
 	 */
-	@:overload(function(v:Vector4):Vector4{})
-	function sub(v:Vector) : Vector;
+	function sub(v:Vector4Like) : Vector4;
 	function subScalar(s:Float) : Vector4;
 	/**
 	 * Sets this vector to a - b.
 	 */
-	@:overload(function(a:Vector4,b:Vector4):Vector4{})
-	function subVectors(a:Vector, b:Vector) : Vector;
+	function subVectors(a:Vector4Like, b:Vector4Like) : Vector4;
+	function multiply(v:Vector4Like) : Vector4;
 	/**
 	 * Multiplies this vector by scalar s.
 	 */
-	@:overload(function(s:Float):Vector4{})
-	function multiplyScalar(s:Float) : Vector;
+	function multiplyScalar(s:Float) : Vector4;
 	function applyMatrix4(m:Matrix4) : Vector4;
 	/**
 	 * Divides this vector by scalar s.
 	 * Set vector to ( 0, 0, 0 ) if s == 0.
 	 */
-	@:overload(function(s:Float):Vector4{})
-	function divideScalar(s:Float) : Vector;
+	function divideScalar(s:Float) : Vector4;
 	/**
 	 * http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
 	 */
-	function setAxisAngleFromQuaternion(q:Quaternion) : Vector4;
+	function setAxisAngleFromQuaternion(q:QuaternionLike) : Vector4;
 	/**
 	 * http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/index.htm
 	 */
-	function setAxisAngleFromRotationMatrix(m:Matrix3) : Vector4;
-	function min(v:Vector4) : Vector4;
-	function max(v:Vector4) : Vector4;
-	function clamp(min:Vector4, max:Vector4) : Vector4;
+	function setAxisAngleFromRotationMatrix(m:Matrix4) : Vector4;
+	function min(v:Vector4Like) : Vector4;
+	function max(v:Vector4Like) : Vector4;
+	function clamp(min:Vector4Like, max:Vector4Like) : Vector4;
 	function clampScalar(min:Float, max:Float) : Vector4;
 	function floor() : Vector4;
 	function ceil() : Vector4;
@@ -112,13 +115,11 @@ extern class Vector4
 	/**
 	 * Inverts this vector.
 	 */
-	@:overload(function():Vector4{})
-	function negate() : Vector;
+	function negate() : Vector4;
 	/**
 	 * Computes dot product of this vector and v.
 	 */
-	@:overload(function(v:Vector4):Float{})
-	function dot(v:Vector) : Float;
+	function dot(v:Vector4Like) : Float;
 	/**
 	 * Computes squared length of this vector.
 	 */
@@ -128,48 +129,57 @@ extern class Vector4
 	 */
 	function length() : Float;
 	/**
-	 * @deprecated Use {@link Vector4#manhattanLength .manhattanLength()} instead.
-	 */
-	function lengthManhattan() : Float;
-	/**
 	 * Computes the Manhattan length of this vector.
 	 * 
-	 * @return {number}
-	 * 
-	 * @see {@link http://en.wikipedia.org/wiki/Taxicab_geometry|Wikipedia: Taxicab Geometry}
+	 * see {@link http://en.wikipedia.org/wiki/Taxicab_geometry|Wikipedia: Taxicab Geometry}
 	 */
 	function manhattanLength() : Float;
 	/**
 	 * Normalizes this vector.
 	 */
-	@:overload(function():Vector4{})
-	function normalize() : Vector;
+	function normalize() : Vector4;
 	/**
 	 * Normalizes this vector and multiplies it by l.
 	 */
-	@:overload(function(length:Float):Vector4{})
-	function setLength(l:Float) : Vector;
+	function setLength(length:Float) : Vector4;
 	/**
 	 * Linearly interpolate between this vector and v with alpha factor.
 	 */
-	@:overload(function(v:Vector4,alpha:Float):Vector4{})
-	function lerp(v:Vector, alpha:Float) : Vector;
-	function lerpVectors(v1:Vector4, v2:Vector4, alpha:Float) : Vector4;
+	function lerp(v:Vector4Like, alpha:Float) : Vector4;
+	function lerpVectors(v1:Vector4Like, v2:Vector4Like, alpha:Float) : Vector4;
 	/**
 	 * Checks for strict equality of this vector and v.
 	 */
-	@:overload(function(v:Vector4):Bool{})
-	function equals(v:Vector) : Bool;
-	function fromArray(xyzw:Array<Float>, ?offset:Float) : Vector4;
-	function toArray(?xyzw:Array<Float>, ?offset:Float) : Array<Float>;
-	function fromBufferAttribute(attribute:BufferAttribute, index:Int, ?offset:Float) : Vector4;
-	
+	function equals(v:Vector4Like) : Bool;
 	/**
-	 * Not supported.
+	 * Sets this vector's x, y, z and w value from the provided array or array-like.
 	 */
-	function distanceTo(v:Vector) : Float;
+	function fromArray(array:haxe.extern.EitherType<Array<Float>, ArrayLike<Float>>, ?offset:Float) : Vector4;
 	/**
-	 * Not supported.
+	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
+	 * @return The created or provided array.
+	 * Copies x, y, z and w into the provided array-like.
+	 * @return The provided array-like.
 	 */
-	function distanceToSquared(v:Vector) : Float;
+	@:overload(function(?array:Vector4Tuple, ?offset:Int):Vector4Tuple{})
+	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
+	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+	/**
+	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
+	 * @return The created or provided array.
+	 * Copies x, y, z and w into the provided array-like.
+	 * @return The provided array-like.
+	 */
+	/**
+	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
+	 * @return The created or provided array.
+	 * Copies x, y, z and w into the provided array-like.
+	 * @return The provided array-like.
+	 */
+	function fromBufferAttribute(attribute:BufferAttribute, index:Float) : Vector4;
+	/**
+	 * Sets this vector's x, y, z and w from Math.random
+	 */
+	function random() : Vector4;
+	function [Symbol.iterator]() : Iterator<Float>;
 }

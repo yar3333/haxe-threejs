@@ -2,32 +2,85 @@ package js.three;
 
 import js.lib.*;
 
+/**
+ * Curved Path - a curve path is simply a array of connected curves, but retains the api of a curve.
+ * @remarks
+ * A {@link CurvePath} is simply an array of connected curves, but retains the api of a curve.
+ * @see {@link https://threejs.org/docs/index.html#api/en/extras/core/CurvePath | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/CurvePath.js | Source}
+ */
 @:native("THREE.CurvePath")
-extern class CurvePath<T:Vector> extends Curve<T>
+extern class CurvePath<TVector:haxe.extern.EitherType<Vector2, Vector3>> extends Curve<TVector>
 {
-	var curves : Array<Curve<T>>;
+	/**
+	 * A Read-only _string_ to check if `this` object type.
+	 * @remarks Sub-classes will update this value.
+	 * @defaultValue `CurvePath`
+	 * Returns an array of points representing a sequence of curves
+	 * @remarks
+	 * The `division` parameter defines the number of pieces each curve is divided into
+	 * However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type
+	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
+	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+	 */
+	var override : Dynamic;
+	var type : haxe.extern.EitherType<js.three.curvepath.Type, String>;
+	/**
+	 * The array of {@link Curve | Curves}.
+	 * @defaultValue `[]`
+	 */
+	var curves : Array<Curve<TVector>>;
+	/**
+	 * Whether or not to automatically close the path.
+	 * @defaultValue false
+	 */
 	var autoClose : Bool;
+	/**
+	 * A Read-only _string_ to check if `this` object type.
+	 * @remarks Sub-classes will update this value.
+	 * @defaultValue `CurvePath`
+	 * Returns an array of points representing a sequence of curves
+	 * @remarks
+	 * The `division` parameter defines the number of pieces each curve is divided into
+	 * However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type
+	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
+	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+	 */
+	var override : Dynamic;
+	var TVector : Dynamic;
+	/**
+	 * A Read-only _string_ to check if `this` object type.
+	 * @remarks Sub-classes will update this value.
+	 * @defaultValue `CurvePath`
+	 * Returns an array of points representing a sequence of curves
+	 * @remarks
+	 * The `division` parameter defines the number of pieces each curve is divided into
+	 * However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type
+	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
+	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+	 */
+	var override : Dynamic;
+	var TVector : Dynamic;
 
+	/**
+	 * Curved Path - a curve path is simply a array of connected curves, but retains the api of a curve.
+	 * @remarks
+	 * A {@link CurvePath} is simply an array of connected curves, but retains the api of a curve.
+	 * @see {@link https://threejs.org/docs/index.html#api/en/extras/core/CurvePath | Official Documentation}
+	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/CurvePath.js | Source}
+	 */
 	function new() : Void;
-	function add(curve:Curve<T>) : Void;
-	function checkConnection() : Bool;
-	function closePath() : Void;
-	override function getPoint(t:Float) : T;
-	override function getLength() : Float;
-	override function updateArcLengths() : Void;
+	/**
+	 * Add a curve to the {@link .curves} array.
+	 */
+	function add(curve:Curve<TVector>) : Void;
+	/**
+	 * Adds a {@link LineCurve | lineCurve} to close the path.
+	 */
+	function closePath() : CurvePath;
+	function getPoint(t:Float, ?optionalTarget:TVector) : TVector;
+	/**
+	 * Get list of cumulative curve lengths of the curves in the {@link .curves} array.
+	 */
 	function getCurveLengths() : Array<Float>;
-	override function getSpacedPoints(?divisions:Int) : Array<T>;
-	override function getPoints(?divisions:Int) : Array<T>;
-	/**
-	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
-	 */
-	function createPointsGeometry(divisions:Int) : Geometry;
-	/**
-	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
-	 */
-	function createSpacedPointsGeometry(divisions:Int) : Geometry;
-	/**
-	 * @deprecated Use {@link Geometry#setFromPoints new THREE.Geometry().setFromPoints( points )} instead.
-	 */
-	function createGeometry(points:Array<T>) : Geometry;
 }

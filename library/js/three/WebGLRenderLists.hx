@@ -5,9 +5,7 @@ import js.lib.*;
 @:native("THREE.WebGLRenderLists")
 extern class WebGLRenderLists
 {
+	function new(properties:WebGLProperties) : Void;
 	function dispose() : Void;
-	/**
-	 * returns {<String> : <WebGLRenderList>}
-	 */
-	function get(scene:Scene, camera:Camera) : WebGLRenderList;
+	function get(scene:Scene, renderCallDepth:Float) : WebGLRenderList;
 }

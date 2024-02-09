@@ -2,9 +2,12 @@ package js.three;
 
 import js.lib.*;
 
-typedef SpriteMaterialParameters =
-{>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
-	@:optional var map : Texture;
-	@:optional var rotation : Float;
+extern interface SpriteMaterialParameters extends MaterialParameters
+{
+	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
+	@:optional var map : haxe.extern.EitherType<Texture, {}>;
+	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var rotation : haxe.extern.EitherType<Float, {}>;
+	@:optional var sizeAttenuation : haxe.extern.EitherType<Bool, {}>;
+	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
 }

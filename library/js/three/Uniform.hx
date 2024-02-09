@@ -2,25 +2,56 @@ package js.three;
 
 import js.lib.*;
 
+/**
+ * Uniforms are global GLSL variables.
+ * They are passed to shader programs.
+ * @example
+ * When declaring a uniform of a {@link THREE.ShaderMaterial | ShaderMaterial}, it is declared by value or by object.
+ * ```typescript
+ * uniforms: {
+ *     time: {
+ *         value: 1.0
+ *     },
+ *     resolution: new Uniform(new Vector2())
+ * };
+ * ```
+ * @see Example: {@link https://threejs.org/examples/#webgl_nodes_materials_instance_uniform | WebGL2 / nodes / materials / instance / uniform}
+ * @see Example: {@link https://threejs.org/examples/#webgpu_instance_uniform| WebGPU / instance / uniform}
+ * @see {@link https://threejs.org/docs/index.html#api/en/core/Uniform | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Uniform.js | Source}
+ */
 @:native("THREE.Uniform")
-extern class Uniform
+extern class Uniform<T:Dynamic, any:Dynamic>
 {
 	/**
-	 * @deprecated
+	 * Current value of the uniform.
 	 */
-	var type : String;
-	var value : Dynamic;
-	/**
-	 * @deprecated Use {@link Object3D#onBeforeRender object.onBeforeRender()} instead.
-	 */
-	var dynamic_(get, null) : Bool;
-	inline function get_dynamic_() : Bool return (cast this)[cast 'dynamic'];
-	var onUpdateCallback : haxe.Constraints.Function;
+	var value : T;
 
-	@:overload(function(type:String, value:Dynamic):Void{})
-	function new(value:Dynamic) : Void;
 	/**
-	 * @deprecated Use {@link Object3D#onBeforeRender object.onBeforeRender()} instead.
+	 * Uniforms are global GLSL variables.
+	 * They are passed to shader programs.
+	 * @example
+	 * When declaring a uniform of a {@link THREE.ShaderMaterial | ShaderMaterial}, it is declared by value or by object.
+	 * ```typescript
+	 * uniforms: {
+	 *     time: {
+	 *         value: 1.0
+	 *     },
+	 *     resolution: new Uniform(new Vector2())
+	 * };
+	 * ```
+	 * @see Example: {@link https://threejs.org/examples/#webgl_nodes_materials_instance_uniform | WebGL2 / nodes / materials / instance / uniform}
+	 * @see Example: {@link https://threejs.org/examples/#webgpu_instance_uniform| WebGPU / instance / uniform}
+	 * @see {@link https://threejs.org/docs/index.html#api/en/core/Uniform | Official Documentation}
+	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Uniform.js | Source}
 	 */
-	function onUpdate(callback:haxe.Constraints.Function) : Uniform;
+	function new(value:T) : Void;
+	/**
+	 * Returns a clone of this uniform.
+	 * @remarks
+	 * If the uniform's {@link value} property is an {@link Object | Object} with a `clone()` method, this is used,
+	 * otherwise the value is copied by assignment Array values are **shared** between cloned {@link THREE.UniformUniform | Uniform}s.
+	 */
+	function clone() : Uniform<T>;
 }

@@ -3,21 +3,26 @@ package js.three;
 import js.lib.*;
 
 /**
- * ( class Matrix3 implements Matrix&lt;Matrix3&gt; )
+ * ( class Matrix3 implements Matrix<Matrix3> )
  */
 @:native("THREE.Matrix3")
 extern class Matrix3
 	implements Matrix
 {
 	/**
-	 * Float32Array with matrix values.
+	 * Array with matrix values.
+	 * @default [1, 0, 0, 0, 1, 0, 0, 0, 1]
 	 */
-	var elements : Float32Array;
+	var elements : Array<Float>;
 
 	/**
-	 * ( class Matrix3 implements Matrix&lt;Matrix3&gt; )
+	 * ( class Matrix3 implements Matrix<Matrix3> )
 	 */
+	@:overload(function(n11:Float, n12:Float, n13:Float, n21:Float, n22:Float, n23:Float, n31:Float, n32:Float, n33:Float):Void{})
 	function new() : Void;
+	/**
+	 * ( class Matrix3 implements Matrix<Matrix3> )
+	 */
 	function set(n11:Float, n12:Float, n13:Float, n21:Float, n22:Float, n23:Float, n31:Float, n32:Float, n33:Float) : Matrix3;
 	@:overload(function():Matrix3{})
 	function identity() : Matrix;
@@ -25,18 +30,16 @@ extern class Matrix3
 	function clone() : Matrix;
 	@:overload(function(m:Matrix3):Matrix3{})
 	function copy(m:Matrix) : Matrix;
+	function extractBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix3;
 	function setFromMatrix4(m:Matrix4) : Matrix3;
-	/**
-	 * @deprecated Use {@link Matrix3#applyToBufferAttribute matrix3.applyToBufferAttribute( attribute )} instead.
-	 */
-	function applyToBuffer(buffer:BufferAttribute, ?offset:Float, ?length:Float) : BufferAttribute;
-	function applyToBufferAttribute(attribute:BufferAttribute) : BufferAttribute;
 	@:overload(function(s:Float):Matrix3{})
 	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
-	@:overload(function(matrix:Matrix3,?throwOnDegenerate:Bool):Matrix3{})
-	@:overload(function(matrix:Matrix, ?throwOnInvertible:Bool):Matrix{})
-	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
+	/**
+	 * Inverts this matrix in place.
+	 */
+	@:overload(function():Matrix3{})
+	function invert() : Matrix;
 	/**
 	 * Transposes this matrix in place.
 	 */
@@ -46,9 +49,97 @@ extern class Matrix3
 	/**
 	 * Transposes this matrix into the supplied array r, and returns itself.
 	 */
-	function transposeIntoArray(r:Array<Float>) : Array<Float>;
-	function fromArray(array:Array<Float>, ?offset:Float) : Matrix3;
-	function toArray() : Array<Float>;
+	function transposeIntoArray(r:Array<Float>) : Matrix3;
+	function setUvTransform(tx:Float, ty:Float, sx:Float, sy:Float, rotation:Float, cx:Float, cy:Float) : Matrix3;
+	function scale(sx:Float, sy:Float) : Matrix3;
+	/**
+	 * Sets this matrix as a 2D translation transform:
+	 * 
+	 * ```
+	 * 1, 0, x,
+	 * 0, 1, y,
+	 * 0, 0, 1
+	 * ```
+	 */
+	@:overload(function(x:Float, y:Float):Matrix3{})
+	function makeTranslation(v:Vector2) : Matrix3;
+	/**
+	 * Sets this matrix as a 2D translation transform:
+	 * 
+	 * ```
+	 * 1, 0, x,
+	 * 0, 1, y,
+	 * 0, 0, 1
+	 * ```
+	 */
+	/**
+	 * Sets this matrix as a 2D rotational transformation by theta radians. The resulting matrix will be:
+	 * 
+	 * ```
+	 * cos(θ) -sin(θ) 0
+	 * sin(θ) cos(θ)  0
+	 * 0      0       1
+	 * ```
+	 */
+	@:overload(function(theta:Float):Matrix3{})
+	function makeRotation(theta:Float) : Matrix3;
+	/**
+	 * Sets this matrix as a 2D rotational transformation by theta radians. The resulting matrix will be:
+	 * 
+	 * ```
+	 * cos(θ) -sin(θ) 0
+	 * sin(θ) cos(θ)  0
+	 * 0      0       1
+	 * ```
+	 */
+	/**
+	 * Sets this matrix as a 2D scale transform:
+	 * 
+	 * ```
+	 * x, 0, 0,
+	 * 0, y, 0,
+	 * 0, 0, 1
+	 * ```
+	 */
+	@:overload(function(x:Float, y:Float):Matrix3{})
+	function makeScale(x:Float, y:Float) : Matrix3;
+	/**
+	 * Sets this matrix as a 2D scale transform:
+	 * 
+	 * ```
+	 * x, 0, 0,
+	 * 0, y, 0,
+	 * 0, 0, 1
+	 * ```
+	 */
+	function rotate(theta:Float) : Matrix3;
+	function translate(tx:Float, ty:Float) : Matrix3;
+	function equals(matrix:Matrix3) : Bool;
+	/**
+	 * Sets the values of this matrix from the provided array or array-like.
+	 */
+	function fromArray(array:haxe.extern.EitherType<Array<Float>, ArrayLike<Float>>, ?offset:Float) : Matrix3;
+	/**
+	 * Returns an array with the values of this matrix, or copies them into the provided array.
+	 * @return The created or provided array.
+	 * Copies he values of this matrix into the provided array-like.
+	 * @return The provided array-like.
+	 */
+	@:overload(function(?array:Matrix3Tuple, ?offset:Int):Matrix3Tuple{})
+	@:overload(function(?array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
+	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+	/**
+	 * Returns an array with the values of this matrix, or copies them into the provided array.
+	 * @return The created or provided array.
+	 * Copies he values of this matrix into the provided array-like.
+	 * @return The provided array-like.
+	 */
+	/**
+	 * Returns an array with the values of this matrix, or copies them into the provided array.
+	 * @return The created or provided array.
+	 * Copies he values of this matrix into the provided array-like.
+	 * @return The provided array-like.
+	 */
 	/**
 	 * Multiplies this matrix by m.
 	 */
@@ -66,7 +157,14 @@ extern class Matrix3
 	 * @deprecated This method has been removed completely.
 	 */
 	function multiplyVector3Array(a:Dynamic) : Dynamic;
-	@:overload(function(matrix:Matrix4,?throwOnDegenerate:Bool):Matrix3{})
+	/**
+	 * @deprecated Use {@link Matrix3#invert .invert()} instead.
+	 */
+	@:overload(function(matrix:Matrix):Matrix{})
+	function getInverse(matrix:Matrix4, ?throwOnDegenerate:Bool) : Matrix3;
+	/**
+	 * @deprecated Use {@link Matrix3#invert .invert()} instead.
+	 */
 	/**
 	 * @deprecated Use {@link Matrix3#toArray .toArray()} instead.
 	 */

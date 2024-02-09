@@ -3,19 +3,25 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.AnimationMixer")
-extern class AnimationMixer extends EventDispatcher
+extern class AnimationMixer extends EventDispatcher<AnimationMixerEventMap>
 {
+	/**
+	 * @default 0
+	 */
 	var time : Float;
+	/**
+	 * @default 1.0
+	 */
 	var timeScale : Float;
 
-	@:overload(function(root:Dynamic):Void{})
-	function new() : Void;
-	function clipAction(clip:AnimationClip, ?root:Dynamic) : AnimationAction;
-	function existingAction(clip:AnimationClip, ?root:Dynamic) : AnimationAction;
+	function new(root:haxe.extern.EitherType<Object3D, AnimationObjectGroup>) : Void;
+	function clipAction(clip:AnimationClip, ?root:haxe.extern.EitherType<Object3D, AnimationObjectGroup>, ?blendMode:AnimationBlendMode) : AnimationAction;
+	function existingAction(clip:AnimationClip, ?root:haxe.extern.EitherType<Object3D, AnimationObjectGroup>) : AnimationAction;
 	function stopAllAction() : AnimationMixer;
 	function update(deltaTime:Float) : AnimationMixer;
-	function getRoot() : Dynamic;
+	function setTime(timeInSeconds:Float) : AnimationMixer;
+	function getRoot() : haxe.extern.EitherType<Object3D, AnimationObjectGroup>;
 	function uncacheClip(clip:AnimationClip) : Void;
-	function uncacheRoot(root:Dynamic) : Void;
-	function uncacheAction(clip:AnimationClip, ?root:Dynamic) : Void;
+	function uncacheRoot(root:haxe.extern.EitherType<Object3D, AnimationObjectGroup>) : Void;
+	function uncacheAction(clip:AnimationClip, ?root:haxe.extern.EitherType<Object3D, AnimationObjectGroup>) : Void;
 }

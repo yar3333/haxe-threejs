@@ -2,8 +2,8 @@ package js.three;
 
 import js.lib.*;
 
-typedef WebGLCapabilitiesParameters =
+extern interface WebGLCapabilitiesParameters
 {
-	@:optional var precision : Dynamic;
-	@:optional var logarithmicDepthBuffer : Dynamic;
+	@:optional var precision : haxe.extern.EitherType<String, {}>;
+	@:optional var logarithmicDepthBuffer : haxe.extern.EitherType<Bool, {}>;
 }

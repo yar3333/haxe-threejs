@@ -3,14 +3,8 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.CubeTextureLoader")
-extern class CubeTextureLoader
+extern class CubeTextureLoader extends Loader<CubeTexture, readonly string[]>
 {
-	var manager : LoadingManager;
-	var corssOrigin : String;
-	var path : String;
-
 	function new(?manager:LoadingManager) : Void;
-	function load(urls:Array<String>, ?onLoad:CubeTexture->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:js.html.ErrorEvent->Void) : CubeTexture;
-	function setCrossOrigin(crossOrigin:String) : CubeTextureLoader;
-	function setPath(path:String) : CubeTextureLoader;
+	function load(url:readonly, ?onLoad:CubeTexture->Void, ?onProgress:ProgressEvent->Void, ?onError:unknown->Void) : CubeTexture;
 }

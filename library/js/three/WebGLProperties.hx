@@ -7,6 +7,7 @@ extern class WebGLProperties
 {
 	function new() : Void;
 	function get(object:Dynamic) : Dynamic;
-	function delete(object:Dynamic) : Void;
-	function clear() : Void;
+	function remove(object:Dynamic) : Void;
+	function update(object:Dynamic, key:Dynamic, value:Dynamic) : Dynamic;
+	function dispose() : Void;
 }

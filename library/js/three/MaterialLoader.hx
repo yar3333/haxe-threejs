@@ -3,14 +3,15 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.MaterialLoader")
-extern class MaterialLoader
+extern class MaterialLoader extends Loader<Material>
 {
-	var manager : LoadingManager;
+	/**
+	 * @default {}
+	 */
 	var textures : Dynamic<Texture>;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, onLoad:Material->Void) : Void;
-	function setTextures(textures:Dynamic<Texture>) : Void;
-	function getTexture(name:String) : Texture;
-	function parse(json:Dynamic) : Material;
+	function parse(json:unknown) : Material;
+	function setTextures(textures:Dynamic<Texture>) : MaterialLoader;
+	static function createMaterialFromType(type:String) : Material;
 }

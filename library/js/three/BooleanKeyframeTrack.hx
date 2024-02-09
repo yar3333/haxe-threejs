@@ -5,6 +5,11 @@ import js.lib.*;
 @:native("THREE.BooleanKeyframeTrack")
 extern class BooleanKeyframeTrack extends KeyframeTrack
 {
-	@:overload(function(name:String,times:Array<Dynamic>,values:Array<Dynamic>):Void{})
-	function new(name:String, times:Array<Dynamic>, values:Array<Dynamic>, interpolation:InterpolationModes) : Void;
+	/**
+	 * @default 'bool'
+	 */
+	//var ValueTypeName : String;
+
+	@:overload(function(name:String,times:ArrayLike<Float>,values:ArrayLike<Dynamic>):Void{})
+	function new(name:String, times:ArrayLike<Float>, values:ArrayLike<Dynamic>, ?interpolation:InterpolationModes) : Void;
 }

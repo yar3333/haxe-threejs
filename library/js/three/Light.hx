@@ -4,58 +4,9 @@ import js.lib.*;
 
 /**
  * Abstract base class for lights.
+ * @remarks All other light types inherit the properties and methods described here.
  */
 @:native("THREE.Light")
-extern class Light extends Object3D
+extern class Light<TShadowSupport:haxe.extern.EitherType<LightShadow, {}>, LightShadow:Dynamic>
 {
-	var color : Color;
-	var intensity : Float;
-	//var receiveShadow : Bool;
-	var shadow : LightShadow;
-	/**
-	 * @deprecated Use shadow.camera.fov instead.
-	 */
-	var shadowCameraFov : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.left instead.
-	 */
-	var shadowCameraLeft : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.right instead.
-	 */
-	var shadowCameraRight : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.top instead.
-	 */
-	var shadowCameraTop : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.bottom instead.
-	 */
-	var shadowCameraBottom : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.near instead.
-	 */
-	var shadowCameraNear : Dynamic;
-	/**
-	 * @deprecated Use shadow.camera.far instead.
-	 */
-	var shadowCameraFar : Dynamic;
-	/**
-	 * @deprecated Use shadow.bias instead.
-	 */
-	var shadowBias : Dynamic;
-	/**
-	 * @deprecated Use shadow.mapSize.width instead.
-	 */
-	var shadowMapWidth : Dynamic;
-	/**
-	 * @deprecated Use shadow.mapSize.height instead.
-	 */
-	var shadowMapHeight : Dynamic;
-
-	/**
-	 * Abstract base class for lights.
-	 */
-	@:overload(function(?hex:haxe.extern.EitherType<Float,String>,?intensity:Float):Void{})
-	function new() : Void;
 }

@@ -5,6 +5,7 @@ import js.lib.*;
 @:native("THREE.QuaternionLinearInterpolant")
 extern class QuaternionLinearInterpolant extends Interpolant
 {
-	function new(parameterPositions:Dynamic, samplesValues:Dynamic, sampleSize:Float, ?resultBuffer:Dynamic) : Void;
+	@:overload(function(parameterPositions:Dynamic,samplesValues:Dynamic,sampleSize:Float,?resultBuffer:Dynamic):Void{})
+	function new(parameterPositions:Dynamic, sampleValues:Dynamic, sampleSize:Float, ?resultBuffer:Dynamic) : Void;
 	function interpolate_(i1:Float, t0:Float, t:Float, t1:Float) : Dynamic;
 }

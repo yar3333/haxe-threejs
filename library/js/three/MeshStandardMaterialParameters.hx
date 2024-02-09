@@ -2,35 +2,34 @@ package js.three;
 
 import js.lib.*;
 
-typedef MeshStandardMaterialParameters =
-{>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
-	@:optional var roughness : Float;
-	@:optional var metalness : Float;
-	@:optional var map : Texture;
-	@:optional var lightMap : Texture;
-	@:optional var lightMapIntensity : Float;
-	@:optional var aoMap : Texture;
-	@:optional var aoMapIntensity : Float;
-	@:optional var emissive : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
-	@:optional var emissiveIntensity : Float;
-	@:optional var emissiveMap : Texture;
-	@:optional var bumpMap : Texture;
-	@:optional var bumpScale : Float;
-	@:optional var normalMap : Texture;
-	@:optional var normalScale : Vector2;
-	@:optional var displacementMap : Texture;
-	@:optional var displacementScale : Float;
-	@:optional var displacementBias : Float;
-	@:optional var roughnessMap : Texture;
-	@:optional var metalnessMap : Texture;
-	@:optional var alphaMap : Texture;
-	@:optional var envMap : Texture;
-	@:optional var envMapIntensity : Float;
-	@:optional var refractionRatio : Float;
-	@:optional var wireframe : Bool;
-	@:optional var wireframeLinewidth : Float;
-	@:optional var skinning : Bool;
-	@:optional var morphTargets : Bool;
-	@:optional var morphNormals : Bool;
+extern interface MeshStandardMaterialParameters extends MaterialParameters
+{
+	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
+	@:optional var roughness : haxe.extern.EitherType<Float, {}>;
+	@:optional var metalness : haxe.extern.EitherType<Float, {}>;
+	@:optional var map : haxe.extern.EitherType<Texture, {}>;
+	@:optional var lightMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var lightMapIntensity : haxe.extern.EitherType<Float, {}>;
+	@:optional var aoMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var aoMapIntensity : haxe.extern.EitherType<Float, {}>;
+	@:optional var emissive : haxe.extern.EitherType<ColorRepresentation, {}>;
+	@:optional var emissiveIntensity : haxe.extern.EitherType<Float, {}>;
+	@:optional var emissiveMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var bumpMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var bumpScale : haxe.extern.EitherType<Float, {}>;
+	@:optional var normalMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var normalMapType : haxe.extern.EitherType<NormalMapTypes, {}>;
+	@:optional var normalScale : haxe.extern.EitherType<Vector2, {}>;
+	@:optional var displacementMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var displacementScale : haxe.extern.EitherType<Float, {}>;
+	@:optional var displacementBias : haxe.extern.EitherType<Float, {}>;
+	@:optional var roughnessMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var metalnessMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var envMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var envMapIntensity : haxe.extern.EitherType<Float, {}>;
+	@:optional var wireframe : haxe.extern.EitherType<Bool, {}>;
+	@:optional var wireframeLinewidth : haxe.extern.EitherType<Float, {}>;
+	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
+	@:optional var flatShading : haxe.extern.EitherType<Bool, {}>;
 }

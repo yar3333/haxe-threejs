@@ -5,6 +5,10 @@ import js.lib.*;
 @:native("THREE.WebGLLights")
 extern class WebGLLights
 {
-	function new(gl:js.html.webgl.RenderingContext, properties:Dynamic, info:Dynamic) : Void;
+	var state : WebGLLightsState;
+
+	function new(extensions:WebGLExtensions, capabilities:WebGLCapabilities) : Void;
 	function get(light:Dynamic) : Dynamic;
+	function setup(lights:Dynamic) : Void;
+	function setupView(lights:Dynamic, camera:Dynamic) : Void;
 }

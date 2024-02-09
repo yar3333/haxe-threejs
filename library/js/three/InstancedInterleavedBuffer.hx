@@ -3,16 +3,23 @@ package js.three;
 import js.lib.*;
 
 /**
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
+ * An instanced version of {@link THREE.InterleavedBuffer | InterleavedBuffer}.
+ * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedInterleavedBuffer | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js | Source}
  */
 @:native("THREE.InstancedInterleavedBuffer")
 extern class InstancedInterleavedBuffer extends InterleavedBuffer
 {
+	/**
+	 * @defaultValue `1`
+	 */
 	var meshPerAttribute : Float;
 
 	/**
-	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
+	 * An instanced version of {@link THREE.InterleavedBuffer | InterleavedBuffer}.
+	 * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedInterleavedBuffer | Official Documentation}
+	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js | Source}
 	 */
-	@:overload(function(array:ArrayLike<Float>,stride:Float,?meshPerAttribute:Float):Void{})
-	function new(array:ArrayLike<Float>, stride:Float) : Void;
+	@:overload(function(array:TypedArray,stride:Float,?meshPerAttribute:Float):Void{})
+	function new(array:TypedArray, stride:Float) : Void;
 }

@@ -5,12 +5,47 @@ import js.lib.*;
 @:native("THREE.SpriteMaterial")
 extern class SpriteMaterial extends Material
 {
+	/**
+	 * Read-only flag to check if a given object is of type {@link SpriteMaterial}.
+	 * @remarks This is a _constant_ value
+	 * @defaultValue `true`
+	 */
+	var isSpriteMaterial(default, null) : Bool;
+	/**
+	 * @default 'SpriteMaterial'
+	 */
+	var type : String;
+	/**
+	 * @default new THREE.Color( 0xffffff )
+	 */
 	var color : Color;
+	/**
+	 * @default null
+	 */
 	var map : Texture;
+	/**
+	 * @default null
+	 */
+	var alphaMap : Texture;
+	/**
+	 * @default 0
+	 */
 	var rotation : Float;
+	/**
+	 * @default true
+	 */
+	var sizeAttenuation : Bool;
+	/**
+	 * @default true
+	 */
+	var transparent : Bool;
+	/**
+	 * Whether the material is affected by fog. Default is true.
+	 * @default fog
+	 */
+	var fog : Bool;
 
-	@:overload(function(?parameters:SpriteMaterialParameters):Void{})
-	function new() : Void;
-	@:overload(function(parameters:SpriteMaterialParameters):Void{})
-	override function setValues(values:MaterialParameters) : Void;
+	function new(?parameters:SpriteMaterialParameters) : Void;
+	function setValues(parameters:SpriteMaterialParameters) : Void;
+	function copy(source:SpriteMaterial) : SpriteMaterial;
 }

@@ -5,11 +5,11 @@ import js.lib.*;
 @:native("THREE.WebGLDepthBuffer")
 extern class WebGLDepthBuffer
 {
-	function new(gl:Dynamic, state:Dynamic) : Void;
+	function new() : Void;
 	function setTest(depthTest:Bool) : Void;
-	function sertMask(depthMask:Float) : Void;
-	function setFunc(depthFunc:haxe.Constraints.Function) : Void;
+	function setMask(depthMask:Bool) : Void;
+	function setFunc(depthFunc:DepthModes) : Void;
 	function setLocked(lock:Bool) : Void;
-	function setClear(depth:Dynamic) : Void;
+	function setClear(depth:Float) : Void;
 	function reset() : Void;
 }

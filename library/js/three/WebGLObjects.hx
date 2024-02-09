@@ -5,8 +5,7 @@ import js.lib.*;
 @:native("THREE.WebGLObjects")
 extern class WebGLObjects
 {
-	function new(gl:js.html.webgl.RenderingContext, properties:Dynamic, info:Dynamic) : Void;
-	function getAttributeBuffer(attribute:Dynamic) : Dynamic;
-	function getWireframeAttribute(geometry:Dynamic) : Dynamic;
-	function update(object:Dynamic) : Void;
+	function new(gl:WebGLRenderingContext, geometries:Dynamic, attributes:Dynamic, info:Dynamic) : Void;
+	function update(object:Dynamic) : Dynamic;
+	function dispose() : Void;
 }

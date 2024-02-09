@@ -3,60 +3,122 @@ package js.three;
 import js.lib.*;
 
 /**
- * An extensible curve object which contains methods for interpolation
- * class Curve&lt;T extends Vector&gt;
+ * An abstract base class for creating a {@link Curve} object that contains methods for interpolation
+ * @remarks
+ * For an array of Curves see {@link THREE.CurvePath | CurvePath}.
+ * @remarks
+ * This following curves inherit from THREE.Curve:
+ * 
+ * **2D curves**
+ *  - {@link THREE.ArcCurve}
+ *  - {@link THREE.CubicBezierCurve}
+ *  - {@link THREE.EllipseCurve}
+ *  - {@link THREE.LineCurve}
+ *  - {@link THREE.QuadraticBezierCurve}
+ *  - {@link THREE.SplineCurve}
+ * 
+ * **3D curves**
+ *  - {@link THREE.CatmullRomCurve3}
+ *  - {@link THREE.CubicBezierCurve3}
+ *  - {@link THREE.LineCurve3}
+ *  - {@link THREE.QuadraticBezierCurve3}
+ * 
+ * @see {@link https://threejs.org/docs/index.html#api/en/extras/core/Curve | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/Curve.js | Source}
  */
 @:native("THREE.Curve")
-extern class Curve<T:Vector>
+extern class Curve<TVector:haxe.extern.EitherType<Vector2, Vector3>>
 {
 	/**
-	 * Returns a vector for point t of the curve where t is between 0 and 1
-	 * getPoint(t: number): T;
+	 * A Read-only _string_ to check if `this` object type.
+	 * @remarks Sub-classes will update this value.
+	 * @defaultValue `Curve`
 	 */
-	function getPoint(t:Float) : T;
+	var type(default, null) : haxe.extern.EitherType<js.three.curve.Type, String>;
 	/**
-	 * Returns a vector for point at relative position in curve according to arc length
-	 * getPointAt(u: number): T;
+	 * This value determines the amount of divisions when calculating the cumulative segment lengths of a {@link Curve}
+	 * via {@link .getLengths}.
+	 * To ensure precision when using methods like {@link .getSpacedPoints}, it is recommended to increase {@link .arcLengthDivisions} if the {@link Curve} is very large.
+	 * @defaultValue `200`
+	 * @remarks Expects a `Integer`
 	 */
-	function getPointAt(u:Float) : T;
+	var arcLengthDivisions : Float;
+
+	function new() : Void;
 	/**
-	 * Get sequence of points using getPoint( t )
-	 * getPoints(divisions?: number): T[];
+	 * Returns a vector for a given position on the curve.
 	 */
-	function getPoints(?divisions:Int) : Array<T>;
+	function getPoint(t:Float, ?optionalTarget:TVector) : TVector;
 	/**
-	 * Get sequence of equi-spaced points using getPointAt( u )
-	 * getSpacedPoints(divisions?: number): T[];
+	 * Returns a vector for a given position on the {@link Curve} according to the arc length.
+	 * @link Curve} according to the arc length. Must be in the range `[ 0, 1 ]`. Expects a `Float`
 	 */
-	function getSpacedPoints(?divisions:Int) : Array<T>;
+	function getPointAt(u:Float, ?optionalTarget:TVector) : TVector;
 	/**
-	 * Get total curve arc length
+	 * Returns a set of divisions `+1` points using {@link .getPoint | getPoint(t)}.
+	 * @link Curve} into. Expects a `Integer`. Default `5`
+	 */
+	function getPoints(?divisions:Float) : Array<TVector>;
+	/**
+	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
+	 * @link Curve} into. Expects a `Integer`. Default `5`
+	 */
+	function getSpacedPoints(?divisions:Float) : Array<TVector>;
+	/**
+	 * Get total {@link Curve} arc length.
 	 */
 	function getLength() : Float;
 	/**
-	 * Get list of cumulative segment lengths
+	 * Get list of cumulative segment lengths.
 	 */
-	function getLengths(?divisions:Int) : Array<Float>;
+	function getLengths(?divisions:Float) : Array<Float>;
 	/**
-	 * Update the cumlative segment distance cache
+	 * Update the cumulative segment distance cache
+	 * @remarks
+	 * The method must be called every time {@link Curve} parameters are changed
+	 * If an updated {@link Curve} is part of a composed {@link Curve} like {@link THREE.CurvePath | CurvePath},
+	 * {@link .updateArcLengths}() must be called on the composed curve, too.
 	 */
 	function updateArcLengths() : Void;
 	/**
-	 * Given u ( 0 .. 1 ), get a t to find p. This gives you points which are equi distance
+	 * Given u in the range `[ 0, 1 ]`,
+	 * @remarks
+	 * `u` and `t` can then be used to give you points which are equidistant from the ends of the curve, using {@link .getPoint}.
+	 * @returns `t` also in the range `[ 0, 1 ]`. Expects a `Float`.
 	 */
 	function getUtoTmapping(u:Float, distance:Float) : Float;
 	/**
-	 * Returns a unit vector tangent at t. If the subclassed curve do not implement its tangent derivation, 2 points a small delta apart will be used to find its gradient which seems to give a reasonable approximation
-	 * getTangent(t: number): T;
+	 * Returns a unit vector tangent at t
+	 * @remarks
+	 * If the derived {@link Curve} does not implement its tangent derivation, two points a small delta apart will be used to find its gradient which seems to give a reasonable approximation.
 	 */
-	function getTangent(t:Float) : T;
+	function getTangent(t:Float, ?optionalTarget:TVector) : TVector;
 	/**
-	 * Returns tangent at equidistance point u on the curve
-	 * getTangentAt(u: number): T;
+	 * Returns tangent at a point which is equidistant to the ends of the {@link Curve} from the point given in {@link .getTangent}.
+	 * @link Curve} according to the arc length. Must be in the range `[ 0, 1 ]`. Expects a `Float`
 	 */
-	function getTangentAt(u:Float) : T;
+	function getTangentAt(u:Float, ?optionalTarget:TVector) : TVector;
 	/**
-	 * @deprecated since r84.
+	 * Generates the Frenet Frames
+	 * @remarks
+	 * Requires a {@link Curve} definition in 3D space
+	 * Used in geometries like {@link THREE.TubeGeometry | TubeGeometry} or {@link THREE.ExtrudeGeometry | ExtrudeGeometry}.
 	 */
-	static function create(constructorFunc:haxe.Constraints.Function, getPointFunc:haxe.Constraints.Function) : haxe.Constraints.Function;
+	function computeFrenetFrames(segments:Float, ?closed:Bool) : { var tangents : Array<Vector3>; var normals : Array<Vector3>; var binormals : Array<Vector3>; };
+	/**
+	 * Creates a clone of this instance.
+	 */
+	function clone() : Curve;
+	/**
+	 * Copies another {@link Curve} object to this instance.
+	 */
+	function copy(source:Curve<TVector>) : Curve;
+	/**
+	 * Returns a JSON object representation of this instance.
+	 */
+	function toJSON() : {};
+	/**
+	 * Copies the data from the given JSON object to this instance.
+	 */
+	function fromJSON(json:{}) : Curve;
 }

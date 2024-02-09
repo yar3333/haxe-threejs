@@ -5,8 +5,14 @@ import js.lib.*;
 @:native("THREE.Box2")
 extern class Box2
 {
-	var max : Vector2;
+	/**
+	 * @default new THREE.Vector2( + Infinity, + Infinity )
+	 */
 	var min : Vector2;
+	/**
+	 * @default new THREE.Vector2( - Infinity, - Infinity )
+	 */
+	var max : Vector2;
 
 	function new(?min:Vector2, ?max:Vector2) : Void;
 	function set(min:Vector2, max:Vector2) : Box2;
@@ -23,7 +29,7 @@ extern class Box2
 	function expandByScalar(scalar:Float) : Box2;
 	function containsPoint(point:Vector2) : Bool;
 	function containsBox(box:Box2) : Bool;
-	function getParameter(point:Vector2) : Vector2;
+	function getParameter(point:Vector2, target:Vector2) : Vector2;
 	function intersectsBox(box:Box2) : Bool;
 	function clampPoint(point:Vector2, target:Vector2) : Vector2;
 	function distanceToPoint(point:Vector2) : Float;

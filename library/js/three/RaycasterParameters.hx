@@ -2,11 +2,12 @@ package js.three;
 
 import js.lib.*;
 
-typedef RaycasterParameters =
+extern interface RaycasterParameters
 {
-	@:optional var Mesh : Dynamic;
-	@:optional var Line : Dynamic;
-	@:optional var LOD : Dynamic;
-	@:optional var Points : { var threshold : Float; };
-	@:optional var Sprite : Dynamic;
+	var Mesh : Dynamic;
+	var Line : { var threshold : Float; };
+	@:optional var Line2 : { var threshold : Float; };
+	var LOD : Dynamic;
+	var Points : { var threshold : Float; };
+	var Sprite : Dynamic;
 }

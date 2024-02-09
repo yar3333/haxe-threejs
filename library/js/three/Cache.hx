@@ -5,11 +5,12 @@ import js.lib.*;
 @:native("THREE.Cache")
 extern class Cache
 {
+	/**
+	 * @default false
+	 */
 	static var enabled : Bool;
+	/**
+	 * @default {}
+	 */
 	static var files : Dynamic;
-
-	static function add(key:String, file:Dynamic) : Void;
-	static function get(key:String) : Dynamic;
-	static function remove(key:String) : Void;
-	static function clear() : Void;
 }

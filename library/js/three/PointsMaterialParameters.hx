@@ -2,10 +2,12 @@ package js.three;
 
 import js.lib.*;
 
-typedef PointsMaterialParameters =
-{>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<Color, haxe.extern.EitherType<String, Float>>;
-	@:optional var map : Texture;
-	@:optional var size : Float;
-	@:optional var sizeAttenuation : Bool;
+extern interface PointsMaterialParameters extends MaterialParameters
+{
+	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
+	@:optional var map : haxe.extern.EitherType<Texture, {}>;
+	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
+	@:optional var size : haxe.extern.EitherType<Float, {}>;
+	@:optional var sizeAttenuation : haxe.extern.EitherType<Bool, {}>;
+	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
 }

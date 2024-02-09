@@ -7,38 +7,27 @@ extern class WebGLState
 {
 	var buffers : { var color : WebGLColorBuffer; var depth : WebGLDepthBuffer; var stencil : WebGLStencilBuffer; };
 
-	function new(gl:Dynamic, extensions:Dynamic, paramThreeToGL:haxe.Constraints.Function) : Void;
-	function init() : Void;
-	function initAttributes() : Void;
-	function enableAttribute(attribute:String) : Void;
-	function enableAttributeAndDivisor(attribute:String, meshPerAttribute:Dynamic, extension:Dynamic) : Void;
-	function disableUnusedAttributes() : Void;
-	function enable(id:String) : Void;
-	function disable(id:String) : Void;
-	function getCompressedTextureFormats() : Array<Dynamic>;
-	function setBlending(blending:Float, blendEquation:Float, blendSrc:Float, blendDst:Float, blendEquationAlpha:Float, blendSrcAlpha:Float, blendDstAlpha:Float) : Void;
-	function setColorWrite(colorWrite:Float) : Void;
-	function setDepthTest(depthTest:Float) : Void;
-	function setDepthWrite(depthWrite:Float) : Void;
-	function setDepthFunc(depthFunc:haxe.Constraints.Function) : Void;
-	function setStencilTest(stencilTest:Bool) : Void;
-	function setStencilWrite(stencilWrite:Dynamic) : Void;
-	function setStencilFunc(stencilFunc:haxe.Constraints.Function, stencilRef:Dynamic, stencilMask:Float) : Void;
-	function setStencilOp(stencilFail:Dynamic, stencilZFail:Dynamic, stencilZPass:Dynamic) : Void;
-	function setFlipSided(flipSided:Float) : Void;
+	function new(gl:WebGLRenderingContext, extensions:WebGLExtensions, capabilities:WebGLCapabilities) : Void;
+	function enable(id:Float) : Void;
+	function disable(id:Float) : Void;
+	function bindFramebuffer(target:Float, framebuffer:WebGLFramebuffer) : Void;
+	function drawBuffers(renderTarget:WebGLRenderTarget, framebuffer:WebGLFramebuffer) : Void;
+	function useProgram(program:Dynamic) : Bool;
+	function setBlending(blending:Blending, ?blendEquation:BlendingEquation, ?blendSrc:BlendingSrcFactor, ?blendDst:BlendingDstFactor, ?blendEquationAlpha:BlendingEquation, ?blendSrcAlpha:BlendingSrcFactor, ?blendDstAlpha:BlendingDstFactor, ?premultiplyAlpha:Bool) : Void;
+	function setMaterial(material:Material, frontFaceCW:Bool) : Void;
+	function setFlipSided(flipSided:Bool) : Void;
 	function setCullFace(cullFace:CullFace) : Void;
 	function setLineWidth(width:Float) : Void;
-	function setPolygonOffset(polygonoffset:Float, factor:Float, units:Float) : Void;
+	function setPolygonOffset(polygonoffset:Bool, ?factor:Float, ?units:Float) : Void;
 	function setScissorTest(scissorTest:Bool) : Void;
-	function getScissorTest() : Bool;
-	function activeTexture(webglSlot:Dynamic) : Void;
-	function bindTexture(webglType:Dynamic, webglTexture:Dynamic) : Void;
-	function compressedTexImage2D() : Void;
-	function texImage2D() : Void;
-	function clearColor(r:Float, g:Float, b:Float, a:Float) : Void;
-	function clearDepth(depth:Float) : Void;
-	function clearStencil(stencil:Dynamic) : Void;
-	function scissor(scissor:Dynamic) : Void;
-	function viewport(viewport:Dynamic) : Void;
+	function activeTexture(webglSlot:Float) : Void;
+	function bindTexture(webglType:Float, webglTexture:Dynamic) : Void;
+	function unbindTexture() : Void;
+	function compressedTexImage2D(target:Float, level:Float, internalformat:Float, width:Float, height:Float, border:Float, data:ArrayBufferView) : Void;
+	@:overload(function(target:Float, level:Float, internalformat:Float, format:Float, type:Float, source:Dynamic):Void{})
+	function texImage2D(target:Float, level:Float, internalformat:Float, width:Float, height:Float, border:Float, format:Float, type:Float, pixels:ArrayBufferView) : Void;
+	function texImage3D(target:Float, level:Float, internalformat:Float, width:Float, height:Float, depth:Float, border:Float, format:Float, type:Float, pixels:Dynamic) : Void;
+	function scissor(scissor:Vector4) : Void;
+	function viewport(viewport:Vector4) : Void;
 	function reset() : Void;
 }

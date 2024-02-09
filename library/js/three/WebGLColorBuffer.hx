@@ -5,9 +5,9 @@ import js.lib.*;
 @:native("THREE.WebGLColorBuffer")
 extern class WebGLColorBuffer
 {
-	function new(gl:Dynamic, state:Dynamic) : Void;
-	function setMask(colorMask:Float) : Void;
+	function new() : Void;
+	function setMask(colorMask:Bool) : Void;
 	function setLocked(lock:Bool) : Void;
-	function setClear(r:Float, g:Float, b:Float, a:Float) : Void;
+	function setClear(r:Float, g:Float, b:Float, a:Float, premultipliedAlpha:Bool) : Void;
 	function reset() : Void;
 }

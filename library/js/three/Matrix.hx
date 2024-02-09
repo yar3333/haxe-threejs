@@ -5,9 +5,9 @@ import js.lib.*;
 extern interface Matrix
 {
 	/**
-	 * Float32Array with matrix values.
+	 * Array with matrix values.
 	 */
-	var elements : Float32Array;
+	var elements : Array<Float>;
 
 	/**
 	 * identity():T;
@@ -23,13 +23,13 @@ extern interface Matrix
 	function multiplyScalar(s:Float) : Matrix;
 	function determinant() : Float;
 	/**
-	 * getInverse(matrix:T, throwOnInvertible?:boolean):T;
-	 */
-	function getInverse(matrix:Matrix, ?throwOnInvertible:Bool) : Matrix;
-	/**
 	 * transpose():T;
 	 */
 	function transpose() : Matrix;
+	/**
+	 * invert():T;
+	 */
+	function invert() : Matrix;
 	/**
 	 * clone():T;
 	 */

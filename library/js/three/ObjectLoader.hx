@@ -3,21 +3,17 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.ObjectLoader")
-extern class ObjectLoader
+extern class ObjectLoader extends Loader<Object3D>
 {
-	var manager : LoadingManager;
-	var texturePass : String;
-	var crossOrigin : String;
-
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, ?onLoad:Object3D->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:haxe.extern.EitherType<Error, js.html.ErrorEvent>->Void) : Void;
-	function setTexturePath(value:String) : Void;
-	function setCrossOrigin(crossOrigin:String) : Void;
-	function parse<T:Object3D>(json:Dynamic, ?onLoad:Object3D->Void) : T;
-	function parseGeometries(json:Dynamic) : Array<Dynamic>;
-	function parseMaterials(json:Dynamic, textures:Array<Texture>) : Array<Material>;
-	function parseAnimations(json:Dynamic) : Array<AnimationClip>;
-	function parseImages(json:Dynamic, onLoad:Void->Void) : Dynamic<js.html.ImageElement>;
-	function parseTextures(json:Dynamic, images:Dynamic) : Array<Texture>;
-	function parseObject<T:Object3D>(data:Dynamic, geometries:Array<Dynamic>, materials:Array<Material>) : T;
+	function load(url:String, ?onLoad:Object3D->Void, ?onProgress:ProgressEvent->Void, ?onError:unknown->Void) : Void;
+	function parse(json:unknown, ?onLoad:Object3D->Void) : Object3D;
+	function parseAsync(json:unknown) : Promise<Object3D>;
+	function parseGeometries(json:unknown) : Dynamic<haxe.extern.EitherType<InstancedBufferGeometry, BufferGeometry>>;
+	function parseMaterials(json:unknown, textures:Dynamic<Texture>) : Dynamic<Material>;
+	function parseAnimations(json:unknown) : Dynamic<AnimationClip>;
+	function parseImages(json:unknown, ?onLoad:Void->Void) : Dynamic<Source>;
+	function parseImagesAsync(json:unknown) : Promise<Dynamic<Source>>;
+	function parseTextures(json:unknown, images:Dynamic<Source>) : Dynamic<Texture>;
+	function parseObject(data:unknown, geometries:Dynamic<haxe.extern.EitherType<InstancedBufferGeometry, BufferGeometry>>, materials:Dynamic<Material>, animations:Dynamic<AnimationClip>) : Object3D;
 }

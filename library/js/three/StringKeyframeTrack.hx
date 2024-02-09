@@ -5,5 +5,10 @@ import js.lib.*;
 @:native("THREE.StringKeyframeTrack")
 extern class StringKeyframeTrack extends KeyframeTrack
 {
-	function new(name:String, times:Array<Dynamic>, values:Array<Dynamic>, interpolation:InterpolationModes) : Void;
+	/**
+	 * @default 'string'
+	 */
+	//var ValueTypeName : String;
+
+	function new(name:String, times:ArrayLike<Float>, values:ArrayLike<Dynamic>, ?interpolation:InterpolationModes) : Void;
 }

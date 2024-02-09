@@ -2,47 +2,56 @@ package js.three;
 
 import js.lib.*;
 
-typedef WebGLRendererParameters =
+extern interface WebGLRendererParameters
 {
 	/**
 	 * A Canvas where the renderer draws its output.
 	 */
-	@:optional var canvas : js.html.CanvasElement;
+	@:optional var canvas : haxe.extern.EitherType<HTMLCanvasElement, haxe.extern.EitherType<OffscreenCanvas, {}>>;
+	/**
+	 * A WebGL Rendering Context.
+	 * (https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext)
+	 * Default is null
+	 */
+	@:optional var context : haxe.extern.EitherType<WebGLRenderingContext, {}>;
 	/**
 	 * shader precision. Can be "highp", "mediump" or "lowp".
 	 */
-	@:optional var precision : String;
-	/**
-	 * default is true.
-	 */
-	@:optional var alpha : Bool;
-	/**
-	 * default is true.
-	 */
-	@:optional var premultipliedAlpha : Bool;
+	@:optional var precision : haxe.extern.EitherType<String, {}>;
 	/**
 	 * default is false.
 	 */
-	@:optional var antialias : Bool;
+	@:optional var alpha : haxe.extern.EitherType<Bool, {}>;
 	/**
 	 * default is true.
 	 */
-	@:optional var stencil : Bool;
+	@:optional var premultipliedAlpha : haxe.extern.EitherType<Bool, {}>;
 	/**
 	 * default is false.
 	 */
-	@:optional var preserveDrawingBuffer : Bool;
+	@:optional var antialias : haxe.extern.EitherType<Bool, {}>;
 	/**
-	 * default is 0x000000.
+	 * default is true.
 	 */
-	@:optional var clearColor : Float;
-	/**
-	 * default is 0.
-	 */
-	@:optional var clearAlpha : Float;
-	@:optional var devicePixelRatio : Float;
+	@:optional var stencil : haxe.extern.EitherType<Bool, {}>;
 	/**
 	 * default is false.
 	 */
-	@:optional var logarithmicDepthBuffer : Bool;
+	@:optional var preserveDrawingBuffer : haxe.extern.EitherType<Bool, {}>;
+	/**
+	 * Can be "high-performance", "low-power" or "default"
+	 */
+	@:optional var powerPreference : haxe.extern.EitherType<String, {}>;
+	/**
+	 * default is true.
+	 */
+	@:optional var depth : haxe.extern.EitherType<Bool, {}>;
+	/**
+	 * default is false.
+	 */
+	@:optional var logarithmicDepthBuffer : haxe.extern.EitherType<Bool, {}>;
+	/**
+	 * default is false.
+	 */
+	@:optional var failIfMajorPerformanceCaveat : haxe.extern.EitherType<Bool, {}>;
 }

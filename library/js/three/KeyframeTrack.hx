@@ -6,25 +6,29 @@ import js.lib.*;
 extern class KeyframeTrack
 {
 	var name : String;
-	var times : Array<Dynamic>;
-	var values : Array<Dynamic>;
+	var times : Float32Array;
+	var values : Float32Array;
 	var ValueTypeName : String;
 	var TimeBufferType : Float32Array;
 	var ValueBufferType : Float32Array;
+	/**
+	 * @default THREE.InterpolateLinear
+	 */
 	var DefaultInterpolation : InterpolationModes;
 
-	function new(name:String, times:Array<Dynamic>, values:Array<Dynamic>, interpolation:InterpolationModes) : Void;
+	function new(name:String, times:ArrayLike<Float>, values:ArrayLike<Dynamic>, ?interpolation:InterpolationModes) : Void;
 	function InterpolantFactoryMethodDiscrete(result:Dynamic) : DiscreteInterpolant;
 	function InterpolantFactoryMethodLinear(result:Dynamic) : LinearInterpolant;
 	function InterpolantFactoryMethodSmooth(result:Dynamic) : CubicInterpolant;
-	function setInterpolation(interpolation:InterpolationModes) : Void;
+	function setInterpolation(interpolation:InterpolationModes) : KeyframeTrack;
 	function getInterpolation() : InterpolationModes;
-	function getValuesize() : Float;
+	function createInterpolant() : Interpolant;
+	function getValueSize() : Float;
 	function shift(timeOffset:Float) : KeyframeTrack;
 	function scale(timeScale:Float) : KeyframeTrack;
 	function trim(startTime:Float, endTime:Float) : KeyframeTrack;
 	function validate() : Bool;
 	function optimize() : KeyframeTrack;
-	static function parse(json:Dynamic) : KeyframeTrack;
+	function clone() : KeyframeTrack;
 	static function toJSON(track:KeyframeTrack) : Dynamic;
 }

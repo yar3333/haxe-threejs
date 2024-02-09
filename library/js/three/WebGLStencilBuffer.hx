@@ -5,12 +5,12 @@ import js.lib.*;
 @:native("THREE.WebGLStencilBuffer")
 extern class WebGLStencilBuffer
 {
-	function new(gl:Dynamic, state:Dynamic) : Void;
+	function new() : Void;
 	function setTest(stencilTest:Bool) : Void;
-	function sertMask(stencilMask:Float) : Void;
-	function setFunc(stencilFunc:haxe.Constraints.Function, stencilRef:Dynamic, stencilMask:Float) : Void;
-	function setOp(stencilFail:Dynamic, stencilZFail:Dynamic, stencilZPass:Dynamic) : Void;
+	function setMask(stencilMask:Float) : Void;
+	function setFunc(stencilFunc:Float, stencilRef:Float, stencilMask:Float) : Void;
+	function setOp(stencilFail:Float, stencilZFail:Float, stencilZPass:Float) : Void;
 	function setLocked(lock:Bool) : Void;
-	function setClear(stencil:Dynamic) : Void;
+	function setClear(stencil:Float) : Void;
 	function reset() : Void;
 }

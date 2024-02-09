@@ -3,28 +3,13 @@ package js.three;
 import js.lib.*;
 
 /**
- * A class for displaying particles in the form of variable size points. For example, if using the WebGLRenderer, the particles are displayed using GL_POINTS.
- * 
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/objects/ParticleSystem.js">src/objects/ParticleSystem.js</a>
+ * A class for displaying {@link Points}
+ * @remarks
+ * The {@link Points} are rendered by the {@link THREE.WebGLRenderer | WebGLRenderer} using {@link https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements | gl.POINTS}.
+ * @see {@link https://threejs.org/docs/index.html#api/en/objects/Points | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Points.js | Source}
  */
 @:native("THREE.Points")
-extern class Points extends Object3D
+extern class Points<TGeometry:BufferGeometry<NormalOrGLBufferAttributes>, BufferGeometry:Dynamic, TMaterial:haxe.extern.EitherType<Material, Array<Material>>, Material:Dynamic>
 {
-	/**
-	 * An instance of Geometry or BufferGeometry, where each vertex designates the position of a particle in the system.
-	 */
-	var geometry : haxe.extern.EitherType<Geometry, BufferGeometry>;
-	/**
-	 * An instance of Material, defining the object's appearance. Default is a PointsMaterial with randomised colour.
-	 */
-	var material : Material;
-
-	/**
-	 * A class for displaying particles in the form of variable size points. For example, if using the WebGLRenderer, the particles are displayed using GL_POINTS.
-	 * 
-	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/objects/ParticleSystem.js">src/objects/ParticleSystem.js</a>
-	 */
-	@:overload(function(?geometry:haxe.extern.EitherType<Geometry,BufferGeometry>,?material:Material):Void{})
-	function new() : Void;
-	override function raycast(raycaster:Raycaster, intersects:Dynamic) : Void;
 }

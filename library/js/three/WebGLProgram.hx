@@ -5,8 +5,12 @@ import js.lib.*;
 @:native("THREE.WebGLProgram")
 extern class WebGLProgram
 {
-	var id : Int;
-	var code : String;
+	var name : String;
+	var id : Float;
+	var cacheKey : String;
+	/**
+	 * @default 1
+	 */
 	var usedTimes : Float;
 	var program : Dynamic;
 	var vertexShader : WebGLShader;
@@ -20,7 +24,7 @@ extern class WebGLProgram
 	 */
 	var attributes : Dynamic;
 
-	function new(renderer:WebGLRenderer, code:String, material:ShaderMaterial, parameters:WebGLRendererParameters) : Void;
+	function new(renderer:WebGLRenderer, cacheKey:String, parameters:object) : Void;
 	function getUniforms() : WebGLUniforms;
 	function getAttributes() : Dynamic;
 	function destroy() : Void;

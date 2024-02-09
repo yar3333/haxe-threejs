@@ -5,30 +5,84 @@ import js.lib.*;
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material
 {
-	var defines : Dynamic;
+	/**
+	 * Read-only flag to check if a given object is of type {@link ShaderMaterial}.
+	 * @remarks This is a _constant_ value
+	 * @defaultValue `true`
+	 */
+	var isShaderMaterial(default, null) : Bool;
+	/**
+	 * @default 'ShaderMaterial'
+	 */
+	var type : String;
+	/**
+	 * @default {}
+	 */
+	var defines : Dynamic<Dynamic>;
+	/**
+	 * @default {}
+	 */
 	var uniforms : Dynamic<IUniform>;
+	var uniformsGroups : Array<UniformsGroup>;
 	var vertexShader : String;
 	var fragmentShader : String;
+	/**
+	 * @default 1
+	 */
 	var linewidth : Float;
+	/**
+	 * @default false
+	 */
 	var wireframe : Bool;
+	/**
+	 * @default 1
+	 */
 	var wireframeLinewidth : Float;
-	//var lights : Bool;
+	/**
+	 * @default false
+	 */
+	var fog : Bool;
+	/**
+	 * @default false
+	 */
+	var lights : Bool;
+	/**
+	 * @default false
+	 */
 	var clipping : Bool;
-	var skinning : Bool;
-	var morphTargets : Bool;
-	var morphNormals : Bool;
 	/**
 	 * @deprecated Use {@link ShaderMaterial#extensions.derivatives extensions.derivatives} instead.
 	 */
 	var derivatives : Dynamic;
-	var extensions : { var derivatives : Bool; var fragDepth : Bool; var drawBuffers : Bool; var shaderTextureLOD : Bool; };
+	/**
+	 * @default {
+	 *   derivatives: false,
+	 *   fragDepth: false,
+	 *   drawBuffers: false,
+	 *   shaderTextureLOD: false,
+	 *   clipCullDistance: false,
+	 *   multiDraw: false
+	 * }
+	 */
+	var extensions : { var derivatives : Bool; var fragDepth : Bool; var drawBuffers : Bool; var shaderTextureLOD : Bool; var clipCullDistance : Bool; var multiDraw : Bool; };
+	/**
+	 * @default { 'color': [ 1, 1, 1 ], 'uv': [ 0, 0 ], 'uv1': [ 0, 0 ] }
+	 */
 	var defaultAttributeValues : Dynamic;
-	var index0AttributeName : String;
+	/**
+	 * @default undefined
+	 */
+	var index0AttributeName : haxe.extern.EitherType<String, {}>;
+	/**
+	 * @default false
+	 */
+	var uniformsNeedUpdate : Bool;
+	/**
+	 * @default null
+	 */
+	var glslVersion : GLSLVersion;
 
-	@:overload(function(?parameters:ShaderMaterialParameters):Void{})
-	function new() : Void;
-	@:overload(function(parameters:ShaderMaterialParameters):Void{})
-	override function setValues(values:MaterialParameters) : Void;
-	@:overload(function(meta:Dynamic):Dynamic{})
-	override function toJSON(?meta:Dynamic) : Dynamic;
+	function new(?parameters:ShaderMaterialParameters) : Void;
+	function setValues(parameters:ShaderMaterialParameters) : Void;
+	function toJSON(meta:Dynamic) : Dynamic;
 }

@@ -5,7 +5,13 @@ import js.lib.*;
 @:native("THREE.Line3")
 extern class Line3
 {
+	/**
+	 * @default new THREE.Vector3()
+	 */
 	var start : Vector3;
+	/**
+	 * @default new THREE.Vector3()
+	 */
 	var end : Vector3;
 
 	function new(?start:Vector3, ?end:Vector3) : Void;

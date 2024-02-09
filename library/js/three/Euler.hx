@@ -5,25 +5,38 @@ import js.lib.*;
 @:native("THREE.Euler")
 extern class Euler
 {
+	/**
+	 * @default 0
+	 */
 	var x : Float;
+	/**
+	 * @default 0
+	 */
 	var y : Float;
+	/**
+	 * @default 0
+	 */
 	var z : Float;
-	var order : String;
-	var onChangeCallback : haxe.Constraints.Function;
-	static var RotationOrders : Array<String>;
-	static var DefaultOrder : String;
+	/**
+	 * @default THREE.Euler.DEFAULT_ORDER
+	 */
+	var order : EulerOrder;
+	var isEuler(default, null) : Bool;
+	var _onChangeCallback : Void->Void;
+	var Euler : Dynamic;
+	static var DEFAULT_ORDER : String; // "XYZ"
 
-	function new(?x:Float, ?y:Float, ?z:Float, ?order:String) : Void;
-	function set(x:Float, y:Float, z:Float, ?order:String) : Euler;
+	function new(?x:Float, ?y:Float, ?z:Float, ?order:EulerOrder) : Void;
+	function set(x:Float, y:Float, z:Float, ?order:EulerOrder) : Euler;
 	function clone() : Euler;
 	function copy(euler:Euler) : Euler;
-	function setFromRotationMatrix(m:Matrix4, ?order:String, ?update:Bool) : Euler;
-	function setFromQuaternion(q:Quaternion, ?order:String, ?update:Bool) : Euler;
-	function setFromVector3(v:Vector3, ?order:String) : Euler;
-	function reorder(newOrder:String) : Euler;
+	function setFromRotationMatrix(m:Matrix4, ?order:EulerOrder, ?update:Bool) : Euler;
+	function setFromQuaternion(q:Quaternion, ?order:EulerOrder, ?update:Bool) : Euler;
+	function setFromVector3(v:Vector3, ?order:EulerOrder) : Euler;
+	function reorder(newOrder:EulerOrder) : Euler;
 	function equals(euler:Euler) : Bool;
-	function fromArray(xyzo:Array<Dynamic>) : Euler;
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
-	function toVector3(?optionalResult:Vector3) : Vector3;
-	function onChange(callback:haxe.Constraints.Function) : Void;
+	function fromArray(xyzo:[number, number, number, EulerOrder?,, any:Dynamic) : Dynamic;
+	function toArray(?array:Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>, ?offset:Float) : Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>;
+	function _onChange(callback:Void->Void) : Euler;
+	function [Symbol.iterator]() : Generator<haxe.extern.EitherType<String, Float>, Void>;
 }

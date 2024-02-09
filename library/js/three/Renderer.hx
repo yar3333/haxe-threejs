@@ -4,8 +4,8 @@ import js.lib.*;
 
 extern interface Renderer
 {
-	var domElement : js.html.CanvasElement;
+	var domElement : HTMLCanvasElement;
 
-	function render(scene:Scene, camera:Camera) : Void;
+	function render(scene:Object3D, camera:Camera) : Void;
 	function setSize(width:Float, height:Float, ?updateStyle:Bool) : Void;
 }

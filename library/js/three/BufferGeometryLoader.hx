@@ -3,11 +3,8 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.BufferGeometryLoader")
-extern class BufferGeometryLoader
+extern class BufferGeometryLoader extends Loader<InstancedBufferGeometry | BufferGeometry>
 {
-	var manager : LoadingManager;
-
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, onLoad:BufferGeometry->Void, ?onProgress:Dynamic->Void, ?onError:Dynamic->Void) : Void;
-	function parse(json:Dynamic) : BufferGeometry;
+	function parse(json:unknown) : haxe.extern.EitherType<InstancedBufferGeometry, BufferGeometry>;
 }

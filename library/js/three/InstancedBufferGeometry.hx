@@ -3,18 +3,37 @@ package js.three;
 import js.lib.*;
 
 /**
- * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js">src/core/InstancedBufferGeometry.js</a>
+ * An instanced version of {@link THREE.BufferGeometry | BufferGeometry}.
+ * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedBufferGeometry | Official Documentation}
+ * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js | Source}
  */
 @:native("THREE.InstancedBufferGeometry")
 extern class InstancedBufferGeometry extends BufferGeometry
 {
-	//var groups : Array<{ var start : Float; var count : Float; var instances : Float; }>;
-	var maxInstancedCount : Float;
+	/**
+	 * @defaultValue `InstancedBufferGeometry`
+	 */
+	var type : String;
+	/**
+	 * Read-only flag to check if a given object is of type {@link InstancedBufferGeometry}.
+	 * @remarks This is a _constant_ value
+	 * @defaultValue `true`
+	 */
+	var isInstancedBufferGeometry(default, null) : Bool;
+	/**
+	 * @defaultValue `Infinity`
+	 */
+	var instanceCount : Float;
 
 	/**
-	 * @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js">src/core/InstancedBufferGeometry.js</a>
+	 * An instanced version of {@link THREE.BufferGeometry | BufferGeometry}.
+	 * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedBufferGeometry | Official Documentation}
+	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferGeometry.js | Source}
 	 */
 	function new() : Void;
-	@:overload(function(start:Float,count:Int,instances:Float):Void{})
-	override function addGroup(start:Float, count:Int, ?materialIndex:Float) : Void;
+	/**
+	 * Copies the given {@link InstancedBufferGeometry} to this instance.
+	 * @override
+	 */
+	function copy(source:InstancedBufferGeometry) : InstancedBufferGeometry;
 }

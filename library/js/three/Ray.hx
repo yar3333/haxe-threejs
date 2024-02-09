@@ -5,7 +5,13 @@ import js.lib.*;
 @:native("THREE.Ray")
 extern class Ray
 {
+	/**
+	 * @default new THREE.Vector3()
+	 */
 	var origin : Vector3;
+	/**
+	 * @default new THREE.Vector3( 0, 0, - 1 )
+	 */
 	var direction : Vector3;
 
 	function new(?origin:Vector3, ?direction:Vector3) : Void;
@@ -13,7 +19,7 @@ extern class Ray
 	function clone() : Ray;
 	function copy(ray:Ray) : Ray;
 	function at(t:Float, target:Vector3) : Vector3;
-	function lookAt(v:Vector3) : Vector3;
+	function lookAt(v:Vector3) : Ray;
 	function recast(t:Float) : Ray;
 	function closestPointToPoint(point:Vector3, target:Vector3) : Vector3;
 	function distanceToPoint(point:Vector3) : Float;

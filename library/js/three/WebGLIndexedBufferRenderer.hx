@@ -5,9 +5,11 @@ import js.lib.*;
 @:native("THREE.WebGLIndexedBufferRenderer")
 extern class WebGLIndexedBufferRenderer
 {
-	function new(gl:js.html.webgl.RenderingContext, properties:Dynamic, info:Dynamic) : Void;
-	function setMode(value:Dynamic) : Void;
-	function setIndex(index:Dynamic) : Void;
-	function render(start:Dynamic, count:Int) : Void;
-	function renderInstances(geometry:Dynamic, start:Dynamic, count:Int) : Void;
+	var setMode : Dynamic->Void;
+	var setIndex : Dynamic->Void;
+	var render : Dynamic->Float->Void;
+	var renderInstances : Dynamic->Float->Float->Void;
+	var renderMultiDraw : Int32Array->Int32Array->Float->Void;
+
+	function new(gl:WebGLRenderingContext, extensions:Dynamic, info:Dynamic, capabilities:Dynamic) : Void;
 }
