@@ -1,5 +1,6 @@
-package js.three;
+package js.three.core;
 
+import js.three.textures.Texture;
 import js.lib.*;
 
 @:native("THREE.RenderTarget")

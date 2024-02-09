@@ -1,6 +1,7 @@
-package js.three;
+package js.three.textures;
 
-import js.lib.*;
+import js.three.math.Matrix3;
+import js.three.core.EventDispatcher;
 import js.three.Constants;
 
 /**

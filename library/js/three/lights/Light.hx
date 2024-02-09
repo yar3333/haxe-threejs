@@ -1,7 +1,6 @@
-package js.three;
+package js.three.lights;
 
 import js.lib.*;
-import js.three.Color;
 
 /**
  * Abstract base class for lights.

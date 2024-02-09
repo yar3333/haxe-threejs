@@ -1,6 +1,8 @@
-package js.three;
+package js.three.objects;
 
-import js.lib.*;
+import js.three.core.Object3DEventMap;
+import js.three.materials.Material;
+import js.three.core.BufferGeometry;
 
 /**
  * A continuous line.

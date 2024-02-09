@@ -1,4 +1,4 @@
-package js.three;
+package js.three.cameras;
 
 import js.lib.*;
 import js.three.Constants;

@@ -1,13 +1,14 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.textures.Texture;
+import js.three.math.ColorRepresentation;
 
 typedef PointsMaterialParameters =
 {>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
-	@:optional var map : haxe.extern.EitherType<Texture, {}>;
-	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var size : haxe.extern.EitherType<Float, {}>;
-	@:optional var sizeAttenuation : haxe.extern.EitherType<Bool, {}>;
-	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
+	@:optional var color : ColorRepresentation;
+	@:optional var map : Texture;
+	@:optional var alphaMap : Texture;
+	@:optional var size : Float;
+	@:optional var sizeAttenuation : Bool;
+	@:optional var fog : Bool;
 }

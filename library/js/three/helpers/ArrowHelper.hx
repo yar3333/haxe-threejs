@@ -1,4 +1,4 @@
-package js.three;
+package js.three.helpers;
 
 import js.three.types.Object3dType;
 import js.lib.*;

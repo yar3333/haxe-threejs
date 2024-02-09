@@ -1,5 +1,6 @@
-package js.three;
+package js.three.lights;
 
+import js.three.cameras.Camera;
 import js.lib.*;
 
 /**

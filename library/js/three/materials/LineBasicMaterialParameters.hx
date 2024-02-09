@@ -1,7 +1,6 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
-import js.three.Color;
+import js.three.math.ColorRepresentation;
 
 typedef LineBasicMaterialParameters =
 {>MaterialParameters,

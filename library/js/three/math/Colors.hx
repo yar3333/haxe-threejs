@@ -1,4 +1,4 @@
-package js.three;
+package js.three.math;
 
 enum abstract Colors(Int)
 {

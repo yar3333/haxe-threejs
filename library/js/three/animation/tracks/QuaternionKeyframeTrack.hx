@@ -1,4 +1,4 @@
-package js.three;
+package js.three.animation.tracks;
 
 import js.lib.*;
 import js.three.Constants.InterpolationModes;

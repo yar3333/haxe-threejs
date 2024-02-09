@@ -1,10 +1,11 @@
-package js.three;
+package js.three.materials;
 
+import js.three.math.Plane;
+import js.three.math.ColorRepresentation;
 import js.three.types.Precision;
 import haxe.extern.EitherType;
 import js.lib.*;
 import js.three.Constants;
-import js.three.Color;
 
 typedef MaterialParameters =
 {

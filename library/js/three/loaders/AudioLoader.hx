@@ -1,4 +1,4 @@
-package js.three;
+package js.three.loaders;
 
 import js.lib.*;
 import js.html.audio.AudioBuffer;

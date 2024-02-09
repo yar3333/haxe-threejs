@@ -1,6 +1,7 @@
-package js.three;
+package js.three.objects;
 
-import js.lib.*;
+import js.three.materials.Material;
+import js.three.core.BufferGeometry;
 
 /**
  * A mesh that has a {@link THREE.Skeleton | Skeleton} with {@link Bone | bones} that can then be used to animate the vertices of the geometry.

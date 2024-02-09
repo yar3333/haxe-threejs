@@ -1,4 +1,4 @@
-package js.three;
+package js.three.extras.curves;
 
 import js.three.types.CurveType;
 import js.lib.*;

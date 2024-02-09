@@ -1,4 +1,4 @@
-package js.three;
+package js.three.math;
 
 import haxe.extern.EitherType;
 import js.lib.*;

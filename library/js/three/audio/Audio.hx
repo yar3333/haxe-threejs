@@ -1,4 +1,4 @@
-package js.three;
+package js.three.audio;
 
 import js.html.audio.GainNode;
 import js.lib.*;

@@ -1,7 +1,4 @@
-package js.three;
-
-import js.lib.*;
-import js.three.WebXRSpaceEventMap.XRInputSource;
+package js.three.renderers.webxr;
 
 typedef XRHandSpace = Dynamic;
 typedef XRControllerEventType = Dynamic;

@@ -1,4 +1,9 @@
-package js.three;
+package js.three.objects;
+
+import js.three.core.BufferGeometry;
+import js.three.core.Object3D;
+import js.three.core.Object3DEventMap;
+import js.three.materials.Material;
 
 /**
  * Class representing triangular {@link https://en.wikipedia.org/wiki/Polygon_mesh | polygon mesh} based objects.

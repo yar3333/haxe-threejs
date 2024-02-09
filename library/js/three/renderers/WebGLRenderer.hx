@@ -1,9 +1,7 @@
-package js.three;
+package js.three.renderers;
 
 import js.html.webgl.WebGL2RenderingContext;
-import js.lib.*;
 import js.three.Constants;
-import js.three.Color;
 
 /**
  * The WebGL renderer displays your beautifully crafted scenes using WebGL, if your device supports it.

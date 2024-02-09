@@ -1,4 +1,4 @@
-package js.three;
+package js.three.geometries;
 
 import js.lib.*;
 

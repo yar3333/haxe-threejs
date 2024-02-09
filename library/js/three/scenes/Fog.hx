@@ -1,4 +1,4 @@
-package js.three;
+package js.three.scenes;
 
 import js.lib.*;
 

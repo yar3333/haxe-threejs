@@ -1,6 +1,7 @@
-package js.three;
+package js.three.renderers;
 
-import js.lib.*;
+import js.three.core.RenderTarget;
+import js.three.textures.Texture;
 
 @:native("THREE.WebGLRenderTarget")
 extern class WebGLRenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>> = Texture> extends RenderTarget<TTexture>

@@ -1,9 +1,9 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.math.ColorRepresentation;
 
 typedef ShadowMaterialParameters =
 {>MaterialParameters,
-	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
-	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
+	@:optional var color : ColorRepresentation;
+	@:optional var fog : Bool;
 }

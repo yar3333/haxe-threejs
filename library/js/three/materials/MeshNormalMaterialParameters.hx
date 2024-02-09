@@ -1,6 +1,7 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.math.Vector2;
+import js.three.textures.Texture;
 import js.three.Constants;
 
 typedef MeshNormalMaterialParameters =

@@ -1,3 +1,3 @@
-package js.three;
+package js.three.renderers.webgl;
 
 extern abstract class WebGLShader {}

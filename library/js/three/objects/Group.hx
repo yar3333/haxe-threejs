@@ -1,6 +1,6 @@
-package js.three;
+package js.three.objects;
 
-import js.lib.*;
+import js.three.core.Object3DEventMap;
 
 /**
  * Its purpose is to make working with groups of objects syntactically clearer.

@@ -1,6 +1,9 @@
-package js.three;
+package js.three.objects;
 
-import js.lib.*;
+import js.three.materials.Material;
+import js.three.core.BufferGeometry;
+
+// TODO: CONVERT FROM TS
 
 /**
  * A special version of {@link THREE.Mesh | Mesh} with instanced rendering support

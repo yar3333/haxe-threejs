@@ -1,4 +1,4 @@
-package js.three;
+package js.three.renderers.webgl;
 
 import js.lib.*;
 import js.html.webgl.WebGL2RenderingContext;

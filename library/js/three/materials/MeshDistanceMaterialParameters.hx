@@ -1,15 +1,16 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.math.Vector3;
+import js.three.textures.Texture;
 
 typedef MeshDistanceMaterialParameters =
 {>MaterialParameters,
-	@:optional var map : haxe.extern.EitherType<Texture, {}>;
-	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var displacementMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var displacementScale : haxe.extern.EitherType<Float, {}>;
-	@:optional var displacementBias : haxe.extern.EitherType<Float, {}>;
-	@:optional var farDistance : haxe.extern.EitherType<Float, {}>;
-	@:optional var nearDistance : haxe.extern.EitherType<Float, {}>;
-	@:optional var referencePosition : haxe.extern.EitherType<Vector3, {}>;
+	@:optional var map : Texture;
+	@:optional var alphaMap : Texture;
+	@:optional var displacementMap : Texture;
+	@:optional var displacementScale : Float;
+	@:optional var displacementBias : Float;
+	@:optional var farDistance : Float;
+	@:optional var nearDistance : Float;
+	@:optional var referencePosition : Vector3;
 }

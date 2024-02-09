@@ -1,8 +1,7 @@
-package js.three;
+package js.three.geometries;
 
 import js.lib.*;
-
-import js.three.BufferGeometry in BaseBufferGeometryClass;
+import js.three.core.BufferGeometry;
 
 /**
  * This can be used as a helper object to view the edges of a {@link THREE.BufferGeometry | geometry}.
@@ -20,7 +19,7 @@ import js.three.BufferGeometry in BaseBufferGeometryClass;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/EdgesGeometry.js | Source}
  */
 @:native("THREE.EdgesGeometry")
-extern class EdgesGeometry<TBufferGeometry:BufferGeometry, BufferGeometry:Dynamic> extends BaseBufferGeometryClass
+extern class EdgesGeometry<TBufferGeometry:BufferGeometry = BufferGeometry> extends BufferGeometry
 {
 	/**
 	 * A Read-only _string_ to check if `this` object type.

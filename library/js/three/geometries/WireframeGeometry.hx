@@ -1,5 +1,6 @@
-package js.three;
+package js.three.geometries;
 
+import js.three.core.BufferGeometry;
 import js.lib.*;
 
 /**

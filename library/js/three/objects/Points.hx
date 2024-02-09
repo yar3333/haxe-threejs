@@ -1,7 +1,7 @@
-package js.three;
+package js.three.objects;
 
-import js.lib.*;
-import js.three.BufferGeometry;
+import js.three.materials.Material;
+import js.three.core.BufferGeometry;
 
 /**
  * A class for displaying {@link Points}

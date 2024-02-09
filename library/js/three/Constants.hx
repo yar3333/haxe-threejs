@@ -1,5 +1,6 @@
 package js.three;
 
+import js.three.textures.OffscreenCanvas;
 import js.lib.*;
 import js.html.*;
 import haxe.extern.EitherType;

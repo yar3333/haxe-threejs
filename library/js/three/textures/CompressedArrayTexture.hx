@@ -1,4 +1,4 @@
-package js.three;
+package js.three.textures;
 
 import js.three.Constants.TextureDataType;
 import js.three.Constants.CompressedPixelFormat;

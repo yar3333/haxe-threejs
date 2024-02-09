@@ -1,6 +1,6 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.textures.Texture;
 import js.three.Constants;
 
 typedef MeshDepthMaterialParameters =

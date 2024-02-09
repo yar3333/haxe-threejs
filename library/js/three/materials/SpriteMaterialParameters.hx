@@ -1,7 +1,7 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
-import js.three.Color;
+import js.three.textures.Texture;
+import js.three.math.ColorRepresentation;
 
 typedef SpriteMaterialParameters =
 {>MaterialParameters,

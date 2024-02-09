@@ -1,6 +1,8 @@
-package js.three;
+package js.three.materials;
 
-import js.lib.*;
+import js.three.math.ColorRepresentation;
+import js.three.math.Vector2;
+import js.three.textures.Texture;
 
 typedef MeshPhysicalMaterialParameters =
 {>MeshStandardMaterialParameters,

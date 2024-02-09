@@ -1,4 +1,4 @@
-package js.three;
+package js.three.loaders;
 
 import haxe.extern.EitherType;
 import js.lib.*;

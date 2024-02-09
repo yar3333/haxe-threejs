@@ -1,6 +1,6 @@
-package js.three;
+package js.three.renderers;
 
-import js.lib.*;
+import js.three.textures.OffscreenCanvas;
 
 typedef WebGLRendererParameters =
 {
