@@ -1,5 +1,5 @@
-TAG = r91
-DEFINITELY_TYPED_COMMIT_HASH = db7a840e4fe9685b2087e0529859ae5c75b6216d
+TAG = r161
+DEFINITELY_TYPED_COMMIT_HASH = 38ef3fd42f1dea0368aa97a34fcac0535c55874e
 
 JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
@@ -7,6 +7,7 @@ TS_SRC = types/three
 
 build: native-ts
 	rm -rf library/js
+
 	haxelib run refactor dts_to_haxe --out-dir library \
 	                                 --root-package js.three \
 	                                 --native-namespace THREE \
@@ -14,18 +15,13 @@ build: native-ts
 	                                 --import js.lib.* \
 	                                 --type-mapper fix_types.rules \
 	                                 --typedef-file fix_force_typedefs.list \
-	                                 native-ts
+	                                 native-ts/types/three/src
+	
 	haxelib run refactor override library
 	
-	haxelib run refactor processFile library/js/three/Vector4.hx postfixes/Vector4.rules
-	haxelib run refactor processFile library/js/three/CatmullRomCurve3.hx postfixes/CatmullRomCurve3.rules
-	haxelib run refactor processFile library/js/three/CubicBezierCurve3.hx postfixes/CubicBezierCurve3.rules
-	haxelib run refactor processFile library/js/three/CurvePath.hx postfixes/CurvePath.rules
-	haxelib run refactor processFile library/js/three/LineCurve3.hx postfixes/LineCurve3.rules
-	haxelib run refactor processFile library/js/three/QuadraticBezierCurve3.hx postfixes/QuadraticBezierCurve3.rules
-	haxelib run refactor processFile library/js/three/PerspectiveCamera.hx postfixes/PerspectiveCamera.rules
-	
-	cp -r manual/* library
+	haxelib run refactor process library/js *.hx postfixes/StringAsType.rules
+	haxelib run refactor process library/js *.hx postfixes/IntAsType.rules
+	haxelib run refactor process library/js *.hx postfixes/Record.rules
 
 native-ts:
 	git init native-ts

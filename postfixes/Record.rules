@@ -1,0 +1,1 @@
+/([:]\s*)Record<String,\s*([A-Z][_a-zA-Z0-9]*)>/$1Dynamic<$2>/

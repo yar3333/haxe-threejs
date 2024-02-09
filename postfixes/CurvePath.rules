@@ -1,5 +1,0 @@
-/\b(function getPoint)\b/override $1/
-/\b(function getLength)\b/override $1/
-/\b(function updateArcLengths)\b/override $1/
-/\b(function getPoints)\b/override $1/
-/\b(function getSpacedPoints)\b/override $1/
