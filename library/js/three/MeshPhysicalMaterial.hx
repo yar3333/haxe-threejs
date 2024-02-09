@@ -11,14 +11,17 @@ extern class MeshPhysicalMaterial extends MeshStandardMaterial
 	 * @defaultValue `true`
 	 */
 	var isMeshPhysicalMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshPhysicalMaterial'
 	 */
 	//var type : String;
-	/**
+	
+    /**
 	 * @default { 'STANDARD': '', 'PHYSICAL': '' }
 	 */
 	//var defines : Dynamic<Dynamic>;
+
 	/**
 	 * @default 0
 	 */
@@ -126,7 +129,7 @@ extern class MeshPhysicalMaterial extends MeshStandardMaterial
 	/**
 	 * @default [100, 400]
 	 */
-	var iridescenceThicknessRange : [number, number];
+	var iridescenceThicknessRange : Array<Float>;
 	/**
 	 * @default null
 	 */
@@ -134,7 +137,7 @@ extern class MeshPhysicalMaterial extends MeshStandardMaterial
 	/**
 	 * @default 0
 	 */
-	@:optional var anisotropy : Float;
+	@:optional var anisotropy : Int;
 	/**
 	 * @default 0
 	 */
@@ -144,6 +147,5 @@ extern class MeshPhysicalMaterial extends MeshStandardMaterial
 	 */
 	@:optional var anisotropyMap : Texture;
 
-	@:overload(function(?parameters:MeshPhysicalMaterialParameters):Void{})
-	function new(?parameters:MeshStandardMaterialParameters) : Void;
+	function new(?parameters:MeshPhysicalMaterialParameters) : Void;
 }

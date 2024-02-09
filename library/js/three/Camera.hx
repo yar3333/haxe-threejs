@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Abstract base class for cameras
@@ -26,8 +27,7 @@ extern class Camera extends Object3D
 	 * @remarks Objects must share at least one layer with the {@link Camera} to be n when the camera's viewpoint is rendered.
 	 * @defaultValue `new THREE.Layers()`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.camera.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.camera.Type, String>;
 	/**
 	 * @override
 	 * @defaultValue `Camera`
@@ -36,8 +36,7 @@ extern class Camera extends Object3D
 	 * @remarks Objects must share at least one layer with the {@link Camera} to be n when the camera's viewpoint is rendered.
 	 * @defaultValue `new THREE.Layers()`
 	 */
-	var override : Dynamic;
-	var Layers : Dynamic;
+	//var layers : Layers;
 	/**
 	 * This is the inverse of matrixWorld.
 	 * @remarks MatrixWorld contains the Matrix which has the world transform of the {@link Camera} .

@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Creates a texture directly from raw data, width and height.
@@ -42,27 +43,31 @@ extern class DataTexture extends Texture
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
-	/**
+	//var magFilter : MagnificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
-	/**
+	//var minFilter : MinificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
-	/**
+	//var flipY : Bool;
+	
+    /**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
-	/**
+	//var generateMipmaps : Bool;
+	
+    /**
 	 * @override
 	 * @defaultValue `1`
 	 */
-	var unpackAlignment : Float;
+	//var unpackAlignment : Float;
 
 	/**
 	 * Creates a texture directly from raw data, width and height.
@@ -91,5 +96,5 @@ extern class DataTexture extends Texture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/DataTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/DataTexture.js | Source}
 	 */
-	function new(?data:BufferSource, ?width:Float, ?height:Float, ?format:PixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Float, ?colorSpace:ColorSpace) : Void;
+	function new(?data:BufferSource, ?width:Float, ?height:Float, ?format:PixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Int, ?colorSpace:ColorSpace) : Void;
 }

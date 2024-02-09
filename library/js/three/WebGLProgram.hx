@@ -6,7 +6,7 @@ import js.lib.*;
 extern class WebGLProgram
 {
 	var name : String;
-	var id : Float;
+	var id : Int;
 	var cacheKey : String;
 	/**
 	 * @default 1
@@ -24,7 +24,7 @@ extern class WebGLProgram
 	 */
 	var attributes : Dynamic;
 
-	function new(renderer:WebGLRenderer, cacheKey:String, parameters:object) : Void;
+	function new(renderer:WebGLRenderer, cacheKey:String, parameters:Dynamic) : Void;
 	function getUniforms() : WebGLUniforms;
 	function getAttributes() : Dynamic;
 	function destroy() : Void;

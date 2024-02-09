@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * This class can only be used in combination with {@link THREE.WebGLRenderer.copyFramebufferToTexture | WebGLRenderer.copyFramebufferToTexture()}.
@@ -37,21 +38,24 @@ extern class FramebufferTexture extends Texture
 	 * @defaultValue `true`
 	 */
 	var isFramebufferTexture(default, null) : Bool;
-	/**
+	
+    /**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
-	/**
+	//var magFilter : MagnificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
-	/**
+	//var minFilter : MinificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 
 	/**
 	 * This class can only be used in combination with {@link THREE.WebGLRenderer.copyFramebufferToTexture | WebGLRenderer.copyFramebufferToTexture()}.

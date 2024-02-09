@@ -10,5 +10,5 @@ extern class WebGLBufferRenderer
 	var renderInstances : Dynamic->Float->Float->Void;
 	var renderMultiDraw : Int32Array->Int32Array->Float->Void;
 
-	function new(gl:WebGLRenderingContext, extensions:WebGLExtensions, info:WebGLInfo, capabilities:WebGLCapabilities) : Void;
+	function new(gl:js.html.webgl.RenderingContext, extensions:WebGLExtensions, info:WebGLInfo, capabilities:WebGLCapabilities) : Void;
 }

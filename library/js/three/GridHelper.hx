@@ -26,8 +26,7 @@ extern class GridHelper extends LineSegments<BufferGeometry, LineBasicMaterial>
 	 * @override
 	 * @defaultValue `GridHelper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.gridhelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.gridhelper.Type, String>;
 
 	/**
 	 * The {@link GridHelper} is an object to define grids
@@ -44,7 +43,7 @@ extern class GridHelper extends LineSegments<BufferGeometry, LineBasicMaterial>
 	 * @see {@link https://threejs.org/docs/index.html#api/en/helpers/GridHelper | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/GridHelper.js | Source}
 	 */
-	function new(?size:Float, ?divisions:Float, ?color1:ColorRepresentation, ?color2:ColorRepresentation) : Void;
+	function new(?size:Float, ?divisions:Int, ?color1:ColorRepresentation, ?color2:ColorRepresentation) : Void;
 	/**
 	 * Frees the GPU-related resources allocated by this instance
 	 * @remarks

@@ -25,9 +25,9 @@ extern class CapsuleGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `CapsuleGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.capsulegeometry.Type, String>;
-	/**
+	//var type : haxe.extern.EitherType<js.three.capsulegeometry.Type, String>;
+	
+    /**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
 	 */
@@ -48,7 +48,7 @@ extern class CapsuleGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/CapsuleGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/CapsuleGeometry.js | Source}
 	 */
-	function new(?radius:Float, ?length:Float, ?capSegments:Float, ?radialSegments:Float) : Void;
+	function new(?radius:Float, ?length:Float, ?capSegments:Float, ?radialSegments:Int) : Void;
 	/**
 	 * @internal 
 	 */

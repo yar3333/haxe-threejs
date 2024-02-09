@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Creates a three-dimensional texture from raw data, with parameters to divide it into width, height, and depth
@@ -46,12 +47,12 @@ extern class Data3DTexture extends Texture
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
+	//var magFilter : MagnificationTextureFilter;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
+	//var minFilter : MinificationTextureFilter;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.ClampToEdgeWrapping}
@@ -61,17 +62,17 @@ extern class Data3DTexture extends Texture
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
+	//var flipY : Bool;
 	/**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 	/**
 	 * @override
 	 * @defaultValue `1`
 	 */
-	var unpackAlignment : Float;
+	//var unpackAlignment : Float;
 
 	/**
 	 * Creates a three-dimensional texture from raw data, with parameters to divide it into width, height, and depth

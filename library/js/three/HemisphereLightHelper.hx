@@ -25,28 +25,27 @@ extern class HemisphereLightHelper extends Object3D
 	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
 	 * @defaultValue `false`.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.hemispherelighthelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.hemispherelighthelper.Type, String>;
+
 	/**
 	 * Reference to the HemisphereLight being visualized.
 	 */
 	var light : HemisphereLight;
+
 	/**
 	 * Reference to the {@link THREE.HemisphereLight.matrixWorld | light.matrixWorld}.
 	 */
-	var matrix : Matrix4;
+	//var matrix : Matrix4;
+
 	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @override
-	 * @defaultValue `HemisphereLightHelper`
-	 * Is set to `false`, as the helper is using the {@link THREE.HemisphereLight.matrixWorld | light.matrixWorld}.
-	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
-	 * @defaultValue `false`.
-	 */
-	var override : Dynamic;
-	var boolean : Dynamic;
-	var material : MeshBasicMaterial;
+     * Is set to `false`, as the helper is using the {@link THREE.HemisphereLight.matrixWorld | light.matrixWorld}.
+     * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
+     * @defaultValue `false`.
+     */
+    //var matrixAutoUpdate: Bool;
+
+    var material: MeshBasicMaterial; // TODO: Double check if this need to be exposed or not.
+
 	/**
 	 * The color parameter passed in the constructor.
 	 * @remarks If this is changed, the helper's color will update the next time {@link update} is called.

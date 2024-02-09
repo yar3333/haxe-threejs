@@ -31,8 +31,8 @@ extern class PolyhedronGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `PolyhedronGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.polyhedrongeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.polyhedrongeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.

@@ -1,5 +1,6 @@
 package js.three;
 
+import js.html.webgl.WebGLTexture;
 import js.lib.*;
 
 extern interface XRWebGLDepthInformation

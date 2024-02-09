@@ -15,19 +15,21 @@ extern class LineCurve extends Curve<Vector2>
 	 * @remarks This is a _constant_ value
 	 * @defaultValue `true`
 	 */
-	var isLineCurve(default, null) : Dynamic;
-	/**
+	var isLineCurve(default, null) : Bool;
+	
+    /**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `LineCurve`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.linecurve.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.linecurve.Type, String>;
+
 	/**
 	 * The start point.
 	 * @defaultValue `new THREE.Vector2()`
 	 */
 	var v1 : Vector2;
+    
 	/**
 	 * The end point
 	 * @defaultValue `new THREE.Vector2()`

@@ -22,8 +22,8 @@ extern class PlaneHelper extends LineSegments
 	 * @override
 	 * @defaultValue `PlaneHelper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.planehelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.planehelper.Type, String>;
+    
 	/**
 	 * The {@link Plane | plane} being visualized.
 	 */
@@ -46,7 +46,7 @@ extern class PlaneHelper extends LineSegments
 	 * @see {@link https://threejs.org/docs/index.html#api/en/helpers/PlaneHelper | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/PlaneHelper.js | Source}
 	 */
-	function new(plane:Plane, ?size:Float, ?hex:Float) : Void;
+	function new(plane:Plane, ?size:Float, ?hex:Int) : Void;
 	/**
 	 * Frees the GPU-related resources allocated by this instance
 	 * @remarks

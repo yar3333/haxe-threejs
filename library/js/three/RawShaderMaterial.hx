@@ -11,8 +11,8 @@ extern class RawShaderMaterial extends ShaderMaterial
 	 * @defaultValue `true`
 	 */
 	var isRawShaderMaterial(default, null) : Bool;
-	var override : Dynamic;
-	//var type : String; // "RawShaderMaterial"
+
+	//var type(default, null) : String; // "RawShaderMaterial"
 
 	function new(?parameters:ShaderMaterialParameters) : Void;
 }

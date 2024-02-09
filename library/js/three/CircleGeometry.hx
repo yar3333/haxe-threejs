@@ -28,8 +28,8 @@ extern class CircleGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `CircleGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.circlegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.circlegeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -54,7 +54,7 @@ extern class CircleGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/CircleGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/CircleGeometry.js | Source}
 	 */
-	function new(?radius:Float, ?segments:Float, ?thetaStart:Float, ?thetaLength:Float) : Void;
+	function new(?radius:Float, ?segments:Int, ?thetaStart:Float, ?thetaLength:Float) : Void;
 	/**
 	 * @internal 
 	 */

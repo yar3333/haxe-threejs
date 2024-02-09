@@ -28,11 +28,13 @@ extern class PointLight extends Light<PointLightShadow>
 	 * @defaultValue `true`
 	 */
 	var isPointLight(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'PointLight'
 	 */
-	var type : String;
-	/**
+	//var type : String;
+	
+    /**
 	 * The light's intensity.
 	 * 
 	 * When **{@link WebGLRenderer.useLegacyLights | legacy lighting mode} is disabled** — intensity is the luminous intensity of the light measured in candela (cd).
@@ -40,7 +42,8 @@ extern class PointLight extends Light<PointLightShadow>
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`
 	 */
-	var intensity : Float;
+	//var intensity : Float;
+
 	/**
 	 * When **Default mode** — When distance is zero, light does not attenuate. When distance is non-zero,
 	 * light will attenuate linearly from maximum intensity at the light's position down to zero at this distance from the light.
@@ -54,13 +57,15 @@ extern class PointLight extends Light<PointLightShadow>
 	 * @remarks Expects a `Float`
 	 */
 	var distance : Float;
-	/**
+	
+    /**
 	 * If set to `true` light will cast dynamic shadows.
 	 * **Warning**: This is expensive and requires tweaking to get shadows looking right.
 	 * @see {@link THREE.PointLightShadow | PointLightShadow} for details.
 	 * @defaultValue `false`
 	 */
-	var castShadow : Bool;
+	//var castShadow : Bool;
+
 	/**
 	 * The amount the light dims along the distance of the light.
 	 * In context of physically-correct rendering the default value should not be changed.
@@ -68,7 +73,8 @@ extern class PointLight extends Light<PointLightShadow>
 	 * @defaultValue `2`
 	 */
 	var decay : Float;
-	/**
+	
+    /**
 	 * A {@link THREE.PointLightShadow | PointLightShadow} used to calculate shadows for this light.
 	 * The lightShadow's {@link LightShadow.camera | camera} is set to
 	 * a {@link THREE.PerspectiveCamera | PerspectiveCamera} with {@link PerspectiveCamera.fov | fov} of 90,
@@ -77,7 +83,8 @@ extern class PointLight extends Light<PointLightShadow>
 	 * and {@link PerspectiveCamera.far | far} clipping plane at 500.
 	 * @defaultValue new THREE.PointLightShadow()
 	 */
-	var shadow : PointLightShadow;
+	//var shadow : PointLightShadow;
+
 	/**
 	 * The light's power.
 	 * When **{@link WebGLRenderer.useLegacyLights | legacy lighting mode} is disabled** — power is the luminous power of the light measured in lumens (lm).

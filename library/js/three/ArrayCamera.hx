@@ -37,6 +37,5 @@ extern class ArrayCamera extends PerspectiveCamera
 	 * @see {@link https://threejs.org/docs/index.html#api/en/cameras/ArrayCamera | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/ArrayCamera.js | Source}
 	 */
-	@:overload(function(?cameras:Array<PerspectiveCamera>):Void{})
-	function new() : Void;
+	function new(?cameras:Array<PerspectiveCamera>) : Void;
 }

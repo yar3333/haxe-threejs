@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.WebGLDepthBuffer")
 extern class WebGLDepthBuffer

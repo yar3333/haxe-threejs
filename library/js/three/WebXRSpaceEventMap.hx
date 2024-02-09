@@ -2,6 +2,9 @@ package js.three;
 
 import js.lib.*;
 
+typedef XRInputSource = Dynamic;
+typedef XRHandedness = Dynamic;
+
 extern interface WebXRSpaceEventMap extends Object3DEventMap
 {
 	var select : { var data : XRInputSource; };

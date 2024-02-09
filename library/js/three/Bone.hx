@@ -18,7 +18,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Bone.js | Source}
  */
 @:native("THREE.Bone")
-extern class Bone<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends Object3D<TEventMap>
+extern class Bone<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link Bone}.
@@ -30,8 +30,7 @@ extern class Bone<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends 
 	 * @override
 	 * @defaultValue `Bone`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.bone.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.bone.Type, String>;
 
 	/**
 	 * A {@link Bone} which is part of a {@link THREE.Skeleton | Skeleton}

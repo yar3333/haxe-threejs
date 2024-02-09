@@ -25,9 +25,9 @@ extern class PlaneGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `PlaneGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.planegeometry.Type, String>;
-	/**
+	//var type : haxe.extern.EitherType<js.three.planegeometry.Type, String>;
+	
+    /**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
 	 */
@@ -48,7 +48,7 @@ extern class PlaneGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/PlaneGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/PlaneGeometry.js | Source}
 	 */
-	function new(?width:Float, ?height:Float, ?widthSegments:Float, ?heightSegments:Float) : Void;
+	function new(?width:Float, ?height:Float, ?widthSegments:Float, ?heightSegments:Int) : Void;
 	/**
 	 * @internal 
 	 */

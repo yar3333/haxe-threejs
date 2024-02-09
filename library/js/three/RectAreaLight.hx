@@ -27,7 +27,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/RectAreaLight.js | Source}
  */
 @:native("THREE.RectAreaLight")
-extern class RectAreaLight extends Light<undefined>
+extern class RectAreaLight extends Light<{}>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link RectAreaLight}.
@@ -35,13 +35,14 @@ extern class RectAreaLight extends Light<undefined>
 	 * @defaultValue `true`
 	 */
 	var isRectAreaLight(default, null) : Bool;
-	/**
+	
+    /**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `RectAreaLight`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.rectarealight.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.rectarealight.Type, String>;
+
 	/**
 	 * The width of the light.
 	 * @remarks Expects a `Float`
@@ -61,7 +62,8 @@ extern class RectAreaLight extends Light<undefined>
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`
 	 */
-	var intensity : Float;
+	//var intensity : Float;
+    
 	/**
 	 * The light's power.
 	 * @remarks Changing the power will also change the light's intensity.

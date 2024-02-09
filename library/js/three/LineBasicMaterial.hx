@@ -11,10 +11,12 @@ extern class LineBasicMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isLineBasicMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'LineBasicMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default 0xffffff
 	 */

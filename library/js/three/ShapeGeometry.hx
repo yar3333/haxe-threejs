@@ -33,8 +33,8 @@ extern class ShapeGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `ShapeGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.shapegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.shapegeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -64,7 +64,7 @@ extern class ShapeGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/ShapeGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/ShapeGeometry.js | Source}
 	 */
-	function new(?shapes:haxe.extern.EitherType<Shape, Array<Shape>>, ?curveSegments:Float) : Void;
+	function new(?shapes:haxe.extern.EitherType<Shape, Array<Shape>>, ?curveSegments:Int) : Void;
 	/**
 	 * @internal 
 	 */

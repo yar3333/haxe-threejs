@@ -2,8 +2,18 @@ package js.three;
 
 import js.lib.*;
 
+enum abstract EulerOrder(String)
+{
+    var XYZ = "XYZ";
+    var YXZ = "YXZ";
+    var ZXY = "ZXY";
+    var ZYX = "ZYX";
+    var YZX = "YZX";
+    var XZY = "XZY";
+}
+
 @:native("THREE.Euler")
-extern class Euler
+extern class Euler implements ArrayAccess<Float>
 {
 	/**
 	 * @default 0
@@ -35,8 +45,15 @@ extern class Euler
 	function setFromVector3(v:Vector3, ?order:EulerOrder) : Euler;
 	function reorder(newOrder:EulerOrder) : Euler;
 	function equals(euler:Euler) : Bool;
-	function fromArray(xyzo:[number, number, number, EulerOrder?,, any:Dynamic) : Dynamic;
-	function toArray(?array:Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>, ?offset:Float) : Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>;
-	function _onChange(callback:Void->Void) : Euler;
-	function [Symbol.iterator]() : Generator<haxe.extern.EitherType<String, Float>, Void>;
+	
+    /**
+        [number, number, number, EulerOrder?,, any:Dynamic
+    **/
+    function fromArray(xyzo:Array<Dynamic>) : Euler;
+	
+    function toArray(?array:Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>, ?offset:Float) : Array<haxe.extern.EitherType<Float, haxe.extern.EitherType<String, {}>>>;
+	
+    function _onChange(callback:Void->Void) : Euler;
+	
+    //function [Symbol.iterator]() : Generator<haxe.extern.EitherType<String, Float>, Void>;
 }

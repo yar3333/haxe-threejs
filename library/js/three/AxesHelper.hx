@@ -28,8 +28,7 @@ extern class AxesHelper extends LineSegments
 	 * @override
 	 * @defaultValue `AxesHelper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.axeshelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.axeshelper.Type, String>;
 
 	/**
 	 * An axis object to visualize the 3 axes in a simple way.

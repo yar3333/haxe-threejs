@@ -16,6 +16,7 @@ import js.lib.*;
 extern class StereoCamera extends Camera
 {
 	//var type : String; // "StereoCamera"
+    
 	/**
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`

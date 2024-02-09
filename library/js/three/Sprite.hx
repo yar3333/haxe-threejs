@@ -18,7 +18,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Sprite.js | Source}
  */
 @:native("THREE.Sprite")
-extern class Sprite<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends Object3D<TEventMap>
+extern class Sprite<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link Sprite}.
@@ -35,8 +35,7 @@ extern class Sprite<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extend
 	 * @hidden
 	 * @defaultValue `false`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.sprite.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.sprite.Type, String>;
 	/**
 	 * @override
 	 * @defaultValue `Sprite`
@@ -46,9 +45,7 @@ extern class Sprite<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extend
 	 * @hidden
 	 * @defaultValue `false`
 	 */
-	var override : Dynamic;
-	var false : Dynamic;
-	var geometry : BufferGeometry;
+	var geometry : haxe.extern.EitherType<BufferGeometry, Bool>;
 	/**
 	 * An instance of {@link THREE.SpriteMaterial | SpriteMaterial}, defining the object's appearance.
 	 * @defaultValue {@link THREE.SpriteMaterial | `new SpriteMaterial()`}, _with white color_.

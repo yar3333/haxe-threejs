@@ -14,16 +14,19 @@ extern class ShadowMaterial extends Material
 	/**
 	 * @default 'ShadowMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default new THREE.Color( 0x000000 )
 	 */
 	var color : Color;
-	/**
+	
+    /**
 	 * @default true
 	 */
-	var transparent : Bool;
-	/**
+	//var transparent : Bool;
+	
+    /**
 	 * Whether the material is affected by fog. Default is true.
 	 * @default fog
 	 */

@@ -1,5 +1,6 @@
 package js.three;
 
+import js.three.types.Object3dType;
 import js.lib.*;
 
 /**
@@ -10,7 +11,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Object3D.js | Source}
  */
 @:native("THREE.Object3D")
-extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends EventDispatcher<TEventMap>
+extern class Object3D<TEventMap:Object3DEventMap = Object3DEventMap> extends EventDispatcher<TEventMap>
 {
 	/**
 	 * Flag to check if a given object is of type {@link Object3D}.
@@ -23,7 +24,7 @@ extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> exte
 	 * @remarks Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.
 	 * Expects a `Integer`
 	 */
-	var id(default, null) : Float;
+	var id(default, null) : Int;
 	/**
 	 * {@link http://en.wikipedia.org/wiki/Universally_unique_identifier | UUID} of this object instance.
 	 * @remarks This gets automatically assigned and shouldn't be edited.
@@ -41,7 +42,7 @@ extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> exte
 	 * Sub-classes will update this value.
 	 * @defaultValue `Object3D`
 	 */
-	var type(default, null) : haxe.extern.EitherType<js.three.object3d.Type, String>;
+	var type(default, null) : Object3dType;
 	/**
 	 * Object's parent in the {@link https://en.wikipedia.org/wiki/Scene_graph | scene graph}.
 	 * @remarks An object can have at most one parent.
@@ -317,14 +318,14 @@ extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> exte
 	 * Rotates the object to face a point in world space.
 	 * @remarks This method does not support objects having non-uniformly-scaled parent(s).
 	 */
-	function lookAt(vector:Vector3) : Void;
+	overload function lookAt(vector:Vector3) : Void;
 	/**
 	 * Rotates the object to face a point in world space.
 	 * @remarks This method does not support objects having non-uniformly-scaled parent(s).
 	 * Rotates the object to face a point in world space.
 	 * @remarks This method does not support objects having non-uniformly-scaled parent(s).
 	 */
-	function lookAt(x:Float, y:Float, z:Float) : Void;
+     overload function lookAt(x:Float, y:Float, z:Float) : Void;
 	/**
 	 * Adds another {@link Object3D} as child of this {@link Object3D}.
 	 * @remarks An arbitrary number of objects may be added
@@ -358,7 +359,7 @@ extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> exte
 	 * @remarks Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.
 	 * @see {@link id}
 	 */
-	function getObjectById(id:Float) : haxe.extern.EitherType<Object3D, {}>;
+	function getObjectById(id:Int) : haxe.extern.EitherType<Object3D, {}>;
 	/**
 	 * Searches through an object and its children, starting with the object itself, and returns the first with a matching name.
 	 * @remarks Note that for most objects the name is an empty string by default
@@ -403,20 +404,20 @@ extern class Object3D<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> exte
 	 * @remarks Note: Modifying the scene graph inside the callback is discouraged.
 	 * @link Object3D} object.
 	 */
-	function traverse(callback:Object3D->Dynamic) : Void;
+	function traverse(callback:Object3D->Void) : Void;
 	/**
 	 * Like traverse, but the callback will only be executed for visible objects
 	 * @remarks Descendants of invisible objects are not traversed.
 	 * Note: Modifying the scene graph inside the callback is discouraged.
 	 * @link Object3D} object.
 	 */
-	function traverseVisible(callback:Object3D->Dynamic) : Void;
+	function traverseVisible(callback:Object3D->Void) : Void;
 	/**
 	 * Executes the callback on all ancestors.
 	 * @remarks Note: Modifying the scene graph inside the callback is discouraged.
 	 * @link Object3D} object.
 	 */
-	function traverseAncestors(callback:Object3D->Dynamic) : Void;
+	function traverseAncestors(callback:Object3D->Void) : Void;
 	/**
 	 * Updates local transform.
 	 */

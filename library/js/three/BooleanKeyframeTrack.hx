@@ -10,6 +10,5 @@ extern class BooleanKeyframeTrack extends KeyframeTrack
 	 */
 	//var ValueTypeName : String;
 
-	@:overload(function(name:String,times:ArrayLike<Float>,values:ArrayLike<Dynamic>):Void{})
-	function new(name:String, times:ArrayLike<Float>, values:ArrayLike<Dynamic>, ?interpolation:InterpolationModes) : Void;
+	function new(name:String, times:ArrayLike<Float>, values:ArrayLike<Dynamic>) : Void;
 }

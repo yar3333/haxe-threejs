@@ -33,13 +33,14 @@ extern class SplineCurve extends Curve<Vector2>
 	 * @defaultValue `true`
 	 */
 	var isSplineCurve(default, null) : Dynamic;
+    
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `SplineCurve`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.splinecurve.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.splinecurve.Type, String>;
+
 	/**
 	 * The array of {@link THREE.Vector2 | Vector2} points that define the curve.
 	 * @defaultValue `[]`

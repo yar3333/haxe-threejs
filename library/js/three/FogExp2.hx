@@ -56,8 +56,7 @@ extern class FogExp2
 	/**
 	 * Returns a new {@link FogExp2} instance with the same parameters as this one.
 	 */
-	@:overload(function():FogExp2{})
-	function clone() : FogBase;
+	function clone() : FogExp2;
 	/**
 	 * Return {@link FogExp2} data in JSON format.
 	 */

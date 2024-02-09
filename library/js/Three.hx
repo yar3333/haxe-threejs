@@ -438,7 +438,7 @@ extern class Three
 	 * Clamps the x to be between a and b.
 	 */
 	static function clamp(value:Float, min:Float, max:Float) : Float;
-	static function euclideanModulo(n:Float, m:Float) : Float;
+	static function euclideanModulo(n:Int, m:Float) : Float;
 	/**
 	 * Linear mapping of x from range [a1, a2] to range [b1, b2].
 	 */
@@ -487,9 +487,9 @@ extern class Three
 	static function cloneUniforms<T:Dynamic<IUniform>>(uniformsSrc:T) : T;
 	static function mergeUniforms(uniforms:Array<Dynamic<IUniform>>) : Dynamic<IUniform>;
 	static function cloneUniformsGroups(src:Array<UniformsGroup>) : Array<UniformsGroup>;
-	static function WebGLShader(gl:WebGLRenderingContext, type:String, string:String) : WebGLShader;
-	static function WebGLUniformsGroups(gl:WebGLRenderingContext, info:WebGLInfo, capabilities:WebGLCapabilities, state:WebGLState) : { var dispose : Void->Void; var update : UniformsGroup->WebGLProgram->Void; var bind : UniformsGroup->WebGLProgram->Void; };
-	static function createCanvasElement() : HTMLCanvasElement;
+	static function WebGLShader(gl:js.html.webgl.RenderingContext, type:String, string:String) : WebGLShader;
+	static function WebGLUniformsGroups(gl:js.html.webgl.RenderingContext, info:WebGLInfo, capabilities:WebGLCapabilities, state:WebGLState) : { var dispose : Void->Void; var update : UniformsGroup->WebGLProgram->Void; var bind : UniformsGroup->WebGLProgram->Void; };
+	static function createCanvasElement() : js.html.CanvasElement;
 	/**
 	 * Returns a half precision floating point value from the given single precision floating point value.
 	 * @see {@link https://threejs.org/docs/index.html#api/en/extras/DataUtils | Official Documentation}

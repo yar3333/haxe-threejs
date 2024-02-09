@@ -15,14 +15,13 @@ extern class ArcCurve extends EllipseCurve
 	 * @remarks This is a _constant_ value
 	 * @defaultValue `true`
 	 */
-	var isArcCurve(default, null) : Dynamic;
+	var isArcCurve(default, null) : Bool;
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `ArcCurve`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.arccurve.Type, String>;
+	//var type : CurveType;
 
 	/**
 	 * Alias for {@link THREE.EllipseCurve | EllipseCurve}.

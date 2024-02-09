@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants.Usage;
 
 /**
  * @see Example: {@link https://threejs.org/examples/#webgl2_ubo | WebGL2 / UBO}
@@ -10,7 +11,7 @@ import js.lib.*;
 extern class UniformsGroup extends EventDispatcher<{ dispose: {} }>
 {
 	var isUniformsGroup(default, null) : Bool;
-	var id : Float;
+	var id : Int;
 	var usage : Usage;
 	var uniforms : Array<haxe.extern.EitherType<Uniform, Array<Uniform>>>;
 

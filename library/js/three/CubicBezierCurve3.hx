@@ -37,8 +37,7 @@ extern class CubicBezierCurve3 extends Curve<Vector3>
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `CubicBezierCurve3`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.cubicbeziercurve3.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.cubicbeziercurve3.Type, String>;
 	/**
 	 * The starting point.
 	 * @defaultValue `new THREE.Vector3()`.

@@ -23,44 +23,19 @@ extern class CurvePath<TVector:haxe.extern.EitherType<Vector2, Vector3>> extends
 	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
 	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.curvepath.Type, String>;
-	/**
+	//var type : haxe.extern.EitherType<js.three.curvepath.Type, String>;
+	
+    /**
 	 * The array of {@link Curve | Curves}.
 	 * @defaultValue `[]`
 	 */
 	var curves : Array<Curve<TVector>>;
-	/**
+	
+    /**
 	 * Whether or not to automatically close the path.
 	 * @defaultValue false
 	 */
 	var autoClose : Bool;
-	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @defaultValue `CurvePath`
-	 * Returns an array of points representing a sequence of curves
-	 * @remarks
-	 * The `division` parameter defines the number of pieces each curve is divided into
-	 * However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type
-	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
-	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
-	 */
-	var override : Dynamic;
-	var TVector : Dynamic;
-	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @defaultValue `CurvePath`
-	 * Returns an array of points representing a sequence of curves
-	 * @remarks
-	 * The `division` parameter defines the number of pieces each curve is divided into
-	 * However, for optimization and quality purposes, the actual sampling resolution for each curve depends on its type
-	 * For example, for a {@link THREE.LineCurve | LineCurve}, the returned number of points is always just 2.
-	 * Returns a set of divisions `+1` equi-spaced points using {@link .getPointAt | getPointAt(u)}.
-	 */
-	var override : Dynamic;
-	var TVector : Dynamic;
 
 	/**
 	 * Curved Path - a curve path is simply a array of connected curves, but retains the api of a curve.
@@ -70,16 +45,20 @@ extern class CurvePath<TVector:haxe.extern.EitherType<Vector2, Vector3>> extends
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/CurvePath.js | Source}
 	 */
 	function new() : Void;
-	/**
+	
+    /**
 	 * Add a curve to the {@link .curves} array.
 	 */
 	function add(curve:Curve<TVector>) : Void;
-	/**
+	
+    /**
 	 * Adds a {@link LineCurve | lineCurve} to close the path.
 	 */
-	function closePath() : CurvePath;
-	function getPoint(t:Float, ?optionalTarget:TVector) : TVector;
-	/**
+	function closePath() : CurvePath<TVector>;
+	
+    function getPoint(t:Float, ?optionalTarget:TVector) : TVector;
+	
+    /**
 	 * Get list of cumulative curve lengths of the curves in the {@link .curves} array.
 	 */
 	function getCurveLengths() : Array<Float>;

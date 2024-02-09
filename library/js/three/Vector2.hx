@@ -2,11 +2,13 @@ package js.three;
 
 import js.lib.*;
 
+typedef Vector2Tuple = Array<Float>;
+
 /**
  * 2D vector.
  */
 @:native("THREE.Vector2")
-extern class Vector2
+extern class Vector2 implements ArrayAccess<Float>
 {
 	/**
 	 * @default 0
@@ -43,11 +45,11 @@ extern class Vector2
 	/**
 	 * Sets a component of this vector.
 	 */
-	function setComponent(index:Float, value:Float) : Vector2;
+	function setComponent(index:Int, value:Float) : Vector2;
 	/**
 	 * Gets a component of this vector.
 	 */
-	function getComponent(index:Float) : Float;
+	function getComponent(index:Int) : Float;
 	/**
 	 * Returns a new Vector2 instance with the same `x` and `y` values.
 	 */
@@ -222,25 +224,25 @@ extern class Vector2
 	 * Copies x and y into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(?array:Vector2Tuple, ?offset:Int):Vector2Tuple{})
-	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+	overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 	/**
 	 * Returns an array [x, y], or copies x and y into the provided array.
 	 * @return The created or provided array.
 	 * Copies x and y into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(?array:Vector2Tuple, ?offset:Int) : Vector2Tuple;
 	/**
 	 * Returns an array [x, y], or copies x and y into the provided array.
 	 * @return The created or provided array.
 	 * Copies x and y into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
 	/**
 	 * Sets this vector's x and y values from the attribute.
 	 */
-	function fromBufferAttribute(attribute:BufferAttribute, index:Float) : Vector2;
+	function fromBufferAttribute(attribute:BufferAttribute, index:Int) : Vector2;
 	/**
 	 * Rotates the vector around center by angle radians.
 	 */
@@ -249,5 +251,6 @@ extern class Vector2
 	 * Sets this vector's x and y from Math.random
 	 */
 	function random() : Vector2;
-	function [Symbol.iterator]() : Iterator<Float>;
+	
+    //function [Symbol.iterator]() : Iterator<Float>;
 }

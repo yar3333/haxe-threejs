@@ -25,8 +25,8 @@ extern class RingGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `RingGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.ringgeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.ringgeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.

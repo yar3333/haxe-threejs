@@ -23,6 +23,5 @@ extern class InstancedBufferAttribute extends BufferAttribute
 	 * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedBufferAttribute | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferAttribute.js | Source}
 	 */
-	@:overload(function(array:TypedArray,itemSize:Float,?normalized:Bool,?meshPerAttribute:Float):Void{})
-	function new(array:TypedArray, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:TypedArray, itemSize:Float, ?normalized:Bool, ?meshPerAttribute:Float) : Void;
 }

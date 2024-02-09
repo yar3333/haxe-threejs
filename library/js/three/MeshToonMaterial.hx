@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.MeshToonMaterial")
 extern class MeshToonMaterial extends Material
@@ -11,14 +12,17 @@ extern class MeshToonMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isMeshToonMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshToonMaterial'
 	 */
-	var type : String;
-	/**
+	//var type : String;
+	
+    /**
 	 * @default { 'TOON': '' }
 	 */
-	var defines : Dynamic<Dynamic>;
+	//var defines : Dynamic<Dynamic>;
+
 	/**
 	 * @default new THREE.Color( 0xffffff )
 	 */

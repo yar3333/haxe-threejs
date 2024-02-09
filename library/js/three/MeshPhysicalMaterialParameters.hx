@@ -2,37 +2,37 @@ package js.three;
 
 import js.lib.*;
 
-extern interface MeshPhysicalMaterialParameters extends MeshStandardMaterialParameters
-{
-	@:optional var clearcoat : haxe.extern.EitherType<Float, {}>;
-	@:optional var clearcoatMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var clearcoatRoughness : haxe.extern.EitherType<Float, {}>;
-	@:optional var clearcoatRoughnessMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var clearcoatNormalScale : haxe.extern.EitherType<Vector2, {}>;
-	@:optional var clearcoatNormalMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var reflectivity : haxe.extern.EitherType<Float, {}>;
-	@:optional var ior : haxe.extern.EitherType<Float, {}>;
-	@:optional var sheen : haxe.extern.EitherType<Float, {}>;
-	@:optional var sheenColor : haxe.extern.EitherType<ColorRepresentation, {}>;
-	@:optional var sheenColorMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var sheenRoughness : haxe.extern.EitherType<Float, {}>;
-	@:optional var sheenRoughnessMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var transmission : haxe.extern.EitherType<Float, {}>;
-	@:optional var transmissionMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var thickness : haxe.extern.EitherType<Float, {}>;
-	@:optional var thicknessMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var attenuationDistance : haxe.extern.EitherType<Float, {}>;
-	@:optional var attenuationColor : haxe.extern.EitherType<ColorRepresentation, {}>;
-	@:optional var specularIntensity : haxe.extern.EitherType<Float, {}>;
-	@:optional var specularColor : haxe.extern.EitherType<ColorRepresentation, {}>;
-	@:optional var specularIntensityMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var specularColorMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var iridescenceMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var iridescenceIOR : haxe.extern.EitherType<Float, {}>;
-	@:optional var iridescence : haxe.extern.EitherType<Float, {}>;
-	@:optional var iridescenceThicknessRange : haxe.extern.EitherType<[number, number], {}>;
-	@:optional var iridescenceThicknessMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var anisotropy : haxe.extern.EitherType<Float, {}>;
-	@:optional var anisotropyRotation : haxe.extern.EitherType<Float, {}>;
-	@:optional var anisotropyMap : haxe.extern.EitherType<Texture, {}>;
+typedef MeshPhysicalMaterialParameters =
+{>MeshStandardMaterialParameters,
+	@:optional var clearcoat : Float;
+	@:optional var clearcoatMap : Texture;
+	@:optional var clearcoatRoughness : Float;
+	@:optional var clearcoatRoughnessMap : Texture;
+	@:optional var clearcoatNormalScale : Vector2;
+	@:optional var clearcoatNormalMap : Texture;
+	@:optional var reflectivity : Float;
+	@:optional var ior : Float;
+	@:optional var sheen : Float;
+	@:optional var sheenColor : ColorRepresentation;
+	@:optional var sheenColorMap : Texture;
+	@:optional var sheenRoughness : Float;
+	@:optional var sheenRoughnessMap : Texture;
+	@:optional var transmission : Float;
+	@:optional var transmissionMap : Texture;
+	@:optional var thickness : Float;
+	@:optional var thicknessMap : Texture;
+	@:optional var attenuationDistance : Float;
+	@:optional var attenuationColor : ColorRepresentation;
+	@:optional var specularIntensity : Float;
+	@:optional var specularColor : ColorRepresentation;
+	@:optional var specularIntensityMap : Texture;
+	@:optional var specularColorMap : Texture;
+	@:optional var iridescenceMap : Texture;
+	@:optional var iridescenceIOR : Float;
+	@:optional var iridescence : Float;
+	@:optional var iridescenceThicknessRange : Array<Float>;
+	@:optional var iridescenceThicknessMap : Texture;
+	@:optional var anisotropy : Float;
+	@:optional var anisotropyRotation : Float;
+	@:optional var anisotropyMap : Texture;
 }

@@ -25,7 +25,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Group.js | Source}
  */
 @:native("THREE.Group")
-extern class Group<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends Object3D<TEventMap>
+extern class Group<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link Group}.
@@ -37,8 +37,7 @@ extern class Group<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends
 	 * @override
 	 * @defaultValue `Group`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.group.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.group.Type, String>;
 
 	/**
 	 * Its purpose is to make working with groups of objects syntactically clearer.

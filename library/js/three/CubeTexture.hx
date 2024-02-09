@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Creates a cube texture made up of six images.
@@ -34,12 +35,12 @@ extern class CubeTexture extends Texture
 	 * @inheritDoc
 	 * @defaultValue {@link THREE.CubeReflectionMapping}
 	 */
-	var mapping : CubeTextureMapping;
+	//var mapping : CubeTextureMapping;
 	/**
 	 * @inheritDoc
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
+	//var flipY : Bool;
 
 	/**
 	 * Creates a cube texture made up of six images.
@@ -60,5 +61,5 @@ extern class CubeTexture extends Texture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/CubeTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CubeTexture.js | Source}
 	 */
-	function new(?images:Array<Dynamic>, ?mapping:CubeTextureMapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Float, ?colorSpace:ColorSpace) : Void;
+	function new(?images:Array<Dynamic>, ?mapping:CubeTextureMapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Int, ?colorSpace:ColorSpace) : Void;
 }

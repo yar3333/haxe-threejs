@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Create a {@link Texture} to apply to a surface or as a reflection or refraction map.
@@ -34,7 +35,7 @@ extern class Texture extends EventDispatcher<{ dispose: {} }>
 	 * @remarks Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.
 	 * @remarks Expects a `Integer`
 	 */
-	var id(default, null) : Float;
+	var id(default, null) : Int;
 	/**
 	 * {@link http://en.wikipedia.org/wiki/Universally_unique_identifier | UUID} of this object instance.
 	 * @remarks This gets automatically assigned and shouldn't be edited.
@@ -117,7 +118,7 @@ extern class Texture extends EventDispatcher<{ dispose: {} }>
 	 * @remarks This value is usually a power of 2.
 	 * @default _value of_ {@link THREE.Texture.DEFAULT_ANISOTROPY}. That is normally `1`.
 	 */
-	var anisotropy : Float;
+	var anisotropy : Int;
 	/**
 	 * These define how elements of a 2D texture, or texels, are read by shaders.
 	 * @remarks All {@link Texture} types except {@link THREE.DepthTexture} and {@link THREE.CompressedPixelFormat} expect the _values_ be {@link THREE.PixelFormat}
@@ -313,26 +314,8 @@ extern class Texture extends EventDispatcher<{ dispose: {} }>
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/Texture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/Textures/Texture.js | Source}
 	 */
-	function new(?image:haxe.extern.EitherType<TexImageSource, OffscreenCanvas>, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Float, ?colorSpace:ColorSpace) : Void;
-	/**
-	 * Create a {@link Texture} to apply to a surface or as a reflection or refraction map.
-	 * @remarks
-	 * After the initial use of a texture, its **dimensions**, {@link format}, and {@link type} cannot be changed
-	 * Instead, call {@link dispose | .dispose()} on the {@link Texture} and instantiate a new {@link Texture}.
-	 * @example
-	 * ```typescript
-	 * // load a texture, set wrap mode to repeat
-	 * const texture = new THREE.TextureLoader().load("textures/water.jpg");
-	 * texture.wrapS = THREE.RepeatWrapping;
-	 * texture.wrapT = THREE.RepeatWrapping;
-	 * texture.repeat.set(4, 4);
-	 * ```
-	 * @see Example: {@link https://threejs.org/examples/#webgl_materials_texture_filters | webgl materials texture filters}
-	 * @see {@link https://threejs.org/docs/index.html#api/en/constants/Textures | Texture Constants}
-	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/Texture | Official Documentation}
-	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/Textures/Texture.js | Source}
-	 */
-	function new(image:haxe.extern.EitherType<TexImageSource, OffscreenCanvas>, mapping:Mapping, wrapS:Wrapping, wrapT:Wrapping, magFilter:MagnificationTextureFilter, minFilter:MinificationTextureFilter, format:PixelFormat, type:TextureDataType, anisotropy:Float, encoding:TextureEncoding) : Void;
+     @:overload(function (?image:haxe.extern.EitherType<TexImageSource, OffscreenCanvas>, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Int, ?colorSpace:ColorSpace) : Void {})
+	function new(image:haxe.extern.EitherType<TexImageSource, OffscreenCanvas>, mapping:Mapping, wrapS:Wrapping, wrapT:Wrapping, magFilter:MagnificationTextureFilter, minFilter:MinificationTextureFilter, format:PixelFormat, type:TextureDataType, anisotropy:Int, encoding:TextureEncoding) : Void;
 	/**
 	 * Transform the **UV** based on the value of this texture's
 	 * {@link offset | .offset},

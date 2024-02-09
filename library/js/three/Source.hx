@@ -16,7 +16,7 @@ extern class Source
 	 * @defaultValue `true`
 	 */
 	var isSource(default, null) : Bool;
-	var id(default, null) : Float;
+	var id(default, null) : Int;
 	/**
 	 * The actual data of a texture.
 	 * @remarks The type of this property depends on the texture that uses this instance.

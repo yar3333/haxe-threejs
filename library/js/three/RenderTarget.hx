@@ -3,7 +3,7 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.RenderTarget")
-extern class RenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>>, Texture:Dynamic> extends EventDispatcher<{ dispose: {} }>
+extern class RenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>> = Texture> extends EventDispatcher<{ dispose: {} }>
 {
 	var isRenderTarget(default, null) : Bool;
 	var width : Float;

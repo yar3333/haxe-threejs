@@ -8,7 +8,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/LightShadow.js | Source}
  */
 @:native("THREE.LightShadow")
-extern class LightShadow<TCamera:Camera, Camera:Dynamic>
+extern class LightShadow<TCamera:Camera = Camera>
 {
 	/**
 	 * The light's view of the world.

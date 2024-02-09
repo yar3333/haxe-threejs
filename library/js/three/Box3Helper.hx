@@ -23,8 +23,7 @@ extern class Box3Helper extends LineSegments
 	 * @override
 	 * @defaultValue `Box3Helper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.box3helper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.box3helper.Type, String>;
 	/**
 	 * The Box3 being visualized.
 	 */

@@ -28,7 +28,7 @@ extern class WebGLInfo
 	/**
 	 * An object with a series of statistical information about the graphics board memory and the rendering process.
 	 */
-	function new(gl:WebGLRenderingContext) : Void;
-	function update(count:Float, mode:Float, instanceCount:Float) : Void;
+	function new(gl:js.html.webgl.RenderingContext) : Void;
+	function update(count:Int, mode:Float, instanceCount:Float) : Void;
 	function reset() : Void;
 }

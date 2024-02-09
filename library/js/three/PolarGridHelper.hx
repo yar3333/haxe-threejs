@@ -28,8 +28,7 @@ extern class PolarGridHelper extends LineSegments
 	 * @override
 	 * @defaultValue `PolarGridHelper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.polargridhelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.polargridhelper.Type, String>;
 
 	/**
 	 * The {@link PolarGridHelper} is an object to define polar grids
@@ -48,7 +47,7 @@ extern class PolarGridHelper extends LineSegments
 	 * @see {@link https://threejs.org/docs/index.html#api/en/helpers/PolarGridHelper | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/PolarGridHelper.js | Source}
 	 */
-	function new(?radius:Float, ?radials:Float, ?circles:Float, ?divisions:Float, ?color1:ColorRepresentation, ?color2:ColorRepresentation) : Void;
+	function new(?radius:Float, ?radials:Float, ?circles:Float, ?divisions:Int, ?color1:ColorRepresentation, ?color2:ColorRepresentation) : Void;
 	/**
 	 * Frees the GPU-related resources allocated by this instance
 	 * @remarks

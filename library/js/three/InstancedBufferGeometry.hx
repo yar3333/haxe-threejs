@@ -13,13 +13,15 @@ extern class InstancedBufferGeometry extends BufferGeometry
 	/**
 	 * @defaultValue `InstancedBufferGeometry`
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * Read-only flag to check if a given object is of type {@link InstancedBufferGeometry}.
 	 * @remarks This is a _constant_ value
 	 * @defaultValue `true`
 	 */
 	var isInstancedBufferGeometry(default, null) : Bool;
+    
 	/**
 	 * @defaultValue `Infinity`
 	 */

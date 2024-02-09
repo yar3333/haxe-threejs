@@ -1,6 +1,8 @@
 package js.three;
 
+import js.three.types.Precision;
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Materials describe the appearance of objects. They are defined in a (mostly) renderer-independent way, so you don't have to rewrite materials if you decide to use a different renderer.
@@ -129,7 +131,7 @@ extern class Material extends EventDispatcher<{ dispose: {} }>
 	/**
 	 * Unique number of this material instance.
 	 */
-	var id : Float;
+	var id : Int;
 	/**
 	 * Whether rendering this material has any effect on the stencil buffer. Default is *false*.
 	 * @default false
@@ -209,7 +211,7 @@ extern class Material extends EventDispatcher<{ dispose: {} }>
 	 * Override the renderer's default precision for this material. Can be "highp", "mediump" or "lowp". Defaults is null.
 	 * @default null
 	 */
-	var precision : js.three.material.Precision;
+	var precision : Precision;
 	/**
 	 * Whether to premultiply the alpha (transparency) value. See WebGL / Materials / Transparency for an example of the difference. Default is false.
 	 * @default false
@@ -249,16 +251,19 @@ extern class Material extends EventDispatcher<{ dispose: {} }>
 	 * @default false
 	 */
 	var transparent : Bool;
-	/**
+	
+    /**
 	 * Value is the string 'Material'. This shouldn't be changed, and can be used to find all objects of this type in a scene.
 	 * @default 'Material'
 	 */
-	var type : String;
-	/**
+	var type(default, null) : String;
+	
+    /**
 	 * UUID of this material instance. This gets automatically assigned, so this shouldn't be edited.
 	 */
 	var uuid : String;
-	/**
+	
+    /**
 	 * Defines whether vertex coloring is used. Default is false.
 	 * @default false
 	 */

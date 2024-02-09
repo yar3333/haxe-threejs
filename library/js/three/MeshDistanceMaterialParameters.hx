@@ -2,8 +2,8 @@ package js.three;
 
 import js.lib.*;
 
-extern interface MeshDistanceMaterialParameters extends MaterialParameters
-{
+typedef MeshDistanceMaterialParameters =
+{>MaterialParameters,
 	@:optional var map : haxe.extern.EitherType<Texture, {}>;
 	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
 	@:optional var displacementMap : haxe.extern.EitherType<Texture, {}>;

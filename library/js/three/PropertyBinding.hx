@@ -2,6 +2,16 @@ package js.three;
 
 import js.lib.*;
 
+@:native("THREE.PropertyBinding.Composite")
+extern class Composite
+{
+	function new(targetGroup:Dynamic, path:Dynamic, ?parsedPath:Dynamic) : Void;
+	function getValue(array:Dynamic, offset:Float) : Dynamic;
+	function setValue(array:Dynamic, offset:Float) : Void;
+	function bind() : Void;
+	function unbind() : Void;
+}
+
 @:native("THREE.PropertyBinding")
 extern class PropertyBinding
 {
@@ -19,7 +29,7 @@ extern class PropertyBinding
 	function setValue(sourceArray:Dynamic, offset:Float) : Void;
 	function bind() : Void;
 	function unbind() : Void;
-	static function create(root:Dynamic, path:Dynamic, ?parsedPath:Dynamic) : haxe.extern.EitherType<PropertyBinding, js.three.propertyBinding.Composite>;
+	static function create(root:Dynamic, path:Dynamic, ?parsedPath:Dynamic) : haxe.extern.EitherType<PropertyBinding, Composite>;
 	static function sanitizeNodeName(name:String) : String;
 	static function parseTrackName(trackName:String) : ParseTrackNameResults;
 	static function findNode(root:Dynamic, nodeName:String) : Dynamic;

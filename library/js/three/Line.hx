@@ -25,6 +25,62 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Line.js | Source}
  */
 @:native("THREE.Line")
-extern class Line<TGeometry:BufferGeometry, BufferGeometry:Dynamic, TMaterial:haxe.extern.EitherType<Material, Array<Material>>, Material:Dynamic>
+extern class Line<TGeometry:BufferGeometry = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material, TEventMap:Object3DEventMap = Object3DEventMap>
+    extends Object3D<TEventMap>
 {
+       /**
+     * Create a new instance of {@link Line}
+     * @param geometry Vertices representing the {@link Line} segment(s). Default {@link THREE.BufferGeometry | `new THREE.BufferGeometry()`}.
+     * @param material Material for the line. Default {@link THREE.LineBasicMaterial | `new THREE.LineBasicMaterial()`}.
+     */
+    function new(?geometry: TGeometry, ?material: TMaterial);
+
+     /**
+      * Read-only flag to check if a given object is of type {@link Line}.
+      * @remarks This is a _constant_ value
+      * @defaultValue `true`
+      */
+    var isLine(default, null): Bool;
+ 
+     /**
+      * @override
+      * @defaultValue `Line`
+      */
+    //var type: string | "Line";
+ 
+     /**
+      * Vertices representing the {@link Line} segment(s).
+      */
+    var geometry: TGeometry;
+ 
+     /**
+      * Material for the line.
+      */
+    var material: TMaterial;
+ 
+     /**
+      * An array of weights typically from `0-1` that specify how much of the morph is applied.
+      * @defaultValue `undefined`, but reset to a blank array by {@link updateMorphTargets | .updateMorphTargets()}.
+      */
+    var morphTargetInfluences: Array<Float>;
+ 
+     /**
+      * A dictionary of morphTargets based on the `morphTarget.name` property.
+      * @defaultValue `undefined`, but reset to a blank array by {@link updateMorphTargets | .updateMorphTargets()}.
+      */
+    var morphTargetDictionary: Dynamic<Float>;
+ 
+     /**
+      * Computes an array of distance values which are necessary for {@link THREE.LineDashedMaterial | LineDashedMaterial}
+      * @remarks
+      * For each vertex in the geometry, the method calculates the cumulative length from the current point to the very beginning of the line.
+      */
+    function computeLineDistances(): Line;
+ 
+     /**
+      * Updates the morphTargets to have no influence on the object
+      * @remarks
+      * Resets the {@link morphTargetInfluences | .morphTargetInfluences} and {@link morphTargetDictionary | .morphTargetDictionary} properties.
+      */
+    function updateMorphTargets(): Void;
 }

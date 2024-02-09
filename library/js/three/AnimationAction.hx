@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.AnimationAction")
 extern class AnimationAction

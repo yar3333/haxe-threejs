@@ -30,8 +30,8 @@ extern class LatheGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `LatheGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.lathegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.lathegeometry.Type, String>;
+
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -58,8 +58,9 @@ extern class LatheGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/LatheGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/LatheGeometry.js | Source}
 	 */
-	function new(?points:Array<Vector2>, ?segments:Float, ?phiStart:Float, ?phiLength:Float) : Void;
-	/**
+	function new(?points:Array<Vector2>, ?segments:Int, ?phiStart:Float, ?phiLength:Float) : Void;
+	
+    /**
 	 * @internal 
 	 */
 	static function fromJSON(data:{}) : LatheGeometry;

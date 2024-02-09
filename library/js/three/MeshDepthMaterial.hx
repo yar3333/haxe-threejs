@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.MeshDepthMaterial")
 extern class MeshDepthMaterial extends Material
@@ -11,10 +12,12 @@ extern class MeshDepthMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isMeshDepthMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshDepthMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default null
 	 */

@@ -1,6 +1,9 @@
 package js.three;
 
+import js.html.webgl.WebGL2RenderingContext;
 import js.lib.*;
+import js.three.Constants;
+import js.three.Color;
 
 /**
  * The WebGL renderer displays your beautifully crafted scenes using WebGL, if your device supports it.
@@ -17,7 +20,7 @@ extern class WebGLRenderer
 	 * This is automatically created by the renderer in the constructor (if not provided already); you just need to add it to your page.
 	 * @default document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' )
 	 */
-	var domElement : HTMLCanvasElement;
+	var domElement : js.html.CanvasElement;
 	/**
 	 * Defines whether the renderer should automatically clear its output before rendering.
 	 * @default true
@@ -51,7 +54,7 @@ extern class WebGLRenderer
 	/**
 	 * @default []
 	 */
-	var clippingPlanes : readonly;
+	final clippingPlanes : Array<Dynamic>;
 	/**
 	 * @default false
 	 */
@@ -84,7 +87,7 @@ extern class WebGLRenderer
 	var properties : WebGLProperties;
 	var renderLists : WebGLRenderLists;
 	var state : WebGLState;
-	var xr : WebXRManager;
+	//var xr : WebXRManager;
 	/**
 	 * Compiles all materials in the scene with the camera. This is useful to precompile shaders before the first
 	 * rendering. If you want to add a 3D object to an existing scene, use the third optional parameter for applying the
@@ -125,14 +128,14 @@ extern class WebGLRenderer
 	/**
 	 * Return the WebGL context.
 	 */
-	function getContext() : haxe.extern.EitherType<WebGLRenderingContext, WebGL2RenderingContext>;
+	function getContext() : haxe.extern.EitherType<js.html.webgl.RenderingContext, WebGL2RenderingContext>;
 	function getContextAttributes() : Dynamic;
 	function forceContextLoss() : Void;
 	function forceContextRestore() : Void;
 	/**
 	 * @deprecated Use {@link WebGLCapabilities#getMaxAnisotropy .capabilities.getMaxAnisotropy()} instead.
 	 */
-	function getMaxAnisotropy() : Float;
+	function getMaxAnisotropy() : Int;
 	/**
 	 * @deprecated Use {@link WebGLCapabilities#precision .capabilities.precision} instead.
 	 */
@@ -208,11 +211,13 @@ extern class WebGLRenderer
 	function resetGLState() : Void;
 	function dispose() : Void;
 	function renderBufferDirect(camera:Camera, scene:Scene, geometry:BufferGeometry, material:Material, object:Object3D, geometryGroup:Dynamic) : Void;
-	/**
+	
+    /**
 	 * A build in function that can be used instead of requestAnimationFrame. For WebXR projects this function must be used.
 	 */
-	function setAnimationLoop(callback:XRFrameRequestCallback) : Void;
-	/**
+	//function setAnimationLoop(callback:XRFrameRequestCallback) : Void;
+	
+    /**
 	 * @deprecated Use {@link WebGLRenderer#setAnimationLoop .setAnimationLoop()} instead.
 	 */
 	function animate(callback:Void->Void) : Void;

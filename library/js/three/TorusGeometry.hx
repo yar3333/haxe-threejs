@@ -24,8 +24,8 @@ extern class TorusGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `TorusGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.torusgeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.torusgeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -46,7 +46,7 @@ extern class TorusGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/TorusGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/TorusGeometry.js | Source}
 	 */
-	function new(?radius:Float, ?tube:Float, ?radialSegments:Float, ?tubularSegments:Float, ?arc:Float) : Void;
+	function new(?radius:Float, ?tube:Float, ?radialSegments:Int, ?tubularSegments:Float, ?arc:Float) : Void;
 	/**
 	 * @internal 
 	 */

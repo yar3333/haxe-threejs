@@ -3,13 +3,13 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.FileLoader")
-extern class FileLoader extends Loader<string | ArrayBuffer>
+extern class FileLoader extends Loader<haxe.extern.EitherType<String, ArrayBuffer>>
 {
-	var mimeType : haxe.extern.EitherType<{}, MimeType>;
+	var mimeType : haxe.extern.EitherType<{}, js.html.MimeType>;
 	var responseType : haxe.extern.EitherType<{}, String>;
 
 	function new(?manager:LoadingManager) : Void;
-	function load(url:String, ?onLoad:haxe.extern.EitherType<String, ArrayBuffer>->Void, ?onProgress:ProgressEvent->Void, ?onError:unknown->Void) : Void;
-	function setMimeType(mimeType:MimeType) : FileLoader;
+	function load(url:String, ?onLoad:haxe.extern.EitherType<String, ArrayBuffer>->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:Dynamic->Void) : Void;
+	function setMimeType(mimeType:js.html.MimeType) : FileLoader;
 	function setResponseType(responseType:String) : FileLoader;
 }

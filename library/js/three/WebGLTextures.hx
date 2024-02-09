@@ -5,7 +5,7 @@ import js.lib.*;
 @:native("THREE.WebGLTextures")
 extern class WebGLTextures
 {
-	function new(gl:WebGLRenderingContext, extensions:WebGLExtensions, state:WebGLState, properties:WebGLProperties, capabilities:WebGLCapabilities, utils:WebGLUtils, info:WebGLInfo) : Void;
+	function new(gl:js.html.webgl.RenderingContext, extensions:WebGLExtensions, state:WebGLState, properties:WebGLProperties, capabilities:WebGLCapabilities, utils:WebGLUtils, info:WebGLInfo) : Void;
 	function allocateTextureUnit() : Void;
 	function resetTextureUnits() : Void;
 	function setTexture2D(texture:Dynamic, slot:Float) : Void;

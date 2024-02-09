@@ -1,6 +1,12 @@
 package js.three;
 
+import js.html.audio.GainNode;
 import js.lib.*;
+import js.html.MediaElement;
+import js.html.MediaStream;
+import js.html.audio.AudioBuffer;
+import js.html.audio.AudioNode;
+import js.html.audio.AudioScheduledSourceNode;
 
 /**
  * Create a non-positional ( global ) {@link Audio} object.
@@ -27,14 +33,15 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/audio/Audio.js | Source}
  */
 @:native("THREE.Audio")
-extern class Audio<NodeType:AudioNode, GainNode:Dynamic> extends Object3D
+extern class Audio<NodeType:AudioNode = GainNode> extends Object3D
 {
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `Audio`
 	 */
-	var type(default, null) : haxe.extern.EitherType<js.three.audio.Type, String>;
+	//var type(default, null) : haxe.extern.EitherType<js.three.audio.Type, String>;
+    
 	/**
 	 * A reference to the listener object of this audio.
 	 */
@@ -42,12 +49,12 @@ extern class Audio<NodeType:AudioNode, GainNode:Dynamic> extends Object3D
 	/**
 	 * The {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioContext | AudioContext} of the {@link AudioListener | listener} given in the constructor.
 	 */
-	var context : AudioContext;
+	var context : js.html.audio.AudioContext;
 	/**
 	 * A {@link https://developer.mozilla.org/en-US/docs/Web/API/GainNode | GainNode} created using
 	 * {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain | AudioContext.createGain}().
 	 */
-	var gain : GainNode;
+	var gain : js.html.audio.GainNode;
 	/**
 	 * Whether to start playback automatically.
 	 * @defaultValue `false`
@@ -155,7 +162,7 @@ extern class Audio<NodeType:AudioNode, GainNode:Dynamic> extends Object3D
 	 * Applies the given object of type {@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement | HTMLMediaElement} as the source of this audio.
 	 * @remarks Also sets {@link Audio.hasPlaybackControl | hasPlaybackControl} to false.
 	 */
-	function setMediaElementSource(mediaElement:HTMLMediaElement) : Audio;
+	function setMediaElementSource(mediaElement:MediaElement) : Audio;
 	/**
 	 * Applies the given object of type {@link https://developer.mozilla.org/en-US/docs/Web/API/MediaStream | MediaStream} as the source of this audio.
 	 * @remarks Also sets {@link Audio.hasPlaybackControl | hasPlaybackControl} to false.

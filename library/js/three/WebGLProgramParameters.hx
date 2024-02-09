@@ -1,6 +1,7 @@
 package js.three;
 
-import js.lib.*;
+import js.three.types.Precision;
+import js.three.Constants;
 
 extern interface WebGLProgramParameters
 {
@@ -15,7 +16,7 @@ extern interface WebGLProgramParameters
 	var customFragmentShaderID : haxe.extern.EitherType<String, {}>;
 	var isRawShaderMaterial : Bool;
 	var glslVersion : haxe.extern.EitherType<GLSLVersion, {}>;
-	var precision : js.three.webglprogramparameters.Precision;
+	var precision : Precision;
 	var batching : Bool;
 	var instancing : Bool;
 	var instancingColor : Bool;
@@ -126,7 +127,7 @@ extern interface WebGLProgramParameters
 	var doubleSided : Bool;
 	var flipSided : Bool;
 	var useDepthPacking : Bool;
-	var depthPacking : haxe.extern.EitherType<DepthPackingStrategies, 0>;
+	var depthPacking : Int; //haxe.extern.EitherType<DepthPackingStrategies, 0>;
 	var index0AttributeName : haxe.extern.EitherType<String, {}>;
 	var extensionDerivatives : Bool;
 	var extensionFragDepth : Bool;

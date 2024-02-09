@@ -1,6 +1,9 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
+
+typedef GLenum = Int;
 
 /**
  * This buffer attribute class does not construct a VBO.
@@ -70,12 +73,12 @@ extern class GLBufferAttribute
 	 * @see `constructor`` for a list of known type sizes.
 	 * @remarks Expects a `1`, `2` or `4`
 	 */
-	var elementSize : haxe.extern.EitherType<1, haxe.extern.EitherType<2, 4>>;
+	var elementSize : Int;
 	/**
 	 * The expected number of vertices in VBO.
 	 * @remarks Expects a `Integer`
 	 */
-	var count : Float;
+	var count : Int;
 	/**
 	 * A version number, incremented every time the needsUpdate property is set to true.
 	 * @remarks Expects a `Integer`
@@ -94,7 +97,7 @@ extern class GLBufferAttribute
 	 * @see {@link https://threejs.org/docs/index.html#api/en/core/GLBufferAttribute | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/GLBufferAttribute.js | Source}
 	 */
-	function new(buffer:WebGLBuffer, type:GLenum, itemSize:Float, elementSize:haxe.extern.EitherType<1, haxe.extern.EitherType<2, 4>>, count:Float) : Void;
+	function new(buffer:WebGLBuffer, type:GLenum, itemSize:Float, elementSize:Int, count:Int) : Void;
 	/**
 	 * Sets the {@link buffer | .buffer} property.
 	 */
@@ -102,7 +105,7 @@ extern class GLBufferAttribute
 	/**
 	 * Sets the both {@link GLBufferAttribute.type | type} and {@link GLBufferAttribute.elementSize | elementSize} properties.
 	 */
-	function setType(type:GLenum, elementSize:haxe.extern.EitherType<1, haxe.extern.EitherType<2, 4>>) : GLBufferAttribute;
+	function setType(type:GLenum, elementSize:Int) : GLBufferAttribute;
 	/**
 	 * Sets the {@link GLBufferAttribute.itemSize | itemSize} property.
 	 */
@@ -110,5 +113,5 @@ extern class GLBufferAttribute
 	/**
 	 * Sets the {@link GLBufferAttribute.count | count} property.
 	 */
-	function setCount(count:Float) : GLBufferAttribute;
+	function setCount(count:Int) : GLBufferAttribute;
 }

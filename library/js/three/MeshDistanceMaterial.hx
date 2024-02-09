@@ -11,10 +11,12 @@ extern class MeshDistanceMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isMeshDistanceMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshDistanceMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default null
 	 */

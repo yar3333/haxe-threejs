@@ -1,5 +1,6 @@
 package js.three;
 
+import js.three.types.CurveType;
 import js.lib.*;
 
 /**
@@ -33,14 +34,15 @@ extern class CatmullRomCurve3 extends Curve<Vector3>
 	 * @remarks This is a _constant_ value
 	 * @defaultValue `true`
 	 */
-	var isCatmullRomCurve3(default, null) : Dynamic;
-	/**
+	var isCatmullRomCurve3(default, null) : Bool;
+	
+    /**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `CatmullRomCurve3`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.catmullromcurve3.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.catmullromcurve3.Type, String>;
+
 	/**
 	 * The curve will loop back onto itself when this is true.
 	 * @defaultValue `false`

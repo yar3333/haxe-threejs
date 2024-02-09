@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants.GLSLVersion;
 
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material
@@ -11,15 +12,18 @@ extern class ShaderMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isShaderMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'ShaderMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default {}
 	 */
-	var defines : Dynamic<Dynamic>;
-	/**
+	//var defines : Dynamic<Dynamic>;
+	
+    /**
 	 * @default {}
 	 */
 	var uniforms : Dynamic<IUniform>;

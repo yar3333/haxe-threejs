@@ -1,6 +1,12 @@
 package js.three;
 
+import haxe.extern.EitherType;
 import js.lib.*;
+import js.three.Constants;
+import js.three.types.GeometryType;
+
+typedef NormalBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, InterleavedBufferAttribute>>>;
+typedef NormalOrGLBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, EitherType<InterleavedBufferAttribute, GLBufferAttribute>>>>;
 
 /**
  * A representation of mesh, line, or point geometry
@@ -61,43 +67,49 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/BufferGeometry.js | Source}
  */
 @:native("THREE.BufferGeometry")
-extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes, NormalBufferAttributes:Dynamic> extends EventDispatcher<{ dispose: {} }>
+extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes = NormalBufferAttributes> extends EventDispatcher<{ dispose: {} }>
 {
 	/**
 	 * Unique number for this {@link THREE.BufferGeometry | BufferGeometry} instance.
 	 * @remarks Expects a `Integer`
 	 */
-	var id : Float;
-	/**
+	var id : Int;
+	
+    /**
 	 * {@link http://en.wikipedia.org/wiki/Universally_unique_identifier | UUID} of this object instance.
 	 * @remarks This gets automatically assigned and shouldn't be edited.
 	 */
 	var uuid : String;
-	/**
+	
+    /**
 	 * Optional name for this {@link THREE.BufferGeometry | BufferGeometry} instance.
 	 * @defaultValue `''`
 	 */
 	var name : String;
-	/**
+	
+    /**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `BufferGeometry`
 	 */
-	var type(default, null) : haxe.extern.EitherType<js.three.buffergeometry.Type, String>;
-	/**
+	var type(default, null) : GeometryType;
+	
+    /**
 	 * Allows for vertices to be re-used across multiple triangles; this is called using "indexed triangles".
 	 * Each triangle is associated with the indices of three vertices. This attribute therefore stores the index of each vertex for each triangular face.
 	 * If this attribute is not set, the {@link THREE.WebGLRenderer | renderer}  assumes that each three contiguous positions represent a single triangle.
 	 * @defaultValue `null`
 	 */
 	var index : BufferAttribute;
-	/**
+	
+    /**
 	 * This hashmap has as id the name of the attribute to be set and as value the {@link THREE.BufferAttribute | buffer} to set it to. Rather than accessing this property directly,
 	 * use {@link setAttribute | .setAttribute} and {@link getAttribute | .getAttribute} to access attributes of this geometry.
 	 * @defaultValue `{}`
 	 */
 	var attributes : Attributes;
-	/**
+	
+    /**
 	 * Hashmap of {@link THREE.BufferAttribute | BufferAttributes} holding details of the geometry's morph targets.
 	 * @remarks
 	 * Once the geometry has been rendered, the morph attribute data cannot be changed.
@@ -105,31 +117,36 @@ extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes, NormalBufferA
 	 * @defaultValue `{}`
 	 */
 	var morphAttributes : Dynamic<Array<haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>>>;
-	/**
+	
+    /**
 	 * Used to control the morph target behavior; when set to true, the morph target data is treated as relative offsets, rather than as absolute positions/normals.
 	 * @defaultValue `false`
 	 */
 	var morphTargetsRelative : Bool;
-	/**
+	
+    /**
 	 * Split the geometry into groups, each of which will be rendered in a separate WebGL draw call. This allows an array of materials to be used with the geometry.
 	 * @remarks Every vertex and index must belong to exactly one group — groups must not share vertices or indices, and must not leave vertices or indices unused.
 	 * @remarks Use {@link addGroup | .addGroup} to add groups, rather than modifying this array directly.
 	 * @defaultValue `[]`
 	 */
 	var groups : Array<{ /** * Specifies the first element in this draw call – the first vertex for non-indexed geometry, otherwise the first triangle index. * @remarks Expects a `Integer` */ var start : Float; /** * Specifies how many vertices (or indices) are included. * @remarks Expects a `Integer` */ var count : Float; /** * Specifies the material array index to use. * @remarks Expects a `Integer` */ @:optional var materialIndex : haxe.extern.EitherType<Float, {}>; }>;
-	/**
+	
+    /**
 	 * Bounding box for the {@link THREE.BufferGeometry | BufferGeometry}, which can be calculated with {@link computeBoundingBox | .computeBoundingBox()}.
 	 * @remarks Bounding boxes aren't computed by default. They need to be explicitly computed, otherwise they are `null`.
 	 * @defaultValue `null`
 	 */
 	var boundingBox : Box3;
-	/**
+	
+    /**
 	 * Bounding sphere for the {@link THREE.BufferGeometry | BufferGeometry}, which can be calculated with {@link computeBoundingSphere | .computeBoundingSphere()}.
 	 * @remarks bounding spheres aren't computed by default. They need to be explicitly computed, otherwise they are `null`.
 	 * @defaultValue `null`
 	 */
 	var boundingSphere : Sphere;
-	/**
+	
+    /**
 	 * Determines the part of the geometry to render. This should not be set directly, instead use {@link setDrawRange | .setDrawRange(...)}.
 	 * @remarks For non-indexed {@link THREE.BufferGeometry | BufferGeometry}, count is the number of vertices to render.
 	 * @remarks For indexed {@link THREE.BufferGeometry | BufferGeometry}, count is the number of indices to render.
@@ -147,8 +164,6 @@ extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes, NormalBufferA
 	 * @defaultValue `true`
 	 */
 	var isBufferGeometry(default, null) : Bool;
-	var this : Dynamic;
-	var K : Dynamic;
 
 	/**
 	 * A representation of mesh, line, or point geometry
@@ -222,24 +237,24 @@ extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes, NormalBufferA
 	 * @remarks
 	 * Use this rather than the attributes property, because an internal hashmap of {@link attributes | .attributes} is maintained to speed up iterating over attributes.
 	 */
-	function setAttribute<K:keyof, Attributes:Dynamic>(name:K, attribute:Array<Attributes>) : Dynamic;
+	function setAttribute(name:String, attribute:Dynamic) : Dynamic;
 	/**
 	 * Returns the {@link attributes | attribute} with the specified name.
 	 */
-	function getAttribute<K:keyof, Attributes:Dynamic>(name:K) : Array<Attributes>;
+	function getAttribute(name:String) : Array<Attributes>;
 	/**
 	 * Deletes the  {@link attributes | attribute} with the specified name.
 	 */
-	function deleteAttribute(name:keyof) : BufferGeometry;
+	function deleteAttribute(name:String) : BufferGeometry;
 	/**
 	 * Returns true if the {@link attributes | attribute} with the specified name exists.
 	 */
-	function hasAttribute(name:keyof) : Bool;
+	function hasAttribute(name:String) : Bool;
 	/**
 	 * Adds a group to this geometry
 	 * @see the {@link BufferGeometry.groups | groups} property for details.
 	 */
-	function addGroup(start:Float, count:Float, ?materialIndex:Float) : Void;
+	function addGroup(start:Float, count:Int, ?materialIndex:Float) : Void;
 	/**
 	 * Clears all groups.
 	 */
@@ -249,7 +264,7 @@ extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes, NormalBufferA
 	 * @remarks For non-indexed BufferGeometry, count is the number of vertices to render
 	 * @remarks For indexed BufferGeometry, count is the number of indices to render.
 	 */
-	function setDrawRange(start:Float, count:Float) : Void;
+	function setDrawRange(start:Float, count:Int) : Void;
 	/**
 	 * Applies the matrix transform to the geometry.
 	 */

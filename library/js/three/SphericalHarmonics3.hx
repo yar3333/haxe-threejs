@@ -26,21 +26,24 @@ extern class SphericalHarmonics3
 	 * Sets the values of this spherical harmonics from the provided array or array-like.
 	 */
 	function fromArray(array:haxe.extern.EitherType<Array<Float>, ArrayLike<Float>>, ?offset:Float) : SphericalHarmonics3;
-	/**
+	
+    /**
 	 * Returns an array with the values of this spherical harmonics, or copies them into the provided array.
 	 * @return The created or provided array.
 	 * Returns an array with the values of this spherical harmonics, or copies them into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
-	/**
+	overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+	
+    /**
 	 * Returns an array with the values of this spherical harmonics, or copies them into the provided array.
 	 * @return The created or provided array.
 	 * Returns an array with the values of this spherical harmonics, or copies them into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	function getAt(normal:Vector3, target:Vector3) : Vector3;
+    overload function toArray(array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
+	
+    function getAt(normal:Vector3, target:Vector3) : Vector3;
 	function getIrradianceAt(normal:Vector3, target:Vector3) : Vector3;
 	static function getBasisAt(normal:Vector3, shBasis:Array<Float>) : Void;
 }

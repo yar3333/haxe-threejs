@@ -1,5 +1,6 @@
 package js.three;
 
+import js.three.types.Object3dType;
 import js.lib.*;
 
 /**
@@ -30,8 +31,7 @@ extern class ArrowHelper extends Object3D
 	 * Copy the given object into this object
 	 * @remarks Note: event listeners and user-defined callbacks ({@link onAfterRender | .onAfterRender} and {@link onBeforeRender | .onBeforeRender}) are not copied.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.arrowhelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.arrowhelper.Type, String>;
 	/**
 	 * Contains the line part of the arrowHelper.
 	 */
@@ -48,8 +48,7 @@ extern class ArrowHelper extends Object3D
 	 * Copy the given object into this object
 	 * @remarks Note: event listeners and user-defined callbacks ({@link onAfterRender | .onAfterRender} and {@link onBeforeRender | .onBeforeRender}) are not copied.
 	 */
-	var override : Dynamic;
-	var this : Dynamic;
+    //var type(default, null): Object3dType;
 
 	/**
 	 * An 3D arrow object for visualizing directions.

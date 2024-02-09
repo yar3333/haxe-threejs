@@ -40,13 +40,14 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @remarks  **Warning**: This is expensive and requires tweaking to get shadows looking right. the {@link THREE.SpotLightShadow | SpotLightShadow} for details.
 	 * @defaultValue `false`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.spotlight.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.spotlight.Type, String>;
+
 	/**
 	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP | Object3D.DEFAULT_UP} (0, 1, 0), so that the light shines from the top down.
 	 * @defaultValue `{@link Object3D.DEFAULT_UP}`
 	 */
-	var position(default, null) : Vector3;
+	//var position(default, null) : Vector3;
+
 	/**
 	 * The {@link SpotLight} points from its {@link SpotLight.position | position} to target.position.
 	 * @remarks
@@ -68,16 +69,14 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @defaultValue `new THREE.Object3D()` _The default position of the target is *(0, 0, 0)*._
 	 */
 	var target : Object3D;
-	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @defaultValue `SpotLight`
-	 * If set to `true` light will cast dynamic shadows.
-	 * @remarks  **Warning**: This is expensive and requires tweaking to get shadows looking right. the {@link THREE.SpotLightShadow | SpotLightShadow} for details.
-	 * @defaultValue `false`
-	 */
-	var override : Dynamic;
-	var boolean : Dynamic;
+
+    /**
+     * If set to `true` light will cast dynamic shadows.
+     * @remarks  **Warning**: This is expensive and requires tweaking to get shadows looking right. the {@link THREE.SpotLightShadow | SpotLightShadow} for details.
+     * @defaultValue `false`
+     */
+    //var castShadow: Bool;
+
 	/**
 	 * The light's intensity.
 	 * @remarks Changing the intensity will also change the light's power.
@@ -85,7 +84,8 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`
 	 */
-	var intensity : Float;
+	//var intensity : Float;
+    
 	/**
 	 * When **Default mode** — When distance is zero, light does not attenuate. When distance is non-zero,
 	 * light will attenuate linearly from maximum intensity at the light's position down to zero at this distance from the light.
@@ -98,6 +98,7 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @defaultValue `0.0`
 	 */
 	var distance : Float;
+    
 	/**
 	 * Maximum extent of the spotlight, in radians, from its direction.
 	 * @remarks Should be no more than `Math.PI/2`.
@@ -105,6 +106,7 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @defaultValue `Math.PI / 3`
 	 */
 	var angle : Float;
+
 	/**
 	 * The amount the light dims along the distance of the light.
 	 * In context of physically-correct rendering the default value should not be changed.
@@ -112,11 +114,13 @@ extern class SpotLight extends Light<SpotLightShadow>
 	 * @defaultValue `2`
 	 */
 	var decay : Float;
+
 	/**
 	 * A {@link THREE.SpotLightShadow | SpotLightShadow} used to calculate shadows for this light.
 	 * @defaultValue `new THREE.SpotLightShadow()`
 	 */
-	var shadow : SpotLightShadow;
+	//var shadow : SpotLightShadow;
+    
 	/**
 	 * The light's power.
 	 * @remarks Changing the power will also change the light's intensity.

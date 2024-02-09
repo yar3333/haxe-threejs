@@ -2,7 +2,7 @@ package js.three;
 
 import js.lib.*;
 
-extern interface Intersection<TIntersected:Object3D, Object3D:Dynamic>
+extern interface Intersection<TIntersected:Object3D = Object3D>
 {
 	/**
 	 * Distance between the origin of the ray and the intersection 

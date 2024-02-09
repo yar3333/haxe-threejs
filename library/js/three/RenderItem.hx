@@ -4,7 +4,7 @@ import js.lib.*;
 
 extern interface RenderItem
 {
-	var id : Float;
+	var id : Int;
 	var object : Object3D;
 	var geometry : BufferGeometry;
 	var material : Material;

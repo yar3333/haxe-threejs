@@ -1,6 +1,9 @@
 package js.three;
 
+import js.three.Constants.TextureDataType;
+import js.three.Constants.CompressedPixelFormat;
 import js.lib.*;
+import js.three.Constants.Wrapping;
 
 /**
  * Creates an texture 2D array based on data in compressed form, for example from a
@@ -32,6 +35,5 @@ extern class CompressedArrayTexture extends CompressedTexture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/CompressedArrayTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CompressedArrayTexture.js | Source}
 	 */
-	@:overload(function(mipmaps:Array<ImageData>,width:Float,height:Float,depth:Float,format:CompressedPixelFormat,?type:TextureDataType):Void{})
-	function new(mipmaps:Array<ImageData>, width:Float, height:Float, format:CompressedPixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Float, ?colorSpace:ColorSpace) : Void;
+	function new(mipmaps:Array<js.html.ImageData>, width:Float, height:Float, depth:Float, format:CompressedPixelFormat, ?type:TextureDataType) : Void;
 }

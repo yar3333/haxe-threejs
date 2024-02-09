@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.MeshMatcapMaterial")
 extern class MeshMatcapMaterial extends Material
@@ -14,12 +15,14 @@ extern class MeshMatcapMaterial extends Material
 	/**
 	 * @default 'MeshMatcapMaterial'
 	 */
-	var type : String;
-	/**
+	//var type : String;
+	
+    /**
 	 * @default { 'MATCAP': '' }
 	 */
-	var defines : Dynamic<Dynamic>;
-	/**
+	//var defines : Dynamic<Dynamic>;
+	
+    /**
 	 * @default new THREE.Color( 0xffffff )
 	 */
 	var color : Color;

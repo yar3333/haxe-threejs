@@ -21,7 +21,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Uniform.js | Source}
  */
 @:native("THREE.Uniform")
-extern class Uniform<T:Dynamic, any:Dynamic>
+extern class Uniform<T = Dynamic>
 {
 	/**
 	 * Current value of the uniform.

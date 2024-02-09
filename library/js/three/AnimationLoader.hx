@@ -3,8 +3,8 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.AnimationLoader")
-extern class AnimationLoader extends Loader<AnimationClip[]>
+extern class AnimationLoader extends Loader<Array<AnimationClip>>
 {
 	function new(?manager:LoadingManager) : Void;
-	function parse(json:readonly) : Array<AnimationClip>;
+	function parse(@:const json:Dynamic) : Array<AnimationClip>;
 }

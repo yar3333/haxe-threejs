@@ -2,11 +2,13 @@ package js.three;
 
 import js.lib.*;
 
+typedef Vector4Tuple = Array<Float>;
+
 /**
  * 4D vector.
  */
 @:native("THREE.Vector4")
-extern class Vector4
+extern class Vector4 implements ArrayAccess<Float>
 {
 	/**
 	 * @default 0
@@ -56,8 +58,8 @@ extern class Vector4
 	 * Sets w component of this vector.
 	 */
 	function setW(w:Float) : Vector4;
-	function setComponent(index:Float, value:Float) : Vector4;
-	function getComponent(index:Float) : Float;
+	function setComponent(index:Int, value:Float) : Vector4;
+	function getComponent(index:Int) : Float;
 	/**
 	 * Clones this vector.
 	 */
@@ -161,25 +163,26 @@ extern class Vector4
 	 * Copies x, y, z and w into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(?array:Vector4Tuple, ?offset:Int):Vector4Tuple{})
-	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+    overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 	/**
 	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
 	 * @return The created or provided array.
 	 * Copies x, y, z and w into the provided array-like.
 	 * @return The provided array-like.
 	 */
+    overload function toArray(?array:Vector4Tuple, ?offset:Int) : Vector4Tuple;
 	/**
 	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
 	 * @return The created or provided array.
 	 * Copies x, y, z and w into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	function fromBufferAttribute(attribute:BufferAttribute, index:Float) : Vector4;
+    overload function toArray(array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
+	function fromBufferAttribute(attribute:BufferAttribute, index:Int) : Vector4;
 	/**
 	 * Sets this vector's x, y, z and w from Math.random
 	 */
 	function random() : Vector4;
-	function [Symbol.iterator]() : Iterator<Float>;
+	
+    //function [Symbol.iterator]() : Iterator<Float>;
 }

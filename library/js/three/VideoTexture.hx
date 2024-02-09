@@ -1,5 +1,6 @@
 package js.three;
 
+import js.three.Constants;
 import js.lib.*;
 
 /**
@@ -30,21 +31,24 @@ extern class VideoTexture extends Texture
 	 * @defaultValue `true`
 	 */
 	var isVideoTexture(default, null) : Bool;
-	/**
+	
+    /**
 	 * @override
 	 * @defaultValue {@link THREE.LinearFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
-	/**
+	//var magFilter : MagnificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue {@link THREE.LinearFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
-	/**
+	//var minFilter : MinificationTextureFilter;
+	
+    /**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 
 	/**
 	 * Creates a texture for use with a video.
@@ -65,8 +69,9 @@ extern class VideoTexture extends Texture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/VideoTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/VideoTexture.js | Source}
 	 */
-	function new(video:HTMLVideoElement, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Float) : Void;
-	/**
+	function new(video:js.html.VideoElement, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?format:PixelFormat, ?type:TextureDataType, ?anisotropy:Int) : Void;
+	
+    /**
 	 * This is called automatically and sets {@link needsUpdate | .needsUpdate } to `true` every time a new frame is available.
 	 */
 	function update() : Void;

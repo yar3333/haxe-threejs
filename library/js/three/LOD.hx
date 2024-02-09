@@ -22,7 +22,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/LOD.js | Source}
  */
 @:native("THREE.LOD")
-extern class LOD<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends Object3D<TEventMap>
+extern class LOD<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link LOD}.
@@ -30,12 +30,13 @@ extern class LOD<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends O
 	 * @defaultValue `true`
 	 */
 	var isLOD(default, null) : Bool;
-	/**
+	
+    /**
 	 * @override
 	 * @defaultValue `LOD`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.lod.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.lod.Type, String>;
+
 	/**
 	 * An array of level objects
 	 */
@@ -67,20 +68,24 @@ extern class LOD<TEventMap:Object3DEventMap, Object3DEventMap:Dynamic> extends O
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/LOD.js | Source}
 	 */
 	function new() : Void;
+
 	/**
 	 * Adds a mesh that will display at a certain distance and greater. Typically the further away the distance, the lower the detail on the mesh.
 	 */
-	function addLevel(object:Object3D, ?distance:Float, ?hysteresis:Float) : LOD;
+	function addLevel(object:Object3D, ?distance:Float, ?hysteresis:Float) : LOD<TEventMap>;
+
 	/**
 	 * Get the currently active {@link LOD} level
 	 * @remarks
 	 * As index of the levels array.
 	 */
 	function getCurrentLevel() : Float;
+
 	/**
 	 * Get a reference to the first {@link THREE.Object3D | Object3D} (mesh) that is greater than {@link distance}.
 	 */
 	function getObjectForDistance(distance:Float) : Object3D;
+    
 	/**
 	 * Set the visibility of each {@link levels | level}'s {@link THREE.Object3D | object} based on distance from the {@link THREE.Camera | camera}.
 	 */

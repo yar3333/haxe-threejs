@@ -1,8 +1,6 @@
 package js.three;
 
-import js.lib.*;
-
-extern interface Matrix
+extern interface Matrix<T>
 {
 	/**
 	 * Array with matrix values.
@@ -12,26 +10,26 @@ extern interface Matrix
 	/**
 	 * identity():T;
 	 */
-	function identity() : Matrix;
+	function identity() : T;
 	/**
 	 * copy(m:T):T;
 	 */
-	function copy(m:Matrix) : Matrix;
+	function copy(m:T) : T;
 	/**
 	 * multiplyScalar(s:number):T;
 	 */
-	function multiplyScalar(s:Float) : Matrix;
+	function multiplyScalar(s:Float) : T;
 	function determinant() : Float;
 	/**
 	 * transpose():T;
 	 */
-	function transpose() : Matrix;
+	function transpose() : T;
 	/**
 	 * invert():T;
 	 */
-	function invert() : Matrix;
+	function invert() : T;
 	/**
 	 * clone():T;
 	 */
-	function clone() : Matrix;
+	function clone() : T;
 }

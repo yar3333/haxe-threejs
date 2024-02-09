@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.MeshPhongMaterial")
 extern class MeshPhongMaterial extends Material
@@ -11,10 +12,12 @@ extern class MeshPhongMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isMeshPhongMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshNormalMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default new THREE.Color( 0xffffff )
 	 */

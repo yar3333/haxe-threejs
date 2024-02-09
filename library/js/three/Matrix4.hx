@@ -1,6 +1,9 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
+
+typedef Matrix4Tuple = Array<Float>;
 
 /**
  * A 4x4 Matrix.
@@ -22,7 +25,7 @@ import js.lib.*;
  */
 @:native("THREE.Matrix4")
 extern class Matrix4
-	implements Matrix
+	implements Matrix<Matrix4>
 {
 	/**
 	 * Array with matrix values.
@@ -48,26 +51,8 @@ extern class Matrix4
 	 * m.multiplyMatrices( m1, m2 );
 	 * m.multiply( m3 );
 	 */
-	@:overload(function(n11:Float, n12:Float, n13:Float, n14:Float, n21:Float, n22:Float, n23:Float, n24:Float, n31:Float, n32:Float, n33:Float, n34:Float, n41:Float, n42:Float, n43:Float, n44:Float):Void{})
-	function new() : Void;
-	/**
-	 * A 4x4 Matrix.
-	 * 
-	 * @example
-	 * // Simple rig for rotating around 3 axes
-	 * const m = new THREE.Matrix4();
-	 * const m1 = new THREE.Matrix4();
-	 * const m2 = new THREE.Matrix4();
-	 * const m3 = new THREE.Matrix4();
-	 * const alpha = 0;
-	 * const beta = Math.PI;
-	 * const gamma = Math.PI/2;
-	 * m1.makeRotationX( alpha );
-	 * m2.makeRotationY( beta );
-	 * m3.makeRotationZ( gamma );
-	 * m.multiplyMatrices( m1, m2 );
-	 * m.multiply( m3 );
-	 */
+    @:overload(function() : Void {})
+    function new(n11:Float, n12:Float, n13:Float, n14:Float, n21:Float, n22:Float, n23:Float, n24:Float, n31:Float, n32:Float, n33:Float, n34:Float, n41:Float, n42:Float, n43:Float, n44:Float) : Void;
 	/**
 	 * Sets all fields of this matrix.
 	 */
@@ -75,12 +60,9 @@ extern class Matrix4
 	/**
 	 * Resets this matrix to identity.
 	 */
-	@:overload(function():Matrix4{})
-	function identity() : Matrix;
-	@:overload(function():Matrix4{})
-	function clone() : Matrix;
-	@:overload(function(m:Matrix4):Matrix4{})
-	function copy(m:Matrix) : Matrix;
+	function identity() : Matrix4;
+	function clone() : Matrix4;
+	overload function copy(m:Matrix4) : Matrix4;
 	function copyPosition(m:Matrix4) : Matrix4;
 	function extractBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
 	function makeBasis(xAxis:Vector3, yAxis:Vector3, zAxis:Vector3) : Matrix4;
@@ -113,8 +95,7 @@ extern class Matrix4
 	/**
 	 * Multiplies this matrix by s.
 	 */
-	@:overload(function(s:Float):Matrix4{})
-	function multiplyScalar(s:Float) : Matrix;
+	function multiplyScalar(s:Float) : Matrix4;
 	/**
 	 * Computes determinant of this matrix.
 	 * Based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
@@ -123,21 +104,19 @@ extern class Matrix4
 	/**
 	 * Transposes this matrix.
 	 */
-	@:overload(function():Matrix4{})
-	function transpose() : Matrix;
+	function transpose() : Matrix4;
 	/**
 	 * Sets the position component for this matrix from vector v.
 	 */
-	@:overload(function(x:Float, y:Float, z:Float):Matrix4{})
-	function setPosition(v:Vector3) : Matrix4;
+    overload function setPosition(v:Vector3) : Matrix4;
 	/**
 	 * Sets the position component for this matrix from vector v.
 	 */
+	overload function setPosition(x:Float, y:Float, z:Float) : Matrix4;
 	/**
 	 * Inverts this matrix.
 	 */
-	@:overload(function():Matrix4{})
-	function invert() : Matrix;
+	function invert() : Matrix4;
 	/**
 	 * Multiplies the columns of this matrix by vector v.
 	 */
@@ -146,11 +125,11 @@ extern class Matrix4
 	/**
 	 * Sets this matrix as translation transform.
 	 */
-	@:overload(function(x:Float, y:Float, z:Float):Matrix4{})
-	function makeTranslation(v:Vector3) : Matrix4;
+    overload function makeTranslation(v:Vector3) : Matrix4;
 	/**
 	 * Sets this matrix as translation transform.
 	 */
+    overload function makeTranslation(x:Float, y:Float, z:Float) : Matrix4;
 	/**
 	 * Sets this matrix as rotation transform around x axis by theta radians.
 	 */
@@ -203,21 +182,21 @@ extern class Matrix4
 	 * Copies he values of this matrix into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(?array:Matrix4Tuple, ?offset:Int):Matrix4Tuple{})
-	@:overload(function(?array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+     overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 	/**
 	 * Returns an array with the values of this matrix, or copies them into the provided array.
 	 * @return The created or provided array.
 	 * Copies he values of this matrix into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(?array:Matrix4Tuple, ?offset:Int) : Matrix4Tuple;
 	/**
 	 * Returns an array with the values of this matrix, or copies them into the provided array.
 	 * @return The created or provided array.
 	 * Copies he values of this matrix into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(?array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
 	/**
 	 * Set the upper 3x3 elements of this matrix to the values of the Matrix3 m.
 	 */
@@ -257,5 +236,5 @@ extern class Matrix4
 	/**
 	 * @deprecated Use {@link Matrix4#invert .invert()} instead.
 	 */
-	function getInverse(matrix:Matrix) : Matrix;
+	function getInverse(matrix:Matrix4) : Matrix4;
 }

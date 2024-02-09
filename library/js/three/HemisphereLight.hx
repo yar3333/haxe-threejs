@@ -19,7 +19,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/HemisphereLight.js | Source}
  */
 @:native("THREE.HemisphereLight")
-extern class HemisphereLight extends Light<undefined>
+extern class HemisphereLight extends Light<{}>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link HemisphereLight}.
@@ -27,6 +27,7 @@ extern class HemisphereLight extends Light<undefined>
 	 * @defaultValue `true`
 	 */
 	var isHemisphereLight(default, null) : Bool;
+    
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
@@ -36,30 +37,20 @@ extern class HemisphereLight extends Light<undefined>
 	 * The light's sky color, as passed in the constructor.
 	 * @defaultValue `new THREE.Color()` set to white _(0xffffff)_.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.hemispherelight.Type, String>;
-	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @defaultValue `HemisphereLight`
-	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
-	 * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
-	 * The light's sky color, as passed in the constructor.
-	 * @defaultValue `new THREE.Color()` set to white _(0xffffff)_.
-	 */
-	var override : Dynamic;
-	var position : Vector3;
-	/**
-	 * A Read-only _string_ to check if `this` object type.
-	 * @remarks Sub-classes will update this value.
-	 * @defaultValue `HemisphereLight`
-	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
-	 * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
-	 * The light's sky color, as passed in the constructor.
-	 * @defaultValue `new THREE.Color()` set to white _(0xffffff)_.
-	 */
-	var override : Dynamic;
-	var Color : Dynamic;
+	//var type : haxe.extern.EitherType<js.three.hemispherelight.Type, String>;
+
+    /**
+     * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
+     * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
+     */
+	//var position : Vector3;
+
+    /**
+     * The light's sky color, as passed in the constructor.
+     * @defaultValue `new THREE.Color()` set to white _(0xffffff)_.
+     */
+	//var color : Color;
+
 	/**
 	 * The light's ground color, as passed in the constructor.
 	 * @defaultValue `new THREE.Color()` set to white _(0xffffff)_.

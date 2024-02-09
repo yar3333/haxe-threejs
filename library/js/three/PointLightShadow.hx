@@ -15,9 +15,10 @@ extern class PointLightShadow extends LightShadow<PerspectiveCamera>
 	 * @defaultValue `true`
 	 */
 	var isPointLightShadow(default, null) : Dynamic;
-	/**
-	 * Update the matrices for the camera and shadow, used internally by the renderer.
-	 */
-	var override : Dynamic;
-	var void : Dynamic;
+    
+    /**
+     * Update the matrices for the camera and shadow, used internally by the renderer.
+     * @param light The light for which the shadow is being rendered.
+     */
+    function updateMatrices(light: Light, ?viewportIndex: Int): Void;
 }

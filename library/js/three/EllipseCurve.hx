@@ -38,8 +38,8 @@ extern class EllipseCurve extends Curve<Vector2>
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `EllipseCurve`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.ellipsecurve.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.ellipsecurve.Type, String>;
+    
 	/**
 	 * The X center of the ellipse.
 	 * @remarks Expects a `Float`

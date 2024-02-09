@@ -12,6 +12,28 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/LineSegments.js | Source}
  */
 @:native("THREE.LineSegments")
-extern class LineSegments<TGeometry:BufferGeometry, BufferGeometry:Dynamic, TMaterial:haxe.extern.EitherType<Material, Array<Material>>, Material:Dynamic>
+extern class LineSegments<TGeometry:BufferGeometry = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material, TEventMap:Object3DEventMap = Object3DEventMap>
+    extends Line<TGeometry, TMaterial, TEventMap>
 {
+    /**
+     * Create a new instance of {@link LineSegments}
+     * @param geometry Pair(s) of vertices representing each line segment(s). Default {@link THREE.BufferGeometry | `new THREE.BufferGeometry()`}.
+     * @param material Material for the line. Default {@link THREE.LineBasicMaterial | `new THREE.LineBasicMaterial()`}.
+     */
+    function new(?geometry: TGeometry, ?material: TMaterial);
+
+     /**
+      * Read-only flag to check if a given object is of type {@link LineSegments}.
+      * @remarks This is a _constant_ value
+      * @defaultValue `true`
+      */
+    var isLineSegments(default, null): Bool;
+ 
+     /**
+      * A Read-only _string_ to check if `this` object type.
+      * @remarks Sub-classes will update this value.
+      * @override
+      * @defaultValue `LineSegments`
+      */
+    //override readonly type: string | "LineSegments";
 }

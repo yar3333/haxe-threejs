@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Creates **6** {@link THREE.PerspectiveCamera | cameras} that render to a {@link THREE.WebGLCubeRenderTarget | WebGLCubeRenderTarget}.
@@ -39,9 +40,9 @@ extern class CubeCamera extends Object3D
 	 * @override
 	 * @defaultValue `CubeCamera`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.cubecamera.Type, String>;
-	/**
+	//var type : haxe.extern.EitherType<js.three.cubecamera.Type, String>;
+	
+    /**
 	 * The destination cube render target.
 	 */
 	var renderTarget : WebGLCubeRenderTarget;
@@ -79,7 +80,8 @@ extern class CubeCamera extends Object3D
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/CubeCamera.js | Source}
 	 */
 	function new(near:Float, far:Float, renderTarget:WebGLCubeRenderTarget) : Void;
-	function updateCoordinateSystem() : Void;
+	
+    function updateCoordinateSystem() : Void;
 	/**
 	 * Call this to update the {@link CubeCamera.renderTarget | renderTarget}.
 	 */

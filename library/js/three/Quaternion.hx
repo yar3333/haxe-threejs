@@ -12,7 +12,7 @@ import js.lib.*;
  * vector.applyQuaternion( quaternion );
  */
 @:native("THREE.Quaternion")
-extern class Quaternion
+extern class Quaternion implements ArrayAccess<Float>
 {
 	/**
 	 * @default 0
@@ -111,26 +111,27 @@ extern class Quaternion
 	 * Copies x, y, z and w into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+    overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 	/**
 	 * Returns an array [x, y, z, w], or copies x, y, z and w into the provided array.
 	 * @return The created or provided array.
 	 * Copies x, y, z and w into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
 	/**
 	 * This method defines the serialization result of Quaternion.
 	 * @return The numerical elements of this quaternion in an array of format [x, y, z, w].
 	 */
-	function toJSON() : [number, number, number, number];
+	function toJSON() : Array<Float>;
 	/**
 	 * Sets x, y, z, w properties of this quaternion from the attribute.
 	 */
-	function fromBufferAttribute(attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>, index:Float) : Quaternion;
+	function fromBufferAttribute(attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>, index:Int) : Quaternion;
 	function _onChange(callback:Void->Void) : Quaternion;
 	static function slerpFlat(dst:Array<Float>, dstOffset:Float, src0:Array<Float>, srcOffset:Float, src1:Array<Float>, stcOffset1:Float, t:Float) : Void;
 	static function multiplyQuaternionsFlat(dst:Array<Float>, dstOffset:Float, src0:Array<Float>, srcOffset:Float, src1:Array<Float>, stcOffset1:Float) : Array<Float>;
 	function random() : Quaternion;
-	function [Symbol.iterator]() : Generator<Float, Void>;
+	
+    //function [Symbol.iterator]() : Generator<Float, Void>;
 }

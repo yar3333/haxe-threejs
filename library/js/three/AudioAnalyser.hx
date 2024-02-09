@@ -1,5 +1,7 @@
 package js.three;
 
+import js.html.audio.AudioNode;
+import js.html.audio.AnalyserNode;
 import js.lib.*;
 
 /**

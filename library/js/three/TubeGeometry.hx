@@ -37,8 +37,8 @@ extern class TubeGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `TubeGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.tubegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.tubegeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -84,7 +84,7 @@ extern class TubeGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/TubeGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/TubeGeometry.js | Source}
 	 */
-	function new(?path:Curve<Vector3>, ?tubularSegments:Float, ?radius:Float, ?radialSegments:Float, ?closed:Bool) : Void;
+	function new(?path:Curve<Vector3>, ?tubularSegments:Float, ?radius:Float, ?radialSegments:Int, ?closed:Bool) : Void;
 	/**
 	 * @internal 
 	 */

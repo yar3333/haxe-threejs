@@ -19,6 +19,5 @@ extern class Int16BufferAttribute extends BufferAttribute
 	 * @see {@link https://threejs.org/docs/index.html#api/en/core/bufferAttributeTypes/BufferAttributeTypes | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js | Source}
 	 */
-	@:overload(function(array:haxe.extern.EitherType<Iterable<Float>,haxe.extern.EitherType<ArrayLike<Float>,haxe.extern.EitherType<ArrayBuffer,Float>>>,itemSize:Float,?normalized:Bool):Void{})
-	function new(array:TypedArray, itemSize:Float, ?normalized:Bool) : Void;
+	function new(array:haxe.extern.EitherType<Iterable<Float>, haxe.extern.EitherType<ArrayLike<Float>, haxe.extern.EitherType<ArrayBuffer, Float>>>, itemSize:Float, ?normalized:Bool) : Void;
 }

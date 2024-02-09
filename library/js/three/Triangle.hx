@@ -29,9 +29,9 @@ extern class Triangle
 	function getNormal(target:Vector3) : Vector3;
 	function getPlane(target:Plane) : Plane;
 	function getBarycoord(point:Vector3, target:Vector3) : Vector3;
-	@:overload(function(point:Vector3, v1:Vector3, v2:Vector3, v3:Vector3, target:Vector3):Vector3{})
-	@:overload(function(point:Vector3, v1:Vector4, v2:Vector4, v3:Vector4, target:Vector4):Vector4{})
-	function getInterpolation(point:Vector3, v1:Vector2, v2:Vector2, v3:Vector2, target:Vector2) : Vector2;
+	overload function getInterpolation(point:Vector3, v1:Vector2, v2:Vector2, v3:Vector2, target:Vector2) : Vector2;
+	overload function getInterpolation(point:Vector3, v1:Vector3, v2:Vector3, v3:Vector3, target:Vector3) : Vector3;
+	overload function getInterpolation(point:Vector3, v1:Vector4, v2:Vector4, v3:Vector4, target:Vector4) : Vector4;
 	function containsPoint(point:Vector3) : Bool;
 	function intersectsBox(box:Box3) : Bool;
 	function isFrontFacing(direction:Vector3) : Bool;
@@ -40,8 +40,8 @@ extern class Triangle
 	static function getNormal(a:Vector3, b:Vector3, c:Vector3, target:Vector3) : Vector3;
 	static function getBarycoord(point:Vector3, a:Vector3, b:Vector3, c:Vector3, target:Vector3) : Vector3;
 	static function containsPoint(point:Vector3, a:Vector3, b:Vector3, c:Vector3) : Bool;
-	static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector2, v2:Vector2, v3:Vector2, target:Vector2) : Vector2;
-	static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector3, v2:Vector3, v3:Vector3, target:Vector3) : Vector3;
-	static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector4, v2:Vector4, v3:Vector4, target:Vector4) : Vector4;
+	overload static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector2, v2:Vector2, v3:Vector2, target:Vector2) : Vector2;
+	overload static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector3, v2:Vector3, v3:Vector3, target:Vector3) : Vector3;
+	overload static function getInterpolation(point:Vector3, p1:Vector3, p2:Vector3, p3:Vector3, v1:Vector4, v2:Vector4, v3:Vector4, target:Vector4) : Vector4;
 	static function isFrontFacing(a:Vector3, b:Vector3, c:Vector3, direction:Vector3) : Bool;
 }

@@ -19,15 +19,15 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/WireframeGeometry.js | Source}
  */
 @:native("THREE.WireframeGeometry")
-extern class WireframeGeometry<TBufferGeometry:BufferGeometry, BufferGeometry:Dynamic> extends BufferGeometry
+extern class WireframeGeometry<TBufferGeometry:BufferGeometry = BufferGeometry> extends BufferGeometry
 {
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `WireframeGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.wireframegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.wireframegeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.

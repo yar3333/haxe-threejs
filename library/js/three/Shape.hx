@@ -41,14 +41,15 @@ extern class Shape extends Path
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `Shape`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.shape.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.shape.Type, String>;
+
 	/**
 	 * {@link http://en.wikipedia.org/wiki/Universally_unique_identifier | UUID} of this object instance.
 	 * @remarks This gets automatically assigned and shouldn't be edited.
 	 */
 	var uuid : String;
-	/**
+	
+    /**
 	 * An array of {@link Path | paths} that define the holes in the shape.
 	 * @defaultValue `[]`
 	 */
@@ -89,9 +90,9 @@ extern class Shape extends Path
 	/**
 	 * Call {@link THREE.Curve.getPoints | getPoints} on the {@link Shape} and the {@link holes} array
 	 */
-	function extractPoints(divisions:Float) : { var shape : Array<Vector2>; var holes : Array<Array<Vector2>>; };
+	function extractPoints(divisions:Int) : { var shape : Array<Vector2>; var holes : Array<Array<Vector2>>; };
 	/**
 	 * Get an array of {@link Vector2 | Vector2's} that represent the holes in the shape.
 	 */
-	function getPointsHoles(divisions:Float) : Array<Array<Vector2>>;
+	function getPointsHoles(divisions:Int) : Array<Array<Vector2>>;
 }

@@ -32,47 +32,54 @@ extern class OrthographicCamera extends Camera
 	 * @defaultValue `true`
 	 */
 	var isOrthographicCamera(default, null) : Bool;
-	/**
+	
+    /**
 	 * @override
 	 * @defaultValue `OrthographicCamera`
 	 */
-	//var override : Dynamic;
 	//var type : haxe.extern.EitherType<js.three.orthographiccamera.Type, String>;
+
 	/**
 	 * Gets or sets the zoom factor of the camera.
 	 * @defaultValue `1`
 	 */
 	var zoom : Float;
-	/**
+	
+    /**
 	 * Set by {@link setViewOffset | .setViewOffset()}.
 	 * @defaultValue `null`
 	 */
 	var view : { var enabled : Bool; var fullWidth : Float; var fullHeight : Float; var offsetX : Float; var offsetY : Float; var width : Float; var height : Float; };
-	/**
+	
+    /**
 	 * Camera frustum left plane.
 	 * @remarks Expects a `Float`
 	 * @defaultValue `-1`
 	 */
 	var left : Float;
-	/**
+	
+    /**
 	 * Camera frustum right plane.
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`
 	 */
 	var right : Float;
-	/**
+	
+    /**
 	 * Camera frustum top plane.
 	 * @remarks Expects a `Float`
 	 * @defaultValue `1`
 	 */
 	var top : Float;
-	/**
+	
+    /**
 	 * Camera frustum bottom plane.
 	 * @remarks Expects a `Float`.
 	 * @defaultValue `-1`
 	 */
 	var bottom : Float;
-	/**
+	
+    /**
 	 * Camera frustum near plane.`.
 	 * @remarks The valid range is between `0` and the current value of the {@link far | .far} plane.
 	 * @remarks Note that, unlike for the {@link THREE.PerspectiveCamera | PerspectiveCamera}, `0` is a valid value for an {@link THREE.OrthographicCamera | OrthographicCamera's} near plane.
@@ -80,7 +87,8 @@ extern class OrthographicCamera extends Camera
 	 * @defaultValue `0.1`
 	 */
 	var near : Float;
-	/**
+	
+    /**
 	 * Camera frustum far plane.
 	 * @remarks Must be greater than the current value of {@link near | .near} plane.
 	 * @remarks Expects a `Float`
@@ -109,14 +117,15 @@ extern class OrthographicCamera extends Camera
 	 * @see {@link https://threejs.org/docs/index.html#api/en/cameras/OrthographicCamera | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/OrthographicCamera.js | Source}
 	 */
-	@:overload(function(?left:Float,?right:Float,?top:Float,?bottom:Float,?near:Float,?far:Float):Void{})
-	function new() : Void;
-	/**
+	function new(?left:Float, ?right:Float, ?top:Float, ?bottom:Float, ?near:Float, ?far:Float) : Void;
+	
+    /**
 	 * Updates the camera projection matrix
 	 * @remarks Must be called after any change of parameters.
 	 */
 	function updateProjectionMatrix() : Void;
-	/**
+	
+    /**
 	 * Sets an offset in a larger {@link https://en.wikipedia.org/wiki/Viewing_frustum | viewing frustum}
 	 * @remarks
 	 * This is useful for multi-window or multi-monitor/multi-machine setups
@@ -124,7 +133,8 @@ extern class OrthographicCamera extends Camera
 	 * @see {@link THREE.PerspectiveCamera.setViewOffset | PerspectiveCamera}.
 	 */
 	function setViewOffset(fullWidth:Float, fullHeight:Float, offsetX:Float, offsetY:Float, width:Float, height:Float) : Void;
-	/**
+	
+    /**
 	 * Removes any offset set by the {@link setViewOffset | .setViewOffset} method.
 	 */
 	function clearViewOffset() : Void;

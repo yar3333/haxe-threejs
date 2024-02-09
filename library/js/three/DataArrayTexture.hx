@@ -49,12 +49,12 @@ extern class DataArrayTexture extends Texture
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
+	//var magFilter : MagnificationTextureFilter;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
+	//var minFilter : MinificationTextureFilter;
 	/**
 	 * @override
 	 * @defaultValue  {@link THREE.ClampToEdgeWrapping}
@@ -64,17 +64,17 @@ extern class DataArrayTexture extends Texture
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
+	//var flipY : Bool;
 	/**
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 	/**
 	 * @override
 	 * @defaultValue `1`
 	 */
-	var unpackAlignment : Float;
+	//var unpackAlignment : Float;
 
 	/**
 	 * Creates an array of textures directly from raw data, width and height and depth

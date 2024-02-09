@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.WebGLShadowMap")
 extern class WebGLShadowMap

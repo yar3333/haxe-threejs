@@ -14,7 +14,7 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/AmbientLight.js | Source}
  */
 @:native("THREE.AmbientLight")
-extern class AmbientLight extends Light<undefined>
+extern class AmbientLight extends Light<{}>
 {
 	/**
 	 * Read-only flag to check if a given object is of type {@link AmbientLight}.
@@ -27,8 +27,7 @@ extern class AmbientLight extends Light<undefined>
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `AmbientLight`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.ambientlight.Type, String>;
+	//var type : LightType;
 
 	/**
 	 * This light globally illuminates all objects in the scene equally.

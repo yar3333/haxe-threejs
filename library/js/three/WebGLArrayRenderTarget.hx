@@ -6,16 +6,18 @@ import js.lib.*;
  * This type of render target represents an array of textures.
  */
 @:native("THREE.WebGLArrayRenderTarget")
-extern class WebGLArrayRenderTarget extends WebGLRenderTarget
+extern class WebGLArrayRenderTarget extends WebGLRenderTarget<DataArrayTexture>
 {
 	/**
 	 * The depth of the render target.
 	 */
-	var depth : Float;
+	//var depth : Float;
+
 	/**
 	 * The texture property is overwritten with an instance of {@link DataArrayTexture}.
 	 */
-	var texture : DataArrayTexture;
+	//var texture : DataArrayTexture;
+    
 	var isWebGLArrayRenderTarget(default, null) : Bool;
 
 	/**

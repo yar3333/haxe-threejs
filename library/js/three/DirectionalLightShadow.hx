@@ -66,7 +66,7 @@ extern class DirectionalLightShadow extends LightShadow<OrthographicCamera>
 	 * the {@link OrthographicCamera.near | near} clipping plane at 0.5 and
 	 * the {@link OrthographicCamera.far | far} clipping plane at 500.
 	 */
-	var camera : OrthographicCamera;
+	//var camera : OrthographicCamera;
 
 	/**
 	 * This is used internally by {@link DirectionalLight | DirectionalLights} for calculating shadows.

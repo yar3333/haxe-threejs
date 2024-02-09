@@ -1,19 +1,25 @@
 package js.three;
 
+import js.three.Constants.GLSLVersion;
 import js.lib.*;
 
-extern interface ShaderMaterialParameters extends MaterialParameters
-{
-	@:optional var uniforms : haxe.extern.EitherType<Dynamic<IUniform>, {}>;
-	@:optional var uniformsGroups : haxe.extern.EitherType<Array<UniformsGroup>, {}>;
-	@:optional var vertexShader : haxe.extern.EitherType<String, {}>;
-	@:optional var fragmentShader : haxe.extern.EitherType<String, {}>;
-	@:optional var linewidth : haxe.extern.EitherType<Float, {}>;
-	@:optional var wireframe : haxe.extern.EitherType<Bool, {}>;
-	@:optional var wireframeLinewidth : haxe.extern.EitherType<Float, {}>;
-	@:optional var lights : haxe.extern.EitherType<Bool, {}>;
-	@:optional var clipping : haxe.extern.EitherType<Bool, {}>;
-	@:optional var fog : haxe.extern.EitherType<Bool, {}>;
-	@:optional var extensions : haxe.extern.EitherType<, haxe.extern.EitherType<{ @:optional var derivatives : haxe.extern.EitherType<Bool, {}>; @:optional var fragDepth : haxe.extern.EitherType<Bool, {}>; @:optional var drawBuffers : haxe.extern.EitherType<Bool, {}>; @:optional var shaderTextureLOD : haxe.extern.EitherType<Bool, {}>; }, {}>>;
-	@:optional var glslVersion : haxe.extern.EitherType<GLSLVersion, {}>;
+typedef ShaderMaterialParameters =
+{>MaterialParameters,
+	@:optional var uniforms : Dynamic<IUniform>;
+	@:optional var uniformsGroups : Array<UniformsGroup>;
+	@:optional var vertexShader : String;
+	@:optional var fragmentShader : String;
+	@:optional var linewidth : Float;
+	@:optional var wireframe : Bool;
+	@:optional var wireframeLinewidth : Float;
+	@:optional var lights : Bool;
+	@:optional var clipping : Bool;
+	@:optional var fog : Bool;
+	@:optional var extensions : { 
+        @:optional var derivatives : Bool;
+        @:optional var fragDepth : Bool;
+        @:optional var drawBuffers : Bool;
+        @:optional var shaderTextureLOD : Bool;
+    };
+	@:optional var glslVersion : GLSLVersion;
 }

@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 @:native("THREE.MeshStandardMaterial")
 extern class MeshStandardMaterial extends Material
@@ -11,14 +12,17 @@ extern class MeshStandardMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isMeshStandardMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'MeshStandardMaterial'
 	 */
-	var type : String;
-	/**
+	//var type : String;
+	
+    /**
 	 * @default { 'STANDARD': '' }
 	 */
-	var defines : Dynamic<Dynamic>;
+	//var defines : Dynamic<Dynamic>;
+
 	/**
 	 * @default new THREE.Color( 0xffffff )
 	 */
@@ -75,10 +79,12 @@ extern class MeshStandardMaterial extends Material
 	 * @default null
 	 */
 	var normalMap : Texture;
-	/**
+	
+    /**
 	 * @default THREE.TangentSpaceNormalMap
 	 */
 	var normalMapType : NormalMapTypes;
+
 	/**
 	 * @default new THREE.Vector2( 1, 1 )
 	 */

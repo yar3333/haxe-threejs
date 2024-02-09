@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * This class can be used to automatically save the depth information of a rendering into a texture
@@ -24,34 +25,34 @@ extern class DepthTexture extends Texture
 	 * @override
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
+	//var flipY : Bool;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var magFilter : MagnificationTextureFilter;
+	//var magFilter : MagnificationTextureFilter;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.NearestFilter}
 	 */
-	var minFilter : MinificationTextureFilter;
+	//var minFilter : MinificationTextureFilter;
 	/**
 	 * @override Depth textures do not use mipmaps.
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 	/**
 	 * @override
 	 * @see {@link Texture.format | Texture.format}
 	 * @defaultValue {@link THREE.DepthFormat}.
 	 */
-	var format : DepthTexturePixelFormat;
+	//var format : DepthTexturePixelFormat;
 	/**
 	 * @override
 	 * @defaultValue {@link THREE.UnsignedByteType} when {@link format | .format} === {@link THREE.DepthFormat}
 	 * @defaultValue {@link THREE.UnsignedInt248Type} when {@link format | .format} === {@link THREE.DepthStencilFormat}
 	 */
-	var type : TextureDataType;
+	//var type : TextureDataType;
 	/**
 	 * This is used to define the comparison function used when comparing texels in the depth texture to the value in
 	 * the depth buffer. Default is `null` which means comparison is disabled.
@@ -69,5 +70,5 @@ extern class DepthTexture extends Texture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/DepthTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/DepthTexture.js | Source}
 	 */
-	function new(width:Float, height:Float, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Float, ?format:DepthTexturePixelFormat) : Void;
+	function new(width:Float, height:Float, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Int, ?format:DepthTexturePixelFormat) : Void;
 }

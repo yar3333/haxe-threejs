@@ -1,6 +1,12 @@
 package js.three;
 
 import js.lib.*;
+import js.three.WebXRSpaceEventMap.XRInputSource;
+
+typedef XRHandSpace = Dynamic;
+typedef XRControllerEventType = Dynamic;
+typedef XRFrame = Dynamic;
+typedef XRReferenceSpace = Dynamic;
 
 @:native("THREE.WebXRController")
 extern class WebXRController

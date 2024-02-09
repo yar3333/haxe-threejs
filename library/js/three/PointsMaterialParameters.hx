@@ -2,8 +2,8 @@ package js.three;
 
 import js.lib.*;
 
-extern interface PointsMaterialParameters extends MaterialParameters
-{
+typedef PointsMaterialParameters =
+{>MaterialParameters,
 	@:optional var color : haxe.extern.EitherType<ColorRepresentation, {}>;
 	@:optional var map : haxe.extern.EitherType<Texture, {}>;
 	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;

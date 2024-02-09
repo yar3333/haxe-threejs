@@ -1,6 +1,8 @@
 package js.three;
 
+import haxe.extern.EitherType;
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * This class stores data for an attribute (such as vertex positions, face indices, normals, colors, UVs, and any custom attributes )
@@ -80,7 +82,7 @@ extern class BufferAttribute
 	 * {@link BufferAttribute.array | array}'s length by the {@link BufferAttribute.itemSize | itemSize}. Read-only
 	 * property.
 	 */
-	var count(default, null) : Float;
+	var count(default, null) : Int;
 	/**
 	 * Read-only flag to check if a given object is of type {@link BufferAttribute}.
 	 * @remarks This is a _constant_ value
@@ -127,7 +129,7 @@ extern class BufferAttribute
 	 * Adds a range of data in the data array to be updated on the GPU. Adds an object describing the range to the
 	 * {@link .updateRanges} array.
 	 */
-	function addUpdateRange(start:Float, count:Float) : Void;
+	function addUpdateRange(start:Float, count:Int) : Void;
 	/**
 	 * Clears the {@link .updateRanges} array.
 	 */
@@ -176,55 +178,55 @@ extern class BufferAttribute
 	/**
 	 * Returns the given component of the vector at the given index.
 	 */
-	function getComponent(index:Float, component:Float) : Float;
+	function getComponent(index:Int, component:Float) : Float;
 	/**
 	 * Sets the given component of the vector at the given index.
 	 */
-	function setComponent(index:Float, component:Float, value:Float) : Void;
+	function setComponent(index:Int, component:Float, value:Float) : Void;
 	/**
 	 * Returns the x component of the vector at the given index.
 	 */
-	function getX(index:Float) : Float;
+	function getX(index:Int) : Float;
 	/**
 	 * Sets the x component of the vector at the given index.
 	 */
-	function setX(index:Float, x:Float) : BufferAttribute;
+	function setX(index:Int, x:Float) : BufferAttribute;
 	/**
 	 * Returns the y component of the vector at the given index.
 	 */
-	function getY(index:Float) : Float;
+	function getY(index:Int) : Float;
 	/**
 	 * Sets the y component of the vector at the given index.
 	 */
-	function setY(index:Float, y:Float) : BufferAttribute;
+	function setY(index:Int, y:Float) : BufferAttribute;
 	/**
 	 * Returns the z component of the vector at the given index.
 	 */
-	function getZ(index:Float) : Float;
+	function getZ(index:Int) : Float;
 	/**
 	 * Sets the z component of the vector at the given index.
 	 */
-	function setZ(index:Float, z:Float) : BufferAttribute;
+	function setZ(index:Int, z:Float) : BufferAttribute;
 	/**
 	 * Returns the w component of the vector at the given index.
 	 */
-	function getW(index:Float) : Float;
+	function getW(index:Int) : Float;
 	/**
 	 * Sets the w component of the vector at the given index.
 	 */
-	function setW(index:Float, z:Float) : BufferAttribute;
+	function setW(index:Int, z:Float) : BufferAttribute;
 	/**
 	 * Sets the x and y components of the vector at the given index.
 	 */
-	function setXY(index:Float, x:Float, y:Float) : BufferAttribute;
+	function setXY(index:Int, x:Float, y:Float) : BufferAttribute;
 	/**
 	 * Sets the x, y and z components of the vector at the given index.
 	 */
-	function setXYZ(index:Float, x:Float, y:Float, z:Float) : BufferAttribute;
+	function setXYZ(index:Int, x:Float, y:Float, z:Float) : BufferAttribute;
 	/**
 	 * Sets the x, y, z and w components of the vector at the given index.
 	 */
-	function setXYZW(index:Float, x:Float, y:Float, z:Float, w:Float) : BufferAttribute;
+	function setXYZW(index:Int, x:Float, y:Float, z:Float, w:Float) : BufferAttribute;
 	/**
 	 * Convert this object to three.js to the `data.attributes` part of {@link https://github.com/mrdoob/three.js/wiki/JSON-Geometry-format-4 | JSON Geometry format v4},
 	 */

@@ -15,7 +15,6 @@ extern class OctahedronGeometry extends PolyhedronGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `OctahedronGeometry`
 	 */
-	//var override : Dynamic;
 	//var type : haxe.extern.EitherType<js.three.octahedrongeometry.Type, String>;
 
 	/**
@@ -23,8 +22,8 @@ extern class OctahedronGeometry extends PolyhedronGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/OctahedronGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/OctahedronGeometry.js | Source}
 	 */
-	@:overload(function(?radius:Float,?detail:Float):Void{})
-	function new(?vertices:Array<Float>, ?indices:Array<Float>, ?radius:Float, ?detail:Float) : Void;
+	function new(?radius:Float, ?detail:Float) : Void;
+    
 	/**
 	 * @internal 
 	 */

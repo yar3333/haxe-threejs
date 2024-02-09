@@ -2,6 +2,8 @@ package js.three;
 
 import js.lib.*;
 
+import js.three.BufferGeometry in BaseBufferGeometryClass;
+
 /**
  * This can be used as a helper object to view the edges of a {@link THREE.BufferGeometry | geometry}.
  * @example
@@ -18,15 +20,15 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/EdgesGeometry.js | Source}
  */
 @:native("THREE.EdgesGeometry")
-extern class EdgesGeometry<TBufferGeometry:BufferGeometry, BufferGeometry:Dynamic> extends BufferGeometry
+extern class EdgesGeometry<TBufferGeometry:BufferGeometry, BufferGeometry:Dynamic> extends BaseBufferGeometryClass
 {
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `EdgesGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.edgesgeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.edgesgeometry.Type, String>;
+    
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.

@@ -20,6 +20,5 @@ extern class InstancedInterleavedBuffer extends InterleavedBuffer
 	 * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedInterleavedBuffer | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js | Source}
 	 */
-	@:overload(function(array:TypedArray,stride:Float,?meshPerAttribute:Float):Void{})
-	function new(array:TypedArray, stride:Float) : Void;
+	function new(array:TypedArray, stride:Float, ?meshPerAttribute:Float) : Void;
 }

@@ -4,5 +4,5 @@ import js.lib.*;
 
 extern interface WebGLProgramParametersWithUniforms extends WebGLProgramParameters
 {
-	var uniforms : Dynamic<IUniform>;
+	var uniforms : Dynamic<IUniform<Dynamic>>;
 }

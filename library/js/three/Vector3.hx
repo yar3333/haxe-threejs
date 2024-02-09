@@ -1,6 +1,9 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Color;
+
+typedef Vector3Tuple = Array<Float>;
 
 /**
  * 3D vector.
@@ -14,7 +17,7 @@ import js.lib.*;
  * c.crossVectors( a, b );
  */
 @:native("THREE.Vector3")
-extern class Vector3
+extern class Vector3 implements ArrayAccess<Float>
 {
 	/**
 	 * @default 0
@@ -62,8 +65,8 @@ extern class Vector3
 	 * Sets z value of this vector.
 	 */
 	function setZ(z:Float) : Vector3;
-	function setComponent(index:Float, value:Float) : Vector3;
-	function getComponent(index:Float) : Float;
+	function setComponent(index:Int, value:Float) : Vector3;
+	function getComponent(index:Int) : Float;
 	/**
 	 * Clones this vector.
 	 */
@@ -185,8 +188,8 @@ extern class Vector3
 	function setFromCylindricalCoords(radius:Float, theta:Float, y:Float) : Vector3;
 	function setFromMatrixPosition(m:Matrix4) : Vector3;
 	function setFromMatrixScale(m:Matrix4) : Vector3;
-	function setFromMatrixColumn(matrix:Matrix4, index:Float) : Vector3;
-	function setFromMatrix3Column(matrix:Matrix3, index:Float) : Vector3;
+	function setFromMatrixColumn(matrix:Matrix4, index:Int) : Vector3;
+	function setFromMatrix3Column(matrix:Matrix3, index:Int) : Vector3;
 	/**
 	 * Sets this vector's {@link x}, {@link y} and {@link z} components from the x, y, and z components of the specified {@link Euler Euler Angle}.
 	 */
@@ -210,26 +213,27 @@ extern class Vector3
 	 * Copies x, y and z into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	@:overload(function(?array:Vector3Tuple, ?offset:Int):Vector3Tuple{})
-	@:overload(function(array:ArrayLike<Float>, ?offset:Float):ArrayLike<Float>{})
-	function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
+    overload function toArray(?array:Array<Float>, ?offset:Float) : Array<Float>;
 	/**
 	 * Returns an array [x, y, z], or copies x, y and z into the provided array.
 	 * @return The created or provided array.
 	 * Copies x, y and z into the provided array-like.
 	 * @return The provided array-like.
 	 */
+	overload function toArray(?array:Vector3Tuple, ?offset:Int) : Vector3Tuple;
 	/**
 	 * Returns an array [x, y, z], or copies x, y and z into the provided array.
 	 * @return The created or provided array.
 	 * Copies x, y and z into the provided array-like.
 	 * @return The provided array-like.
 	 */
-	function fromBufferAttribute(attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>, index:Float) : Vector3;
+    overload function toArray(array:ArrayLike<Float>, ?offset:Float) : ArrayLike<Float>;
+	function fromBufferAttribute(attribute:haxe.extern.EitherType<BufferAttribute, InterleavedBufferAttribute>, index:Int) : Vector3;
 	/**
 	 * Sets this vector's x, y and z from Math.random
 	 */
 	function random() : Vector3;
 	function randomDirection() : Vector3;
-	function [Symbol.iterator]() : Iterator<Float>;
+	
+    //function [Symbol.iterator]() : Iterator<Float>;
 }

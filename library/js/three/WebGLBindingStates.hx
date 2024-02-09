@@ -5,7 +5,7 @@ import js.lib.*;
 @:native("THREE.WebGLBindingStates")
 extern class WebGLBindingStates
 {
-	function new(gl:WebGLRenderingContext, extensions:WebGLExtensions, attributes:WebGLAttributes, capabilities:WebGLCapabilities) : Void;
+	function new(gl:js.html.webgl.RenderingContext, extensions:WebGLExtensions, attributes:WebGLAttributes, capabilities:WebGLCapabilities) : Void;
 	function setup(object:Object3D, material:Material, program:WebGLProgram, geometry:BufferGeometry, index:BufferAttribute) : Void;
 	function reset() : Void;
 	function resetDefaultState() : Void;

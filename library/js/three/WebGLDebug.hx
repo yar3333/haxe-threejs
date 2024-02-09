@@ -14,5 +14,5 @@ extern interface WebGLDebug
 	 * Assigning a custom function disables the default error reporting.
 	 * @default `null`
 	 */
-	var onShaderError : haxe.extern.EitherType<, (WebGLRenderingContext->WebGLProgram->WebGLShader->WebGLShader->Void)>;
+	@:optional var onShaderError : js.html.webgl.RenderingContext->WebGLProgram->WebGLShader->WebGLShader->Void;
 }

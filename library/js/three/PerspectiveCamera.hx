@@ -33,7 +33,6 @@ extern class PerspectiveCamera extends Camera
 	 * @override
 	 * @defaultValue `PerspectiveCamera`
 	 */
-	//var override : Dynamic;
 	//var type : haxe.extern.EitherType<js.three.perspectivecamera.Type, String>;
 	/**
 	 * Gets or sets the zoom factor of the camera.
@@ -112,8 +111,7 @@ extern class PerspectiveCamera extends Camera
 	 * @see {@link https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/PerspectiveCamera.js | Source}
 	 */
-	@:overload(function(?fov:Float,?aspect:Float,?near:Float,?far:Float):Void{})
-	function new() : Void;
+	function new(?fov:Float, ?aspect:Float, ?near:Float, ?far:Float) : Void;
 	/**
 	 * Returns the focal length of the current {@link .fov | fov} in respect to {@link filmGauge | .filmGauge}.
 	 */

@@ -11,10 +11,12 @@ extern class LineDashedMaterial extends LineBasicMaterial
 	 * @defaultValue `true`
 	 */
 	var isLineDashedMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'LineDashedMaterial'
 	 */
 	//var type : String;
+
 	/**
 	 * @default 1
 	 */
@@ -28,8 +30,6 @@ extern class LineDashedMaterial extends LineBasicMaterial
 	 */
 	var gapSize : Float;
 
-	@:overload(function(?parameters:LineDashedMaterialParameters):Void{})
-	function new(?parameters:LineBasicMaterialParameters) : Void;
-	@:overload(function(parameters:LineDashedMaterialParameters):Void{})
-	override function setValues(parameters:LineBasicMaterialParameters) : Void;
+	function new(?parameters:LineDashedMaterialParameters) : Void;
+	function setValues(parameters:LineDashedMaterialParameters) : Void;
 }

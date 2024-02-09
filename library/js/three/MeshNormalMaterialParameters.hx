@@ -1,18 +1,19 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
-extern interface MeshNormalMaterialParameters extends MaterialParameters
-{
-	@:optional var bumpMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var bumpScale : haxe.extern.EitherType<Float, {}>;
-	@:optional var normalMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var normalMapType : haxe.extern.EitherType<NormalMapTypes, {}>;
-	@:optional var normalScale : haxe.extern.EitherType<Vector2, {}>;
-	@:optional var displacementMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var displacementScale : haxe.extern.EitherType<Float, {}>;
-	@:optional var displacementBias : haxe.extern.EitherType<Float, {}>;
-	@:optional var wireframe : haxe.extern.EitherType<Bool, {}>;
-	@:optional var wireframeLinewidth : haxe.extern.EitherType<Float, {}>;
-	@:optional var flatShading : haxe.extern.EitherType<Bool, {}>;
+typedef MeshNormalMaterialParameters =
+{>MaterialParameters,
+	@:optional var bumpMap : Texture;
+	@:optional var bumpScale : Float;
+	@:optional var normalMap : Texture;
+	@:optional var normalMapType : NormalMapTypes;
+	@:optional var normalScale : Vector2;
+	@:optional var displacementMap : Texture;
+	@:optional var displacementScale : Float;
+	@:optional var displacementBias : Float;
+	@:optional var wireframe : Bool;
+	@:optional var wireframeLinewidth : Float;
+	@:optional var flatShading : Bool;
 }

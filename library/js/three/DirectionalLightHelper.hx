@@ -29,8 +29,8 @@ extern class DirectionalLightHelper extends Object3D
 	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
 	 * @defaultValue `false`.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.directionallighthelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.directionallighthelper.Type, String>;
+
 	/**
 	 * Contains the line mesh showing the location of the directional light.
 	 */
@@ -39,10 +39,12 @@ extern class DirectionalLightHelper extends Object3D
 	 * Reference to the {@link THREE.DirectionalLight | directionalLight} being visualized.
 	 */
 	var light : DirectionalLight;
-	/**
+	
+    /**
 	 * Reference to the {@link THREE.DirectionalLight.matrixWorld | light.matrixWorld}.
 	 */
-	var matrix : Matrix4;
+	//var matrix : Matrix4;
+
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
@@ -52,8 +54,8 @@ extern class DirectionalLightHelper extends Object3D
 	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
 	 * @defaultValue `false`.
 	 */
-	var override : Dynamic;
-	var boolean : Dynamic;
+	//var type : Dynamic;
+
 	/**
 	 * The color parameter passed in the constructor.
 	 * @remarks If this is changed, the helper's color will update the next time {@link update} is called.

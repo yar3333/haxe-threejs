@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * **"Interleaved"** means that multiple attributes, possibly of different types, (e.g., _position, normal, uv, color_) are packed into a single array buffer.
@@ -54,7 +55,7 @@ extern class InterleavedBuffer
 	 * @remarks Expects a `Integer`
 	 * @defaultValue 0
 	 */
-	var count : Float;
+	var count : Int;
 	/**
 	 * {@link http://en.wikipedia.org/wiki/Universally_unique_identifier | UUID} of this object instance.
 	 * @remarks This gets automatically assigned and shouldn't be edited.
@@ -90,7 +91,7 @@ extern class InterleavedBuffer
 	 * Adds a range of data in the data array to be updated on the GPU. Adds an object describing the range to the
 	 * {@link .updateRanges} array.
 	 */
-	function addUpdateRange(start:Float, count:Float) : Void;
+	function addUpdateRange(start:Float, count:Int) : Void;
 	/**
 	 * Clears the {@link .updateRanges} array.
 	 */

@@ -53,7 +53,8 @@ extern class SpotLightShadow extends LightShadow<PerspectiveCamera>
 	 * @defaultValue `true`
 	 */
 	var isSpotLightShadow(default, null) : Bool;
-	/**
+	
+    /**
 	 * The light's view of the world.
 	 * @remarks This is used to generate a depth map of the scene; objects behind other objects from the light's perspective will be in shadow.
 	 * @remarks
@@ -63,8 +64,9 @@ extern class SpotLightShadow extends LightShadow<PerspectiveCamera>
 	 * If the {@link SpotLight.distance | distance} property of the light is set, the {@link THREE.PerspectiveCamera.far | far} clipping plane will track that, otherwise it defaults to `500`.
 	 * @defaultValue is a {@link THREE.PerspectiveCamera | PerspectiveCamera} with {@link THREE.PerspectiveCamera.near | near} clipping plane at `0.5`.
 	 */
-	var camera : PerspectiveCamera;
-	/**
+	//var camera : PerspectiveCamera;
+	
+    /**
 	 * Used to focus the shadow camera.
 	 * @remarks The camera's field of view is set as a percentage of the spotlight's field-of-view. Range is `[0, 1]`. 0`.
 	 * @defaultValue `1`

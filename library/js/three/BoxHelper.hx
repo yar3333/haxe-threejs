@@ -30,8 +30,7 @@ extern class BoxHelper extends LineSegments<BufferGeometry, LineBasicMaterial>
 	 * @override
 	 * @defaultValue `BoxHelper`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.boxhelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.boxhelper.Type, String>;
 
 	/**
 	 * Helper object to graphically show the world-axis-aligned bounding box around an object

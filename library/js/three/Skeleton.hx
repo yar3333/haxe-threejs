@@ -78,8 +78,10 @@ extern class Skeleton
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Skeleton.js | Source}
 	 */
 	function new(?bones:Array<Bone>, ?boneInverses:Array<Matrix4>) : Void;
-	function init() : Void;
-	/**
+	
+    function init() : Void;
+	
+    /**
 	 * Generates the {@link boneInverses} array if not provided in the constructor.
 	 */
 	function calculateInverses() : Void;
@@ -114,6 +116,8 @@ extern class Skeleton
 	 * Call this method whenever this instance is no longer used in your app.
 	 */
 	function dispose() : Void;
-	function toJSON() : unknown;
-	function fromJSON(json:unknown, bones:Dynamic<Bone>) : Void;
+	
+    function toJSON() : Dynamic;
+	
+    function fromJSON(json:Dynamic, bones:Dynamic<Bone>) : Void;
 }

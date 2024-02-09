@@ -51,63 +51,63 @@ extern class InterleavedBufferAttribute
 	/**
 	 * Applies normal matrix {@link Matrix3 | m} to every Vector3 element of this InterleavedBufferAttribute.
 	 */
-	function applyNormalMatrix(m:Matrix) : InterleavedBufferAttribute;
+	function applyNormalMatrix(m:Matrix3) : InterleavedBufferAttribute;
 	/**
 	 * Applies matrix {@link Matrix4 | m} to every Vector3 element of this InterleavedBufferAttribute, interpreting the elements as a direction vectors.
 	 */
-	function transformDirection(m:Matrix) : InterleavedBufferAttribute;
+	function transformDirection(m:Matrix4) : InterleavedBufferAttribute;
 	/**
 	 * Returns the given component of the vector at the given index.
 	 */
-	function getComponent(index:Float, component:Float) : Float;
+	function getComponent(index:Int, component:Float) : Float;
 	/**
 	 * Sets the given component of the vector at the given index.
 	 */
-	function setComponent(index:Float, component:Float, value:Float) : InterleavedBufferAttribute;
+	function setComponent(index:Int, component:Float, value:Float) : InterleavedBufferAttribute;
 	/**
 	 * Returns the x component of the item at the given index.
 	 */
-	function getX(index:Float) : Float;
+	function getX(index:Int) : Float;
 	/**
 	 * Sets the x component of the item at the given index.
 	 */
-	function setX(index:Float, x:Float) : InterleavedBufferAttribute;
+	function setX(index:Int, x:Float) : InterleavedBufferAttribute;
 	/**
 	 * Returns the y component of the item at the given index.
 	 */
-	function getY(index:Float) : Float;
+	function getY(index:Int) : Float;
 	/**
 	 * Sets the y component of the item at the given index.
 	 */
-	function setY(index:Float, y:Float) : InterleavedBufferAttribute;
+	function setY(index:Int, y:Float) : InterleavedBufferAttribute;
 	/**
 	 * Returns the z component of the item at the given index.
 	 */
-	function getZ(index:Float) : Float;
+	function getZ(index:Int) : Float;
 	/**
 	 * Sets the z component of the item at the given index.
 	 */
-	function setZ(index:Float, z:Float) : InterleavedBufferAttribute;
+	function setZ(index:Int, z:Float) : InterleavedBufferAttribute;
 	/**
 	 * Returns the w component of the item at the given index.
 	 */
-	function getW(index:Float) : Float;
+	function getW(index:Int) : Float;
 	/**
 	 * Sets the w component of the item at the given index.
 	 */
-	function setW(index:Float, z:Float) : InterleavedBufferAttribute;
+	function setW(index:Int, z:Float) : InterleavedBufferAttribute;
 	/**
 	 * Sets the x and y components of the item at the given index.
 	 */
-	function setXY(index:Float, x:Float, y:Float) : InterleavedBufferAttribute;
+	function setXY(index:Int, x:Float, y:Float) : InterleavedBufferAttribute;
 	/**
 	 * Sets the x, y and z components of the item at the given index.
 	 */
-	function setXYZ(index:Float, x:Float, y:Float, z:Float) : InterleavedBufferAttribute;
+	function setXYZ(index:Int, x:Float, y:Float, z:Float) : InterleavedBufferAttribute;
 	/**
 	 * Sets the x, y, z and w components of the item at the given index.
 	 */
-	function setXYZW(index:Float, x:Float, y:Float, z:Float, w:Float) : InterleavedBufferAttribute;
+	function setXYZW(index:Int, x:Float, y:Float, z:Float, w:Float) : InterleavedBufferAttribute;
 	/**
 	 * Creates a clone of this {@link InterleavedBufferAttribute}.
 	 */

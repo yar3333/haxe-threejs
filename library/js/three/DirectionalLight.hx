@@ -36,6 +36,7 @@ extern class DirectionalLight extends Light<DirectionalLightShadow>
 	 * @defaultValue `true`
 	 */
 	var isDirectionalLight(default, null) : Bool;
+
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
@@ -49,8 +50,8 @@ extern class DirectionalLight extends Light<DirectionalLightShadow>
 	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
 	 * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.directionallight.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.directionallight.Type, String>;
+    
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
@@ -64,8 +65,8 @@ extern class DirectionalLight extends Light<DirectionalLightShadow>
 	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
 	 * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
 	 */
-	var override : Dynamic;
-	var boolean : Dynamic;
+    //var castShadow: Bool;
+
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
@@ -79,13 +80,14 @@ extern class DirectionalLight extends Light<DirectionalLightShadow>
 	 * This is set equal to {@link THREE.Object3D.DEFAULT_UP}, so that the light shines from the top down.
 	 * @defaultValue {@link Object3D.DEFAULT_UP} _(0, 1, 0)_
 	 */
-	var override : Dynamic;
-	var position : Vector3;
+	//var position : Vector3;
+
 	/**
 	 * A {@link THREE.DirectionalLightShadow | DirectionalLightShadow} used to calculate shadows for this light.
 	 * @defaultValue `new THREE.DirectionalLightShadow()`
 	 */
-	var shadow : DirectionalLightShadow;
+	//var shadow : DirectionalLightShadow;
+    
 	/**
 	 * The {@link DirectionalLight} points from its {@link DirectionalLight.position | position} to target.position.
 	 * @remarks **Note**: For the target's position to be changed to anything other than the default,

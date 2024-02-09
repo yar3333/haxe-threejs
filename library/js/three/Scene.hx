@@ -23,7 +23,7 @@ extern class Scene extends Object3D
 	/**
 	 * @defaultValue `Scene`
 	 */
-	var type : String; // "Scene"
+	//var type : String; // "Scene"
 	/**
 	 * A {@link Fog | fog} instance defining the type of fog that affects everything rendered in the scene.
 	 * @defaultValue `null`

@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
 /**
  * Creates a texture based on data in compressed form, for example from a {@link https://en.wikipedia.org/wiki/DirectDraw_Surface | DDS} file.
@@ -17,26 +18,30 @@ extern class CompressedTexture extends Texture
 	 * @defaultValue `true`
 	 */
 	var isCompressedTexture(default, null) : Bool;
+    
 	/**
 	 * The mipmaps array should contain objects with data, width and height. The mipmaps should be of the correct {@link format} and {@link type}.
 	 */
-	var mipmaps : Array<ImageData>;
+	//var mipmaps : Array<js.html.ImageData>;
+
 	/**
 	 * @override
 	 * @see {@link https://threejs.org/docs/index.html#api/en/constants/Textures | Texture Constants}
 	 * @see {@link THREE.CompressedPixelFormat}
 	 */
-	var format : CompressedPixelFormat;
+	//var format : CompressedPixelFormat;
+
 	/**
 	 * @override No flipping for cube textures. (also flipping doesn't work for compressed textures)
 	 * @defaultValue `false`
 	 */
-	var flipY : Bool;
+	//var flipY : Bool;
+
 	/**
 	 * @override Can't generate mipmaps for compressed textures. mips must be embedded in DDS files
 	 * @defaultValue `false`
 	 */
-	var generateMipmaps : Bool;
+	//var generateMipmaps : Bool;
 
 	/**
 	 * Creates a texture based on data in compressed form, for example from a {@link https://en.wikipedia.org/wiki/DirectDraw_Surface | DDS} file.
@@ -44,5 +49,5 @@ extern class CompressedTexture extends Texture
 	 * @see {@link https://threejs.org/docs/index.html#api/en/textures/CompressedTexture | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CompressedTexture.js | Source}
 	 */
-	function new(mipmaps:Array<ImageData>, width:Float, height:Float, format:CompressedPixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Float, ?colorSpace:ColorSpace) : Void;
+	function new(mipmaps:Array<js.html.ImageData>, width:Float, height:Float, format:CompressedPixelFormat, ?type:TextureDataType, ?mapping:Mapping, ?wrapS:Wrapping, ?wrapT:Wrapping, ?magFilter:MagnificationTextureFilter, ?minFilter:MinificationTextureFilter, ?anisotropy:Int, ?colorSpace:ColorSpace) : Void;
 }

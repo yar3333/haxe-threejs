@@ -11,7 +11,7 @@ extern class MaterialLoader extends Loader<Material>
 	var textures : Dynamic<Texture>;
 
 	function new(?manager:LoadingManager) : Void;
-	function parse(json:unknown) : Material;
+	function parse(json:Dynamic) : Material;
 	function setTextures(textures:Dynamic<Texture>) : MaterialLoader;
 	static function createMaterialFromType(type:String) : Material;
 }

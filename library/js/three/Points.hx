@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.three.BufferGeometry;
 
 /**
  * A class for displaying {@link Points}
@@ -10,6 +11,6 @@ import js.lib.*;
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Points.js | Source}
  */
 @:native("THREE.Points")
-extern class Points<TGeometry:BufferGeometry<NormalOrGLBufferAttributes>, BufferGeometry:Dynamic, TMaterial:haxe.extern.EitherType<Material, Array<Material>>, Material:Dynamic>
+extern class Points<TGeometry:BufferGeometry<NormalOrGLBufferAttributes> = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material>
 {
 }

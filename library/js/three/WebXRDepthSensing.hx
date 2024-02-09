@@ -2,6 +2,9 @@ package js.three;
 
 import js.lib.*;
 
+typedef XRRenderState = Dynamic;
+typedef WebXRArrayCamera = Dynamic;
+
 @:native("THREE.WebXRDepthSensing")
 extern class WebXRDepthSensing
 {

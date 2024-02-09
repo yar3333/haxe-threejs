@@ -30,14 +30,15 @@ extern class QuadraticBezierCurve extends Curve<Vector2>
 	 * @remarks This is a _constant_ value
 	 * @defaultValue `true`
 	 */
-	var isQuadraticBezierCurve(default, null) : Dynamic;
+	var isQuadraticBezierCurve(default, null) : Bool;
+
 	/**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `QuadraticBezierCurve`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.quadraticbeziercurve.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.quadraticbeziercurve.Type, String>;
+
 	/**
 	 * The start point.
 	 * @defaultValue `new THREE.Vector2()`

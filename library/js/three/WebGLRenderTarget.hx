@@ -3,7 +3,7 @@ package js.three;
 import js.lib.*;
 
 @:native("THREE.WebGLRenderTarget")
-extern class WebGLRenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>>, Texture:Dynamic> extends RenderTarget<TTexture>
+extern class WebGLRenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>> = Texture> extends RenderTarget<TTexture>
 {
 	var isWebGLRenderTarget(default, null) : Bool;
 

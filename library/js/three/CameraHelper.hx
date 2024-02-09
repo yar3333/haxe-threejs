@@ -30,8 +30,7 @@ extern class CameraHelper extends LineSegments
 	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
 	 * @defaultValue `false`.
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.camerahelper.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.camerahelper.Type, String>;
 	/**
 	 * The camera being visualized.
 	 */
@@ -40,11 +39,13 @@ extern class CameraHelper extends LineSegments
 	 * This contains the points used to visualize the camera.
 	 */
 	var pointMap : Dynamic<Array<Float>>;
-	/**
+	
+    /**
 	 * Reference to the {@link THREE.Camera.matrixWorld | camera.matrixWorld}.
 	 */
-	var matrix : Matrix4;
-	/**
+	//var matrix : Matrix4;
+	
+    /**
 	 * A Read-only _string_ to check if `this` object type.
 	 * @remarks Sub-classes will update this value.
 	 * @override
@@ -53,8 +54,14 @@ extern class CameraHelper extends LineSegments
 	 * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
 	 * @defaultValue `false`.
 	 */
-	var override : Dynamic;
-	var boolean : Dynamic;
+	//var type : Dynamic;
+
+    /**
+     * Is set to `false`, as the helper is using the {@link THREE.Camera.matrixWorld | camera.matrixWorld}.
+     * @see {@link THREE.Object3D.matrixAutoUpdate | Object3D.matrixAutoUpdate}.
+     * @defaultValue `false`.
+     */
+    //var matrixAutoUpdate: Bool;
 
 	/**
 	 * This helps with visualizing what a camera contains in its frustum

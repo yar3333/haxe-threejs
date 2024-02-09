@@ -25,8 +25,7 @@ extern class BoxGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `BoxGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.boxgeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.boxgeometry.Type, String>;
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -48,7 +47,7 @@ extern class BoxGeometry extends BufferGeometry
 	 * @see {@link https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry | Official Documentation}
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/BoxGeometry.js | Source}
 	 */
-	function new(?width:Float, ?height:Float, ?depth:Float, ?widthSegments:Float, ?heightSegments:Float, ?depthSegments:Float) : Void;
+	function new(?width:Float, ?height:Float, ?depth:Float, ?widthSegments:Float, ?heightSegments:Int, ?depthSegments:Float) : Void;
 	/**
 	 * @internal 
 	 */

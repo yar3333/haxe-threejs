@@ -11,10 +11,12 @@ extern class PointsMaterial extends Material
 	 * @defaultValue `true`
 	 */
 	var isPointsMaterial(default, null) : Bool;
-	/**
+	
+    /**
 	 * @default 'PointsMaterial'
 	 */
-	var type : String;
+	//var type : String;
+
 	/**
 	 * @default new THREE.Color( 0xffffff )
 	 */

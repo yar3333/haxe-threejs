@@ -1,6 +1,7 @@
 package js.three;
 
 import js.lib.*;
+import js.html.audio.PannerNode;
 
 /**
  * Create a positional audio object.
@@ -41,7 +42,7 @@ extern class PositionalAudio extends Audio<PannerNode>
 	/**
 	 * The PositionalAudio's {@link https://developer.mozilla.org/en-US/docs/Web/API/PannerNode | PannerNode}.
 	 */
-	var panner : PannerNode;
+	var panner : js.html.audio.PannerNode;
 
 	/**
 	 * Create a positional audio object.
@@ -80,7 +81,7 @@ extern class PositionalAudio extends Audio<PannerNode>
 	/**
 	 * Returns the {@link PositionalAudio.panner | panner}.
 	 */
-	function getOutput() : PannerNode;
+	function getOutput() : js.html.audio.PannerNode;
 	/**
 	 * Returns the value of {@link https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/refDistance | panner.refDistance}.
 	 */

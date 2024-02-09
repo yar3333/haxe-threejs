@@ -1,5 +1,6 @@
 package js.three;
 
+import js.html.audio.AudioNode;
 import js.lib.*;
 
 /**
@@ -38,21 +39,25 @@ extern class AudioListener extends Object3D
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `AudioListener`
 	 */
-	var type(default, null) : haxe.extern.EitherType<js.three.audiolistener.Type, String>;
+	//var type(default, null) : haxe.extern.EitherType<js.three.audiolistener.Type, String>;
+
 	/**
 	 * The {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioContext | AudioContext} of the {@link {@link AudioListener} | listener} given in the constructor.
 	 */
-	var context : AudioContext;
-	/**
+	var context : js.html.audio.AudioContext;
+	
+    /**
 	 * A {@link https://developer.mozilla.org/en-US/docs/Web/API/GainNode | GainNode} created using
 	 * {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain | AudioContext.createGain()}.
 	 */
-	var gain : GainNode;
-	/**
+	var gain : js.html.audio.GainNode;
+	
+    /**
 	 * @defaultValue `null`
 	 */
 	var filter : AudioNode;
-	/**
+	
+    /**
 	 * Time delta value for audio entities. Use in context of {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime | AudioParam.linearRampToValueAtTimeDefault()}.
 	 * @defaultValue `0`
 	 */
@@ -90,7 +95,7 @@ extern class AudioListener extends Object3D
 	/**
 	 * Return the {@link AudioListener.gain | gainNode}.
 	 */
-	function getInput() : GainNode;
+	function getInput() : js.html.audio.GainNode;
 	/**
 	 * Set the {@link AudioListener.filter | filter} property to `null`.
 	 */

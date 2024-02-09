@@ -31,9 +31,9 @@ extern class Path extends CurvePath<Vector2>
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `Path`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.path.Type, String>;
-	/**
+	//var type : haxe.extern.EitherType<js.three.path.Type, String>;
+	
+    /**
 	 * The current offset of the path. Any new {@link THREE.Curve | Curve} added will start here.
 	 * @defaultValue `new THREE.Vector2()`
 	 */

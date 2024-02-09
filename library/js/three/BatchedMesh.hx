@@ -44,7 +44,7 @@ extern class BatchedMesh extends Mesh<BufferGeometry, Material>
 	 * @default null
 	 */
 	var boundingSphere : Sphere;
-	var customSort : (this->Array<{ var start : Float; var count : Float; var z : Float; }>->Camera->Void);
+	var customSort : (BatchedMesh->Array<{ var start : Float; var count : Float; var z : Float; }>->Camera->Void);
 	/**
 	 * If true then the individual objects within the {@link BatchedMesh} are frustum culled.
 	 * @default true
@@ -109,24 +109,24 @@ extern class BatchedMesh extends Mesh<BufferGeometry, Material>
 	 * Takes a sort a function that is run before render. The function takes a list of items to sort and a camera. The
 	 * objects in the list include a "z" field to perform a depth-ordered sort with.
 	 */
-	function setCustomSort(func:(this->Array<{ var start : Float; var count : Float; var z : Float; }>->Camera->Void)) : BatchedMesh;
+	function setCustomSort(func:(BatchedMesh->Array<{ var start : Float; var count : Float; var z : Float; }>->Camera->Void)) : BatchedMesh;
 	/**
 	 * Get the local transformation matrix of the defined instance.
 	 */
-	function getMatrixAt(index:Float, matrix:Matrix4) : Matrix4;
+	function getMatrixAt(index:Int, matrix:Matrix4) : Matrix4;
 	/**
 	 * Get whether the given instance is marked as "visible" or not.
 	 */
-	function getVisibleAt(index:Float) : Bool;
+	function getVisibleAt(index:Int) : Bool;
 	/**
 	 * Sets the given local transformation matrix to the defined instance. Make sure you set {@link .instanceMatrix}
 	 * {@link BufferAttribute.needsUpdate} to true after updating all the matrices.
 	 */
-	function setMatrixAt(index:Float, matrix:Matrix4) : BatchedMesh;
+	function setMatrixAt(index:Int, matrix:Matrix4) : BatchedMesh;
 	/**
 	 * Sets the visibility of the object at the given index.
 	 */
-	function setVisibleAt(index:Float, visible:Bool) : BatchedMesh;
+	function setVisibleAt(index:Int, visible:Bool) : BatchedMesh;
 	/**
 	 * Adds the given geometry to the {@link BatchedMesh} and returns the associated index referring to it.
 	 * @link BatchedMesh}.
@@ -136,11 +136,11 @@ extern class BatchedMesh extends Mesh<BufferGeometry, Material>
 	 * Replaces the geometry at `index` with the provided geometry. Throws an error if there is not enough space
 	 * reserved for geometry at the index.
 	 */
-	function setGeometryAt(index:Float, geometry:BufferGeometry) : Float;
+	function setGeometryAt(index:Int, geometry:BufferGeometry) : Float;
 	/**
 	 * Marks the geometry at the given index as deleted and to not be rendered anymore.
 	 */
-	function deleteGeometry(index:Float) : BatchedMesh;
-	function getBoundingBoxAt(index:Float, target:Box3) : Box3;
-	function getBoundingSphereAt(index:Float, target:Sphere) : Sphere;
+	function deleteGeometry(index:Int) : BatchedMesh;
+	function getBoundingBoxAt(index:Int, target:Box3) : Box3;
+	function getBoundingSphereAt(index:Int, target:Sphere) : Sphere;
 }

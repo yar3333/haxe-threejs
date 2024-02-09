@@ -1,15 +1,16 @@
 package js.three;
 
 import js.lib.*;
+import js.three.Constants;
 
-extern interface MeshDepthMaterialParameters extends MaterialParameters
-{
-	@:optional var map : haxe.extern.EitherType<Texture, {}>;
-	@:optional var alphaMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var depthPacking : haxe.extern.EitherType<DepthPackingStrategies, {}>;
-	@:optional var displacementMap : haxe.extern.EitherType<Texture, {}>;
-	@:optional var displacementScale : haxe.extern.EitherType<Float, {}>;
-	@:optional var displacementBias : haxe.extern.EitherType<Float, {}>;
-	@:optional var wireframe : haxe.extern.EitherType<Bool, {}>;
-	@:optional var wireframeLinewidth : haxe.extern.EitherType<Float, {}>;
+typedef MeshDepthMaterialParameters =
+{>MaterialParameters,
+	@:optional var map : Texture;
+	@:optional var alphaMap : Texture;
+	@:optional var depthPacking : DepthPackingStrategies;
+	@:optional var displacementMap : Texture;
+	@:optional var displacementScale : Float;
+	@:optional var displacementBias : Float;
+	@:optional var wireframe : Bool;
+	@:optional var wireframeLinewidth : Float;
 }

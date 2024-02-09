@@ -62,8 +62,7 @@ extern class Fog
 	/**
 	 * Returns a new {@link Fog} instance with the same parameters as this one.
 	 */
-	@:overload(function():Fog{})
-	function clone() : FogBase;
+	function clone() : Fog;
 	/**
 	 * Return {@link Fog} data in JSON format.
 	 */

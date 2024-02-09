@@ -43,8 +43,8 @@ extern class ExtrudeGeometry extends BufferGeometry
 	 * @remarks Sub-classes will update this value.
 	 * @defaultValue `ExtrudeGeometry`
 	 */
-	var override : Dynamic;
-	var type : haxe.extern.EitherType<js.three.extrudegeometry.Type, String>;
+	//var type : haxe.extern.EitherType<js.three.extrudegeometry.Type, String>;
+
 	/**
 	 * An object with a property for each of the constructor parameters.
 	 * @remarks Any modification after instantiation does not change the geometry.
@@ -85,9 +85,11 @@ extern class ExtrudeGeometry extends BufferGeometry
 	 * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/ExtrudeGeometry.js | Source}
 	 */
 	function new(?shapes:haxe.extern.EitherType<Shape, Array<Shape>>, ?options:ExtrudeGeometryOptions) : Void;
-	function addShape(shape:Shape) : Void;
-	/**
+	
+    function addShape(shape:Shape) : Void;
+	
+    /**
 	 * @internal 
 	 */
-	static function fromJSON(data:{}, shapes:unknown) : ExtrudeGeometry;
+	static function fromJSON(data:{}, shapes:Dynamic) : ExtrudeGeometry;
 }

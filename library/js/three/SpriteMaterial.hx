@@ -14,7 +14,7 @@ extern class SpriteMaterial extends Material
 	/**
 	 * @default 'SpriteMaterial'
 	 */
-	var type : String;
+	//var type : String;
 	/**
 	 * @default new THREE.Color( 0xffffff )
 	 */
@@ -38,7 +38,7 @@ extern class SpriteMaterial extends Material
 	/**
 	 * @default true
 	 */
-	var transparent : Bool;
+	//var transparent : Bool;
 	/**
 	 * Whether the material is affected by fog. Default is true.
 	 * @default fog
