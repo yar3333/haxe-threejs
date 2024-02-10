@@ -5,6 +5,9 @@ JS_GIT = https://github.com/mrdoob/three.js.git
 TS_GIT = https://github.com/DefinitelyTyped/DefinitelyTyped.git
 TS_SRC = types/three
 
+bypass:
+	@echo Please specify a task name.
+
 build: native-ts
 	rm -rf library/js
 
