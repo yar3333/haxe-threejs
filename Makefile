@@ -15,9 +15,6 @@ build: native-ts
 	                                 --root-package js.three \
 	                                 --native-namespace THREE \
 	                                 --log-level warn \
-	                                 --import js.lib.* \
-	                                 --type-mapper fix_types.rules \
-	                                 --typedef-file fix_force_typedefs.list \
 	                                 native-ts/types/three/src
 	
 	haxelib run refactor override library
@@ -46,6 +43,5 @@ native-js:
 clean:
 	rm -rf native-ts
 	rm -rf native-js
-
 
 rebuild: clean build

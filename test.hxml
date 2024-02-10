@@ -1,4 +1,5 @@
---js test\bin\test.js
+--js dummy.js
+--no-output
 --class-path library
 --class-path test
 --macro include("js.three")
