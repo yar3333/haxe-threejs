@@ -2,9 +2,11 @@ package js.three.loaders;
 
 import js.lib.BufferSource;
 
-extern interface LoaderUtils
+@:jsRequire("three", "LoaderUtils")
+@:native("THREE.LoaderUtils")
+extern class LoaderUtils
 {
-	function decodeText(array:BufferSource) : String;
-	function extractUrlBase(url:String) : String;
-	function resolveURL(url:String, path:String) : String;
+	static function decodeText(array:BufferSource) : String;
+	static function extractUrlBase(url:String) : String;
+	static function resolveURL(url:String, path:String) : String;
 }

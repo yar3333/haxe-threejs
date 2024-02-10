@@ -1,7 +1,7 @@
 package js.three.renderers;
 
+import js.html.webgl.Shader;
 import js.three.renderers.webgl.WebGLProgram;
-import js.three.renderers.webgl.WebGLShader;
 
 extern interface WebGLDebug
 {
@@ -15,5 +15,5 @@ extern interface WebGLDebug
 	 * Assigning a custom function disables the default error reporting.
 	 * @default `null`
 	 */
-	@:optional var onShaderError : js.html.webgl.RenderingContext->WebGLProgram->WebGLShader->WebGLShader->Void;
+	@:optional var onShaderError : js.html.webgl.RenderingContext->WebGLProgram->Shader->Shader->Void;
 }

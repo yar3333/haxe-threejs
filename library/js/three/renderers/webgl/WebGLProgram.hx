@@ -1,5 +1,7 @@
 package js.three.renderers.webgl;
 
+import js.html.webgl.Shader;
+
 @:jsRequire("three", "WebGLProgram")
 @:native("THREE.WebGLProgram")
 extern class WebGLProgram
@@ -12,8 +14,8 @@ extern class WebGLProgram
 	 */
 	var usedTimes : Float;
 	var program : Dynamic;
-	var vertexShader : WebGLShader;
-	var fragmentShader : WebGLShader;
+	var vertexShader : Shader;
+	var fragmentShader : Shader;
 	/**
 	 * @deprecated Use {@link WebGLProgram#getUniforms getUniforms()} instead.
 	 */
