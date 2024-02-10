@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLTextures")
 @:native("THREE.WebGLTextures")
 extern class WebGLTextures
 {

@@ -5,7 +5,7 @@ import js.three.core.BufferGeometry;
 import js.three.materials.Material;
 import js.three.objects.Group;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLRenderList")
 @:native("THREE.WebGLRenderList")
 extern class WebGLRenderList
 {

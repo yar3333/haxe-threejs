@@ -6,7 +6,7 @@ import js.three.cameras.PerspectiveCamera;
  * Shadow for {@link THREE.PointLight | PointLight}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/PointLightShadow.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "PointLightShadow")
 @:native("THREE.PointLightShadow")
 extern class PointLightShadow extends LightShadow<PerspectiveCamera>
 {

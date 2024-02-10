@@ -10,7 +10,7 @@ enum abstract EulerOrder(String)
     var XZY = "XZY";
 }
 
-@:jsRequire("three")
+@:jsRequire("three", "Euler")
 @:native("THREE.Euler")
 extern class Euler implements ArrayAccess<Float>
 {

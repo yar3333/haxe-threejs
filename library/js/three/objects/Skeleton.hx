@@ -28,7 +28,7 @@ import js.three.textures.DataTexture;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Skeleton | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Skeleton.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Skeleton")
 @:native("THREE.Skeleton")
 extern class Skeleton
 {

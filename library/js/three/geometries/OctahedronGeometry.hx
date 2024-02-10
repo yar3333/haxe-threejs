@@ -5,7 +5,7 @@ package js.three.geometries;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/OctahedronGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/OctahedronGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "OctahedronGeometry")
 @:native("THREE.OctahedronGeometry")
 extern class OctahedronGeometry extends PolyhedronGeometry
 {

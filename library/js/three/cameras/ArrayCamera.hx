@@ -10,7 +10,7 @@ package js.three.cameras;
  * @see {@link https://threejs.org/docs/index.html#api/en/cameras/ArrayCamera | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/ArrayCamera.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "ArrayCamera")
 @:native("THREE.ArrayCamera")
 extern class ArrayCamera extends PerspectiveCamera
 {

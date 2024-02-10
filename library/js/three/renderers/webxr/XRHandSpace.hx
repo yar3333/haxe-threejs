@@ -1,6 +1,6 @@
 package js.three.renderers.webxr;
 
-// @:jsRequire("three")
+// @:jsRequire("three", "XRHandSpace")
 @:native("THREE.XRHandSpace")
 // extern class XRHandSpace extends Group<WebXRSpaceEventMap>
 // {

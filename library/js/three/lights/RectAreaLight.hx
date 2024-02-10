@@ -26,7 +26,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/RectAreaLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/RectAreaLight.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "RectAreaLight")
 @:native("THREE.RectAreaLight")
 extern class RectAreaLight extends Light<{}>
 {

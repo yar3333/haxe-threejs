@@ -1,6 +1,6 @@
 package js.three.materials;
 
-@:jsRequire("three")
+@:jsRequire("three", "LineDashedMaterial")
 @:native("THREE.LineDashedMaterial")
 extern class LineDashedMaterial extends LineBasicMaterial
 {

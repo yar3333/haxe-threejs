@@ -28,7 +28,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/DirectionalLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/DirectionalLight.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "DirectionalLight")
 @:native("THREE.DirectionalLight")
 extern class DirectionalLight extends Light<DirectionalLightShadow>
 {

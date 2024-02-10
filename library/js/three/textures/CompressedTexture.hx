@@ -8,7 +8,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/CompressedTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CompressedTexture.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "CompressedTexture")
 @:native("THREE.CompressedTexture")
 extern class CompressedTexture extends Texture
 {

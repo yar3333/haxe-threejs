@@ -4,7 +4,7 @@ import js.three.Constants;
 import js.three.math.Color;
 import js.three.textures.Texture;
 
-@:jsRequire("three")
+@:jsRequire("three", "MeshBasicMaterial")
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material
 {

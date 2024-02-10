@@ -27,7 +27,7 @@ import js.three.core.Object3D;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Line | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Line.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Line")
 @:native("THREE.Line")
 extern class Line<TGeometry:BufferGeometry = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material, TEventMap:Object3DEventMap = Object3DEventMap>
     extends Object3D<TEventMap>

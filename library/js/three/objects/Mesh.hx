@@ -22,7 +22,7 @@ import js.three.math.Vector3;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Mesh | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Mesh.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Mesh")
 @:native("THREE.Mesh")
 extern class Mesh<TGeometry:BufferGeometry = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material, TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {

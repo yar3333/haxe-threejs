@@ -4,7 +4,7 @@ import js.three.math.Plane;
 import js.three.cameras.Camera;
 import js.three.materials.Material;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLClipping")
 @:native("THREE.WebGLClipping")
 extern class WebGLClipping
 {

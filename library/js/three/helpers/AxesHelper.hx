@@ -20,7 +20,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/AxesHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/AxesHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "AxesHelper")
 @:native("THREE.AxesHelper")
 extern class AxesHelper extends LineSegments
 {

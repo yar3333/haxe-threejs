@@ -24,7 +24,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/ArrowHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/ArrowHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "ArrowHelper")
 @:native("THREE.ArrowHelper")
 extern class ArrowHelper extends Object3D
 {

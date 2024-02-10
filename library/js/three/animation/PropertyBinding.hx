@@ -1,6 +1,6 @@
 package js.three.animation;
 
-@:jsRequire("three")
+@:jsRequire("three", "PropertyBinding.Composite")
 @:native("THREE.PropertyBinding.Composite")
 extern class Composite
 {
@@ -11,7 +11,7 @@ extern class Composite
 	function unbind() : Void;
 }
 
-@:jsRequire("three")
+@:jsRequire("three", "PropertyBinding")
 @:native("THREE.PropertyBinding")
 extern class PropertyBinding
 {

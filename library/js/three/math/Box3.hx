@@ -3,7 +3,7 @@ package js.three.math;
 import js.three.core.BufferAttribute;
 import js.three.core.Object3D;
 
-@:jsRequire("three")
+@:jsRequire("three", "Box3")
 @:native("THREE.Box3")
 extern class Box3
 {

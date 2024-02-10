@@ -3,7 +3,7 @@ package js.three.materials;
 import js.three.math.Color;
 import js.three.textures.Texture;
 
-@:jsRequire("three")
+@:jsRequire("three", "PointsMaterial")
 @:native("THREE.PointsMaterial")
 extern class PointsMaterial extends Material
 {

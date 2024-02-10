@@ -2,7 +2,7 @@ package js.three.animation.tracks;
 
 import js.three.Constants;
 
-@:jsRequire("three")
+@:jsRequire("three", "VectorKeyframeTrack")
 @:native("THREE.VectorKeyframeTrack")
 extern class VectorKeyframeTrack extends KeyframeTrack
 {

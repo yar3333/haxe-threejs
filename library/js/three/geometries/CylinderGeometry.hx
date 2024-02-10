@@ -16,7 +16,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/CylinderGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/CylinderGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "CylinderGeometry")
 @:native("THREE.CylinderGeometry")
 extern class CylinderGeometry extends BufferGeometry
 {

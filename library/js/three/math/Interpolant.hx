@@ -1,6 +1,6 @@
 package js.three.math;
 
-@:jsRequire("three")
+@:jsRequire("three", "Interpolant")
 @:native("THREE.Interpolant")
 extern class Interpolant
 {

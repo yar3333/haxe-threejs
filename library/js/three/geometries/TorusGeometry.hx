@@ -16,7 +16,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/TorusGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/TorusGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "TorusGeometry")
 @:native("THREE.TorusGeometry")
 extern class TorusGeometry extends BufferGeometry
 {

@@ -25,7 +25,7 @@ import js.three.math.Vector2;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/EllipseCurve | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/curves/EllipseCurve.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "EllipseCurve")
 @:native("THREE.EllipseCurve")
 extern class EllipseCurve extends Curve<Vector2>
 {

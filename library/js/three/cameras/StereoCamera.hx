@@ -10,7 +10,7 @@ package js.three.cameras;
  * @see {@link https://threejs.org/docs/index.html#api/en/cameras/StereoCamera | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/StereoCamera.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "StereoCamera")
 @:native("THREE.StereoCamera")
 extern class StereoCamera extends Camera
 {

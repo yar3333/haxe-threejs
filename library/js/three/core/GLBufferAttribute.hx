@@ -17,7 +17,7 @@ typedef GLenum = Int;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/GLBufferAttribute | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/GLBufferAttribute.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "GLBufferAttribute")
 @:native("THREE.GLBufferAttribute")
 extern class GLBufferAttribute
 {

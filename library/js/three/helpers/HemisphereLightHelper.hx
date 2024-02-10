@@ -16,7 +16,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/HemisphereLightHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/HemisphereLightHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "HemisphereLightHelper")
 @:native("THREE.HemisphereLightHelper")
 extern class HemisphereLightHelper extends Object3D
 {

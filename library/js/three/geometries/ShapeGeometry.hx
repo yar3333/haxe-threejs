@@ -26,7 +26,7 @@ import js.three.extras.core.Shape;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/ShapeGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/ShapeGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "ShapeGeometry")
 @:native("THREE.ShapeGeometry")
 extern class ShapeGeometry extends BufferGeometry
 {

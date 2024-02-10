@@ -2,7 +2,7 @@ package js.three.textures;
 
 import js.three.Constants;
 
-@:jsRequire("three")
+@:jsRequire("three", "CompressedCubeTexture")
 @:native("THREE.CompressedCubeTexture")
 extern class CompressedCubeTexture extends CompressedTexture
 {

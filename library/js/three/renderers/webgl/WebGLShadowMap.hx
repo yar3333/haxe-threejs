@@ -5,7 +5,7 @@ import js.three.lights.Light;
 import js.three.scenes.Scene;
 import js.three.cameras.Camera;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLShadowMap")
 @:native("THREE.WebGLShadowMap")
 extern class WebGLShadowMap
 {

@@ -11,7 +11,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/DepthTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/DepthTexture.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "DepthTexture")
 @:native("THREE.DepthTexture")
 extern class DepthTexture extends Texture
 {

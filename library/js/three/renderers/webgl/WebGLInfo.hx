@@ -3,7 +3,7 @@ package js.three.renderers.webgl;
 /**
  * An object with a series of statistical information about the graphics board memory and the rendering process.
  */
-@:jsRequire("three")
+@:jsRequire("three", "WebGLInfo")
 @:native("THREE.WebGLInfo")
 extern class WebGLInfo
 {

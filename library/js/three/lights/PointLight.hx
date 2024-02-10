@@ -19,7 +19,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/PointLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/PointLight.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "PointLight")
 @:native("THREE.PointLight")
 extern class PointLight extends Light<PointLightShadow>
 {

@@ -3,7 +3,7 @@ package js.three.materials;
 import js.three.Constants;
 import js.three.textures.Texture;
 
-@:jsRequire("three")
+@:jsRequire("three", "MeshDepthMaterial")
 @:native("THREE.MeshDepthMaterial")
 extern class MeshDepthMaterial extends Material
 {

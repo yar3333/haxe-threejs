@@ -19,7 +19,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/HemisphereLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/HemisphereLight.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "HemisphereLight")
 @:native("THREE.HemisphereLight")
 extern class HemisphereLight extends Light<{}>
 {

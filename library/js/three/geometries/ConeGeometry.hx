@@ -14,7 +14,7 @@ package js.three.geometries;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/ConeGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/ConeGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "ConeGeometry")
 @:native("THREE.ConeGeometry")
 extern class ConeGeometry extends CylinderGeometry
 {

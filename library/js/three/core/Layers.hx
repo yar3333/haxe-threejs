@@ -13,7 +13,7 @@ package js.three.core;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/Layers | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Layers.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Layers")
 @:native("THREE.Layers")
 extern class Layers
 {

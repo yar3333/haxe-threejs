@@ -5,7 +5,7 @@ package js.three.geometries;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/IcosahedronGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/IcosahedronGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "IcosahedronGeometry")
 @:native("THREE.IcosahedronGeometry")
 extern class IcosahedronGeometry extends PolyhedronGeometry
 {

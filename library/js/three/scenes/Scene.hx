@@ -15,7 +15,7 @@ import js.three.textures.CubeTexture;
  * @see {@link https://threejs.org/docs/index.html#api/en/scenes/Scene | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/scenes/Scene.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Scene")
 @:native("THREE.Scene")
 extern class Scene extends Object3D
 {

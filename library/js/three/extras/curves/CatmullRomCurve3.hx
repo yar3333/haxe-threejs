@@ -27,7 +27,7 @@ import js.three.math.Vector3;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/CatmullRomCurve3 | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/curves/CatmullRomCurve3.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "CatmullRomCurve3")
 @:native("THREE.CatmullRomCurve3")
 extern class CatmullRomCurve3 extends Curve<Vector3>
 {

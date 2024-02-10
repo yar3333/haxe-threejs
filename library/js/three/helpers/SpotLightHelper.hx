@@ -19,7 +19,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/SpotLightHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/SpotLightHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "SpotLightHelper")
 @:native("THREE.SpotLightHelper")
 extern class SpotLightHelper extends Object3D
 {

@@ -14,7 +14,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/scenes/FogExp2 | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/scenes/FogExp2.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "FogExp2")
 @:native("THREE.FogExp2")
 extern class FogExp2
 	implements FogBase

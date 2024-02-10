@@ -14,7 +14,7 @@ import js.three.math.Plane;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/PlaneHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/PlaneHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "PlaneHelper")
 @:native("THREE.PlaneHelper")
 extern class PlaneHelper extends LineSegments
 {

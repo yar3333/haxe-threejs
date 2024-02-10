@@ -18,7 +18,7 @@ typedef Vector3Tuple = Array<Float>;
  * const c = new THREE.Vector3();
  * c.crossVectors( a, b );
  */
-@:jsRequire("three")
+@:jsRequire("three", "Vector3")
 @:native("THREE.Vector3")
 extern class Vector3 implements ArrayAccess<Float>
 {

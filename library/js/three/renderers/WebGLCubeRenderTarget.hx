@@ -3,7 +3,7 @@ package js.three.renderers;
 import js.three.textures.CubeTexture;
 import js.three.textures.Texture;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLCubeRenderTarget")
 @:native("THREE.WebGLCubeRenderTarget")
 extern class WebGLCubeRenderTarget extends WebGLRenderTarget<CubeTexture>
 {

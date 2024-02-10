@@ -8,7 +8,7 @@ import js.lib.ArrayBuffer;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/bufferAttributeTypes/BufferAttributeTypes | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Uint16BufferAttribute")
 @:native("THREE.Uint16BufferAttribute")
 extern class Uint16BufferAttribute extends BufferAttribute
 {

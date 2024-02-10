@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLUniforms")
 @:native("THREE.WebGLUniforms")
 extern class WebGLUniforms
 {

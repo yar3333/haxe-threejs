@@ -12,7 +12,7 @@ import js.three.math.Vector4;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/shadows/LightShadow | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/LightShadow.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "LightShadow")
 @:native("THREE.LightShadow")
 extern class LightShadow<TCamera:Camera = Camera>
 {

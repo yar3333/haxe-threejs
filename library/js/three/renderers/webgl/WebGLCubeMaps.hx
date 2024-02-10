@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLCubeMaps")
 @:native("THREE.WebGLCubeMaps")
 extern class WebGLCubeMaps
 {

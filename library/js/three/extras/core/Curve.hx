@@ -28,7 +28,7 @@ import js.three.types.CurveType;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/core/Curve | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/Curve.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Curve")
 @:native("THREE.Curve")
 extern class Curve<TVector:haxe.extern.EitherType<Vector2, Vector3>>
 {

@@ -12,7 +12,7 @@ import js.three.math.Vector3;
  * @see {@link https://threejs.org/docs/index.html#api/en/cameras/Camera | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/Camera.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Camera")
 @:native("THREE.Camera")
 extern class Camera extends Object3D
 {

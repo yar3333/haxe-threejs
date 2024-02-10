@@ -1,6 +1,6 @@
 package js.three.materials;
 
-@:jsRequire("three")
+@:jsRequire("three", "RawShaderMaterial")
 @:native("THREE.RawShaderMaterial")
 extern class RawShaderMaterial extends ShaderMaterial
 {

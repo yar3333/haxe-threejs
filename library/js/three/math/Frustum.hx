@@ -7,7 +7,7 @@ import js.three.objects.Sprite;
 /**
  * Frustums are used to determine what is inside the camera's field of view. They help speed up the rendering process.
  */
-@:jsRequire("three")
+@:jsRequire("three", "Frustum")
 @:native("THREE.Frustum")
 extern class Frustum
 {

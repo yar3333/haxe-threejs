@@ -25,7 +25,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/BoxHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/BoxHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "BoxHelper")
 @:native("THREE.BoxHelper")
 extern class BoxHelper extends LineSegments<BufferGeometry, LineBasicMaterial>
 {

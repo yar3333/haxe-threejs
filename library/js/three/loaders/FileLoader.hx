@@ -1,7 +1,7 @@
 package js.three.loaders;
 import js.lib.ArrayBuffer;
 
-@:jsRequire("three")
+@:jsRequire("three", "FileLoader")
 @:native("THREE.FileLoader")
 extern class FileLoader extends Loader<haxe.extern.EitherType<String, ArrayBuffer>>
 {

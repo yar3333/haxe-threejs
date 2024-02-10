@@ -2,7 +2,7 @@ package js.three.renderers.webxr;
 
 import js.three.objects.Group;
 
-@:jsRequire("three")
+@:jsRequire("three", "XRJointSpace")
 @:native("THREE.XRJointSpace")
 extern class XRJointSpace extends Group
 {

@@ -1,6 +1,6 @@
 package js.three.math;
 
-@:jsRequire("three")
+@:jsRequire("three", "Sphere")
 @:native("THREE.Sphere")
 extern class Sphere
 {

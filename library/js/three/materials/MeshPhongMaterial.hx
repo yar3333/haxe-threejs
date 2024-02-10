@@ -5,7 +5,7 @@ import js.three.math.Color;
 import js.three.textures.Texture;
 import js.three.math.Vector2;
 
-@:jsRequire("three")
+@:jsRequire("three", "MeshPhongMaterial")
 @:native("THREE.MeshPhongMaterial")
 extern class MeshPhongMaterial extends Material
 {

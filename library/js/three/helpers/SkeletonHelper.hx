@@ -20,7 +20,7 @@ import js.three.core.Object3D;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/SkeletonHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/SkeletonHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "SkeletonHelper")
 @:native("THREE.SkeletonHelper")
 extern class SkeletonHelper extends LineSegments
 {

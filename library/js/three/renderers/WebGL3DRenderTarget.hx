@@ -5,7 +5,7 @@ import js.three.textures.Data3DTexture;
 /**
  * Represents a three-dimensional render target.
  */
-@:jsRequire("three")
+@:jsRequire("three", "WebGL3DRenderTarget")
 @:native("THREE.WebGL3DRenderTarget")
 extern class WebGL3DRenderTarget extends WebGLRenderTarget<Data3DTexture>
 {

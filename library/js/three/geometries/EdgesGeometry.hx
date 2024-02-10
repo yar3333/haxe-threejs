@@ -17,7 +17,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/EdgesGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/EdgesGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "EdgesGeometry")
 @:native("THREE.EdgesGeometry")
 extern class EdgesGeometry<TBufferGeometry:BufferGeometry = BufferGeometry> extends BufferGeometry
 {

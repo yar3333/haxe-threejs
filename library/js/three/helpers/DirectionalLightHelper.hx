@@ -20,7 +20,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/DirectionalLightHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/DirectionalLightHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "DirectionalLightHelper")
 @:native("THREE.DirectionalLightHelper")
 extern class DirectionalLightHelper extends Object3D
 {

@@ -2,7 +2,7 @@ package js.three.materials;
 
 import js.three.math.Color;
 
-@:jsRequire("three")
+@:jsRequire("three", "ShadowMaterial")
 @:native("THREE.ShadowMaterial")
 extern class ShadowMaterial extends Material
 {

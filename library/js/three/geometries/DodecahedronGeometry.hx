@@ -5,7 +5,7 @@ package js.three.geometries;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/DodecahedronGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/DodecahedronGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "DodecahedronGeometry")
 @:native("THREE.DodecahedronGeometry")
 extern class DodecahedronGeometry extends PolyhedronGeometry
 {

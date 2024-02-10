@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLStencilBuffer")
 @:native("THREE.WebGLStencilBuffer")
 extern class WebGLStencilBuffer
 {

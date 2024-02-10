@@ -20,7 +20,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/CircleGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/CircleGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "CircleGeometry")
 @:native("THREE.CircleGeometry")
 extern class CircleGeometry extends BufferGeometry
 {

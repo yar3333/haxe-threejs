@@ -34,7 +34,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/Data3DTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/Data3DTexture.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Data3DTexture")
 @:native("THREE.Data3DTexture")
 extern class Data3DTexture extends Texture
 {

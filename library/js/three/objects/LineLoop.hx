@@ -10,7 +10,7 @@ package js.three.objects;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/LineLoop | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/LineLoop.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "LineLoop")
 @:native("THREE.LineLoop")
 extern class LineLoop<TGeometry:BufferGeometry, BufferGeometry:Dynamic, TMaterial:haxe.extern.EitherType<Material, Array<Material>>, Material:Dynamic>
 {

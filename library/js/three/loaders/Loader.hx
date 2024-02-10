@@ -3,7 +3,7 @@ package js.three.loaders;
 /**
  * Base class for implementing loaders.
  */
-@:jsRequire("three")
+@:jsRequire("three", "Loader")
 @:native("THREE.Loader")
 extern class Loader<TData = Dynamic, TUrl = String>
 {

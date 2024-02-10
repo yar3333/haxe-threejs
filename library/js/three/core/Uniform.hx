@@ -18,7 +18,7 @@ package js.three.core;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/Uniform | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Uniform.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Uniform")
 @:native("THREE.Uniform")
 extern class Uniform<T = Dynamic>
 {

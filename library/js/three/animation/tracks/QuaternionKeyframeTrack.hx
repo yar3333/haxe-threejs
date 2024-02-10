@@ -2,7 +2,7 @@ package js.three.animation.tracks;
 
 import js.three.Constants.InterpolationModes;
 
-@:jsRequire("three")
+@:jsRequire("three", "QuaternionKeyframeTrack")
 @:native("THREE.QuaternionKeyframeTrack")
 extern class QuaternionKeyframeTrack extends KeyframeTrack
 {

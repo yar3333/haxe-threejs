@@ -23,7 +23,7 @@ import js.three.math.Vector2;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/core/Path | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/core/Path.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "Path")
 @:native("THREE.Path")
 extern class Path extends CurvePath<Vector2>
 {

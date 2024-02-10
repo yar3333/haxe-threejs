@@ -35,7 +35,7 @@ import js.html.audio.PannerNode;
  * @see {@link https://threejs.org/docs/index.html#api/en/audio/PositionalAudio | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/audio/PositionalAudio.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "PositionalAudio")
 @:native("THREE.PositionalAudio")
 extern class PositionalAudio extends Audio<PannerNode>
 {

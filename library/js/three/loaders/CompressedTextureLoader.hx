@@ -2,7 +2,7 @@ package js.three.loaders;
 
 import js.three.textures.CompressedTexture;
 
-@:jsRequire("three")
+@:jsRequire("three", "CompressedTextureLoader")
 @:native("THREE.CompressedTextureLoader")
 extern class CompressedTextureLoader extends Loader<CompressedTexture>
 {

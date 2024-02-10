@@ -5,7 +5,7 @@ import js.three.math.Color;
 import js.three.textures.Texture;
 import js.three.math.Vector2;
 
-@:jsRequire("three")
+@:jsRequire("three", "MeshToonMaterial")
 @:native("THREE.MeshToonMaterial")
 extern class MeshToonMaterial extends Material
 {

@@ -28,7 +28,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/FramebufferTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/FramebufferTexture.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "FramebufferTexture")
 @:native("THREE.FramebufferTexture")
 extern class FramebufferTexture extends Texture
 {

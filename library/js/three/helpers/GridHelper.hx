@@ -20,7 +20,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/GridHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/GridHelper.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "GridHelper")
 @:native("THREE.GridHelper")
 extern class GridHelper extends LineSegments<BufferGeometry, LineBasicMaterial>
 {

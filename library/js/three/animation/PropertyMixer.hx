@@ -1,6 +1,6 @@
 package js.three.animation;
 
-@:jsRequire("three")
+@:jsRequire("three", "PropertyMixer")
 @:native("THREE.PropertyMixer")
 extern class PropertyMixer
 {

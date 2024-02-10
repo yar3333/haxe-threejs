@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-@:jsRequire("three")
+@:jsRequire("three", "WebGLLights")
 @:native("THREE.WebGLLights")
 extern class WebGLLights
 {

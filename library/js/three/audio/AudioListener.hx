@@ -31,7 +31,7 @@ import js.three.core.Object3D;
  * @see {@link https://threejs.org/docs/index.html#api/en/audio/AudioListener | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/audio/AudioListener.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "AudioListener")
 @:native("THREE.AudioListener")
 extern class AudioListener extends Object3D
 {

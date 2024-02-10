@@ -17,7 +17,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/CapsuleGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/CapsuleGeometry.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "CapsuleGeometry")
 @:native("THREE.CapsuleGeometry")
 extern class CapsuleGeometry extends BufferGeometry
 {

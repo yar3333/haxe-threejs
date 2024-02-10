@@ -13,7 +13,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/LineSegments | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/LineSegments.js | Source}
  */
-@:jsRequire("three")
+@:jsRequire("three", "LineSegments")
 @:native("THREE.LineSegments")
 extern class LineSegments<TGeometry:BufferGeometry = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material, TEventMap:Object3DEventMap = Object3DEventMap>
     extends Line<TGeometry, TMaterial, TEventMap>
