@@ -1,7 +1,5 @@
 package js.three.math;
 
-import js.lib.*;
-
 enum abstract EulerOrder(String)
 {
     var XYZ = "XYZ";

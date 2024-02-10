@@ -2,7 +2,6 @@ package js.three.extras.core;
 
 import js.three.math.Vector3;
 import js.three.math.Vector2;
-import js.lib.*;
 
 /**
  * Curved Path - a curve path is simply a array of connected curves, but retains the api of a curve.

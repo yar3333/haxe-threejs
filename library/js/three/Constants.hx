@@ -38,7 +38,6 @@ enum abstract ShadowMapType(Int)
     var VSMShadowMap = 3;
 }
 
-
 enum abstract Side(Int)
 {
     var FrontSide = 0;
@@ -55,7 +54,6 @@ enum abstract Blending(Int)
     var MultiplyBlending = 4;
     var CustomBlending = 5;
 }
-
 
 // custom blending equations
 // (numbers start from 100 not to clash with other
@@ -170,7 +168,6 @@ enum abstract MagnificationTextureFilter(Int)
     */
     var LinearFilter = 1006;
 }
-
 
 /**
  * Texture Minification Filter Modes.
@@ -664,7 +661,6 @@ enum abstract InterpolationEndingModes(Int)
     var ZeroSlopeEnding = 2401;
     var WrapAroundEnding = 2402;
 }
-
 
 enum abstract AnimationBlendMode(Int)
 {

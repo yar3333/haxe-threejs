@@ -1,7 +1,5 @@
 package js.three.extras.curves;
 
-import js.lib.*;
-
 /**
  * Alias for {@link THREE.EllipseCurve | EllipseCurve}.
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/ArcCurve | Official Documentation}

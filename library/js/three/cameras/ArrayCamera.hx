@@ -1,7 +1,5 @@
 package js.three.cameras;
 
-import js.lib.*;
-
 /**
  * {@link ArrayCamera} can be used in order to efficiently render a scene with a predefined set of cameras
  * @remarks

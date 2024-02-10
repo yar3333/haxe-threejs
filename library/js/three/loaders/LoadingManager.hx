@@ -1,6 +1,6 @@
 package js.three.loaders;
 
-import js.lib.*;
+import js.lib.RegExp;
 
 /**
  * Handles and keeps track of loaded and pending data.

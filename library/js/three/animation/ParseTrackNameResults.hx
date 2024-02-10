@@ -1,7 +1,5 @@
 package js.three.animation;
 
-import js.lib.*;
-
 extern interface ParseTrackNameResults
 {
 	var nodeName : String;

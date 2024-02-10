@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 /**
  * Object for keeping track of time
  * @remarks

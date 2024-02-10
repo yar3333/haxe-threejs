@@ -3,7 +3,6 @@ package js.three.extras.core;
 import js.three.math.Vector3;
 import js.three.math.Vector2;
 import js.three.types.CurveType;
-import js.lib.*;
 
 /**
  * An abstract base class for creating a {@link Curve} object that contains methods for interpolation

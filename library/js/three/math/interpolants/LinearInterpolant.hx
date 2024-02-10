@@ -1,7 +1,5 @@
 package js.three.math.interpolants;
 
-import js.lib.*;
-
 @:native("THREE.LinearInterpolant")
 extern class LinearInterpolant extends Interpolant
 {

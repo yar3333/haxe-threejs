@@ -1,7 +1,5 @@
 package js.three.animation;
 
-import js.lib.*;
-
 @:native("THREE.AnimationObjectGroup")
 extern class AnimationObjectGroup
 {

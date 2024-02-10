@@ -1,7 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
-
 extern interface WebGLLightsState
 {
 	var version : Float;

@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 typedef RaycasterParameters =
 {
 	var Mesh : Dynamic;

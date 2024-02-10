@@ -1,7 +1,5 @@
 package js.three.materials;
 
-import js.lib.*;
-
 @:native("THREE.RawShaderMaterial")
 extern class RawShaderMaterial extends ShaderMaterial
 {

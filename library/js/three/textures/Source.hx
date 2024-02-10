@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.lib.*;
-
 /**
  * Represents the data {@link Source} of a texture.
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/Source | Official Documentation}

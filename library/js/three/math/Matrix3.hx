@@ -1,7 +1,5 @@
 package js.three.math;
 
-import js.lib.*;
-
 typedef Matrix3Tuple = Array<Float>;
 
 /**

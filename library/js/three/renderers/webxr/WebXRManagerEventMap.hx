@@ -1,7 +1,5 @@
 package js.three.renderers.webxr;
 
-import js.lib.*;
-
 // extern interface WebXRManagerEventMap
 // {
 // 	var sessionstart : {};

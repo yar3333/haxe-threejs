@@ -1,7 +1,6 @@
 package js.three.geometries;
 
 import js.three.core.BufferGeometry;
-import js.lib.*;
 
 /**
  * This can be used as a helper object to view a {@link BufferGeometry | geometry} as a wireframe.

@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 /**
  * JavaScript events for custom objects
  * @example

@@ -1,7 +1,5 @@
 package js.three.geometries;
 
-import js.lib.*;
-
 /**
  * A class for generating a tetrahedron geometries.
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/TetrahedronGeometry | Official Documentation}

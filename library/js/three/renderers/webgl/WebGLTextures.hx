@@ -1,7 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
-
 @:native("THREE.WebGLTextures")
 extern class WebGLTextures
 {

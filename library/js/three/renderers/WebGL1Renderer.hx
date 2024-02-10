@@ -1,7 +1,5 @@
 package js.three.renderers;
 
-import js.lib.*;
-
 @:native("THREE.WebGL1Renderer")
 extern class WebGL1Renderer extends WebGLRenderer
 {

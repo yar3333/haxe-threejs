@@ -1,7 +1,5 @@
 package js.three.loaders;
 
-import js.lib.*;
-
 /**
  * Base class for implementing loaders.
  */
@@ -36,7 +34,7 @@ extern class Loader<TData = Dynamic, TUrl = String>
 	 */
 	function new(?manager:LoadingManager) : Void;
 	function load(url:TUrl, onLoad:TData->Void, ?onProgress:js.html.ProgressEvent->Void, ?onError:Dynamic->Void) : Void;
-	function loadAsync(url:TUrl, ?onProgress:js.html.ProgressEvent->Void) : Promise<TData>;
+	function loadAsync(url:TUrl, ?onProgress:js.html.ProgressEvent->Void) : js.lib.Promise<TData>;
 	function setCrossOrigin(crossOrigin:String) : Loader<TData, TUrl>;
 	function setWithCredentials(value:Bool) : Loader<TData, TUrl>;
 	function setPath(path:String) : Loader<TData, TUrl>;

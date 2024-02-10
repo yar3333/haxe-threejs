@@ -1,7 +1,5 @@
 package js.three.animation;
 
-import js.lib.*;
-
 @:native("THREE.PropertyMixer")
 extern class PropertyMixer
 {

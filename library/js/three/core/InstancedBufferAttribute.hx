@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 /**
  * An instanced version of {@link THREE.BufferAttribute | BufferAttribute}.
  * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedBufferAttribute | Official Documentation}

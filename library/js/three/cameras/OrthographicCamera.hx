@@ -1,7 +1,5 @@
 package js.three.cameras;
 
-import js.lib.*;
-
 /**
  * Camera that uses {@link https://en.wikipedia.org/wiki/Orthographic_projection | orthographic projection}.
  * In this projection mode, an object's size in the rendered image stays constant regardless of its distance from the camera.

@@ -2,7 +2,7 @@ package js.three.audio;
 
 import js.html.audio.AudioNode;
 import js.html.audio.AnalyserNode;
-import js.lib.*;
+import js.lib.Uint8Array;
 
 /**
  * Create a {@link AudioAnalyser} object, which uses an {@link https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode | AnalyserNode} to analyse audio data.

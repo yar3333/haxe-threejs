@@ -1,6 +1,6 @@
 package js.three.textures;
 
-import js.lib.*;
+import js.lib.Uint8ClampedArray;
 
 extern interface TextureImageData
 {

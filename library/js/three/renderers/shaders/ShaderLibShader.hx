@@ -1,7 +1,5 @@
 package js.three.renderers.shaders;
 
-import js.lib.*;
-
 extern interface ShaderLibShader
 {
 	var uniforms : Dynamic<IUniform>;

@@ -1,7 +1,5 @@
 package js.three.geometries;
 
-import js.lib.*;
-
 /**
  * A class for generating cone geometries.
  * @example

@@ -1,7 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
-
 /**
  * An object with a series of statistical information about the graphics board memory and the rendering process.
  */

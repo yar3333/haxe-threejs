@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 /**
  * A {@link THREE.Layers | Layers} object assigns an {@link THREE.Object3D | Object3D} to 1 or more of 32 layers numbered `0` to `31` - internally the
  * layers are stored as a {@link https://en.wikipedia.org/wiki/Mask_(computing) | bit mask}, and

@@ -1,6 +1,5 @@
 package js.three.textures;
-
-import js.lib.*;
+import js.lib.BufferSource;
 
 /**
  * Creates an array of textures directly from raw data, width and height and depth

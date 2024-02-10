@@ -1,7 +1,5 @@
 package js.three.math;
 
-import js.lib.*;
-
 @:native("THREE.Box2")
 extern class Box2
 {

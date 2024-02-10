@@ -1,7 +1,5 @@
 package js.three.animation;
 
-import js.lib.*;
-
 @:native("THREE.PropertyBinding.Composite")
 extern class Composite
 {

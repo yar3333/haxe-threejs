@@ -1,6 +1,5 @@
 package js.three.core;
-
-import js.lib.*;
+import js.lib.ArrayBuffer;
 
 /**
  * A {@link THREE.BufferAttribute | BufferAttribute} for {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array: Int16Array}

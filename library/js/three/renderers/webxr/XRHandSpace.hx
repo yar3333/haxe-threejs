@@ -1,7 +1,5 @@
 package js.three.renderers.webxr;
 
-import js.lib.*;
-
 // @:native("THREE.XRHandSpace")
 // extern class XRHandSpace extends Group<WebXRSpaceEventMap>
 // {

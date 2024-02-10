@@ -1,7 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
-
 /**
  * Uniforms are global GLSL variables.
  * They are passed to shader programs.

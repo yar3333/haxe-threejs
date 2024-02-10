@@ -1,7 +1,5 @@
 package js.three.animation.tracks;
 
-import js.lib.*;
-
 @:native("THREE.BooleanKeyframeTrack")
 extern class BooleanKeyframeTrack extends KeyframeTrack
 {

@@ -1,7 +1,5 @@
 package js.three.objects;
 
-import js.lib.*;
-
 /**
  * A continuous line that connects back to the start.
  * @remarks

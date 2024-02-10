@@ -1,7 +1,5 @@
 package js.three.math;
 
-import js.lib.*;
-
 extern interface QuaternionLike
 {
 	var x(default, null) : Float;

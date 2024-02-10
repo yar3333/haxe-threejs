@@ -1,7 +1,5 @@
 package js.three.materials;
 
-import js.lib.*;
-
 typedef LineDashedMaterialParameters =
 {>LineBasicMaterialParameters,
 	@:optional var scale : haxe.extern.EitherType<Float, {}>;
