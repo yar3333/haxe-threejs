@@ -7,9 +7,6 @@ import js.Browser.window;
 import js.Browser.document;
 import js.three.scenes.Scene;
 
-//import * as THREE from 'three'
-//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-
 function main()
 {
     final scene = new Scene();
@@ -20,8 +17,6 @@ function main()
     final renderer = new WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
-
-    //final controls = new OrbitControls(camera, renderer.domElement);
 
     final geometry = new BoxGeometry();
     final material = new MeshBasicMaterial({
@@ -35,23 +30,21 @@ function main()
     function render() {
         renderer.render(scene, camera);
     }
+
     function onWindowResize(_) {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
         render();
-    };
+    }
 
     window.addEventListener('resize', onWindowResize, false);
-
 
     function animate() {
         window.requestAnimationFrame((_) -> animate());
 
         cube.rotation.x += 0.01;
         cube.rotation.y += 0.01;
-
-        //controls.update();
 
         render();
     }
