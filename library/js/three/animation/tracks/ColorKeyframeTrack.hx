@@ -1,7 +1,6 @@
 package js.three.animation.tracks;
 
 import js.three.Constants.InterpolationModes;
-import js.lib.*;
 
 @:native("THREE.ColorKeyframeTrack")
 extern class ColorKeyframeTrack extends KeyframeTrack

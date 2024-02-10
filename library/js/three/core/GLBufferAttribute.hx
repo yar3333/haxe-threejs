@@ -1,6 +1,7 @@
 package js.three.core;
 
 import js.three.Constants;
+import js.html.webgl.WebGLBuffer;
 
 typedef GLenum = Int;
 

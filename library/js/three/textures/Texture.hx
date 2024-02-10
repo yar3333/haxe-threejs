@@ -4,6 +4,7 @@ import js.three.math.Matrix3;
 import js.three.core.EventDispatcher;
 import js.three.Constants;
 import js.three.math.Vector2;
+import js.html.TexImageSource;
 
 /**
  * Create a {@link Texture} to apply to a surface or as a reflection or refraction map.

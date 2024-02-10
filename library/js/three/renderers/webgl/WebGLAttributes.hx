@@ -1,10 +1,10 @@
 package js.three.renderers.webgl;
 
 import js.html.webgl.WebGL2RenderingContext;
-import js.three.Constants.WebGLBuffer;
 import js.three.core.BufferAttribute;
 import js.three.core.InterleavedBufferAttribute;
 import js.three.core.GLBufferAttribute;
+import js.html.webgl.WebGLBuffer;
 
 @:native("THREE.WebGLAttributes")
 extern class WebGLAttributes

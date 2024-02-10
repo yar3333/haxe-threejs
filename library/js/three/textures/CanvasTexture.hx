@@ -1,6 +1,7 @@
 package js.three.textures;
 
 import js.three.Constants;
+import js.html.TexImageSource;
 
 /**
  * Creates a texture from a {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas | canvas element}.
