@@ -5,6 +5,7 @@ import js.three.textures.DataArrayTexture;
 /**
  * This type of render target represents an array of textures.
  */
+@:jsRequire("three")
 @:native("THREE.WebGLArrayRenderTarget")
 extern class WebGLArrayRenderTarget extends WebGLRenderTarget<DataArrayTexture>
 {

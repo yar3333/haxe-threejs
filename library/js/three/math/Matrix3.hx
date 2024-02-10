@@ -5,6 +5,7 @@ typedef Matrix3Tuple = Array<Float>;
 /**
  * ( class Matrix3 implements Matrix<Matrix3> )
  */
+@:jsRequire("three")
 @:native("THREE.Matrix3")
 extern class Matrix3
 	implements Matrix<Matrix3>

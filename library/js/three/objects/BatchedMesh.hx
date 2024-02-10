@@ -34,6 +34,7 @@ import js.three.math.Matrix4;
  * 
  * @also Example: {@link https://threejs.org/examples/#webgl_mesh_batch WebGL / mesh / batch}
  */
+@:jsRequire("three")
 @:native("THREE.BatchedMesh")
 extern class BatchedMesh extends Mesh<BufferGeometry, Material>
 {

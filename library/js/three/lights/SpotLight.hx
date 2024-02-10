@@ -25,6 +25,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/SpotLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/SpotLight.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.SpotLight")
 extern class SpotLight extends Light<SpotLightShadow>
 {

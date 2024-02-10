@@ -1,5 +1,6 @@
 package js.three.renderers.webgl;
 
+@:jsRequire("three")
 @:native("THREE.WebGLColorBuffer")
 extern class WebGLColorBuffer
 {

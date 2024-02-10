@@ -6,6 +6,7 @@ import js.three.objects.Mesh;
 typedef XRRenderState = Dynamic;
 typedef WebXRArrayCamera = Dynamic;
 
+@:jsRequire("three")
 @:native("THREE.WebXRDepthSensing")
 extern class WebXRDepthSensing
 {

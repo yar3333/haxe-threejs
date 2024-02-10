@@ -1,6 +1,7 @@
 package js.three.renderers.webxr;
 
-// @:native("THREE.WebXRManager")
+// @:jsRequire("three")
+@:native("THREE.WebXRManager")
 // extern class WebXRManager extends EventDispatcher<WebXRManagerEventMap>
 // {
 // 	/**

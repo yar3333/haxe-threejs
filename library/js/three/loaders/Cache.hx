@@ -1,5 +1,6 @@
 package js.three.loaders;
 
+@:jsRequire("three")
 @:native("THREE.Cache")
 extern class Cache
 {

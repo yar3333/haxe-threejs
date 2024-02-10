@@ -5,6 +5,7 @@ import js.lib.RegExp;
 /**
  * Handles and keeps track of loaded and pending data.
  */
+@:jsRequire("three")
 @:native("THREE.LoadingManager")
 extern class LoadingManager
 {

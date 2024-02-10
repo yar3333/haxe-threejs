@@ -10,6 +10,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Points | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Points.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Points")
 extern class Points<TGeometry:BufferGeometry<NormalOrGLBufferAttributes> = BufferGeometry, TMaterial:haxe.extern.EitherType<Material, Array<Material>> = Material>
 {

@@ -4,6 +4,7 @@ import js.three.Constants.GLSLVersion;
 import js.three.renderers.shaders.IUniform;
 import js.three.core.UniformsGroup;
 
+@:jsRequire("three")
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material
 {

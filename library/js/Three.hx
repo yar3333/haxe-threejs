@@ -1,5 +1,6 @@
 package js;
 
+@:jsRequire("three")
 @:native("THREE")
 extern class Three
 {

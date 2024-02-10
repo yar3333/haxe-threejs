@@ -27,6 +27,7 @@ typedef RGB =
  * @example
  * const color = new THREE.Color( 0xff0000 );
  */
+@:jsRequire("three")
 @:native("THREE.Color")
 extern class Color implements ArrayAccess<Float>
 {

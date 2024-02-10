@@ -6,6 +6,7 @@ import js.three.core.BufferGeometry;
 import js.three.core.Object3D;
 import js.three.core.BufferAttribute;
 
+@:jsRequire("three")
 @:native("THREE.WebGLGeometries")
 extern class WebGLGeometries
 {

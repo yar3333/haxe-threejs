@@ -25,6 +25,7 @@ import js.three.math.Vector2;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/SplineCurve | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/curves/SplineCurve.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.SplineCurve")
 extern class SplineCurve extends Curve<Vector2>
 {

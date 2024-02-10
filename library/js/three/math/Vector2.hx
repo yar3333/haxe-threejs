@@ -7,6 +7,7 @@ typedef Vector2Tuple = Array<Float>;
 /**
  * 2D vector.
  */
+@:jsRequire("three")
 @:native("THREE.Vector2")
 extern class Vector2 implements ArrayAccess<Float>
 {

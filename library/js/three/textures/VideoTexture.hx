@@ -21,6 +21,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/VideoTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/VideoTexture.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.VideoTexture")
 extern class VideoTexture extends Texture
 {

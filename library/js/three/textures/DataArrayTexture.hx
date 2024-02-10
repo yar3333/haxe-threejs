@@ -35,6 +35,7 @@ import js.lib.BufferSource;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/DataArrayTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/DataArrayTexture.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.DataArrayTexture")
 extern class DataArrayTexture extends Texture
 {

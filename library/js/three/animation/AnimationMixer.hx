@@ -4,6 +4,7 @@ import js.three.Constants.AnimationBlendMode;
 import js.three.core.EventDispatcher;
 import js.three.core.Object3D;
 
+@:jsRequire("three")
 @:native("THREE.AnimationMixer")
 extern class AnimationMixer extends EventDispatcher<AnimationMixerEventMap>
 {

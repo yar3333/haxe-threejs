@@ -23,6 +23,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/PolyhedronGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/PolyhedronGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.PolyhedronGeometry")
 extern class PolyhedronGeometry extends BufferGeometry
 {

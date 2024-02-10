@@ -32,6 +32,7 @@ import js.lib.Uint8Array;
  * @see {@link https://threejs.org/docs/index.html#api/en/audio/AudioAnalyser | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/audio/AudioAnalyser.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.AudioAnalyser")
 extern class AudioAnalyser
 {

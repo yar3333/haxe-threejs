@@ -20,6 +20,7 @@ import js.three.math.Color;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/CameraHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/CameraHelper.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.CameraHelper")
 extern class CameraHelper extends LineSegments
 {

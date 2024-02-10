@@ -3,6 +3,7 @@ package js.three.math;
 import js.three.core.BufferAttribute;
 import js.three.core.InterleavedBufferAttribute;
 
+@:jsRequire("three")
 @:native("THREE.Triangle")
 extern class Triangle
 {

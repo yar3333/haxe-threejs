@@ -22,6 +22,7 @@ typedef Matrix4Tuple = Array<Float>;
  * m.multiplyMatrices( m1, m2 );
  * m.multiply( m3 );
  */
+@:jsRequire("three")
 @:native("THREE.Matrix4")
 extern class Matrix4
 	implements Matrix<Matrix4>

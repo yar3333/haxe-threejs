@@ -5,6 +5,7 @@ package js.three.core;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/InstancedBufferAttribute | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InstancedBufferAttribute.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.InstancedBufferAttribute")
 extern class InstancedBufferAttribute extends BufferAttribute
 {

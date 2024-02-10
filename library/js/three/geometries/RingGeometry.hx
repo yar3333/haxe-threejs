@@ -17,6 +17,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/RingGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/RingGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.RingGeometry")
 extern class RingGeometry extends BufferGeometry
 {

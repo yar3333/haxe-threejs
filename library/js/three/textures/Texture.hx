@@ -24,6 +24,7 @@ import js.html.TexImageSource;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/Texture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/Textures/Texture.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Texture")
 extern class Texture extends EventDispatcher<{ dispose: {} }>
 {

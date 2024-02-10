@@ -3,6 +3,7 @@ package js.three.animation;
 import js.three.Constants;
 import js.three.core.Object3D;
 
+@:jsRequire("three")
 @:native("THREE.AnimationAction")
 extern class AnimationAction
 {

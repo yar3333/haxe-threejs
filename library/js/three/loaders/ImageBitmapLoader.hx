@@ -2,6 +2,7 @@ package js.three.loaders;
 
 import js.html.ImageBitmap;
 
+@:jsRequire("three")
 @:native("THREE.ImageBitmapLoader")
 extern class ImageBitmapLoader extends Loader<ImageBitmap>
 {

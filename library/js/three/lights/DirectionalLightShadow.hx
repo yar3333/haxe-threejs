@@ -48,6 +48,7 @@ import js.three.cameras.OrthographicCamera;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/shadows/DirectionalLightShadow | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/DirectionalLightShadow.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.DirectionalLightShadow")
 extern class DirectionalLightShadow extends LightShadow<OrthographicCamera>
 {

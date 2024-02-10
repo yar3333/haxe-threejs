@@ -21,6 +21,7 @@ import js.three.math.Vector2;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Sprite | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Sprite.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Sprite")
 extern class Sprite<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {

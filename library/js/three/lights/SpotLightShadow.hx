@@ -44,6 +44,7 @@ import js.three.cameras.PerspectiveCamera;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/shadows/SpotLightShadow | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/SpotLightShadow.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.SpotLightShadow")
 extern class SpotLightShadow extends LightShadow<PerspectiveCamera>
 {

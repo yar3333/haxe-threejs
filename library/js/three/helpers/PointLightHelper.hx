@@ -19,6 +19,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/PointLightHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/PointLightHelper.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.PointLightHelper")
 extern class PointLightHelper extends Object3D
 {

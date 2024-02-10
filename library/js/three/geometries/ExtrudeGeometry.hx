@@ -36,6 +36,7 @@ import js.three.extras.core.Shape;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/ExtrudeGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/ExtrudeGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.ExtrudeGeometry")
 extern class ExtrudeGeometry extends BufferGeometry
 {

@@ -5,6 +5,7 @@ package js.three.textures;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/Source | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/Source.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Source")
 extern class Source
 {

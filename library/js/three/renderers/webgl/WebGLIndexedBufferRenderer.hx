@@ -1,6 +1,7 @@
 package js.three.renderers.webgl;
 import js.lib.Int32Array;
 
+@:jsRequire("three")
 @:native("THREE.WebGLIndexedBufferRenderer")
 extern class WebGLIndexedBufferRenderer
 {

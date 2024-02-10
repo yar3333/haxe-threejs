@@ -13,6 +13,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/AmbientLight | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/AmbientLight.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.AmbientLight")
 extern class AmbientLight extends Light<{}>
 {

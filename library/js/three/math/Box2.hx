@@ -1,5 +1,6 @@
 package js.three.math;
 
+@:jsRequire("three")
 @:native("THREE.Box2")
 extern class Box2
 {

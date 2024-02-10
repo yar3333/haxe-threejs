@@ -21,6 +21,7 @@ package js.three.cameras;
  * @see {@link https://threejs.org/docs/index.html#api/en/cameras/OrthographicCamera | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/OrthographicCamera.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.OrthographicCamera")
 extern class OrthographicCamera extends Camera
 {

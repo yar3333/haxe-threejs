@@ -5,6 +5,7 @@ import js.three.materials.Material;
 import js.three.core.BufferGeometry;
 import js.three.core.BufferAttribute;
 
+@:jsRequire("three")
 @:native("THREE.WebGLBindingStates")
 extern class WebGLBindingStates
 {

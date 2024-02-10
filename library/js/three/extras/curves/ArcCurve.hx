@@ -5,6 +5,7 @@ package js.three.extras.curves;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/ArcCurve | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/curves/ArcCurve.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.ArcCurve")
 extern class ArcCurve extends EllipseCurve
 {

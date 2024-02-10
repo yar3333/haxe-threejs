@@ -32,6 +32,7 @@ import js.three.textures.DataArrayTexture;
  * 
  * see {@link https://github.com/mrdoob/three.js/blob/master/src/renderers/WebGLRenderer.js|src/renderers/WebGLRenderer.js}
  */
+@:jsRequire("three")
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer
 	implements Renderer

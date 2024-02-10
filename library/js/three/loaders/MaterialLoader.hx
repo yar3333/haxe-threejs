@@ -3,6 +3,7 @@ package js.three.loaders;
 import js.three.materials.Material;
 import js.three.textures.Texture;
 
+@:jsRequire("three")
 @:native("THREE.MaterialLoader")
 extern class MaterialLoader extends Loader<Material>
 {

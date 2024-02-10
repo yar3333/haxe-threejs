@@ -21,6 +21,7 @@ package js.three.core;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/EventDispatcher | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/EventDispatcher.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.EventDispatcher")
 extern class EventDispatcher<TEventMap:{}>
 {

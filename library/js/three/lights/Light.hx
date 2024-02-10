@@ -8,6 +8,7 @@ import js.three.math.Color;
  * Abstract base class for lights.
  * @remarks All other light types inherit the properties and methods described here.
  */
+@:jsRequire("three")
 @:native("THREE.Light")
 extern abstract class Light<TShadowSupport:haxe.extern.EitherType<LightShadow, {}> = haxe.extern.EitherType<LightShadow, {}>> extends Object3D
 {

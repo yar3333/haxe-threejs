@@ -25,6 +25,7 @@ import js.three.core.Object3D;
  * @see {@link https://threejs.org/docs/index.html#api/en/objects/Group | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/objects/Group.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Group")
 extern class Group<TEventMap:Object3DEventMap = Object3DEventMap> extends Object3D<TEventMap>
 {

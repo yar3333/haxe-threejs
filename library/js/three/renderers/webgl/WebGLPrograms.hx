@@ -6,6 +6,7 @@ import js.three.scenes.Scene;
 import js.three.core.Object3D;
 import js.three.renderers.shaders.IUniform;
 
+@:jsRequire("three")
 @:native("THREE.WebGLPrograms")
 extern class WebGLPrograms
 {

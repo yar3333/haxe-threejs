@@ -6,6 +6,7 @@ import js.three.Constants;
 import js.three.materials.Material;
 import js.three.math.Vector4;
 
+@:jsRequire("three")
 @:native("THREE.WebGLState")
 extern class WebGLState
 {

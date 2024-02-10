@@ -4,6 +4,7 @@ import haxe.extern.EitherType;
 import js.three.core.InstancedBufferGeometry;
 import js.three.core.BufferGeometry;
 
+@:jsRequire("three")
 @:native("THREE.BufferGeometryLoader")
 extern class BufferGeometryLoader extends Loader<EitherType<InstancedBufferGeometry, BufferGeometry>>
 {

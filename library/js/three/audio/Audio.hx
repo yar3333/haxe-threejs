@@ -32,6 +32,7 @@ import js.three.core.Object3D;
  * @see {@link https://threejs.org/docs/index.html#api/en/audio/Audio | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/audio/Audio.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Audio")
 extern class Audio<NodeType:AudioNode = GainNode> extends Object3D
 {

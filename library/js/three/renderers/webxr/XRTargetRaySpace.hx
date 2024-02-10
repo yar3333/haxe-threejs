@@ -3,6 +3,7 @@ package js.three.renderers.webxr;
 import js.three.objects.Group;
 import js.three.math.Vector3;
 
+@:jsRequire("three")
 @:native("THREE.XRTargetRaySpace")
 extern class XRTargetRaySpace extends Group<WebXRSpaceEventMap>
 {

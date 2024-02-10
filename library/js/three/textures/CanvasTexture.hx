@@ -12,6 +12,7 @@ import js.html.TexImageSource;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/CanvasTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CanvasTexture.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.CanvasTexture")
 extern class CanvasTexture extends Texture
 {

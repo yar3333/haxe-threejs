@@ -24,6 +24,7 @@ import js.three.math.Vector2;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/curves/CubicBezierCurve | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/curves/CubicBezierCurve.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.CubicBezierCurve")
 extern class CubicBezierCurve extends Curve<Vector2>
 {

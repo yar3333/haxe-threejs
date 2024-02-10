@@ -8,6 +8,7 @@ package js.three.core;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/Clock | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Clock.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Clock")
 extern class Clock
 {

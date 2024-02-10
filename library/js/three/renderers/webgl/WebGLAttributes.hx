@@ -6,6 +6,7 @@ import js.three.core.InterleavedBufferAttribute;
 import js.three.core.GLBufferAttribute;
 import js.html.webgl.WebGLBuffer;
 
+@:jsRequire("three")
 @:native("THREE.WebGLAttributes")
 extern class WebGLAttributes
 {

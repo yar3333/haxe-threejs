@@ -20,6 +20,7 @@ import js.three.objects.Group;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/Object3D | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/Object3D.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Object3D")
 extern class Object3D<TEventMap:Object3DEventMap = Object3DEventMap> extends EventDispatcher<TEventMap>
 {

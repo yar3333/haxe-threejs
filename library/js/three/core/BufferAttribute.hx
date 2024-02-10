@@ -20,6 +20,7 @@ import js.three.math.Matrix4;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/BufferAttribute | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/BufferAttribute.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.BufferAttribute")
 extern class BufferAttribute
 {

@@ -22,6 +22,7 @@ import js.three.math.SphericalHarmonics3;
  * @see {@link https://threejs.org/docs/index.html#api/en/lights/LightProbe | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/lights/LightProbe.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.LightProbe")
 extern class LightProbe extends Light
 {

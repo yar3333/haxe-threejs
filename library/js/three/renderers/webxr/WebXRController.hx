@@ -7,6 +7,7 @@ typedef XRControllerEventType = Dynamic;
 typedef XRFrame = Dynamic;
 typedef XRReferenceSpace = Dynamic;
 
+@:jsRequire("three")
 @:native("THREE.WebXRController")
 extern class WebXRController
 {

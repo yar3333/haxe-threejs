@@ -11,6 +11,7 @@ import js.three.Constants.Wrapping;
  * @see {@link https://threejs.org/docs/index.html#api/en/textures/CompressedArrayTexture | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/textures/CompressedArrayTexture.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.CompressedArrayTexture")
 extern class CompressedArrayTexture extends CompressedTexture
 {

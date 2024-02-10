@@ -2,6 +2,7 @@ package js.three.loaders;
 
 import js.three.textures.DataTexture;
 
+@:jsRequire("three")
 @:native("THREE.DataTextureLoader")
 extern class DataTextureLoader extends Loader<DataTexture>
 {

@@ -30,6 +30,7 @@ import js.three.textures.CubeTexture;
  * @see {@link https://threejs.org/docs/index.html#api/en/extras/PMREMGenerator | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/extras/PMREMGenerator.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.PMREMGenerator")
 extern class PMREMGenerator
 {

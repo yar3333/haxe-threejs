@@ -12,6 +12,7 @@ import js.three.core.InterleavedBufferAttribute;
  * const vector = new THREE.Vector3( 1, 0, 0 );
  * vector.applyQuaternion( quaternion );
  */
+@:jsRequire("three")
 @:native("THREE.Quaternion")
 extern class Quaternion implements ArrayAccess<Float>
 {

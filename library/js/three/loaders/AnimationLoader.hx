@@ -2,6 +2,7 @@ package js.three.loaders;
 
 import js.three.animation.AnimationClip;
 
+@:jsRequire("three")
 @:native("THREE.AnimationLoader")
 extern class AnimationLoader extends Loader<Array<AnimationClip>>
 {

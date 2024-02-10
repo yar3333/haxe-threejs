@@ -20,6 +20,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/helpers/PolarGridHelper | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/helpers/PolarGridHelper.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.PolarGridHelper")
 extern class PolarGridHelper extends LineSegments
 {

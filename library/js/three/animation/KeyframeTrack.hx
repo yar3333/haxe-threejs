@@ -7,6 +7,7 @@ import js.three.math.interpolants.LinearInterpolant;
 import js.three.math.interpolants.CubicInterpolant;
 import js.three.math.Interpolant;
 
+@:jsRequire("three")
 @:native("THREE.KeyframeTrack")
 extern class KeyframeTrack
 {

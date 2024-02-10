@@ -18,6 +18,7 @@ import js.three.core.BufferGeometry;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/WireframeGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/WireframeGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.WireframeGeometry")
 extern class WireframeGeometry<TBufferGeometry:BufferGeometry = BufferGeometry> extends BufferGeometry
 {

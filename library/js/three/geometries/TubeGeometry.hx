@@ -31,6 +31,7 @@ import js.three.math.Vector3;
  * @see {@link https://threejs.org/docs/index.html#api/en/geometries/TubeGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/geometries/TubeGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.TubeGeometry")
 extern class TubeGeometry extends BufferGeometry
 {

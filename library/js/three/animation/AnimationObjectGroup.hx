@@ -1,5 +1,6 @@
 package js.three.animation;
 
+@:jsRequire("three")
 @:native("THREE.AnimationObjectGroup")
 extern class AnimationObjectGroup
 {

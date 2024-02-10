@@ -9,6 +9,7 @@ import js.three.Constants;
  * @see {@link https://threejs.org/docs/index.html#api/en/core/InterleavedBuffer | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/InterleavedBuffer.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.InterleavedBuffer")
 extern class InterleavedBuffer
 {

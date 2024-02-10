@@ -71,6 +71,7 @@ typedef NormalOrGLBufferAttributes = Dynamic<EitherType<String, EitherType<Buffe
  * @see {@link https://threejs.org/docs/index.html#api/en/core/BufferGeometry | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/core/BufferGeometry.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.BufferGeometry")
 extern class BufferGeometry<Attributes:NormalOrGLBufferAttributes = NormalBufferAttributes> extends EventDispatcher<{ dispose: {} }>
 {

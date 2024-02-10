@@ -2,6 +2,7 @@ package js.three.renderers.webgl;
 
 import js.three.scenes.Scene;
 
+@:jsRequire("three")
 @:native("THREE.WebGLRenderLists")
 extern class WebGLRenderLists
 {

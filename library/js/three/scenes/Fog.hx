@@ -13,6 +13,7 @@ import js.three.math.ColorRepresentation;
  * @see {@link https://threejs.org/docs/index.html#api/en/scenes/Fog | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/scenes/Fog.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.Fog")
 extern class Fog
 	implements FogBase

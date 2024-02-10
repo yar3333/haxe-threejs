@@ -5,6 +5,7 @@ import js.three.math.Color;
 import js.three.textures.Texture;
 import js.three.math.Vector2;
 
+@:jsRequire("three")
 @:native("THREE.MeshMatcapMaterial")
 extern class MeshMatcapMaterial extends Material
 {

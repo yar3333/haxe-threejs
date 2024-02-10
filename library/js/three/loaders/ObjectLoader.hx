@@ -9,6 +9,7 @@ import js.three.textures.Texture;
 import js.three.animation.AnimationClip;
 import js.three.textures.Source;
 
+@:jsRequire("three")
 @:native("THREE.ObjectLoader")
 extern class ObjectLoader extends Loader<Object3D>
 {

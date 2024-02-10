@@ -35,6 +35,7 @@ import js.three.renderers.WebGLRenderer;
  * @see {@link https://threejs.org/docs/index.html#api/en/cameras/CubeCamera | Official Documentation}
  * @see {@link https://github.com/mrdoob/three.js/blob/master/src/cameras/CubeCamera.js | Source}
  */
+@:jsRequire("three")
 @:native("THREE.CubeCamera")
 extern class CubeCamera extends Object3D
 {
