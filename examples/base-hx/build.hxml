@@ -1,0 +1,4 @@
+--js dist\bundle.js
+--library threejs
+--class-path src
+--main Main
