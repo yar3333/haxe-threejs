@@ -2,14 +2,14 @@
 (function ($global) { "use strict";
 var Main = function() { };
 Main.main = function() {
-	var scene = new THREE.Scene();
-	var camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
-	var renderer = new THREE.WebGLRenderer();
+	var scene = new THREE_Scene();
+	var camera = new THREE_PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
+	var renderer = new THREE_WebGLRenderer();
 	renderer.setSize(window.innerWidth,window.innerHeight,true);
 	window.document.body.appendChild(renderer.domElement);
-	var geometry = new THREE.BoxGeometry(1,1,1);
-	var material = new THREE.MeshBasicMaterial({ color : 65280});
-	var cube = new THREE.Mesh(geometry,material);
+	var geometry = new THREE_BoxGeometry(1,1,1);
+	var material = new THREE_MeshBasicMaterial({ color : 65280});
+	var cube = new THREE_Mesh(geometry,material);
 	scene.add(cube);
 	camera.position.z = 5;
 	var render = null;
@@ -41,5 +41,11 @@ js_three_ArrayLike.arrayWrite = function(this1,k,v) {
 	this1[k] = v;
 	return v;
 };
+var THREE_PerspectiveCamera = require("three").PerspectiveCamera;
+var THREE_BoxGeometry = require("three").BoxGeometry;
+var THREE_MeshBasicMaterial = require("three").MeshBasicMaterial;
+var THREE_Mesh = require("three").Mesh;
+var THREE_WebGLRenderer = require("three").WebGLRenderer;
+var THREE_Scene = require("three").Scene;
 Main.main();
 })({});

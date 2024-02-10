@@ -1,6 +1,5 @@
 package js.three.math;
 
-import js.three.Constants;
 import js.three.core.Object3D;
 import js.three.objects.Sprite;
 

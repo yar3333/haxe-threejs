@@ -1,6 +1,5 @@
 package js.three.materials;
 
-import js.three.Constants;
 import js.three.textures.Texture;
 
 @:jsRequire("three", "MeshDepthMaterial")

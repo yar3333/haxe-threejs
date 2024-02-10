@@ -1,6 +1,5 @@
 package js.three.helpers;
 
-import js.three.types.Object3dType;
 import js.three.core.Object3D;
 import js.three.objects.Line;
 import js.three.objects.Mesh;

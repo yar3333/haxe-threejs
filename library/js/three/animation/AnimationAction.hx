@@ -1,6 +1,5 @@
 package js.three.animation;
 
-import js.three.Constants;
 import js.three.core.Object3D;
 
 @:jsRequire("three", "AnimationAction")

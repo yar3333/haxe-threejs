@@ -1,6 +1,5 @@
 package js.three.core;
 
-import js.three.Constants;
 import js.three.textures.DepthTexture;
 
 extern interface RenderTargetOptions

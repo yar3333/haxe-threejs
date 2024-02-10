@@ -1,4 +1,5 @@
 package js.three.loaders;
+
 import js.lib.BufferSource;
 
 extern interface LoaderUtils

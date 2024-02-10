@@ -1,9 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants.TextureDataType;
-import js.three.Constants.CompressedPixelFormat;
-import js.three.Constants.Wrapping;
-
 /**
  * Creates an texture 2D array based on data in compressed form, for example from a
  * {@link https://en.wikipedia.org/wiki/DirectDraw_Surface | DDS} file.

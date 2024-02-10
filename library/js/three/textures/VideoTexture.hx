@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants;
-
 /**
  * Creates a texture for use with a video.
  * @remarks

@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants;
-
 /**
  * Creates a texture based on data in compressed form, for example from a {@link https://en.wikipedia.org/wiki/DirectDraw_Surface | DDS} file.
  * @remarks For use with the {@link THREE.CompressedTextureLoader | CompressedTextureLoader}.

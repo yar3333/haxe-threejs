@@ -2,7 +2,6 @@ package js.three.core;
 
 import haxe.extern.EitherType;
 import js.lib.ArrayBufferView;
-import js.three.Constants;
 import js.three.math.Matrix3;
 import js.three.math.Matrix4;
 

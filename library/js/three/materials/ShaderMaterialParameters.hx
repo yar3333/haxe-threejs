@@ -2,7 +2,6 @@ package js.three.materials;
 
 import js.three.core.UniformsGroup;
 import js.three.renderers.shaders.IUniform;
-import js.three.Constants.GLSLVersion;
 
 typedef ShaderMaterialParameters =
 {>MaterialParameters,

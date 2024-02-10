@@ -1,7 +1,6 @@
 package js.three.renderers.webgl;
 
 import js.three.types.Precision;
-import js.three.Constants;
 
 extern interface WebGLProgramParameters
 {

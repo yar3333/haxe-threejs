@@ -3,7 +3,6 @@ package js.three.materials;
 import js.three.math.Vector2;
 import js.three.textures.Texture;
 import js.three.math.ColorRepresentation;
-import js.three.Constants;
 
 typedef MeshMatcapMaterialParameters =
 {>MaterialParameters,

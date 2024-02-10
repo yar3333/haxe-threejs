@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants;
-
 /**
  * This class can be used to automatically save the depth information of a rendering into a texture
  * @remarks

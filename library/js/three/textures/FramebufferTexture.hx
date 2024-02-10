@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants;
-
 /**
  * This class can only be used in combination with {@link THREE.WebGLRenderer.copyFramebufferToTexture | WebGLRenderer.copyFramebufferToTexture()}.
  * @example

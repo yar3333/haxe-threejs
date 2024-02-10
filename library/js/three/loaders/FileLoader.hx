@@ -1,4 +1,5 @@
 package js.three.loaders;
+
 import js.lib.ArrayBuffer;
 
 @:jsRequire("three", "FileLoader")

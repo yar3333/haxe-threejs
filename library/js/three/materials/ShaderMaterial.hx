@@ -1,6 +1,5 @@
 package js.three.materials;
 
-import js.three.Constants.GLSLVersion;
 import js.three.renderers.shaders.IUniform;
 import js.three.core.UniformsGroup;
 

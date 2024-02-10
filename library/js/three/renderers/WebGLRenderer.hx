@@ -3,7 +3,6 @@ package js.three.renderers;
 import js.lib.Set;
 import js.lib.Promise;
 import js.html.webgl.WebGL2RenderingContext;
-import js.three.Constants;
 import js.three.renderers.webgl.WebGLExtensions;
 import js.three.renderers.webgl.WebGLInfo;
 import js.three.renderers.webgl.WebGLShadowMap;

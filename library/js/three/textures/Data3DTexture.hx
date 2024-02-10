@@ -1,7 +1,6 @@
 package js.three.textures;
 
 import js.lib.BufferSource;
-import js.three.Constants;
 
 /**
  * Creates a three-dimensional texture from raw data, with parameters to divide it into width, height, and depth

@@ -1,6 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.three.Constants;
 import js.three.lights.Light;
 import js.three.scenes.Scene;
 import js.three.cameras.Camera;

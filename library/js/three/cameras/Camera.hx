@@ -1,6 +1,5 @@
 package js.three.cameras;
 
-import js.three.Constants;
 import js.three.core.Object3D;
 import js.three.math.Matrix4;
 import js.three.math.Vector3;

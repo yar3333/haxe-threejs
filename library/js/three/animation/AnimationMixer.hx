@@ -1,6 +1,5 @@
 package js.three.animation;
 
-import js.three.Constants.AnimationBlendMode;
 import js.three.core.EventDispatcher;
 import js.three.core.Object3D;
 

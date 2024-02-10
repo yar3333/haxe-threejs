@@ -2,7 +2,6 @@ package js.three.materials;
 
 import js.three.textures.Texture;
 import js.three.math.ColorRepresentation;
-import js.three.Constants;
 
 typedef MeshBasicMaterialParameters =
 {>MaterialParameters,

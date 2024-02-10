@@ -4,7 +4,6 @@ import js.three.math.Plane;
 import js.three.math.ColorRepresentation;
 import js.three.types.Precision;
 import haxe.extern.EitherType;
-import js.three.Constants;
 
 typedef MaterialParameters =
 {

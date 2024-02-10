@@ -1,7 +1,5 @@
 package js.three.animation.tracks;
 
-import js.three.Constants.InterpolationModes;
-
 @:jsRequire("three", "StringKeyframeTrack")
 @:native("THREE.StringKeyframeTrack")
 extern class StringKeyframeTrack extends KeyframeTrack

@@ -1,7 +1,5 @@
 package js.three.textures;
 
-import js.three.Constants;
-
 /**
  * Creates a cube texture made up of six images.
  * @remarks
