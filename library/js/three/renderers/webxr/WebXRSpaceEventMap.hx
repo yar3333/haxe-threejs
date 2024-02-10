@@ -1,6 +1,6 @@
 package js.three.renderers.webxr;
 
-import js.lib.*;
+import js.three.core.Object3DEventMap;
 
 typedef XRInputSource = Dynamic;
 typedef XRHandedness = Dynamic;

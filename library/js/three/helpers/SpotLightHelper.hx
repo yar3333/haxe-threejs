@@ -1,6 +1,9 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.objects.LineSegments;
+import js.three.lights.Light;
+import js.three.math.ColorRepresentation;
 
 /**
  * This displays a cone shaped helper object for a {@link THREE.SpotLight | SpotLight}.

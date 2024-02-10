@@ -1,6 +1,5 @@
 package js.three.math;
 
-import js.lib.*;
 import js.three.Constants;
 
 typedef Matrix4Tuple = Array<Float>;

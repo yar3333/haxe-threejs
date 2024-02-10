@@ -1,6 +1,10 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.core.BufferGeometry;
+import js.three.materials.LineBasicMaterial;
+import js.three.core.Object3D;
+import js.three.math.ColorRepresentation;
 
 /**
  * Helper object to graphically show the world-axis-aligned bounding box around an object

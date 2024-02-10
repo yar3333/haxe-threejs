@@ -1,6 +1,6 @@
 package js.three.materials;
 
-import js.lib.*;
+import js.three.math.Color;
 
 @:native("THREE.ShadowMaterial")
 extern class ShadowMaterial extends Material

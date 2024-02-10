@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.math.Vector2;
 
 extern interface UVGenerator
 {

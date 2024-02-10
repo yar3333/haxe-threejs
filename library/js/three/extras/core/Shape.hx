@@ -1,6 +1,6 @@
 package js.three.extras.core;
 
-import js.lib.*;
+import js.three.math.Vector2;
 
 /**
  * Defines an arbitrary 2d {@link Shape} plane using paths with optional holes

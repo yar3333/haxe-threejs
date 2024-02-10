@@ -1,7 +1,8 @@
 package js.three.core;
 
 import js.three.textures.Texture;
-import js.lib.*;
+import js.three.math.Vector4;
+import js.three.textures.DepthTexture;
 
 @:native("THREE.RenderTarget")
 extern class RenderTarget<TTexture:haxe.extern.EitherType<Texture, Array<Texture>> = Texture> extends EventDispatcher<{ dispose: {} }>

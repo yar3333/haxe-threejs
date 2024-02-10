@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.math.ColorRepresentation;
 
 /**
  * {@link RectAreaLight} emits light uniformly across the face a rectangular plane

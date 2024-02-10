@@ -1,6 +1,8 @@
 package js.three.objects;
 
-import js.lib.*;
+import js.lib.Float32Array;
+import js.three.math.Matrix4;
+import js.three.textures.DataTexture;
 
 /**
  * Use an array of {@link Bone | bones} to create a {@link Skeleton} that can be used by a {@link THREE.SkinnedMesh | SkinnedMesh}.

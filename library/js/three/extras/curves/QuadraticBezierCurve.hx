@@ -1,6 +1,7 @@
 package js.three.extras.curves;
 
-import js.lib.*;
+import js.three.extras.core.Curve;
+import js.three.math.Vector2;
 
 /**
  * Create a smooth **2D** {@link http://en.wikipedia.org/wiki/B%C3%A9zier_curve#mediaviewer/File:B%C3%A9zier_2_big.gif | quadratic bezier curve},

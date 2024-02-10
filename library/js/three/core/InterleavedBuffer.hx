@@ -1,6 +1,5 @@
 package js.three.core;
 
-import js.lib.*;
 import js.three.Constants;
 
 /**

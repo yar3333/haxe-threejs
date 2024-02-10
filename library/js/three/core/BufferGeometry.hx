@@ -1,9 +1,14 @@
 package js.three.core;
 
 import haxe.extern.EitherType;
-import js.lib.*;
 import js.three.Constants;
 import js.three.types.GeometryType;
+import js.three.math.Box3;
+import js.three.math.Sphere;
+import js.three.math.Matrix4;
+import js.three.math.Quaternion;
+import js.three.math.Vector3;
+import js.three.math.Vector2;
 
 typedef NormalBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, InterleavedBufferAttribute>>>;
 typedef NormalOrGLBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, EitherType<InterleavedBufferAttribute, GLBufferAttribute>>>>;

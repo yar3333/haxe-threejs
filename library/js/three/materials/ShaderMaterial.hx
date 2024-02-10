@@ -1,7 +1,8 @@
 package js.three.materials;
 
-import js.lib.*;
 import js.three.Constants.GLSLVersion;
+import js.three.renderers.shaders.IUniform;
+import js.three.core.UniformsGroup;
 
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material

@@ -1,6 +1,7 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
+import js.three.extras.core.Shape;
 
 /**
  * Creates an one-sided polygonal geometry from one or more path shapes.

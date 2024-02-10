@@ -1,6 +1,8 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.math.Box3;
+import js.three.math.ColorRepresentation;
 
 /**
  * Helper object to visualize a {@link THREE.Box3 | Box3}.

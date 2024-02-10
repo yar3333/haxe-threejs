@@ -1,6 +1,7 @@
 package js.three.renderers;
 
-import js.lib.*;
+import js.three.renderers.webgl.WebGLProgram;
+import js.three.renderers.webgl.WebGLShader;
 
 extern interface WebGLDebug
 {

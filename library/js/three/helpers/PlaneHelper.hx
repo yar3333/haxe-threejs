@@ -1,6 +1,7 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.math.Plane;
 
 /**
  * Helper object to visualize a {@link THREE.Plane | Plane}.

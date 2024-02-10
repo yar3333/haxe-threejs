@@ -1,6 +1,7 @@
 package js.three.scenes;
 
-import js.lib.*;
+import js.three.math.Color;
+import js.three.math.ColorRepresentation;
 
 /**
  * This class contains the parameters that define linear fog, i.e., that grows linearly denser with the distance.

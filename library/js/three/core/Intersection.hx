@@ -1,6 +1,7 @@
 package js.three.core;
 
-import js.lib.*;
+import js.three.math.Vector3;
+import js.three.math.Vector2;
 
 extern interface Intersection<TIntersected:Object3D = Object3D>
 {

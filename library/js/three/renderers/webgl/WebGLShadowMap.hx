@@ -1,7 +1,9 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
 import js.three.Constants;
+import js.three.lights.Light;
+import js.three.scenes.Scene;
+import js.three.cameras.Camera;
 
 @:native("THREE.WebGLShadowMap")
 extern class WebGLShadowMap

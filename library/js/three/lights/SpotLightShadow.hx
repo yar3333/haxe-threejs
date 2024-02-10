@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.cameras.PerspectiveCamera;
 
 /**
  * This is used internally by {@link SpotLight | SpotLights} for calculating shadows.

@@ -1,6 +1,8 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.textures.Texture;
+import js.three.math.ColorRepresentation;
 
 /**
  * This light gets emitted from a single point in one direction, along a cone that increases in size the further from the light it gets.

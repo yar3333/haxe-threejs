@@ -1,6 +1,7 @@
 package js.three.renderers;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.cameras.Camera;
 
 extern interface Renderer
 {

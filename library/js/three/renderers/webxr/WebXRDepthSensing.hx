@@ -1,6 +1,7 @@
 package js.three.renderers.webxr;
 
-import js.lib.*;
+import js.three.textures.Texture;
+import js.three.objects.Mesh;
 
 typedef XRRenderState = Dynamic;
 typedef WebXRArrayCamera = Dynamic;

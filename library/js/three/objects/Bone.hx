@@ -1,6 +1,7 @@
 package js.three.objects;
 
 import js.three.core.Object3DEventMap;
+import js.three.core.Object3D;
 
 /**
  * A {@link Bone} which is part of a {@link THREE.Skeleton | Skeleton}

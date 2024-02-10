@@ -1,6 +1,6 @@
 package js.three.extras.core;
 
-import js.lib.*;
+import js.three.math.Vector2;
 
 /**
  * A 2D {@link Path} representation.

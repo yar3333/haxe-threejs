@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.math.SphericalHarmonics3;
 
 /**
  * Light probes are an alternative way of adding light to a 3D scene.

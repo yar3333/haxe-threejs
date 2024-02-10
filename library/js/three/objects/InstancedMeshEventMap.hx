@@ -1,6 +1,6 @@
 package js.three.objects;
 
-import js.lib.*;
+import js.three.core.Object3DEventMap;
 
 extern interface InstancedMeshEventMap extends Object3DEventMap
 {

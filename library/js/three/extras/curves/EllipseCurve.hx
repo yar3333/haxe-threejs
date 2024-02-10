@@ -1,6 +1,7 @@
 package js.three.extras.curves;
 
-import js.lib.*;
+import js.three.extras.core.Curve;
+import js.three.math.Vector2;
 
 /**
  * Creates a 2d curve in the shape of an ellipse

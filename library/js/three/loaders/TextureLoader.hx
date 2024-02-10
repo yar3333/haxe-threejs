@@ -1,6 +1,6 @@
 package js.three.loaders;
 
-import js.lib.*;
+import js.three.textures.Texture;
 
 /**
  * Class for loading a texture.

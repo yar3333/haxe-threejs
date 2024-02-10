@@ -1,6 +1,6 @@
 package js.three.materials;
 
-import js.lib.*;
+import js.three.textures.Texture;
 
 @:native("THREE.MeshDistanceMaterial")
 extern class MeshDistanceMaterial extends Material

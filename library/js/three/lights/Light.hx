@@ -1,6 +1,8 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.math.ColorRepresentation;
+import js.three.math.Color;
 
 /**
  * Abstract base class for lights.

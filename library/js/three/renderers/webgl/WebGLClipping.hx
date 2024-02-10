@@ -1,6 +1,8 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
+import js.three.math.Plane;
+import js.three.cameras.Camera;
+import js.three.materials.Material;
 
 @:native("THREE.WebGLClipping")
 extern class WebGLClipping

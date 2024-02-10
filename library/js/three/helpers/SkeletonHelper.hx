@@ -1,6 +1,9 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.objects.Bone;
+import js.three.objects.SkinnedMesh;
+import js.three.core.Object3D;
 
 /**
  * A helper object to assist with visualizing a {@link Skeleton | Skeleton}

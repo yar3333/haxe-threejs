@@ -1,12 +1,12 @@
 package js.three.audio;
 
 import js.html.audio.GainNode;
-import js.lib.*;
 import js.html.MediaElement;
 import js.html.MediaStream;
 import js.html.audio.AudioBuffer;
 import js.html.audio.AudioNode;
 import js.html.audio.AudioScheduledSourceNode;
+import js.three.core.Object3D;
 
 /**
  * Create a non-positional ( global ) {@link Audio} object.

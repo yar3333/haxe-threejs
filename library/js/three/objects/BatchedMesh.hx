@@ -1,6 +1,11 @@
 package js.three.objects;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
+import js.three.materials.Material;
+import js.three.math.Box3;
+import js.three.math.Sphere;
+import js.three.cameras.Camera;
+import js.three.math.Matrix4;
 
 /**
  * A special version of {@link Mesh} with multi draw batch rendering support. Use {@link BatchedMesh} if you have to

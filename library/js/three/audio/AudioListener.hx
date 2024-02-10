@@ -1,7 +1,7 @@
 package js.three.audio;
 
 import js.html.audio.AudioNode;
-import js.lib.*;
+import js.three.core.Object3D;
 
 /**
  * The {@link AudioListener} represents a virtual {@link https://developer.mozilla.org/en-US/docs/Web/API/AudioListener | listener} of the all positional and non-positional audio effects in the scene.

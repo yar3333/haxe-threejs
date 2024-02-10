@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
 
 /**
  * {@link BoxGeometry} is a geometry class for a rectangular cuboid with a given 'width', 'height', and 'depth'

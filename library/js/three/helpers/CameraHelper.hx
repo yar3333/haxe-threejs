@@ -1,6 +1,8 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.cameras.Camera;
+import js.three.math.Color;
 
 /**
  * This helps with visualizing what a camera contains in its frustum

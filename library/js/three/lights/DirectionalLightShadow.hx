@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.cameras.OrthographicCamera;
 
 /**
  * This is used internally by {@link DirectionalLight | DirectionalLights} for calculating shadows.

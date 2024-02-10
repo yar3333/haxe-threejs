@@ -1,6 +1,5 @@
 package js.three.textures;
 
-import js.lib.*;
 import js.three.Constants;
 
 /**

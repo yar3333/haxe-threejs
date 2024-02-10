@@ -1,6 +1,10 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
+import js.three.materials.Material;
+import js.three.lights.Light;
+import js.three.scenes.Scene;
+import js.three.core.Object3D;
+import js.three.renderers.shaders.IUniform;
 
 @:native("THREE.WebGLPrograms")
 extern class WebGLPrograms

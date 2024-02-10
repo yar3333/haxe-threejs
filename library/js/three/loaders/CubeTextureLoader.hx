@@ -1,6 +1,6 @@
 package js.three.loaders;
 
-import js.lib.*;
+import js.three.textures.CubeTexture;
 
 @:native("THREE.CubeTextureLoader")
 extern class CubeTextureLoader extends Loader<CubeTexture, Array<String>>

@@ -1,6 +1,6 @@
 package js.three.scenes;
 
-import js.lib.*;
+import js.three.math.Color;
 
 extern interface FogBase
 {

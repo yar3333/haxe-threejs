@@ -1,8 +1,9 @@
 package js.three.math;
 
 import haxe.extern.EitherType;
-import js.lib.*;
 import js.three.Constants;
+import js.three.core.BufferAttribute;
+import js.three.core.InterleavedBufferAttribute;
 
 typedef HSL =
 {

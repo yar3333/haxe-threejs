@@ -1,8 +1,10 @@
 package js.three.core;
 
 import haxe.extern.EitherType;
-import js.lib.*;
+import js.lib.ArrayBufferView;
 import js.three.Constants;
+import js.three.math.Matrix3;
+import js.three.math.Matrix4;
 
 /**
  * This class stores data for an attribute (such as vertex positions, face indices, normals, colors, UVs, and any custom attributes )

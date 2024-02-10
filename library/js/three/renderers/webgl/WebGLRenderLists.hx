@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
+import js.three.scenes.Scene;
 
 @:native("THREE.WebGLRenderLists")
 extern class WebGLRenderLists

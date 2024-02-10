@@ -1,7 +1,7 @@
 package js.three.animation;
 
-import js.lib.*;
 import js.three.Constants;
+import js.three.objects.Bone;
 
 @:native("THREE.AnimationClip")
 extern class AnimationClip

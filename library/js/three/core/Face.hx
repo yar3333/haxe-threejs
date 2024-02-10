@@ -1,6 +1,6 @@
 package js.three.core;
 
-import js.lib.*;
+import js.three.math.Vector3;
 
 extern interface Face
 {

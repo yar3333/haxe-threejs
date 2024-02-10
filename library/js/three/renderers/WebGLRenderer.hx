@@ -1,7 +1,30 @@
 package js.three.renderers;
 
+import js.lib.Set;
+import js.lib.Promise;
 import js.html.webgl.WebGL2RenderingContext;
 import js.three.Constants;
+import js.three.renderers.webgl.WebGLExtensions;
+import js.three.renderers.webgl.WebGLInfo;
+import js.three.renderers.webgl.WebGLShadowMap;
+import js.three.renderers.webgl.WebGLCapabilities;
+import js.three.renderers.webgl.WebGLProperties;
+import js.three.renderers.webgl.WebGLRenderLists;
+import js.three.renderers.webgl.WebGLState;
+import js.three.materials.Material;
+import js.three.core.Object3D;
+import js.three.cameras.Camera;
+import js.three.scenes.Scene;
+import js.three.math.Vector2;
+import js.three.math.Vector4;
+import js.three.math.Color;
+import js.three.math.ColorRepresentation;
+import js.three.core.BufferGeometry;
+import js.three.textures.Texture;
+import js.three.math.Box3;
+import js.three.math.Vector3;
+import js.three.textures.Data3DTexture;
+import js.three.textures.DataArrayTexture;
 
 /**
  * The WebGL renderer displays your beautifully crafted scenes using WebGL, if your device supports it.

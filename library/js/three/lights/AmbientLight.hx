@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.math.ColorRepresentation;
 
 /**
  * This light globally illuminates all objects in the scene equally.

@@ -1,6 +1,6 @@
 package js.three.renderers;
 
-import js.lib.*;
+import js.three.textures.DataArrayTexture;
 
 /**
  * This type of render target represents an array of textures.

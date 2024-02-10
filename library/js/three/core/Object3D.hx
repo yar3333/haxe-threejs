@@ -1,7 +1,17 @@
 package js.three.core;
 
 import js.three.types.Object3dType;
-import js.lib.*;
+import js.three.math.Vector3;
+import js.three.math.Euler;
+import js.three.math.Quaternion;
+import js.three.math.Matrix4;
+import js.three.math.Matrix3;
+import js.three.animation.AnimationClip;
+import js.three.materials.Material;
+import js.three.renderers.WebGLRenderer;
+import js.three.scenes.Scene;
+import js.three.cameras.Camera;
+import js.three.objects.Group;
 
 /**
  * This is the base class for most objects in three.js and provides a set of properties and methods for manipulating objects in 3D space.

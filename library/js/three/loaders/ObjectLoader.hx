@@ -1,6 +1,13 @@
 package js.three.loaders;
 
-import js.lib.*;
+import js.lib.Promise;
+import js.three.core.Object3D;
+import js.three.core.InstancedBufferGeometry;
+import js.three.core.BufferGeometry;
+import js.three.materials.Material;
+import js.three.textures.Texture;
+import js.three.animation.AnimationClip;
+import js.three.textures.Source;
 
 @:native("THREE.ObjectLoader")
 extern class ObjectLoader extends Loader<Object3D>

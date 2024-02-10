@@ -1,6 +1,14 @@
+package;
+
 import js.Browser.window;
 import js.Browser.document;
-import js.three.*;
+import js.three.scenes.Scene;
+import js.three.cameras.PerspectiveCamera;
+import js.three.renderers.WebGLRenderer;
+import js.three.geometries.BoxGeometry;
+import js.three.materials.MeshBasicMaterial;
+import js.three.materials.MeshBasicMaterialParameters;
+import js.three.objects.Mesh;
 
 class Main
 {

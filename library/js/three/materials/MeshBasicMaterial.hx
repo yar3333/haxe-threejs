@@ -1,7 +1,8 @@
 package js.three.materials;
 
-import js.lib.*;
 import js.three.Constants;
+import js.three.math.Color;
+import js.three.textures.Texture;
 
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material

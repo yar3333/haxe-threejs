@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
 
 /**
  * A polyhedron is a solid in three dimensions with flat faces

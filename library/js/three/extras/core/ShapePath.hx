@@ -1,6 +1,7 @@
 package js.three.extras.core;
 
-import js.lib.*;
+import js.three.math.Color;
+import js.three.math.Vector2;
 
 /**
  * This class is used to convert a series of shapes to an array of {@link THREE.Path | Path's},

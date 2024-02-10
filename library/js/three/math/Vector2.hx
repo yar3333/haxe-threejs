@@ -1,6 +1,6 @@
 package js.three.math;
 
-import js.lib.*;
+import js.three.core.BufferAttribute;
 
 typedef Vector2Tuple = Array<Float>;
 

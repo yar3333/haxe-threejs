@@ -1,6 +1,9 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.lights.HemisphereLight;
+import js.three.materials.MeshBasicMaterial;
+import js.three.math.ColorRepresentation;
 
 /**
  * Creates a visual aid consisting of a spherical {@link THREE.Mesh | Mesh} for a {@link THREE.HemisphereLight | HemisphereLight}.

@@ -2,6 +2,9 @@ package js.three.objects;
 
 import js.three.core.Object3D;
 import js.three.core.Object3DEventMap;
+import js.three.core.BufferGeometry;
+import js.three.materials.SpriteMaterial;
+import js.three.math.Vector2;
 
 /**
  * A {@link Sprite} is a plane that always faces towards the camera, generally with a partially transparent texture applied.

@@ -1,6 +1,7 @@
 package js.three.extras.curves;
 
-import js.lib.*;
+import js.three.extras.core.Curve;
+import js.three.math.Vector3;
 
 /**
  * A curve representing a **3D** line segment.

@@ -1,7 +1,11 @@
 package js.three.helpers;
 
 import js.three.types.Object3dType;
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.objects.Line;
+import js.three.objects.Mesh;
+import js.three.math.Vector3;
+import js.three.math.ColorRepresentation;
 
 /**
  * An 3D arrow object for visualizing directions.

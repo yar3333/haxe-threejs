@@ -1,6 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
 import js.three.Constants;
 
 @:native("THREE.WebGLDepthBuffer")

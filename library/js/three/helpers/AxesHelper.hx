@@ -1,6 +1,7 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.math.ColorRepresentation;
 
 /**
  * An axis object to visualize the 3 axes in a simple way.

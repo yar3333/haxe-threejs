@@ -1,6 +1,9 @@
 package js.three.math;
 
-import js.lib.*;
+import js.three.math.Color.RGB;
+import js.three.cameras.Camera;
+import js.three.core.BufferAttribute;
+import js.three.core.InterleavedBufferAttribute;
 
 typedef Vector3Tuple = Array<Float>;
 

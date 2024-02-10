@@ -1,6 +1,7 @@
 package js.three.core;
 
-import js.lib.*;
+import js.three.math.Matrix4;
+import js.three.math.Matrix3;
 
 /**
  * @see {@link https://threejs.org/docs/index.html#api/en/core/InterleavedBufferAttribute | Official Documentation}

@@ -1,6 +1,7 @@
 package js.three.math;
 
-import js.lib.*;
+import js.three.core.BufferAttribute;
+import js.three.core.InterleavedBufferAttribute;
 
 /**
  * Implementation of a quaternion. This is used for rotating things without incurring in the dreaded gimbal lock issue, amongst other advantages.

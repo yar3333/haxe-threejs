@@ -1,6 +1,7 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.math.Color;
+import js.three.math.ColorRepresentation;
 
 /**
  * A light source positioned directly above the scene, with color fading from the sky color to the ground color.

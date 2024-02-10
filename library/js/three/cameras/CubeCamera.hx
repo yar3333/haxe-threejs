@@ -1,7 +1,9 @@
 package js.three.cameras;
 
-import js.lib.*;
 import js.three.Constants;
+import js.three.core.Object3D;
+import js.three.renderers.WebGLCubeRenderTarget;
+import js.three.renderers.WebGLRenderer;
 
 /**
  * Creates **6** {@link THREE.PerspectiveCamera | cameras} that render to a {@link THREE.WebGLCubeRenderTarget | WebGLCubeRenderTarget}.

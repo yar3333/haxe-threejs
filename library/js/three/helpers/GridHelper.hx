@@ -1,6 +1,9 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.core.BufferGeometry;
+import js.three.materials.LineBasicMaterial;
+import js.three.math.ColorRepresentation;
 
 /**
  * The {@link GridHelper} is an object to define grids

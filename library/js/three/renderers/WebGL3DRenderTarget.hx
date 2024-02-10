@@ -1,6 +1,6 @@
 package js.three.renderers;
 
-import js.lib.*;
+import js.three.textures.Data3DTexture;
 
 /**
  * Represents a three-dimensional render target.

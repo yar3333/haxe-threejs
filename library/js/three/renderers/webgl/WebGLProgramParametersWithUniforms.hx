@@ -1,6 +1,6 @@
 package js.three.renderers.webgl;
 
-import js.lib.*;
+import js.three.renderers.shaders.IUniform;
 
 extern interface WebGLProgramParametersWithUniforms extends WebGLProgramParameters
 {

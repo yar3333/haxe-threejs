@@ -2,6 +2,7 @@ package js.three.objects;
 
 import js.three.core.Object3D;
 import js.three.core.Object3DEventMap;
+import js.three.cameras.Camera;
 
 /**
  * Every level is associated with an object, and rendering can be switched between them at the distances specified

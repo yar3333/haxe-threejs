@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
 
 /**
  * {@link CircleGeometry} is a simple shape of Euclidean geometry

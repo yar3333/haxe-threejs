@@ -1,8 +1,10 @@
 package js.three.renderers.webgl;
 
+import js.lib.ArrayBufferView;
 import js.html.webgl.Framebuffer;
-import js.lib.*;
 import js.three.Constants;
+import js.three.materials.Material;
+import js.three.math.Vector4;
 
 @:native("THREE.WebGLState")
 extern class WebGLState

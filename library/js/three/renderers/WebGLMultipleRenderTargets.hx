@@ -1,6 +1,6 @@
 package js.three.renderers;
 
-import js.lib.*;
+import js.three.textures.Texture;
 
 @:native("THREE.WebGLMultipleRenderTargets")
 extern class WebGLMultipleRenderTargets extends WebGLRenderTarget<Array<Texture>>

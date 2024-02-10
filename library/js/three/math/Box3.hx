@@ -1,6 +1,7 @@
 package js.three.math;
 
-import js.lib.*;
+import js.three.core.BufferAttribute;
+import js.three.core.Object3D;
 
 @:native("THREE.Box3")
 extern class Box3

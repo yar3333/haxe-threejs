@@ -1,8 +1,12 @@
 package js.three.materials;
 
 import js.three.types.Precision;
-import js.lib.*;
 import js.three.Constants;
+import js.three.core.EventDispatcher;
+import js.three.math.Color;
+import js.three.math.Plane;
+import js.three.renderers.webgl.WebGLProgramParametersWithUniforms;
+import js.three.renderers.WebGLRenderer;
 
 /**
  * Materials describe the appearance of objects. They are defined in a (mostly) renderer-independent way, so you don't have to rewrite materials if you decide to use a different renderer.

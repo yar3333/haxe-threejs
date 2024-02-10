@@ -1,6 +1,7 @@
 package js.three.extras.curves;
 
-import js.lib.*;
+import js.three.extras.core.Curve;
+import js.three.math.Vector3;
 
 /**
  * Create a smooth **3D** {@link http://en.wikipedia.org/wiki/B%C3%A9zier_curve#mediaviewer/File:Bezier_curve.svg | cubic bezier curve},

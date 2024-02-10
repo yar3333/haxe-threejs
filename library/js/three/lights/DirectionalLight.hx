@@ -1,6 +1,7 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.math.ColorRepresentation;
 
 /**
  * A light that gets emitted in a specific direction

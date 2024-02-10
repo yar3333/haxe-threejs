@@ -1,7 +1,11 @@
 package js.three.animation;
 
-import js.lib.*;
+import js.lib.Float32Array;
 import js.three.Constants;
+import js.three.math.interpolants.DiscreteInterpolant;
+import js.three.math.interpolants.LinearInterpolant;
+import js.three.math.interpolants.CubicInterpolant;
+import js.three.math.Interpolant;
 
 @:native("THREE.KeyframeTrack")
 extern class KeyframeTrack

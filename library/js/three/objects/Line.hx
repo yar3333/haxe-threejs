@@ -3,6 +3,7 @@ package js.three.objects;
 import js.three.core.Object3DEventMap;
 import js.three.materials.Material;
 import js.three.core.BufferGeometry;
+import js.three.core.Object3D;
 
 /**
  * A continuous line.

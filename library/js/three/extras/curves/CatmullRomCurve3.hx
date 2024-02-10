@@ -1,7 +1,8 @@
 package js.three.extras.curves;
 
 import js.three.types.CurveType;
-import js.lib.*;
+import js.three.extras.core.Curve;
+import js.three.math.Vector3;
 
 /**
  * Create a smooth **3D** spline curve from a series of points using the {@link https://en.wikipedia.org/wiki/Centripetal_Catmull-Rom_spline | Catmull-Rom} algorithm.

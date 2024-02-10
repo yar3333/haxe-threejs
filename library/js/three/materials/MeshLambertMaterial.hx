@@ -1,7 +1,9 @@
 package js.three.materials;
 
-import js.lib.*;
 import js.three.Constants;
+import js.three.math.Color;
+import js.three.textures.Texture;
+import js.three.math.Vector2;
 
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material

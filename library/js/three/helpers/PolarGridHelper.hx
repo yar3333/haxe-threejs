@@ -1,6 +1,7 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.objects.LineSegments;
+import js.three.math.ColorRepresentation;
 
 /**
  * The {@link PolarGridHelper} is an object to define polar grids

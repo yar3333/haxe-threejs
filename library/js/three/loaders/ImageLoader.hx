@@ -1,6 +1,5 @@
 package js.three.loaders;
 
-import js.lib.*;
 import js.html.ImageElement;
 
 /**

@@ -2,7 +2,6 @@ package js.three.textures;
 
 import js.three.Constants.TextureDataType;
 import js.three.Constants.CompressedPixelFormat;
-import js.lib.*;
 import js.three.Constants.Wrapping;
 
 /**

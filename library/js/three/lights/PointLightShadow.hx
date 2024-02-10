@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.cameras.PerspectiveCamera;
 
 /**
  * Shadow for {@link THREE.PointLight | PointLight}

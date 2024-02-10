@@ -1,7 +1,8 @@
 package js.three.animation;
 
-import js.lib.*;
 import js.three.Constants.AnimationBlendMode;
+import js.three.core.EventDispatcher;
+import js.three.core.Object3D;
 
 @:native("THREE.AnimationMixer")
 extern class AnimationMixer extends EventDispatcher<AnimationMixerEventMap>

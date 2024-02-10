@@ -1,7 +1,11 @@
 package js.three.lights;
 
 import js.three.cameras.Camera;
-import js.lib.*;
+import js.three.math.Vector2;
+import js.three.renderers.WebGLRenderTarget;
+import js.three.math.Matrix4;
+import js.three.math.Frustum;
+import js.three.math.Vector4;
 
 /**
  * Serves as a base class for the other shadow classes.

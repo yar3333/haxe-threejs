@@ -1,6 +1,10 @@
 package js.three.extras;
 
-import js.lib.*;
+import js.three.renderers.WebGLRenderer;
+import js.three.renderers.WebGLRenderTarget;
+import js.three.scenes.Scene;
+import js.three.textures.Texture;
+import js.three.textures.CubeTexture;
 
 /**
  * This class generates a Prefiltered, Mipmapped Radiance Environment Map (PMREM) from a cubeMap environment texture.

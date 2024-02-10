@@ -1,6 +1,9 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.objects.Line;
+import js.three.lights.DirectionalLight;
+import js.three.math.ColorRepresentation;
 
 /**
  * Helper object to assist with visualizing a {@link THREE.DirectionalLight | DirectionalLight}'s effect on the scene

@@ -1,6 +1,8 @@
 package js.three.helpers;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.lights.PointLight;
+import js.three.math.ColorRepresentation;
 
 /**
  * This displays a helper object consisting of a spherical {@link THREE.Mesh | Mesh} for visualizing a {@link THREE.PointLight | PointLight}.

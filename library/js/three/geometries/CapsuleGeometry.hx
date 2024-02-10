@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
 
 /**
  * {@link CapsuleGeometry} is a geometry class for a capsule with given radii and height

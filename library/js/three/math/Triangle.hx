@@ -1,6 +1,7 @@
 package js.three.math;
 
-import js.lib.*;
+import js.three.core.BufferAttribute;
+import js.three.core.InterleavedBufferAttribute;
 
 @:native("THREE.Triangle")
 extern class Triangle

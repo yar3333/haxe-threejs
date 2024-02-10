@@ -1,6 +1,7 @@
 package js.three.scenes;
 
-import js.lib.*;
+import js.three.math.Color;
+import js.three.math.ColorRepresentation;
 
 /**
  * This class contains the parameters that define exponential squared fog, which gives a clear view near the camera and a faster than exponentially densening fog farther from the camera.

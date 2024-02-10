@@ -1,6 +1,7 @@
 package js.three.materials;
 
-import js.lib.*;
+import js.three.math.Color;
+import js.three.textures.Texture;
 
 @:native("THREE.LineBasicMaterial")
 extern class LineBasicMaterial extends Material

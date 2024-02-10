@@ -1,6 +1,6 @@
 package js.three.lights;
 
-import js.lib.*;
+import js.three.math.ColorRepresentation;
 
 /**
  * A light that gets emitted from a single point in all directions

@@ -1,6 +1,6 @@
 package js.three.cameras;
 
-import js.lib.*;
+import js.three.math.Vector2;
 
 /**
  * Camera that uses {@link https://en.wikipedia.org/wiki/Perspective_(graphical) | perspective projection}.

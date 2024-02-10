@@ -1,6 +1,9 @@
 package js.three.core;
 
-import js.lib.*;
+import js.three.math.Ray;
+import js.three.cameras.Camera;
+import js.three.math.Vector3;
+import js.three.math.Vector2;
 
 /**
  * This class is designed to assist with {@link https://en.wikipedia.org/wiki/Ray_casting | raycasting}

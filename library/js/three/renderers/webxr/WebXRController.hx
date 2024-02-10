@@ -1,5 +1,7 @@
 package js.three.renderers.webxr;
 
+import js.three.renderers.webxr.WebXRSpaceEventMap.XRInputSource;
+
 typedef XRHandSpace = Dynamic;
 typedef XRControllerEventType = Dynamic;
 typedef XRFrame = Dynamic;

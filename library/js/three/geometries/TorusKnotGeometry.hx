@@ -1,6 +1,6 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
 
 /**
  * Creates a torus knot, the particular shape of which is defined by a pair of coprime integers, p and q

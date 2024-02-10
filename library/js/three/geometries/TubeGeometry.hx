@@ -1,6 +1,8 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
+import js.three.extras.core.Curve;
+import js.three.math.Vector3;
 
 /**
  * Creates a tube that extrudes along a 3d curve.

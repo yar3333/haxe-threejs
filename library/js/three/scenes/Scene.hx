@@ -1,6 +1,10 @@
 package js.three.scenes;
 
-import js.lib.*;
+import js.three.core.Object3D;
+import js.three.materials.Material;
+import js.three.math.Color;
+import js.three.textures.Texture;
+import js.three.textures.CubeTexture;
 
 /**
  * Scenes allow you to set up what and where is to be rendered by three.js

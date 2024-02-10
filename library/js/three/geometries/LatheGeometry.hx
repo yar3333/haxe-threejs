@@ -1,6 +1,7 @@
 package js.three.geometries;
 
-import js.lib.*;
+import js.three.core.BufferGeometry;
+import js.three.math.Vector2;
 
 /**
  * Creates meshes with axial symmetry like vases

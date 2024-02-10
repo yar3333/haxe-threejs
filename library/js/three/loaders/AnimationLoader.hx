@@ -1,6 +1,6 @@
 package js.three.loaders;
 
-import js.lib.*;
+import js.three.animation.AnimationClip;
 
 @:native("THREE.AnimationLoader")
 extern class AnimationLoader extends Loader<Array<AnimationClip>>
