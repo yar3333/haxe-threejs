@@ -1,4 +1,4 @@
-package js.three.types;
+package js.three.extras.curves;
 
 enum abstract CurveType(String)
 {

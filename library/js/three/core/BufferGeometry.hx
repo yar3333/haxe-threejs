@@ -1,7 +1,7 @@
 package js.three.core;
 
 import haxe.extern.EitherType;
-import js.three.types.GeometryType;
+import js.three.geometries.GeometryType;
 import js.three.math.Box3;
 import js.three.math.Sphere;
 import js.three.math.Matrix4;

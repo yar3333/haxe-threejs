@@ -1,7 +1,5 @@
 package js.three.renderers.webgl;
 
-import js.three.types.Precision;
-
 extern interface WebGLProgramParameters
 {
 	var isWebGL2 : Bool;

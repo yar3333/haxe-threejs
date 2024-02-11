@@ -1,6 +1,5 @@
 package js.three.materials;
 
-import js.three.types.Precision;
 import js.three.core.EventDispatcher;
 import js.three.math.Color;
 import js.three.math.Plane;

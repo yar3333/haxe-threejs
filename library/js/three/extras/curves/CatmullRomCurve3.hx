@@ -1,6 +1,5 @@
 package js.three.extras.curves;
 
-import js.three.types.CurveType;
 import js.three.extras.core.Curve;
 import js.three.math.Vector3;
 
