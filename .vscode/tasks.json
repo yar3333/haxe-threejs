@@ -27,6 +27,24 @@
                 "showReuseMessage": true,
                 "clear": true
             }
+        },
+        {
+            "label": "refactor: typescipt to haxe",
+            "type": "shell",
+            "command": "haxelib",
+            "args": [
+                "run",
+                "refactor",
+                "ts_to_haxe",
+                "${relativeFile}"
+            ],
+            "presentation": {
+                "clear": true,
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
         }
     ]
 }

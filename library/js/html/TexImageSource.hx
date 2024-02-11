@@ -1,7 +1,6 @@
 package js.html;
 
 import haxe.extern.EitherType;
-import js.three.textures.OffscreenCanvas;
 
 typedef TexImageSource = EitherType<ImageBitmap, 
                          EitherType<ImageData, 

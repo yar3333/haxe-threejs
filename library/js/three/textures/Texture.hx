@@ -1,5 +1,6 @@
 package js.three.textures;
 
+import js.html.OffscreenCanvas;
 import js.three.math.Matrix3;
 import js.three.core.EventDispatcher;
 import js.three.math.Vector2;

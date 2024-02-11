@@ -1,5 +1,6 @@
 package js.three.textures;
 
+import js.html.OffscreenCanvas;
 import js.html.TexImageSource;
 
 /**

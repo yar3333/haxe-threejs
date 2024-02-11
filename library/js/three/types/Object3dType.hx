@@ -2,6 +2,7 @@ package js.three.types;
 
 enum abstract Object3dType(String)
 {
+    var Scene = "Scene";
 	var Object3D = "Object3D";
     var ArrowHelper = "ArrowHelper";
     var Line = "Line";
