@@ -10,7 +10,6 @@ import js.three.materials.Material;
 import js.three.renderers.WebGLRenderer;
 import js.three.scenes.Scene;
 import js.three.cameras.Camera;
-import js.three.objects.Object3dType;
 import js.three.objects.Group;
 
 /**
@@ -53,7 +52,7 @@ extern class Object3D<TEventMap:Object3DEventMap = Object3DEventMap> extends Eve
 	 * Sub-classes will update this value.
 	 * @defaultValue `Object3D`
 	 */
-	var type(default, null) : Object3dType;
+	var type(default, null) : ObjectType;
 	/**
 	 * Object's parent in the {@link https://en.wikipedia.org/wiki/Scene_graph | scene graph}.
 	 * @remarks An object can have at most one parent.

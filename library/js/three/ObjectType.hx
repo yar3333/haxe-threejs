@@ -1,6 +1,6 @@
-package js.three.objects;
+package js.three;
 
-enum abstract Object3dType(String)
+enum abstract ObjectType(String)
 {
     var Scene = "Scene";
     var Mesh = "Mesh";
@@ -24,6 +24,7 @@ enum abstract Object3dType(String)
 	var HemisphereLight = "HemisphereLight";
 	var HemisphereLightHelper = "HemisphereLightHelper";
 	var RectAreaLight = "RectAreaLight";
+	var PointLight = "PointLight";
 	var PointLightHelper = "PointLightHelper";
 	var SpotLight = "SpotLight";
 	var SpotLightHelper = "SpotLightHelper";
