@@ -9,8 +9,11 @@ import js.three.math.Quaternion;
 import js.three.math.Vector3;
 import js.three.math.Vector2;
 
-typedef NormalBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, InterleavedBufferAttribute>>>;
-typedef NormalOrGLBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, EitherType<InterleavedBufferAttribute, GLBufferAttribute>>>>;
+//typedef NormalBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, InterleavedBufferAttribute>>>;
+typedef NormalBufferAttributes = Dynamic<String>;
+
+//typedef NormalOrGLBufferAttributes = Dynamic<EitherType<String, EitherType<BufferAttribute, EitherType<InterleavedBufferAttribute, GLBufferAttribute>>>>;
+typedef NormalOrGLBufferAttributes = Dynamic<String>;
 
 /**
  * A representation of mesh, line, or point geometry
