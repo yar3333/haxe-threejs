@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
 	mode: 'development',
     entry: './src/main.ts',
@@ -20,6 +18,6 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: __dirname + '/dist',
     }
 };
